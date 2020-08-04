@@ -185,8 +185,7 @@
                         alt="Team" />
                     <div class="media-body pl-xl-3 ml-xl-3">
                         <h3 class="h4 text-primary pb-1">For Employers</h3>
-                        <p>Aute irure dolor in reprehenderit in volup tate velit esse cillum dolore eu fugiat nulla
-                            pariatur sed quia consequuntur.</p><a class="nav-link-style" href="#">Read more<i
+                        <p>Place your idea or project and find your skiller.</p><a class="nav-link-style" href="#">Read more<i
                                 class="fa fa-chevron-right sm font-size-xl ml-1"></i></a>
                     </div>
                 </div>
@@ -199,8 +198,7 @@
                         alt="Freelancer" />
                     <div class="media-body pl-xl-3 ml-xl-3">
                         <h3 class="h4 text-primary pb-1">For Freelancers</h3>
-                        <p>Aute irure dolor in reprehenderit in volup tate velit esse cillum dolore eu fugiat nulla
-                            pariatur sed quia consequuntur.</p><a class="nav-link-style" href="#">Read more<i
+                        <p>Grab the platform to enrich your potentical and turn your passion into profession.</p><a class="nav-link-style" href="#">Read more<i
                                 class="fa fa-chevron-right sm font-size-xl ml-1"></i></a>
                     </div>
                 </div>
@@ -229,13 +227,8 @@
                         </div>
                         <div class="collapse show" id="faq-1" data-parent="#faq">
                             <div class="card-body font-size-sm">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
-                                <p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                                    molestias excepturi sint occaecati cupiditate non provident, similique
-                                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                    fuga.</p>
+                                <p>Yes! This is the right place to post your jobs and projects.</p>
+                                <p class="mb-0">Before that! Don't forget to register in our system member.You are always welcome here.</p>
                             </div>
                         </div>
                     </div>
@@ -247,13 +240,8 @@
                         </div>
                         <div class="collapse" id="faq-2" data-parent="#faq">
                             <div class="card-body font-size-sm">
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident, similique
-                                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                    fuga.</p>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+                                <p>First of all !</p>
+                                <p class="mb-0">Register yourself and then choose your category and skill you are looking for your project.</p>
                             </div>
                         </div>
                     </div>
@@ -265,13 +253,8 @@
                         </div>
                         <div class="collapse" id="faq-3" data-parent="#faq">
                             <div class="card-body font-size-sm">
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident, similique
-                                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                    fuga.</p>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+                                <p>Pretty Simple !</p>
+                                <p class="mb-0">Point to the Service and Category section in our header at the top of page. You can Choose there.</p>
                             </div>
                         </div>
                     </div>
@@ -284,13 +267,8 @@
                         </div>
                         <div class="collapse" id="faq-4" data-parent="#faq">
                             <div class="card-body font-size-sm">
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident, similique
-                                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                    fuga.</p>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+                                <p>Yes !</p>
+                                <p class="mb-0">For accessibility of all, we have included feature there .</p>
                             </div>
                         </div>
                     </div>

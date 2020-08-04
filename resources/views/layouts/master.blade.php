@@ -210,37 +210,33 @@
                                 <div class="dropdown-menu">
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Technology and IT</h5><a class="dropdown-item"
-                                            href="blog-grid-rs">Grid Right Sidebar</a><a class="dropdown-item"
-                                            href="blog-grid-ls">Grid Left Sidebar</a><a class="dropdown-item"
-                                            href="blog-grid-ns">Grid No Sidebar</a>
-                                        <a class="dropdown-item" href="blog-list-rs">List Right Sidebar</a><a
-                                            class="dropdown-item" href="blog-list-ls">List Left Sidebar</a><a
-                                            class="dropdown-item" href="blog-list-ns">List No Sidebar</a><a
-                                            class="dropdown-item" href="blog-single-rs">Single Post Right
-                                            Sidebar</a>
+                                            href="blog-grid-rs">Networking</a><a class="dropdown-item"
+                                            href="blog-grid-ls">Engineering</a><a class="dropdown-item"
+                                            href="blog-grid-ns">Data Science & Analytics</a>
+                                        <a class="dropdown-item" href="blog-list-rs">Translation</a><a
+                                            class="dropdown-item" href="blog-list-ls">Cloud Computing</a><a
+                                            class="dropdown-item" href="blog-list-ns">Artificial Intelligence</a><a
+                                            class="dropdown-item" href="blog-single-rs">Software Development</a>
                                     </div>
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Design and Creatives</h5><a class="dropdown-item"
-                                            href="portfolio-style-1">Grid Style 1</a><a class="dropdown-item"
-                                            href="portfolio-style-2">Grid Style 2</a><a class="dropdown-item"
-                                            href="portfolio-style-3">Grid Style 3</a>
-                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Project
-                                            Side
-                                            Gallery (Grid)</a><a class="dropdown-item"
-                                            href="portfolio-single-side-gallery-list">Project Side Gallery
-                                            (List)</a><a class="dropdown-item" href="portfolio-single-carousel">Project
-                                            Carousel</a>
-                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Project Wide
-                                            Gallery</a>
+                                            href="portfolio-style-1">UX Design</a><a class="dropdown-item"
+                                            href="portfolio-style-2">Video Designing</a><a class="dropdown-item"
+                                            href="portfolio-style-3">Graphic Design</a>
+                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Art & illustration
+                                            </a><a class="dropdown-item"
+                                            href="portfolio-single-side-gallery-list">Audio Production</a><a class="dropdown-item" href="portfolio-single-carousel">Photography
+                                            </a>
+                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Motion Graphics</a>
                                     </div>
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Sales and Analytics</h5><a class="dropdown-item"
-                                            href="shop-ls">Grid Left Sidebar</a><a class="dropdown-item"
-                                            href="shop-rs">Grid Right Sidebar</a><a class="dropdown-item"
-                                            href="shop-ns">Grid No Sidebar</a><a class="dropdown-item"
-                                            href="shop-single">Single Product</a><a class="dropdown-item"
-                                            href="checkout">Cart &amp; Checkout</a><a class="dropdown-item"
-                                            href="order-tracking">Order Tracking</a>
+                                            href="shop-ls">SEO</a><a class="dropdown-item"
+                                            href="shop-rs">Email Automation</a><a class="dropdown-item"
+                                            href="shop-ns">Public Relation</a><a class="dropdown-item"
+                                            href="shop-single">Digital Marketing</a><a class="dropdown-item"
+                                            href="checkout">Community Management</a><a class="dropdown-item"
+                                            href="order-tracking">Market Research</a>
                                     </div>
                                 </div>
                             </li>
@@ -250,14 +246,14 @@
                                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
                                             data-toggle="dropdown">Popular Skills</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="dashboard-orders">Orders</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-sales">Sales</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-messages">Messages</a>
+                                            <li><a class="dropdown-item" href="dashboard-orders">Front End Developer</a></li>
+                                            <li><a class="dropdown-item" href="dashboard-sales">Back End Developer</a></li>
+                                            <li><a class="dropdown-item" href="dashboard-messages">Full Stack Developer</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="dashboard-followers">Followers</a>
+                                            <li><a class="dropdown-item" href="dashboard-followers">Python</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="dashboard-reviews">Reviews</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-favorites">Favorites</a>
+                                            <li><a class="dropdown-item" href="dashboard-reviews">C#</a></li>
+                                            <li><a class="dropdown-item" href="dashboard-favorites">PHP</a>
                                             </li>
                                         </ul>
                                     </li>
