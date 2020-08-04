@@ -1,58 +1,41 @@
 @extends('layouts.security')
 
-
 @section('content')
-<style>
-    p {
-        text-align: center;
-        color: #666;
-    }
 
-    button:hover {
-        background: #1dc8cc;
-        transition: none;
-    }
+<!-- Page content-->
+<section class="container d-flex justify-content-center align-items-center pt-5 pb-4" style="flex: 1 0 auto;">
+    <div class="cs-signin-form mt-3">
+        <div class="cs-signin-form-inner">
+            <!-- Sign in view-->
+            <div class="cs-view show">
+                <center><img src="/images/logo/logo.svg" class="pb-4" width="50"/></center>
+                <h4 class="text-center">Verify Your Account</h4>
 
-    button {
-        margin-top: 20px;
-    }
-</style>
-<!-- Login -->
-<main class="browse-section">
-    <div class="container">
-        <div class="row justify-content-center d-flex vh-100">
-            <div class="col-lg-4 mx-auto">
-                <div class="osahan-login py-4" style="font-size: 14px !important;">
-                    <div class="text-center mb-4">
-                        <a href="{{ url('/') }}"><img src="/images/fav-miver.svg" style="width: 50px;" alt=""></a>
-                        <h5 class="font-weight-bold mt-3">Verify Your Account</h5>
-                        <p class="text-muted" style="font-size: 14px;font-weight:500">Email Verification Link has been
-                            sent to <b>{{ Auth::user()->email }}</b>.</p>
-                    </div>
-
-                    @if (session('resent'))
-                    <div class="feedback" role="alert">
-                        <p> {{ __('A fresh verification link has been sent to your email address.') }}</p>
-                    </div>
-                    @endif
-
-                    <p style="font-size: 15px;margin-bottom:5px"> If you haven't received our email in 15 minutes,
-                        please
-                        check your spam folder or,
-                        <!-- Form -->
-                        <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
-                            @csrf
-                            <center> <b><button class="c-btn c-fill-color-btn" type="submit">{{ __('Request a fresh verification link.') }}</button></b>
-                            </center>
-                    </p>
-                    </form>
-                    <p class="text-muted" style="font-size: 14px;font-weight:600;margin-top:20px"> Get verified by skillpark and explore the freelancing world.</p>
+                @if (session('resent'))
+                <div class="alert alert-info" role="alert">
+                    {{ __('A fresh verification link has been sent to your email address.') }}
                 </div>
+                @endif
+
+                <p class="font-size-md mb-4 text-center">Email Verification Link has been
+                    sent to <b>{{ Auth::user()->email }}</b>.</p>
             </div>
+        
+        <div class="border-top text-center mt-4 pt-4">
+            <p class="font-size-sm font-weight-medium text-heading"> If you haven't received our email in 15 minutes,
+                please
+                check your spam folder or,</p>
+            <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                @csrf
+                <button class="btn btn-outline-primary"
+                    type="submit">{{ __('Request a fresh verification link.') }}</button>
+            </form>
+            <p class="font-size-sm font-weight-medium pt-4 text-muted">Get verified by skillpark and explore the
+                freelancing world.</p>
         </div>
     </div>
-</main>
-<!-- End Login -->
+    </div>
+</section>
 
 
 <script>

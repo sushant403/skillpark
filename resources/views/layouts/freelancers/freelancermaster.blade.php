@@ -3,298 +3,375 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
-    <meta name="description" content="skillpark">
-    <meta name="author" content="skillpark">
+    <title>Skillpark Inc.
+    </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Skillpark Inc.">
+    <meta name="keywords"
+        content="bootstrap, business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
+    <meta name="author" content="Skillpark Inc.">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#1dc8cc">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+        .cs-page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
 
-    <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="/images/logo/block-logo.svg">
+        .cs-page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    <!-- Stylesheets -->
-    <!-- Semantic Css -->
+        .cs-page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .cs-page-loading.active>.cs-page-loading-inner {
+            opacity: 1;
+        }
+
+        .cs-page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #1bb7bb;
+        }
+
+        .cs-page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #1bb7bb;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.cs-page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+    </script>
+    <!-- Fontawesome kit's code here -->
+    <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
+    <link rel="stylesheet" media="screen" href="/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+    <!-- Main Theme Styles + Bootstrap-->
     <link href="/css/responsive.css" rel="stylesheet">
-    <link href="/css/datepicker.min.css" rel="stylesheet">
-    <link href="/css/jquery.range.css" rel="stylesheet">
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
     <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/profileheader.css" rel="stylesheet">
-    <link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-    <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
-
+    <link rel="stylesheet" media="screen" href="/css/main.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.min.css">
 </head>
+<!-- Body-->
 
 <body>
-    <div class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light topbar static-top shadow-sm bg-white osahan-nav-top px-0"
-            style="padding: 7px !important;font-size:13px">
-            <div class="container">
-                <!-- Sidebar Toggle (Topbar) -->
-                <a class="navbar-brand" href="{{ route('home') }}"><img src="/images/logo/logo.svg" alt=""></a>
-                <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
-                    <div class="input-group" style="width: 300px;">
-                        <input type="text" class="form-control bg-white small" placeholder="Find Services..."
-                            aria-label="Search" aria-describedby="basic-addon2" style="font-size: 13px;">
-                        <div class="input-group-append">
-                            <button class="btn btn-success" type="button" style="font-size: 13px;">
-                                <i class="fa fa-search fa-sm"></i>
-                            </button>
-                        </div>
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+        <div class="cs-page-loading-inner">
+            <div class="cs-page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+    <main class="cs-page-wrapper">
+        <!-- Navbar (Floating dark)-->
+        <header class="cs-header navbar navbar-expand-lg navbar-light navbar-floating navbar-sticky" data-scroll-header>
+            <div class="container px-0 px-xl-3">
+                <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas"
+                    data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button><a
+                    class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="{{ url('/') }}"><img
+                        class="d-none d-lg-block" width="143" src="/images/logo/biglogo.svg" alt="Around" /><img
+                        class="d-lg-none" width="40" src="/images/logo/logo.svg" alt="Around" /></a>
+
+
+                <div class="d-flex align-items-center order-lg-3">
+                    <img src="{{ Auth::user()->avatar }}" style="max-width: 60px">
+                    <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
+                        href="{{ route('home') }}">Profile</a>
+                </div>
+
+
+                <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
+                    <div class="cs-offcanvas-cap navbar-box-shadow">
+                        <h5 class="mt-1 mb-0">Menu</h5>
+                        <button class="close lead" type="button" data-toggle="offcanvas"
+                            data-offcanvas-id="primaryMenu"><span aria-hidden="true">&times;</span></button>
                     </div>
-                </form>
-                <!-- Topbar Navbar -->
-                <ul class="navbar-nav align-items-center ml-auto">
-                    <li class="nav-item dropdown no-arrow no-caret mr-3 dropdown-notifications d-sm-none">
-                        <a class="btn btn-icon btn-transparent-dark dropdown-toggle" href="#" id="searchDropdown"
-                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-search fa-fw"></i>
-                        </a>
-                        <!-- Dropdown - Messages -->
-                        <div class="dropdown-menu dropdown-menu-right p-3 shadow-sm animated--grow-in"
-                            aria-labelledby="searchDropdown">
-                            <form class="form-inline mr-auto w-100 navbar-search">
-                                <div class="input-group" style="width: 350px;">
-                                    <input type="text" class="form-control bg-light border-0 small"
-                                        placeholder="Find Services..." aria-label="Search"
-                                        aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fa fa-search fa-sm"></i>
-                                        </button>
+                    <div class="cs-offcanvas-body">
+                        <!-- Menu-->
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown dropdown-mega"><a class="nav-link dropdown-toggle" href="#"
+                                    data-toggle="dropdown">How It Works</a>
+                                <div class="dropdown-menu"><a class="dropdown-column dropdown-column-img bg-secondary"
+                                        href="" style="background-image: url(/images/svg/work.svg);"></a>
+                                    <div class="dropdown-column"><a class="dropdown-item" href="">About
+                                            Skillpark</a><a class="dropdown-item" href="g">Hire
+                                            Freelancers</a><a class="dropdown-item" href="age">Post
+                                            Project</a>
+                                        <a class="dropdown-item" href="rectory">Explore
+                                            Skills / Categories</a><a class="dropdown-item" href="">Post a Job</a><a
+                                            class="dropdown-item" href="">Advertisement</a></div>
+                                    <div class="dropdown-column"><a class="dropdown-item" href="dget">Creators</a><a
+                                            class="dropdown-item" href="">Payment Methods</a><a class="dropdown-item"
+                                            href="">Join Skillpark</a>
+                                        <a class="dropdown-item" href="">Events and Blogs</a>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </li>
-
-                    <li class="nav-item no-arrow no-caret">
-                        <a class="btn btn-icon btn-transparent-dark dropdown-toggle" href="javascript:void(0);">
-                            <i class="fas fa-envelope fa-m pt-2 mt-1"></i>
-                        </a>
-
-                    </li>
-                    <li class="nav-item dropdown no-arrow no-caret dropdown-user">
-                        <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
-                            href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"><img class="img-fluid" src="{{ Auth::user()->avatar }}"></a>
-                        <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
-                            aria-labelledby="navbarDropdownUserImage">
-                            <h6 class="dropdown-header d-flex align-items-center">
-                                <img class="dropdown-user-img" src="{{ Auth::user()->avatar }} ">
-                                <div class=" dropdown-user-details">
-                                    <div class="dropdown-user-details-name">{{ Auth::user()->name }}</div>
-                                    <div class="dropdown-user-details-email">{{ Auth::user()->email }}</div>
+                            </li>
+                            <li class="nav-item dropdown dropdown-mega"><a class="nav-link dropdown-toggle" href="#"
+                                    data-toggle="dropdown">Services / Categories</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-column mb-2 mb-lg-0">
+                                        <h5 class="dropdown-header">Technology and IT</h5><a class="dropdown-item"
+                                            href="blog-grid-rs">Grid Right Sidebar</a><a class="dropdown-item"
+                                            href="blog-grid-ls">Grid Left Sidebar</a><a class="dropdown-item"
+                                            href="blog-grid-ns">Grid No Sidebar</a>
+                                        <a class="dropdown-item" href="blog-list-rs">List Right Sidebar</a><a
+                                            class="dropdown-item" href="blog-list-ls">List Left Sidebar</a><a
+                                            class="dropdown-item" href="blog-list-ns">List No Sidebar</a><a
+                                            class="dropdown-item" href="blog-single-rs">Single Post Right
+                                            Sidebar</a>
+                                    </div>
+                                    <div class="dropdown-column mb-2 mb-lg-0">
+                                        <h5 class="dropdown-header">Design and Creatives</h5><a class="dropdown-item"
+                                            href="portfolio-style-1">Grid Style 1</a><a class="dropdown-item"
+                                            href="portfolio-style-2">Grid Style 2</a><a class="dropdown-item"
+                                            href="portfolio-style-3">Grid Style 3</a>
+                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Project
+                                            Side
+                                            Gallery (Grid)</a><a class="dropdown-item"
+                                            href="portfolio-single-side-gallery-list">Project Side Gallery
+                                            (List)</a><a class="dropdown-item" href="portfolio-single-carousel">Project
+                                            Carousel</a>
+                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Project Wide
+                                            Gallery</a>
+                                    </div>
+                                    <div class="dropdown-column mb-2 mb-lg-0">
+                                        <h5 class="dropdown-header">Sales and Analytics</h5><a class="dropdown-item"
+                                            href="shop-ls">Grid Left Sidebar</a><a class="dropdown-item"
+                                            href="shop-rs">Grid Right Sidebar</a><a class="dropdown-item"
+                                            href="shop-ns">Grid No Sidebar</a><a class="dropdown-item"
+                                            href="shop-single">Single Product</a><a class="dropdown-item"
+                                            href="checkout">Cart &amp; Checkout</a><a class="dropdown-item"
+                                            href="order-tracking">Order Tracking</a>
+                                    </div>
                                 </div>
-                            </h6>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('dashboard') }}">
-                                <div class="dropdown-item-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-settings">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <path
-                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                Account
-                            </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                <div class="dropdown-item-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-log-out">
-                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                        <polyline points="16 17 21 12 16 7"></polyline>
-                                        <line x1="21" y1="12" x2="9" y2="12"></line>
-                                    </svg>
-                                </div>
-                                Logout
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white osahan-nav-mid px-0 mb-8 border-top shadow-sm">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">
-                                Profile
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Trending</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">
-                                Saved Jobs
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">
-                                Messages
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <img class="country-flag img-fluid" src="/images/svg/en.svg">
-                            <span>English</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="mb-5 mt-5 py-3"></div>
-
-    @yield('content')
-
-    <!-- footer Start -->
-    <footer class="footer">
-        <div class="subscribe-newsletter">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="subcribes">
-                            <div class="text-step1">
-                                <div class="btext-heading mt-2" style="color:#acacac; font-size:14px;">
-                                    <i class="fas fa-check-circle"></i>All Rights Reserved &reg; Sushant Poudel, Nitika
-                                    Bhatta and Divesh Thapa.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem"
-                            href=""><img src="/images/logo/logo.svg" alt=""></a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="about-jobby">
-                        <a href=""><img src="images/logo/profilelogo.png" width="30" alt=""></a>
-                        <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The
-                            application is a Nepal National Payment Gateway Verified website. Trusted by the Government
-                            of Nepal. &copy; Skillpark Inc.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="footer-links">
-                        <h4>About</h4>
-                        <ul class="list">
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Press &amp; News</a></li>
-                            <li><a href="#">Partnerships</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Intellectual Property Claims</a></li>
-                            <li><a href="#" target="_blank">Investor Relations</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="footer-links">
-                        <h4>For Companies</h4>
-                        <ul class="list">
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Community Standards</a></li>
-                            <li><a href="#">Podcast</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Invite a Friend</a></li>
-                            <li><a href="#">Become a Seller</a></li>
-                            <li><a href="#">Skillpark Elevate</a>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                    data-toggle="dropdown">Explore</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
+                                            data-toggle="dropdown">Popular Skills</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="dashboard-orders">Orders</a></li>
+                                            <li><a class="dropdown-item" href="dashboard-sales">Sales</a></li>
+                                            <li><a class="dropdown-item" href="dashboard-messages">Messages</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="dashboard-followers">Followers</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="dashboard-reviews">Reviews</a></li>
+                                            <li><a class="dropdown-item" href="dashboard-favorites">Favorites</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="signin-illustration">Freelancers</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="signin-image">Companies</a></li>
+                                    <li><a class="dropdown-item" href="signin-signup">Trending Jobs</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link" href="">Enterprise</a>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                    data-toggle="dropdown">Support</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="font-size-xl text-muted"><img src="/images/svg/np.svg"
+                                                        style="width: 25px;max-width:unset">
+                                                </div>
+                                                <div class="pl-3"><span class="d-block text-heading">नेपाली</span><small
+                                                        class="d-block text-muted">Change to Nepali Language</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="font-size-xl text-muted"><img src="/images/svg/en.svg"
+                                                        style="width: 25px;max-width:unset"></i></div>
+                                                <div class="pl-3"><span
+                                                        class="d-block text-heading">English</span><small
+                                                        class="d-block text-muted">Change to English Language</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="mailto:skillparknepal@gmail.com">
+                                            <div class="d-flex align-items-center">
+                                                <div class="font-size-xl text-muted"><i
+                                                        class="fas fa-question-circle fa-lg"></i>
+                                                </div>
+                                                <div class="pl-3"><span
+                                                        class="d-block text-heading">Support</span><small
+                                                        class="d-block text-muted">skillparknepal@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="footer-links">
-                        <h4>Support</h4>
-                        <ul class="list">
-                            <li><a href="#">Help &amp; Support</a></li>
-                            <li><a href="#">Trust &amp; Safety</a></li>
-                            <li><a href="#">Selling on Skillpark
-                                </a>
-                            </li>
-                            <li><a href="#">Buying on Skillpark
-                                </a>
-                            </li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Community Standards</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="copy-social">
-            <div class="container">
+        </header>
+
+        <div class="pt-6"></div>
+
+        @yield('content')
+
+    </main>
+
+    <!-- Footer-->
+    <footer class="cs-footer container pt-5">
+        <div class="row">
+            <div class="col-xl-6 col-lg-5 col-md-4 mb-5 text-center text-md-left">
+                <h2 class="mb-4">Contact Us</h2><a class="btn btn-danger mb-4" href="#"><i
+                        class="fa fa-envelope font-size-lg mr-2"></i>Email Now</a>
+                <div class="pt-2"><a class="social-btn sb-outline sb-lg sb-facebook mr-2 mb-2" href="#"><i
+                            class="fab fa-facebook"></i></a><a class="social-btn sb-outline sb-lg sb-twitter mr-2 mb-2"
+                        href="#"><i class="fab fa-twitter"></i></a><a
+                        class="social-btn sb-outline sb-lg sb-instagram mr-2 mb-2" href="#"><i
+                            class="fab fa-instagram"></i></a><a class="social-btn sb-outline sb-lg sb-google mr-2 mb-2"
+                        href="#"><i class="fab fa-google"></i></a></div>
+            </div>
+            <div class="col-xl-6 col-lg-7 col-md-8 mb-5">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="copyright">
-                            <i class="far fa-copyright"></i>Copyright 2020 <a href="{{ url('/') }}">Skillpark Inc.</a>.
-                            All Right Reserved.
+                    <div class="col-6 col-sm-4">
+                        <div class="cs-widget">
+                            <h4 class="cs-widget-title">Enterprise</h4>
+                            <ul>
+                                <li><a class="cs-widget-link" href="#">About</a></li>
+                                <li><a class="cs-widget-link" href="#">Jobs</a></li>
+                                <li><a class="cs-widget-link" href="#">Freelancers</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="social-icons">
+                    <div class="col-6 col-sm-4">
+                        <div class="cs-widget">
+                            <h4 class="cs-widget-title">Services</h4>
                             <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                <li><a class="cs-widget-link" href="#">Strategy</a></li>
+                                <li><a class="cs-widget-link" href="#">HR &amp; Talent</a></li>
+                                <li><a class="cs-widget-link" href="#">Training</a></li>
+                                <li><a class="cs-widget-link" href="#">Analytics</a></li>
+                                <li><a class="cs-widget-link" href="#">Sales &amp; Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-4">
+                        <div class="cs-widget">
+                            <h4 class="cs-widget-title">Our news</h4>
+                            <ul>
+                                <li><a class="cs-widget-link" href="#">Latest news</a></li>
+                                <li><a class="cs-widget-link" href="#">Insights</a></li>
+                                <li><a class="cs-widget-link" href="#">Blogs</a></li>
+                                <li><a class="cs-widget-link" href="#">Events</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="border-top py-4">
+            <div class="d-md-flex align-items-center justify-content-between py-2 text-center text-md-left">
+                <ul class="list-inline font-size-sm mb-3 mb-md-0 order-md-2">
+                    <li class="list-inline-item my-1"><a class="nav-link-style" href="#">Support</a></li>
+                    <li class="list-inline-item my-1"><a class="nav-link-style" href="#">Privacy Policy</a></li>
+                    <li class="list-inline-item my-1"><a class="nav-link-style" href="#">Terms &amp; Conditions</a></li>
+                </ul>
+                <p class="font-size-sm mb-0 mr-3 order-md-1"><span class="text-muted mr-1">© All rights reserved.
+                    </span><a class="nav-link-style font-weight-normal" href="https://skillpark.herokuapp.com/"
+                        target="_blank" rel="noopener">Skillpark Inc.</a></p>
+            </div>
+        </div>
     </footer>
-    <!-- footer End -->
-    <!-- Scroll to Top Button Start -->
-    <button onclick="topFunction()" id="pageup" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-    <!-- Scroll to Top Button End -->
-    <!-- Scripts js -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/datepicker.min.js"></script>
-    <script src="/js/i18n/datepicker.en.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/jquery.range-min.js"></script>
-    <script src="/vendor/OwlCarousel/owl.carousel.js"></script>
-    <script src="/vendor/semantic/semantic.min.js"></script>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span
+            class="btn-scroll-top-tooltip text-muted font-size-sm mr-2"></span><i
+            class="btn-scroll-top-icon fa fa-arrow-up"> </i></a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <!-- Main theme script-->
     <script src="/js/custom1.js"></script>
-
+    <script src="/js/theme.min.js"></script>
 </body>
 
 </html>

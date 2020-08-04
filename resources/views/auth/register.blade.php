@@ -5,100 +5,88 @@
     document.title = 'Register | SKILLPARK - Hire Expert Freelancers Any Time';
 </script>
 
-<!-- Register -->
-<main class="browse-section">
-    <div class="container">
-        <div class="row  ">
-            <div class="col-xl-7 justify-content-center align-items-center d-flex vh100">
-                <img src="/images/svg/ipad.svg" class="banner" style="width:500px">
-            </div>
-            <div class="col-xl-4 col-lg-12 col-sm-12 justify-content-center align-items-center">
-                <div class="osahan-login" style="font-size: 13px !important;">
-                    <div class="text-center mb-4">
-                        <a href="{{ url('/') }}"><img src="/images/logo/block-logo.svg" style="width: 50px;" alt=""></a>
-                        <h5 class="font-weight-bold mt-3" style="font-size: 1.25rem;">Join Skillpark</h5>
-                        <p class="text-muted" style="color:#6c757d;font-size:12px">Connect with the verified businesses and clients and make the most of your freelancing
-                            life. </p>
-                    </div>
-                    <form method="POST" action="{{ route('register') }}">
+<!-- Page content-->
+<!-- Background image-->
+<div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover"
+    style="top: 0; right: 0; background-image: url(/images/add/login.jpg);"></div>
+<!-- Actual content-->
+<section class="container d-flex align-items-center pt-7 pb-3 pb-md-4" style="flex: 1 0 auto;">
+    <div class="w-100 pt-3">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 offset-lg-1">
+                <!-- Sign in view-->
+                <div class="cs-view show" id="signin-view">
+                    <h1 class="h2">Join Skillpark</h1>
+                    <p class="font-size-ms text-muted mb-4">Connect with the verified businesses and clients and make
+                        the most of your freelancing
+                        life.</p>
+                    <form class="needs-validation" method="POST" action="{{ route('register') }}" novalidate>
                         @csrf
-                        <div class="form-row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label class="mb-1">Name</label>
-                                    <div class="position-relative icon-form-control">
-                                        <i class="fas fa-user position-absolute"></i>
-                                        <input type="text" name="name" value="{{ old('name') }}" class="form-control">
-                                        @error('name')
-                                        <span class="feedback" style="color: red;" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="form-group">
-                            <label class="mb-1">Email</label>
-                            <div class="position-relative icon-form-control">
-                                <i class="fa fa-envelope position-absolute"></i>
-                                <input type="email" name="email" value="{{ old('email') }}" class="form-control">
-                                @error('email')
-                                <span class="feedback" style="color: red;" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+
+                        @error('name')
+                        <span class="feedback" style="color:red;font-size:13px" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <div class="input-group-overlay form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                                        class="fa fa-user fa-sm"></i></span></div>
+                            <input class="form-control prepended-form-control" type="text" name="name"
+                                value="{{ old('name') }}" placeholder="Full Name" required>
+                        </div>
+
+                        @error('email')
+                        <span class="feedback" style="color:red;font-size:13px" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <div class="input-group-overlay form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                                        class="fa fa-envelope fa-sm"></i></span></div>
+                            <input class="form-control prepended-form-control" type="email" name="email"
+                                value="{{ old('email') }}" placeholder="Email Address" required>
+                        </div>
+
+                        @error('password')
+                        <span class="feedback" style="color:red;font-size:13px" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <div class="input-group-overlay cs-password-toggle form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                                        class="fa fa-lock fa-sm"></i></span></div>
+                            <input class="form-control prepended-form-control" name="password" type="password"
+                                placeholder="Password" required>
+                            <label class="cs-password-toggle-btn">
+                                <input class="custom-control-input" type="checkbox"><span class="sr-only">Show
+                                    password</span>
+                            </label>
                         </div>
                         <div class="form-group">
-                            <label class="mb-1">Password (8 or more characters)</label>
-                            <div class="position-relative icon-form-control">
-                                <i class="fas fa-key position-absolute"></i>
-                                <input type="password" name="password" class="form-control">
-                                @error('password')
-                                <span class="feedback" style="color: red;" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                            <label class="mb-1">You agree to the SkillPark Inc. <a href="{{ url('agreement') }}"
+                                    style="color: #1dbf73;">User Agreement</a>, <a style="color: #1dbf73;"
+                                    href="{{ url('policy') }}">Privacy Policy</a>, and <a href="{{ url('cookies') }}"
+                                    style="color: #1dbf73;">Cookie Policy</a>.</label>
                         </div>
-                        <div class="form-group">
-                            <label class="mb-1">You agree to the SkillPark Inc. <a href="{{ url('agreement') }}" style="color: #1dbf73;">User Agreement</a>, <a style="color: #1dbf73;" href="{{ url('policy') }}">Privacy Policy</a>, and <a href="{{ url('cookies') }}" style="color: #1dbf73;">Cookie Policy</a>.</label>
-                        </div>
-                        <button class="btn btn-success btn-block text-uppercase" type="submit"> Agree & Join </button>
-                        <div class="text-center mt-3 border-bottom pb-3">
-                            <p class="small text-muted">or Register via</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'google') }}"> <button type="button" class="btn btn-outline-google btn-block"><i class="fab fa-google"></i>
-                                            Google</button></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'facebook') }}"> <button type="button" class="btn btn-outline-facebook btn-block"><i class="fab fa-facebook"></i>
-                                            Facebook</button></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'twitter') }}"><button type="button" class="btn btn-outline-twitter btn-block"><i class="fab fa-twitter"></i>
-                                            Twitter</button></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'github') }}"> <button type="button" class="btn btn-outline-github btn-block"><i class="fab fa-github"></i>
-                                            GitHub</button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-3 d-flex align-item-center">
-                            <a href="{{ route('password.update') }}">Forgot password?</a>
-                            <span class="ml-auto"> Already on Skillpark? <a href="{{ route('login') }}">Sign in</a></span>
-                        </div>
+                        <button class="btn btn-primary btn-block" type="submit">Agree &amp; Join</button>
+                        <p class="font-size-sm pt-3 mb-0">Already a Skillpark member? <a href='{{ route('login') }}'
+                                class='font-weight-medium'>Sign in</a></p>
                     </form>
+                </div>
+                <div class="border-top text-center mt-4 pt-4">
+                    <p class="font-size-sm font-weight-medium text-heading">Or register via</p><a
+                        class="social-btn sb-facebook sb-outline sb-lg mx-1 mb-2"
+                        href="{{ route('social.oauth', 'facebook') }}"><i class="fa fa-facebook"></i></a><a
+                        class="social-btn sb-twitter sb-outline sb-lg mx-1 mb-2"
+                        href="{{ route('social.oauth', 'twitter') }}"><i class="fa fa-twitter"></i></a><a
+                        class="social-btn sb-github sb-outline sb-lg mx-1 mb-2"
+                        href="{{ route('social.oauth', 'github') }}"><i class="fa fa-github"></i></a><a
+                        class="social-btn sb-google sb-outline sb-lg mx-1 mb-2"
+                        href="{{ route('social.oauth', 'google') }}"><i class="fa fa-google"></i></a>
                 </div>
             </div>
         </div>
     </div>
-</main>
-<!-- End Register -->
+</section>
 
 @endsection

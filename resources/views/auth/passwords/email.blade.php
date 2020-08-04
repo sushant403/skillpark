@@ -5,46 +5,39 @@
     document.title = 'Reset Password | SKILLPARK - Hire Expert Freelancers Any Time';
 </script>
 
-<!-- Login -->
-<main class="browse-section" style="padding: 30;">
-    <div class="container">
-        <div class="row justify-content-center d-flex vh-100">
-            <div class="col-lg-4 mx-auto">
-                <div class="osahan-login py-4" style="font-size: 13px !important;">
-                    <div class="text-center mb-4">
-                        <a href="{{ route('login') }}"><img src="{{ asset('images/logo/block-logo.svg') }}" alt=""></a>
-                        <h5 class="font-weight-bold mt-3">First, let's find your account</h5>
-                        <p class="text-muted">Please enter your email address</p>
-
-                        @if (session('status'))
-                        <div class="notification notice" style="text-align: center;" role="alert">
-                            <span class="feedback" style="color:#1bb7bb;font-weight:600" role="alert"> {{ session('status') }} </span>
-                        </div>
-                        @endif
+<div class="container py-5 py-sm-6 py-md-7">
+    <div class="row justify-content-center pt-4">
+        <div class="col-lg-7 col-md-9 col-sm-11">
+            <h1 class="h2 pb-3">Forgot your password?</h1>
+            <p class="font-size-sm">Change your password in three easy steps. This helps to keep your new password
+                secure.</p>
+            <ul class="list-unstyled font-size-sm pb-1 mb-4">
+                <li><span class="text-primary font-weight-semibold mr-1">1.</span>Fill in your email address below.</li>
+                <li><span class="text-primary font-weight-semibold mr-1">2.</span>We'll send you a verification email.
+                </li>
+                <li><span class="text-primary font-weight-semibold mr-1">3.</span>Follow the provided link and set the
+                    new secure password..</li>
+            </ul>
+            <div class="bg-secondary rounded-lg px-3 py-4 p-sm-4">
+                <form method="POST" action="{{ route('password.email') }}" class="needs-validation p-2" novalidate >
+                    @csrf
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="recovery-email">Enter your email address</label>
+                        <input class="form-control" type="email" name="email" value="{{ old('email') }}"
+                            autocomplete="off" required id="recovery-email">
+                    @error('email')
+                    <span class="feedback" style="color:red;font-size:13px" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                        <div class="invalid-feedback">Please provide a valid email address!</div>
                     </div>
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-                        <div class="form-group">
-                            <label class="mb-1">Email Address</label>
-                            <div class="position-relative icon-form-control">
-                                <i class="fas fa-user position-absolute"></i>
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" autocomplete="off">
-                                @error('email')
-                                <span class="feedback" style="color:red;" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <button class="btn btn-success btn-block text-uppercase" type="submit"> Find account </button>
-                    </form>
-                </div>
+                    <button class="btn btn-primary" type="submit">Request Verification Link</button>
+                </form>
             </div>
         </div>
     </div>
-    </div>
-</main>
-<!-- End Login -->
+</div>
 
 @endsection

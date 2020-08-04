@@ -5,85 +5,71 @@
     document.title = 'Login | SKILLPARK - Hire Expert Freelancers Any Time';
 </script>
 
-<!-- Login -->
-<main class="browse-section justify-content-center">
-    <div class="container">
+<!-- Page content-->
+<!-- Background image-->
+<div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover"
+    style="top: 0; right: 0; background-image: url(/images/add/login.jpg);"></div>
+<!-- Actual content-->
+<section class="container d-flex align-items-center pt-7 pb-3 pb-md-4" style="flex: 1 0 auto;">
+    <div class="w-100 pt-3">
         <div class="row">
-            <div class="col-xl-7 justify-content-center align-items-center d-flex vh100">
-                <img src="/images/svg/login.svg" class="banner" style="width:500px">
-            </div>
-            <div class="col-xl-4 col-lg-12 col-sm-12 justify-content-center align-items-center">
-                <div class="osahan-login" style="font-size: 13px !important;">
-                    <div class="text-center mb-4">
-                        <a href="{{ url('/') }}"><img src="/images/logo/block-logo.svg" style="width: 50px;" alt=""></a>
-                        <h5 class="font-weight-bold mt-3">Welcome Back</h5>
-                        <p class="text-muted" style="font-size: 12px;">Don't miss your next opportunity. Sign in to stay updated on your freelancing world.</p>
-                    </div>
-
-                    <form method="POST" action="{{ route('login') }}">
+            <div class="col-lg-4 col-md-6 offset-lg-1">
+                <!-- Sign in view-->
+                <div class="cs-view show" id="signin-view">
+                    <h1 class="h2">Welcome Back</h1>
+                    <p class="font-size-ms text-muted mb-4">Don't miss your next opportunity. Sign in to stay updated on your freelancing world.</p>
+                    <form class="needs-validation" method="POST" action="{{ route('login') }}" novalidate>
                         @csrf
-
-                        <div class="form-group">
-                            <label class="mb-1">Email Address</label>
-                            <div class="position-relative icon-form-control">
-                                <i class="fas fa-user position-absolute"></i>
-                                <input type="email" name="email" value="{{ old('email') }}" class="form-control">
-                                @error('email')
-                                <span class="feedback" style="color:red;" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                        
+                        @error('email')
+                        <span class="feedback" style="color:red;font-size:13px" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <div class="input-group-overlay form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                                        class="fa fa-envelope fa-sm"></i></span></div>
+                            <input class="form-control prepended-form-control" type="email" name="email" value="{{ old('email') }}" placeholder="Email"
+                                required>
                         </div>
-                        <div class="form-group">
-                            <label class="mb-1">Password</label>
-                            <div class="position-relative icon-form-control">
-                                <i class="fas fa-key position-absolute"></i>
-                                <input type="password" name="password" id="password" class="form-control" />
-                                @error('password')
-                                <span class="feedback" style="color:red;" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                        @error('password')
+                        <span class="feedback" style="color:red;font-size:13px" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <div class="input-group-overlay cs-password-toggle form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                                        class="fa fa-lock fa-sm"></i></span></div>
+                            <input class="form-control prepended-form-control" name="password" type="password" placeholder="Password"
+                                required>
+                            <label class="cs-password-toggle-btn">
+                                <input class="custom-control-input" type="checkbox"><span class="sr-only">Show
+                                    password</span>
+                            </label>
                         </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} >
-                            <label class="custom-control-label" for="remember">{{ __('Remember Me') }}</label>
+                        <div class="d-flex justify-content-between align-items-center form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" name="remember" {{ old('remember') ? 'checked' : '' }} type="checkbox" id="keep-signed-2">
+                                <label class="custom-control-label" for="keep-signed-2">Keep me signed in</label>
+                            </div><a class="nav-link-style font-size-ms" href="{{ route('password.update') }}">Forgot
+                                password?</a>
                         </div>
-                        <button class="btn btn-success btn-block text-uppercase" type="submit"> Sign in </button>
-                        <div class="text-center mt-3 border-bottom pb-3">
-                            <p class="small text-muted">or login with</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'google') }}"> <button type="button" class="btn btn-outline-google btn-block"><i class="fab fa-google"></i> Google</button></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'facebook') }}"> <button type="button" class="btn btn-outline-facebook btn-block"><i class="fab fa-facebook"></i> Facebook</button></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'twitter') }}"><button type="button" class="btn btn-outline-twitter btn-block"><i class="fab fa-twitter"></i> Twitter</button></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="{{ route('social.oauth', 'github') }}"> <button type="button" class="btn btn-outline-github btn-block"><i class="fab fa-github"></i> GitHub</button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-3 d-flex align-item-center">
-                            @if (Route::has('password.request'))
-                            <a href="{{ route('password.request') }}">
-                                @endif
-                                Forgot password?</a>
-                            <span class="ml-auto"> New to Skillpark? <a href="{{ route('register') }}">Join now</a></span>
-                        </div>
+                        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+                        <p class="font-size-sm pt-3 mb-0">Don't have an account? <a href='{{ route('register') }}' class='font-weight-medium'>Sign up</a></p>
                     </form>
+                </div>
+                <div class="border-top text-center mt-4 pt-4">
+                    <p class="font-size-sm font-weight-medium text-heading">Or sign in with</p><a
+                        class="social-btn sb-facebook sb-outline sb-lg mx-1 mb-2" href="{{ route('social.oauth', 'facebook') }}"><i
+                            class="fa fa-facebook"></i></a><a class="social-btn sb-twitter sb-outline sb-lg mx-1 mb-2"
+                        href="{{ route('social.oauth', 'twitter') }}"><i class="fa fa-twitter"></i></a><a
+                        class="social-btn sb-github sb-outline sb-lg mx-1 mb-2" href="{{ route('social.oauth', 'github') }}"><i
+                            class="fa fa-github"></i></a><a class="social-btn sb-google sb-outline sb-lg mx-1 mb-2"
+                        href="{{ route('social.oauth', 'google') }}"><i class="fa fa-google"></i></a>
                 </div>
             </div>
         </div>
     </div>
-</main>
-<!-- End Login -->
+</section>
 
 @endsection

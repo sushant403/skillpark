@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('tagline')->nullable();
             $table->foreignId('city_id')->nullable();
 
-            $table->string('avatar')->default('default.jpg');
+            $table->string('avatar')->default('default.png');
             $table->string('provider', 20)->nullable();
             $table->string('provider_id')->nullable();
             $table->string('access_token')->nullable();
