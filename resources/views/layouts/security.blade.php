@@ -113,6 +113,7 @@
     <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
     <link rel="stylesheet" media="screen" href="/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
     <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="/css/stream.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">
 </head>
 <!-- Body-->
@@ -177,6 +178,7 @@
     <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
     <!-- Main theme script-->
+    <script src="/js/stream.js"></script>
     <script src="/js/theme.min.js"></script>
 </body>
 

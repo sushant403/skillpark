@@ -63,7 +63,7 @@
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             font-weight: normal;
-            color: #1bb7bb;
+            color: #666;
         }
 
         .cs-page-spinner {
@@ -72,7 +72,7 @@
             height: 2.75rem;
             margin-bottom: .75rem;
             vertical-align: text-bottom;
-            border: .15em solid #1bb7bb;
+            border: .15em solid #2adb9e;
             border-right-color: transparent;
             border-radius: 50%;
             -webkit-animation: spinner .75s linear infinite;
@@ -113,6 +113,7 @@
     <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
     <link rel="stylesheet" media="screen" href="/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
     <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="/css/stream.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">
 </head>
 <!-- Body-->
@@ -143,12 +144,39 @@
 
                     <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
                         href="{{ route('register') }}">Join</a>
-                    @else
-                    <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
-                        href="{{ route('home') }}">Dashboard</a>
-                    @endguest
-                </div>
+                
+                @else
+                <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+                    <div class="navbar-tool dropdown"><a class="navbar-tool-icon-box" href="{{ url('dashboard') }}"><img
+                                class="navbar-tool-icon-box-img" src="{{ Auth::user()->avatar }}"
+                                alt="Avatar" /></a><a class="navbar-tool-label dropdown-toggle"
+                            href="account-profile"><small>Hello,</small>{{ Auth::user()->name }}</a>
+                        <ul class="dropdown-menu dropdown-menu-right" style="width: 15rem;">
+                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-messages"><i
+                                        class="fa fa-envelope font-size-base opacity-60 mr-2"></i>Messages<span
+                                        class="nav-indicator"></span><span
+                                        class="ml-auto font-size-xs text-muted">1</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-followers"><i
+                                        class="fa fa-users font-size-base opacity-60 mr-2"></i>Followers<span
+                                        class="ml-auto font-size-xs text-muted">34</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-reviews"><i
+                                        class="fa fa-star font-size-base opacity-60 mr-2"></i>Reviews<span
+                                        class="ml-auto font-size-xs text-muted">15</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center"  href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();"">
+                                <i class="fa fa-sign-out font-size-base opacity-60 mr-2"></i>Sign out</a></li>
 
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                        </ul>
+                    </div>
+                </div>
+                @endguest
+            </div>
 
                 <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
                     <div class="cs-offcanvas-cap navbar-box-shadow">

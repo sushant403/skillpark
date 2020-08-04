@@ -21,7 +21,7 @@
                     <button class="btn btn-success" type="submit">Search</button>
                 </form>
             </div>
-            <div class="col-xl-6 col-lg-6 pt-lg-3 d-none d-lg-block">
+            <div class="col-xl-5 offset-1 col-lg-6 pt-lg-3 d-none d-lg-block">
                 <div class="cs-carousel bg-size-cover mx-auto pt-6 pb-2">
                     <div class="position-relative">
                         <div class="cs-frame-browser-label">

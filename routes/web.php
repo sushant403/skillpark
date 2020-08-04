@@ -10,7 +10,9 @@ Route::get('/creators', function () {return view('about.creators');});
 
 Route::get('/contact', function () {return view('about.contact');});
 
-Route::get('/policy', function () {return view('about.terms');});
+Route::get('/policy', function () {return view('about.policy');});
+
+Route::get('/terms', function () {return view('about.terms');});
 
 
 // |=================LOGGED IN USER==========================|

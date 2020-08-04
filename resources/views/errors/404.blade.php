@@ -2,19 +2,21 @@
 
 @section('content')
 <!-- 404 Page -->
-<section class="py-5 bg-white border-top border-bottom">
-    <div class="container">
-        <div class="row" style="padding-top: 6rem">
-            <div class="col-lg-8 col-md-8 mx-auto text-center">
-                <h1><img class="img-fluid" src="/images/404.png" alt="404" width="400"></h1>
-                <h1>Sorry! Page not found.</h1>
-                <p class="land">Unfortunately the page you are looking for has been moved or deleted.</p>
-                <div class="mt-5">
-                    <a href="{{ url('/') }}" class="btn btn-success"><i class="mdi mdi-home"></i> GO TO HOME PAGE</a>
-                </div>
-            </div>
+      <div class="container d-flex flex-column justify-content-center pt-5 mt-n6" style="flex: 1 0 auto;">
+        <div class="pt-7 pb-5">
+          <div class="text-center mb-2 pb-4">
+            <h1 class="mb-grid-gutter"><img class="d-inline-block pt-4" width="270" src="images/svg/404.svg" alt=""/><span class="sr-only">Error 404</span><span class="d-block pt-3 font-size-sm font-weight-semibold text-danger">Error code: 404</span>
+            </h1>
+            <h2>Page not found!</h2>
+            <p class="pb-2">It seems we can’t find the page you are looking for.</p><a class="btn btn-translucent-primary mr-3" href="{{ url('/') }}">Go to homepage</a><span>Or try</span>
+          </div>
+          <div class="input-group-overlay mx-auto" style="max-width: 390px;">
+            <div class="input-group-prepend-overlay"><span class="input-group-text"><i class="fa fa-search"></i></span></div>
+            <input class="form-control prepended-form-control" type="text" placeholder="Search">
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </main>
+
 <!-- End 404 Page -->
 @endsection
