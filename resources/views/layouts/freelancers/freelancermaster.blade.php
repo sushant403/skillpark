@@ -138,13 +138,33 @@
                         class="d-none d-lg-block" width="143" src="/images/logo/biglogo.svg" alt="Around" /><img
                         class="d-lg-none" width="40" src="/images/logo/logo.svg" alt="Around" /></a>
 
-
-                <div class="d-flex align-items-center order-lg-3">
-                    <img src="{{ Auth::user()->avatar }}" style="max-width: 60px">
-                    <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
-                        href="{{ route('home') }}">Profile</a>
+                <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+                    <div class="navbar-tool dropdown"><a class="navbar-tool-icon-box" href="{{ url('dashboard') }}"><img
+                                class="navbar-tool-icon-box-img" src="{{ Auth::user()->avatar }}"
+                                alt="Avatar" /></a><a class="navbar-tool-label dropdown-toggle"
+                            href="account-profile.html"><small>Hello,</small>{{ Auth::user()->name }}</a>
+                        <ul class="dropdown-menu dropdown-menu-right" style="width: 15rem;">
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-messages.html"><i
+                                        class="fe-message-square font-size-base opacity-60 mr-2"></i>Messages<span
+                                        class="nav-indicator"></span><span
+                                        class="ml-auto font-size-xs text-muted">1</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-followers.html"><i
+                                        class="fe-users font-size-base opacity-60 mr-2"></i>Followers<span
+                                        class="ml-auto font-size-xs text-muted">34</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-reviews.html"><i
+                                        class="fe-star font-size-base opacity-60 mr-2"></i>Reviews<span
+                                        class="ml-auto font-size-xs text-muted">15</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="signin-illustration.html"><i
+                                        class="fe-log-out font-size-base opacity-60 mr-2"></i>Sign out</a></li>
+                        </ul>
+                    </div>
                 </div>
-
 
                 <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
                     <div class="cs-offcanvas-cap navbar-box-shadow">

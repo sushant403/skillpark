@@ -63,7 +63,7 @@
 
 
                                 <div class="header-notifications-trigger">
-                                    <a href="#"><i class="icon-feather-message-square"></i><span>1</span></a>
+                                    <a href="#"><i class="icon-Font Awesome 5 Free-message-square"></i><span>1</span></a>
                                 </div>
 
                                 <!-- Dropdown -->
@@ -72,7 +72,7 @@
                                     <div class="header-notifications-headline">
                                         <h4>Messages</h4>
                                         <button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-                                            <i class="icon-feather-check-square"></i>
+                                            <i class="icon-Font Awesome 5 Free-check-square"></i>
                                         </button>
                                     </div>
 
