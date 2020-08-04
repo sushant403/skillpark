@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Skillpark Inc.
+    <title>Skillpark Inc. | Hire Expert Freelancers Any Time
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
-        content="bootstrap, business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
+        content="business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
     <meta name="author" content="Skillpark Inc.">
     <!-- Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,12 +108,13 @@
     <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
     <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="/css/stream.css">
+    <link rel="stylesheet" media="screen" href="/vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
     <link rel="stylesheet" media="screen" href="/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
     <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="/css/stream.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">
 </head>
 <!-- Body-->
@@ -144,39 +145,43 @@
 
                     <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
                         href="{{ route('register') }}">Join</a>
-                
-                @else
-                <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
-                    <div class="navbar-tool dropdown"><a class="navbar-tool-icon-box" href="{{ url('dashboard') }}"><img
-                                class="navbar-tool-icon-box-img" src="{{ Auth::user()->avatar }}"
-                                alt="Avatar" /></a><a class="navbar-tool-label dropdown-toggle"
-                            href="account-profile"><small>Hello,</small>{{ Auth::user()->name }}</a>
-                        <ul class="dropdown-menu dropdown-menu-right" style="width: 15rem;">
-                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-messages"><i
-                                        class="fa fa-envelope font-size-base opacity-60 mr-2"></i>Messages<span
-                                        class="nav-indicator"></span><span
-                                        class="ml-auto font-size-xs text-muted">1</span></a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-followers"><i
-                                        class="fa fa-users font-size-base opacity-60 mr-2"></i>Followers<span
-                                        class="ml-auto font-size-xs text-muted">34</span></a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="dashboard-reviews"><i
-                                        class="fa fa-star font-size-base opacity-60 mr-2"></i>Reviews<span
-                                        class="ml-auto font-size-xs text-muted">15</span></a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center"  href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"">
-                                <i class="fa fa-sign-out font-size-base opacity-60 mr-2"></i>Sign out</a></li>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                        </ul>
+                    @else
+                    <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+                        <div class="navbar-tool dropdown"><a class="navbar-tool-icon-box"
+                                href="{{ url('dashboard') }}"><img class="navbar-tool-icon-box-img"
+                                    src="{{ Auth::user()->avatar }}" alt="Avatar" /></a><a
+                                class="navbar-tool-label dropdown-toggle"
+                                href="account-profile"><small>Hello,</small>{{ Auth::user()->name }}</a>
+                            <ul class="dropdown-menu dropdown-menu-right" style="width: 15rem;">
+                                <li><a class="dropdown-item d-flex align-items-center"
+                                        href="{{ url('coming-soon') }}"><i
+                                            class="fa fa-envelope font-size-base opacity-60 mr-2"></i>Messages<span
+                                            class="nav-indicator"></span><span
+                                            class="ml-auto font-size-xs text-muted">1</span></a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item d-flex align-items-center" href="{{ url('dashboard') }}"><i
+                                            class="fa fa-dashcube font-size-base opacity-60 mr-2"></i>Dashboard<span
+                                            class="ml-auto font-size-xs text-muted">34</span></a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item d-flex align-items-center" href="{{ url('settings') }}"><i
+                                            class="fa fa-cog font-size-base opacity-60 mr-2"></i>Settings<span
+                                            class="ml-auto font-size-xs text-muted">15</span></a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();"">
+                                <i class=" fa fa-sign-out font-size-base opacity-60 mr-2"></i>Sign out</a></li>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            </ul>
+                        </div>
                     </div>
+                    @endguest
                 </div>
-                @endguest
-            </div>
 
                 <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
                     <div class="cs-offcanvas-cap navbar-box-shadow">
@@ -195,10 +200,10 @@
                                             Skillpark</a><a class="dropdown-item" href="g">Hire
                                             Freelancers</a><a class="dropdown-item" href="age">Post
                                             Project</a>
-                                        <a class="dropdown-item" href="rectory">Explore
+                                        <a class="dropdown-item" href="">Explore
                                             Skills / Categories</a><a class="dropdown-item" href="">Post a Job</a><a
                                             class="dropdown-item" href="">Advertisement</a></div>
-                                    <div class="dropdown-column"><a class="dropdown-item" href="dget">Creators</a><a
+                                    <div class="dropdown-column"><a class="dropdown-item" href="">Creators</a><a
                                             class="dropdown-item" href="">Payment Methods</a><a class="dropdown-item"
                                             href="">Join Skillpark</a>
                                         <a class="dropdown-item" href="">Events and Blogs</a>
@@ -223,20 +228,21 @@
                                             href="portfolio-style-1">UX Design</a><a class="dropdown-item"
                                             href="portfolio-style-2">Video Designing</a><a class="dropdown-item"
                                             href="portfolio-style-3">Graphic Design</a>
-                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Art & illustration
-                                            </a><a class="dropdown-item"
-                                            href="portfolio-single-side-gallery-list">Audio Production</a><a class="dropdown-item" href="portfolio-single-carousel">Photography
-                                            </a>
-                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Motion Graphics</a>
+                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Art &
+                                            illustration
+                                        </a><a class="dropdown-item" href="portfolio-single-side-gallery-list">Audio
+                                            Production</a><a class="dropdown-item"
+                                            href="portfolio-single-carousel">Photography
+                                        </a>
+                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Motion
+                                            Graphics</a>
                                     </div>
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Sales and Analytics</h5><a class="dropdown-item"
-                                            href="shop-ls">SEO</a><a class="dropdown-item"
-                                            href="shop-rs">Email Automation</a><a class="dropdown-item"
-                                            href="shop-ns">Public Relation</a><a class="dropdown-item"
-                                            href="shop-single">Digital Marketing</a><a class="dropdown-item"
-                                            href="checkout">Community Management</a><a class="dropdown-item"
-                                            href="order-tracking">Market Research</a>
+                                            href="">SEO</a><a class="dropdown-item" href="">Email Automation</a><a
+                                            class="dropdown-item" href="">Public Relation</a><a class="dropdown-item"
+                                            href="">Digital Marketing</a><a class="dropdown-item" href="">Community
+                                            Management</a><a class="dropdown-item" href="">Market Research</a>
                                     </div>
                                 </div>
                             </li>
@@ -246,21 +252,21 @@
                                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
                                             data-toggle="dropdown">Popular Skills</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="dashboard-orders">Front End Developer</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-sales">Back End Developer</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-messages">Full Stack Developer</a>
+                                            <li><a class="dropdown-item" href="">Front End Developer</a></li>
+                                            <li><a class="dropdown-item" href="">Back End Developer</a></li>
+                                            <li><a class="dropdown-item" href="">Full Stack Developer</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="dashboard-followers">Python</a>
+                                            <li><a class="dropdown-item" href="">Python</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="dashboard-reviews">C#</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-favorites">PHP</a>
+                                            <li><a class="dropdown-item" href="">C#</a></li>
+                                            <li><a class="dropdown-item" href="">PHP</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="signin-illustration">Freelancers</a>
+                                    <li><a class="dropdown-item" href="">Freelancers</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="signin-image">Companies</a></li>
-                                    <li><a class="dropdown-item" href="signin-signup">Trending Jobs</a></li>
+                                    <li><a class="dropdown-item" href="">Companies</a></li>
+                                    <li><a class="dropdown-item" href="">Trending Jobs</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown"><a class="nav-link" href="">Enterprise</a>

@@ -13,7 +13,7 @@
 
                 @if (session('resent'))
                 <div class="alert alert-info" role="alert">
-                    {{ __('A fresh verification link has been sent to your email address.') }}
+                    {{ __('A fresh verification link has been emailed.') }}
                 </div>
                 @endif
 

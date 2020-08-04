@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Skillpark Inc.
+    <title>Skillpark Inc. | Hire Expert Freelancers Any Time
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
-        content="bootstrap, business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
+        content="business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
     <meta name="author" content="Skillpark Inc.">
     <!-- Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,7 +63,7 @@
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             font-weight: normal;
-            color: #1bb7bb;
+            color: #666;
         }
 
         .cs-page-spinner {
@@ -72,7 +72,7 @@
             height: 2.75rem;
             margin-bottom: .75rem;
             vertical-align: text-bottom;
-            border: .15em solid #1bb7bb;
+            border: .15em solid #2adb9e;
             border-right-color: transparent;
             border-radius: 50%;
             -webkit-animation: spinner .75s linear infinite;
@@ -108,13 +108,14 @@
     <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
     <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="/css/stream.css">
+    <link rel="stylesheet" media="screen" href="/vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
     <link rel="stylesheet" media="screen" href="/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
     <!-- Main Theme Styles + Bootstrap-->
-    <link href="/css/responsive.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="/css/style.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">
 </head>
 <!-- Body-->
@@ -138,12 +139,50 @@
                         class="d-lg-none" width="40" src="/images/logo/logo.svg" alt="Around" /></a>
 
 
-                        <div class="d-flex align-items-center order-lg-3">
-                            <img src="{{ Auth::user()->avatar }}" style="max-width: 60px">
-                            <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
-                                href="{{ route('home') }}">Profile</a>
-                        </div>
+                <div class="d-flex align-items-center order-lg-3">
+                    @guest
+                    <a class="nav-link-style font-size-sm text-nowrap" href="{{ route('login') }}"><i
+                            class="fa fa-user font-size-xl mr-2"></i>Sign in</a>
 
+                    <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
+                        href="{{ route('register') }}">Join</a>
+
+                    @else
+                    <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+                        <div class="navbar-tool dropdown"><a class="navbar-tool-icon-box"
+                                href="{{ url('dashboard') }}"><img class="navbar-tool-icon-box-img"
+                                    src="{{ Auth::user()->avatar }}" alt="Avatar" /></a><a
+                                class="navbar-tool-label dropdown-toggle"
+                                href="account-profile"><small>Hello,</small>{{ Auth::user()->name }}</a>
+                            <ul class="dropdown-menu dropdown-menu-right" style="width: 15rem;">
+                                <li><a class="dropdown-item d-flex align-items-center"
+                                        href="{{ url('coming-soon') }}"><i
+                                            class="fa fa-envelope font-size-base opacity-60 mr-2"></i>Messages<span
+                                            class="nav-indicator"></span><span
+                                            class="ml-auto font-size-xs text-muted">1</span></a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item d-flex align-items-center" href="{{ url('dashboard') }}"><i
+                                            class="fa fa-dashcube font-size-base opacity-60 mr-2"></i>Dashboard<span
+                                            class="ml-auto font-size-xs text-muted">34</span></a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item d-flex align-items-center" href="{{ url('settings') }}"><i
+                                            class="fa fa-cog font-size-base opacity-60 mr-2"></i>Settings<span
+                                            class="ml-auto font-size-xs text-muted">15</span></a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();"">
+                                <i class=" fa fa-sign-out font-size-base opacity-60 mr-2"></i>Sign out</a></li>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                    @endguest
+                </div>
 
                 <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
                     <div class="cs-offcanvas-cap navbar-box-shadow">
@@ -162,10 +201,10 @@
                                             Skillpark</a><a class="dropdown-item" href="g">Hire
                                             Freelancers</a><a class="dropdown-item" href="age">Post
                                             Project</a>
-                                        <a class="dropdown-item" href="rectory">Explore
+                                        <a class="dropdown-item" href="">Explore
                                             Skills / Categories</a><a class="dropdown-item" href="">Post a Job</a><a
                                             class="dropdown-item" href="">Advertisement</a></div>
-                                    <div class="dropdown-column"><a class="dropdown-item" href="dget">Creators</a><a
+                                    <div class="dropdown-column"><a class="dropdown-item" href="">Creators</a><a
                                             class="dropdown-item" href="">Payment Methods</a><a class="dropdown-item"
                                             href="">Join Skillpark</a>
                                         <a class="dropdown-item" href="">Events and Blogs</a>
@@ -177,37 +216,34 @@
                                 <div class="dropdown-menu">
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Technology and IT</h5><a class="dropdown-item"
-                                            href="blog-grid-rs">Grid Right Sidebar</a><a class="dropdown-item"
-                                            href="blog-grid-ls">Grid Left Sidebar</a><a class="dropdown-item"
-                                            href="blog-grid-ns">Grid No Sidebar</a>
-                                        <a class="dropdown-item" href="blog-list-rs">List Right Sidebar</a><a
-                                            class="dropdown-item" href="blog-list-ls">List Left Sidebar</a><a
-                                            class="dropdown-item" href="blog-list-ns">List No Sidebar</a><a
-                                            class="dropdown-item" href="blog-single-rs">Single Post Right
-                                            Sidebar</a>
+                                            href="blog-grid-rs">Networking</a><a class="dropdown-item"
+                                            href="blog-grid-ls">Engineering</a><a class="dropdown-item"
+                                            href="blog-grid-ns">Data Science & Analytics</a>
+                                        <a class="dropdown-item" href="blog-list-rs">Translation</a><a
+                                            class="dropdown-item" href="blog-list-ls">Cloud Computing</a><a
+                                            class="dropdown-item" href="blog-list-ns">Artificial Intelligence</a><a
+                                            class="dropdown-item" href="blog-single-rs">Software Development</a>
                                     </div>
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Design and Creatives</h5><a class="dropdown-item"
-                                            href="portfolio-style-1">Grid Style 1</a><a class="dropdown-item"
-                                            href="portfolio-style-2">Grid Style 2</a><a class="dropdown-item"
-                                            href="portfolio-style-3">Grid Style 3</a>
-                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Project
-                                            Side
-                                            Gallery (Grid)</a><a class="dropdown-item"
-                                            href="portfolio-single-side-gallery-list">Project Side Gallery
-                                            (List)</a><a class="dropdown-item" href="portfolio-single-carousel">Project
-                                            Carousel</a>
-                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Project Wide
-                                            Gallery</a>
+                                            href="portfolio-style-1">UX Design</a><a class="dropdown-item"
+                                            href="portfolio-style-2">Video Designing</a><a class="dropdown-item"
+                                            href="portfolio-style-3">Graphic Design</a>
+                                        <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Art &
+                                            illustration
+                                        </a><a class="dropdown-item" href="portfolio-single-side-gallery-list">Audio
+                                            Production</a><a class="dropdown-item"
+                                            href="portfolio-single-carousel">Photography
+                                        </a>
+                                        <a class="dropdown-item" href="portfolio-single-wide-gallery">Motion
+                                            Graphics</a>
                                     </div>
                                     <div class="dropdown-column mb-2 mb-lg-0">
                                         <h5 class="dropdown-header">Sales and Analytics</h5><a class="dropdown-item"
-                                            href="shop-ls">Grid Left Sidebar</a><a class="dropdown-item"
-                                            href="shop-rs">Grid Right Sidebar</a><a class="dropdown-item"
-                                            href="shop-ns">Grid No Sidebar</a><a class="dropdown-item"
-                                            href="shop-single">Single Product</a><a class="dropdown-item"
-                                            href="checkout">Cart &amp; Checkout</a><a class="dropdown-item"
-                                            href="order-tracking">Order Tracking</a>
+                                            href="">SEO</a><a class="dropdown-item" href="">Email Automation</a><a
+                                            class="dropdown-item" href="">Public Relation</a><a class="dropdown-item"
+                                            href="">Digital Marketing</a><a class="dropdown-item" href="">Community
+                                            Management</a><a class="dropdown-item" href="">Market Research</a>
                                     </div>
                                 </div>
                             </li>
@@ -217,21 +253,21 @@
                                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
                                             data-toggle="dropdown">Popular Skills</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="dashboard-orders">Orders</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-sales">Sales</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-messages">Messages</a>
+                                            <li><a class="dropdown-item" href="">Front End Developer</a></li>
+                                            <li><a class="dropdown-item" href="">Back End Developer</a></li>
+                                            <li><a class="dropdown-item" href="">Full Stack Developer</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="dashboard-followers">Followers</a>
+                                            <li><a class="dropdown-item" href="">Python</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="dashboard-reviews">Reviews</a></li>
-                                            <li><a class="dropdown-item" href="dashboard-favorites">Favorites</a>
+                                            <li><a class="dropdown-item" href="">C#</a></li>
+                                            <li><a class="dropdown-item" href="">PHP</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="signin-illustration">Freelancers</a>
+                                    <li><a class="dropdown-item" href="">Freelancers</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="signin-image">Companies</a></li>
-                                    <li><a class="dropdown-item" href="signin-signup">Trending Jobs</a></li>
+                                    <li><a class="dropdown-item" href="">Companies</a></li>
+                                    <li><a class="dropdown-item" href="">Trending Jobs</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown"><a class="nav-link" href="">Enterprise</a>
@@ -286,7 +322,7 @@
             </div>
         </header>
 
-        <div class="pt-6"></div>
+        <div class="py-5"></div>
 
         @yield('content')
 

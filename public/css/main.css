@@ -18,7 +18,7 @@ body {
   background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
 }
-button {
+button {!
   padding: 0;
   border: none;
   background-color: transparent;

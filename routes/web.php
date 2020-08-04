@@ -14,6 +14,8 @@ Route::get('/policy', function () {return view('about.policy');});
 
 Route::get('/terms', function () {return view('about.terms');});
 
+Route::get('/coming-soon', function () {return view('about.coming-soon');});
+
 
 // |=================LOGGED IN USER==========================|
 

@@ -74,7 +74,7 @@
     </div>
 </section>
 <!-- Icon + text-->
-<section class="container pt-5 pb-4 mt-3 mt-md-0 mb-md-3 pb-md-5 pt-md-7">
+<section class="container pt-3 pb-4 mt-3 mt-md-0 mb-md-3 pb-md-5 pt-md-5">
     <h2 class="text-center mb-6">Explore the Marketplace</h2>
     <div class="row">
         <div class="col-sm-6 col-md-3">

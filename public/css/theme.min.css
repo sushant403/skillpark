@@ -10051,7 +10051,7 @@ dd {
 [class^="fe-"],
 [class*=" fe-"] {
     display: inline-block;
-    font-family: "feather" !important;
+    font-family: "Font Awesome 5 Free" !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -12091,13 +12091,13 @@ label:not(.form-check-label):not(.custom-control-label):not(.custom-file-label):
 .dropdown-toggle::after,
 .dropdown-toggle::before {
     display: inline-block;
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     font-weight: normal;
     vertical-align: middle;
 }
 .dropdown-toggle::after {
     margin-left: 0.25rem;
-    content: "\e92f";
+    content: "\f107";
 }
 .dropdown-toggle::before {
     margin-right: 0.25rem;
@@ -12114,14 +12114,14 @@ label:not(.form-check-label):not(.custom-control-label):not(.custom-file-label):
     display: none;
 }
 .dropup .dropdown-toggle::after {
-    content: "\e932";
+    content: "\f107";
 }
 .dropright .dropdown-toggle::after {
-    content: "\e931";
+    content: "\f105";
     vertical-align: bottom;
 }
 .dropleft .dropdown-toggle::before {
-    content: "\e930";
+    content: "\f105";
     vertical-align: bottom;
 }
 .dropleft .dropdown-toggle::after {
