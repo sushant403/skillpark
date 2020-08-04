@@ -17,13 +17,58 @@ class CategoriesSeeder extends Seeder
 
         DB::table('categories')->insert([
             [
-                'name' => 'Amargadhi',
+                'name' => 'Blockchain',
             ],           
             [
-                'name' => 'Arujundhara'
+                'name' => 'Cloud Computing'
             ],
             [
-                'name' => 'Aurahi'
+                'name' => 'Analytical Reasoning'
+            ],
+            [
+                'name' => 'Game',
+            ],   
+            [
+                'name' => 'Chatbot',
+            ],
+            [
+                'name' => 'Online Training',
+            ],
+            [
+                'name' => 'Digital Assistance',
+            ],
+            [
+                'name' => 'Artificial Intelligence',
+            ],        
+            [
+                'name' => 'UX Design'
+            ],
+            [
+                'name' => 'Business Analysis'
+            ],
+            [
+                'name' => 'Scientific Computing'
+            ],
+            [
+                'name' => 'E-Commerce'
+            ],
+            [
+                'name' => 'Animtion Production',
+            ],           
+            [
+                'name' => 'Cloud Computing'
+            ],
+            [
+                'name' => 'Graphic Design'
+            ],
+            [
+                'name' => 'Digiital Marketing',
+            ],           
+            [
+                'name' => 'Content Writing'
+            ],
+            [
+                'name' => 'Translation'
             ],
         ]);  
     }
