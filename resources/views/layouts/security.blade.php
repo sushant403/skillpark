@@ -113,7 +113,7 @@
     <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
     <link rel="stylesheet" media="screen" href="/vendor/lightgallery.js/dist/css/lightgallery.min.css" />
     <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="/css/stream.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">
 </head>
 <!-- Body-->

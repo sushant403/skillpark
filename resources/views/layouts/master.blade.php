@@ -108,7 +108,7 @@
     <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
     <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="/css/stream.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.css">
     <link rel="stylesheet" media="screen" href="/vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />

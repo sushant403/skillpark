@@ -192,7 +192,7 @@
                                 <div class="job-item mt-30">
                                     <div class="job-top-dt1 text-center">
                                         <div class="job-center-dt">
-                                            <img src="/images/spacer.jpg" alt="">
+                                            <img src="/images/spacer.png" alt="">
                                             <div class="job-urs-dts">
                                                 <a href="#">
                                                     <h4>Rajesh Hamal</h4>
@@ -230,7 +230,7 @@
                                 <div class="job-item mt-30">
                                     <div class="job-top-dt1 text-center">
                                         <div class="job-center-dt">
-                                            <img src="/images/spacer.jpg" alt="">
+                                            <img src="/images/spacer.png" alt="">
                                             <div class="job-urs-dts">
                                                 <a href="#">
                                                     <h4>Nitika Bhatta</h4>
@@ -268,7 +268,7 @@
                                 <div class="job-item mt-30">
                                     <div class="job-top-dt1 text-center">
                                         <div class="job-center-dt">
-                                            <img src="/images/spacer.jpg" alt="">
+                                            <img src="/images/spacer.png" alt="">
                                             <div class="job-urs-dts">
                                                 <a href="#">
                                                     <h4>Divesh Chhetri</h4>
@@ -306,7 +306,7 @@
                                 <div class="job-item mt-30">
                                     <div class="job-top-dt1 text-center">
                                         <div class="job-center-dt">
-                                            <img src="/images/spacer.jpg" alt="">
+                                            <img src="/images/spacer.png" alt="">
                                             <div class="job-urs-dts">
                                                 <a href="#">
                                                     <h4>Ariana Grande</h4>
@@ -344,7 +344,7 @@
                                 <div class="job-item mt-30">
                                     <div class="job-top-dt1 text-center">
                                         <div class="job-center-dt">
-                                            <img src="/images/spacer.jpg" alt="">
+                                            <img src="/images/spacer.png" alt="">
                                             <div class="job-urs-dts">
                                                 <a href="#">
                                                     <h4>Sanaya Sharma</h4>
@@ -382,7 +382,7 @@
                                 <div class="job-item mt-30">
                                     <div class="job-top-dt1 text-center">
                                         <div class="job-center-dt">
-                                            <img src="/images/spacer.jpg" alt="">
+                                            <img src="/images/spacer.png" alt="">
                                             <div class="job-urs-dts">
                                                 <a href="#">
                                                     <h4>Hari Singh</h4>
@@ -468,7 +468,7 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="/images/spacer.jpg" alt="">
+                                        <img src="/images/spacer.png" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
                                                 <h4>Sushant Poudel</h4>
@@ -511,7 +511,7 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="/images/spacer.jpg" alt="">
+                                        <img src="/images/spacer.png" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
                                                 <h4>Nitika Bhatta</h4>
@@ -554,7 +554,7 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="/images/spacer.jpg" alt="">
+                                        <img src="/images/spacer.png" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
                                                 <h4>Divesh Thaoa</h4>
@@ -597,7 +597,7 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="/images/spacer.jpg" alt="">
+                                        <img src="/images/spacer.png" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
                                                 <h4>Simkhada Khatiwada</h4>
@@ -640,7 +640,7 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="/images/spacer.jpg" alt="">
+                                        <img src="/images/spacer.png" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
                                                 <h4>Sanaya Sharma</h4>
@@ -683,7 +683,7 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="/images/spacer.jpg" alt="">
+                                        <img src="/images/spacer.png" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
                                                 <h4>Aakash Jha</h4>
