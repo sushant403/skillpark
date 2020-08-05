@@ -4,10 +4,10 @@
 	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
 <style type="text/css">
 	.icon-5-0{fill:#BDC5D1;}
-	.icon-5-1{fill:#377DFF;}
+	.icon-5-1{fill:#2ad9a2;}
 	.icon-5-2{fill:#FFFFFF;}
 	.icon-5-3{fill:none;stroke:#BDC5D1;}
-	.icon-5-5{fill:none;stroke:#377DFF;}
+	.icon-5-5{fill:none;stroke:#2ad9a2;}
 </style>
 <circle class="icon-5-0 fill-gray-400" opacity=".5" cx="82.2" cy="92.3" r="27.2"/>
 <circle class="icon-5-1 fill-primary" cx="72.2" cy="83.8" r="27.2"/>

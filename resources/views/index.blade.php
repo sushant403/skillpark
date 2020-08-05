@@ -4,7 +4,7 @@
 
 <!-- Page content-->
 <!-- Hero-->
-<section class="position-relative bg-faded-primary pt-5 pb-5 pb-md-6 pb-lg-7 overflow-hidden">
+<section class="position-relative bg-faded-primary pt-6 space-top-3 pb-5 pb-md-6 pb-lg-7 overflow-hidden">
     <div class="cs-shape cs-shape-bottom cs-shape-curve bg-body">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
             <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z">
@@ -21,22 +21,8 @@
                     <button class="btn btn-success" type="submit">Search</button>
                 </form>
             </div>
-            <div class="col-xl-5 offset-1 col-lg-6 pt-lg-3 d-none d-lg-block">
-                <div class="cs-carousel bg-size-cover mx-auto pt-6 pb-2">
-                    <div class="position-relative">
-                        <div class="cs-frame-browser-label">
-                        </div>
-                        <div class="cs-frame-browser-body">
-                            <div class="cs-carousel-inner"
-                                data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;controls&quot;: false, &quot;nav&quot;: false, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 6000}">
-                                <div
-                                    data-carousel-label="&lt;i class=&quot;fa fa-magnifier&quot;&gt;&lt;/i&gt;&lt;span&gt;Hire Freelancers&lt;/span&gt;">
-                                    <img class="rounded" height="700" src="images/svg/banner.svg" alt="Screenshot" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-xl-5 offset-1 col-lg-5 pt-6 d-none d-lg-block">
+                <img class="rounded" height="700" src="images/svg/banner.svg" alt="Screenshot" />
             </div>
         </div>
     </div>
@@ -207,7 +193,7 @@
     </div>
 </section>
 <!-- Q&A-->
-<section class="position-relative bg-secondary py-5 py-md-6 py-lg-7" style="margin-top: -200px;">
+<section class="position-relative bg-faded-primary py-5 py-md-6 py-lg-7" style="margin-top: -200px;">
     <div style="height: 200px;"></div>
     <div class="cs-shape cs-shape-top cs-shape-curve bg-body">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
@@ -278,7 +264,7 @@
     </div>
 </section>
 <!-- Get Started on Skillpark -->
-<section class="bg-secondary">
+<section class="bg-faded-primary">
     <div class="container pb-7 md-0">
         <div class="row align-items-center pb-3 pb-md-0">
             <div class="col-md-6 col-lg-6 pb-5 pb-md-0">

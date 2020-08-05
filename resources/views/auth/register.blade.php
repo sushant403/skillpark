@@ -7,7 +7,7 @@
 
 <!-- Page content-->
 <!-- Background image-->
-<div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover"
+<div class="d-none d-md-block position-absolute w-50 h-90 bg-size-cover"
     style="top: 0; right: 0; background-image: url(/images/add/login.jpg);"></div>
 <!-- Actual content-->
 <section class="container d-flex align-items-center pt-7 pb-3 pb-md-4" style="flex: 1 0 auto;">

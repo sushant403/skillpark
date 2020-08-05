@@ -345,7 +345,7 @@ h3,
 }
 h4,
 .h4 {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
 }
 h5,
 .h5 {
@@ -12097,7 +12097,7 @@ label:not(.form-check-label):not(.custom-control-label):not(.custom-file-label):
 }
 .dropdown-toggle::after {
     margin-left: 0.25rem;
-    content: "\f107";
+    /* content: "\f107"; */
 }
 .dropdown-toggle::before {
     margin-right: 0.25rem;

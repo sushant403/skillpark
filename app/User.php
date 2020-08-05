@@ -59,7 +59,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function getAvatarAttribute($val)
     {
-        return is_null($val) ? asset('images/avatar-placeholder.svg') : $val;
+        return is_null($val) ? asset('images/spacer.png') : $val;
     }
 
     public function cities()
@@ -70,5 +70,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function categories()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function project()
+    {
+        return $this->hasMany(Project::class);
     }
 }

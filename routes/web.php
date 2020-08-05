@@ -38,8 +38,6 @@ Route::middleware(['verified','auth'])->group(function () {
     Route::get('/user-details', 'ProfileController@userDetails');
     Route::get('/services', 'ProfileController@serviceList');
     Route::get('/services/description', 'ProfileController@serviceSingle');
-    Route::get('/post/project', 'PostController@postProject');
-    Route::get('/post/proposal', 'PostController@postProposal');
     
 
     Route::middleware(['verified','freelancer'])->group(function () {
@@ -48,6 +46,11 @@ Route::middleware(['verified','auth'])->group(function () {
     Route::middleware(['verified', 'client'])->group(function () {
     });
 
+    Route::get('/post/project', 'PostController@showProjectForm');
+    Route::post('/post/project', 'PostController@postProject')->name('post-project');
+    
+    Route::get('/post/proposal', 'PostController@showProposalForm');
+    Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
     
     Route::get('client', 'SearchController@searchInfo')->name('client');
     Route::post('client', 'SearchController@searchAction')->name('searchInfo');

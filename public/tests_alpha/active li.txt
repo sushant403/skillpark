@@ -1,0 +1,6 @@
+
+{{ Request::path() === '/' ? 'li-active' : 'li' }}
+
+or
+
+{{ Request::is('profile*') ? 'li-active' : 'li' }}

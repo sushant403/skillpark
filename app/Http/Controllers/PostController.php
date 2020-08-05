@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +24,29 @@ class PostController extends Controller
         //
     }
 
-    public function postProject(){
-        return view('post.post-project');
+    public function showProjectForm(){
+
+        $categories = Category::all();
+
+        return view('post.post-project', compact('categories'));
     }
+
+    public function postProject(Request $request){
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'budget' => 'required',
+            'delivery_time' => 'required',
+        ]);
+
+        Project::create($request->all());
+
+        return redirect()->route('client')->with('success','You successfuly added the project.');
+    }
+
+
+    //proposal
 
     public function postProposal(){
         return view('post.post-proposal');

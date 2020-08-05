@@ -12,8 +12,8 @@
                 <h4 class="text-center">Verify Your Account</h4>
 
                 @if (session('resent'))
-                <div class="alert alert-info" role="alert">
-                    {{ __('A fresh verification link has been emailed.') }}
+                <div class="alert alert-info text-center" role="alert">
+                    {{ __('A fresh verification link has been sent to your email address.') }}
                 </div>
                 @endif
 
