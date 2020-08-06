@@ -48,10 +48,10 @@
             <div class="d-flex align-items-center order-lg-3">
                 @guest
                 <a class="nav-link-style font-size-sm text-nowrap" href="{{ route('login') }}"><i
-                        class="fa fa-user font-size-xl mr-2"></i>Sign in</a>
+                        class="fa fa-user font-size-xl mr-2"></i>{{__('nepali.Login')}}</a>
 
                 <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
-                    href="{{ route('register') }}">Join</a>
+                    href="{{ route('register') }}">{{__('nepali.Join')}}</a>
 
                 @else
                 <div class="d-flex align-items-center order-lg-3 ml-lg-auto">

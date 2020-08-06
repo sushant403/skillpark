@@ -14,11 +14,11 @@
     <div class="container pt-7 pt-md-5 pt-lg-0">
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                <h1 class="mb-3" style="font-size: 2.2rem">Seek the perfect freelancer talents for your business!</h1>
-                <p class="font-size-lg text-muted mb-4">Hire expert freelancers for any job, any time.</p>
+                <h1 class="mb-3" style="font-size: 2.2rem">{{ __('nepali.Seek the perfect freelancer talents for your business!') }}</h1>
+                <p class="font-size-lg text-muted mb-4">{{ __('nepali.Hire expert freelancers for any job, any time') }}.</p>
                 <form class="d-flex pt-4 mx-auto mx-lg-0" style="max-width: 540px;">
-                    <input class="form-control mr-3" type="email" placeholder="Search for Services.." required>
-                    <button class="btn btn-success" type="submit">Search</button>
+                    <input class="form-control mr-3" type="email" placeholder="{{ __('nepali.Search for Services') }}.." required>
+                    <button class="btn btn-success" type="submit">{{ __('nepali.Search') }}</button>
                 </form>
             </div>
             <div class="col-xl-5 offset-1 col-lg-5 pt-6 d-none d-lg-block">
