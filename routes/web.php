@@ -2,6 +2,11 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+Route::get('lang/{locale}', function ($locale) {
+    session()->put ('locale',$locale);
+    return redirect()->back();
+});
+
 Route::get('/', function () {return view('index');});
 
 Route::get('/about', function () { return view('about.about');});

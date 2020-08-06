@@ -200,7 +200,7 @@
                                 data-toggle="dropdown">Support</a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="lang/ne">
                                         <div class="d-flex align-items-center">
                                             <div class="font-size-xl text-muted"><img src="/images/svg/np.svg"
                                                     style="width: 25px;max-width:unset">
@@ -213,7 +213,7 @@
                                 </li>
                                 <li class="dropdown-divider"></li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="lang/en">
                                         <div class="d-flex align-items-center">
                                             <div class="font-size-xl text-muted"><img src="/images/svg/en.svg"
                                                     style="width: 25px;max-width:unset"></i></div>
