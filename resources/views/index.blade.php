@@ -202,7 +202,7 @@
         </svg>
     </div>
     <div class="container mt-n4 py-3 py-md-2">
-        <h2 class="text-center mb-5">Questions &amp; Answers</h2>
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-9">
                 <div class="accordion accordion-alt" id="faq">

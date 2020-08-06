@@ -2,6 +2,7 @@
 
 @section('content')
 
+<link rel="stylesheet" media="screen" href="/css/theme.css">
 <!-- ========== MAIN ========== -->
 <main id="content" role="main">
     <!-- Hero Section -->

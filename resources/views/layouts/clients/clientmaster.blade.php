@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/vendor/aos/dist/aos.css">
     <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
     <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="/css/mover.css">
     <link rel="stylesheet" media="screen" href="/css/style.css">
     <link rel="stylesheet" media="screen" href="/css/theme.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">

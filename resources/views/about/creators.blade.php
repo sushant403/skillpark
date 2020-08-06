@@ -146,7 +146,7 @@
     <!-- END TEAM -->
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src="/css/teamscript.js"></script>
+    <script src="/js/teamscript.js"></script>
 
 
     <script>

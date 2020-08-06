@@ -21,6 +21,7 @@
     <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
     <!-- Vendor Styles-->
+    <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="/css/theme.css">
     <link rel="stylesheet" media="screen" href="/css/theme.min.css">
