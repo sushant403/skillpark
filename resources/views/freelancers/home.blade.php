@@ -85,7 +85,7 @@
                 <div class="post__wrap">
                     <div class="post__company">
                         <i class="fa fa-briefcase fa-sm"></i>
-                        <span>Front-end Developer</span>
+                        <span>Skillpark-end Developer</span>
                     </div>
 
                     <div class="post__actions">
@@ -160,7 +160,7 @@
                 <div class="post__wrap">
                     <div class="post__company">
                         <i class="fa fa-briefcase fa-sm"></i>
-                        <span>Front-end Developer</span>
+                        <span>Skillpark-end Developer</span>
                     </div>
 
                     <div class="post__actions">
@@ -235,7 +235,7 @@
                 <div class="post__wrap">
                     <div class="post__company">
                         <i class="fa fa-briefcase fa-sm"></i>
-                        <span>Front-end Developer</span>
+                        <span>Skillpark-end Developer</span>
                     </div>
 
                     <div class="post__actions">
@@ -310,7 +310,7 @@
                 <div class="post__wrap">
                     <div class="post__company">
                         <i class="fa fa-briefcase fa-sm"></i>
-                        <span>Front-end Developer</span>
+                        <span>Skillpark-end Developer</span>
                     </div>
 
                     <div class="post__actions">
@@ -379,7 +379,7 @@
                         <div class="post__wrap">
                             <div class="post__company">
                                 <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Front-end Developer</span>
+                                <span>Skillpark-end Developer</span>
                             </div>
                         </div>
                     </div>
@@ -452,7 +452,7 @@
                         <div class="post__wrap">
                             <div class="post__company">
                                 <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Front-end Developer</span>
+                                <span>Skillpark-end Developer</span>
                             </div>
                         </div>
                     </div>

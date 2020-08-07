@@ -2,289 +2,343 @@
 
 @section('content')
 
-<!-- Page content-->
-<!-- Hero-->
-<section class="position-relative bg-faded-primary pt-6 space-top-3 pb-5 pb-md-6 pb-lg-7 overflow-hidden">
-    <div class="cs-shape cs-shape-bottom cs-shape-curve bg-body">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
-            <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z">
-            </path>
-        </svg>
-    </div>
-    <div class="container pt-7 pt-md-5 pt-lg-0">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                <h1 class="mb-3" style="font-size: 2.2rem">{{ __('nepali.Seek the perfect freelancer talents for your business!') }}</h1>
-                <p class="font-size-lg text-muted mb-4">{{ __('nepali.Hire expert freelancers for any job, any time') }}.</p>
-                <form class="d-flex pt-4 mx-auto mx-lg-0" style="max-width: 540px;">
-                    <input class="form-control mr-3" type="email" placeholder="{{ __('nepali.Search for Services') }}.." required>
-                    <button class="btn btn-success" type="submit">{{ __('nepali.Search') }}</button>
-                </form>
-            </div>
-            <div class="col-xl-5 offset-1 col-lg-5 pt-6 d-none d-lg-block">
-                <img class="rounded" height="700" src="images/svg/banner.svg" alt="Screenshot" />
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Features section #1-->
-<section class="container py-5 py-md-6 py-lg-7">
-    <div class="row pt-2">
-        <div class="col-sm-4 mb-grid-gutter pb-1">
-            <div class="mx-auto text-center" style="max-width: 278px;"><img class="d-inline-block mb-3" width="56"
-                    src="/img/demo/software-landing/icons/01.svg" alt="Simple" />
-                <h3 class="h5">Searching the Best Job</h3>
-                <p class="font-size-sm mb-0">Find Jobs according to categories and work on what best qualifies your
-                    skills and
-                    payments you deserve.</p>
-            </div>
-        </div>
-        <div class="col-sm-4 mb-grid-gutter pb-1">
-            <div class="mx-auto text-center" style="max-width: 278px;"><img class="d-inline-block mb-3" width="56"
-                    src="/img/demo/software-landing/icons/02.svg" alt="Fast" />
-                <h3 class="h5">Quality Hires</h3>
-                <p class="font-size-sm mb-0">Thousands of Qualified Freelancers ready for your projects and business.
-                    Either find them
-                    or let them bid.</p>
-            </div>
-        </div>
-        <div class="col-sm-4 mb-grid-gutter pb-1">
-            <div class="mx-auto text-center" style="max-width: 278px;"><img class="d-inline-block mb-3" width="67"
-                    src="/img/demo/software-landing/icons/03.svg" alt="Organized" />
-                <h3 class="h5">Simplified Payment</h3>
-                <p class="font-size-sm mb-0">Using the national payment system, now the payments are faster and more
-                    secure. Contracts
-                    are there to backup.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Icon + text-->
-<section class="container pt-3 pb-4 mt-3 mt-md-0 mb-md-3 pb-md-5 pt-md-5">
-    <h2 class="text-center mb-6">Explore the Marketplace</h2>
-    <div class="row">
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-9.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6">Sales and Marketing</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-16.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6">Web Development</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-17.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6">Transalation</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-7.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6"> Architecture Design</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-11.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6">Financial Advices</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-13.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6"> Blogs Writing</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-14.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6"> Legal Advices</h3>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
-                    src="/images/homepage/categories/icon-15.svg" alt="Icon" />
-                <a href="">
-                    <h3 class="h6"> Networking</h3>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Features section #2-->
-<section class="container py-5 py-md-6 py-lg-7">
-    <div class="row align-items-center pt-3 pt-md-0">
-        <div class="d-none d-lg-block col-lg-6"><img class="d-block mx-auto" src="/images/svg/ipad.svg" alt="Features" />
-        </div>
-        <div class="col-xl-5 offset-1 col-md-5 pt-5 pt-md-0">
-            <h2 class="mb-3 text-center text-md-left">Organized Transparency</h2>
-            <p class="text-center text-md-left">Modern dynamic dashboard allows you to track your project's activity for
-                you to always
-                stay updated.</p>
-                <div class="row pt-5">
-                    <div class="col-6 pb-1 mb-grid-gutter"><img class="d-block mb-3" width="29" src="img/demo/software-landing/icons/04.svg" alt="Easy to edit" />
-                        <h3 class="h6">Easy to Post</h3>
-                        <p class="font-size-sm mb-0">Posting Project Info has never been this simple and secure.</p>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content" role="main" class="overflow-hidden">
+    <!-- Hero Section -->
+    <div class="position-relative bg-img-hero"
+        style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
+        <div class="container space-top-3 space-bottom-lg-3">
+            <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
+                <div class="col-lg-6">
+                    <!-- Info -->
+                    <div class="mb-5">
+                        <h2 class="display-6 mb-3">
+                            {{ __('nepali.Seek the perfect freelancer talents for your business!') }}</h2>
+                        <p class="lead">{{ __('nepali.Hire expert freelancers for any job, any time') }}</p>
                     </div>
-                    <div class="col-6 pb-1 mb-grid-gutter"><img class="d-block mb-3" width="28" src="img/demo/software-landing/icons/05.svg" alt="Upload files" />
-                        <h3 class="h6">Upload files</h3>
-                        <p class="font-size-sm mb-0">Represent your ideas with files like images, docs.</p>
-                    </div>
-                    <div class="col-6 pb-1 mb-grid-gutter"><img class="d-block mb-3" width="26" src="img/demo/software-landing/icons/06.svg" alt="Control schedule" />
-                        <h3 class="h6">Control Bidding</h3>
-                        <p class="font-size-sm mb-0">Let the talents come to you, choose the most qualified ones.</p>
-                    </div>
-                    <div class="col-6 pb-1 mb-grid-gutter"><img class="d-block mb-3" width="36" src="img/demo/software-landing/icons/07.svg" alt="Mark tasks" />
-                        <h3 class="h6">Mark tasks</h3>
-                        <p class="font-size-sm mb-0">Tasks and Projects are there with contracts backing up.</p>
-                    </div>
-                </div>
-        </div>
-    </div>
-</section>
-<!-- Solutions-->
-<section class="container bg-overlay-content pt-5 pt-md-6 pt-lg-7">
-    <h2 class="text-center pt-3 pt-md-0 mb-5">More solutions for you</h2>
-    <div class="row">
-        <div class="col-sm-6 mb-grid-gutter">
-            <div class="bg-light box-shadow rounded-lg py-5 px-4">
-                <div class="media d-block d-xl-flex align-items-center px-lg-3 py-xl-2 text-center text-sm-left">
-                    <img class="d-inline-block mb-3 mb-xl-0" width="140" src="/img/demo/software-landing/team.png"
-                        alt="Team" />
-                    <div class="media-body pl-xl-3 ml-xl-3">
-                        <h3 class="h4 text-primary pb-1">For Employers</h3>
-                        <p>Place your idea or project and find your skiller.</p><a class="nav-link-style" href="#">Read more<i
-                                class="fa fa-chevron-right sm font-size-xl ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 mb-grid-gutter">
-            <div class="bg-light box-shadow rounded-lg py-5 px-4">
-                <div class="media d-block d-xl-flex align-items-center px-lg-3 py-xl-2 text-center text-sm-left">
-                    <img class="d-inline-block mb-3 mb-xl-0" width="140" src="/img/demo/software-landing/freelancer.png"
-                        alt="Freelancer" />
-                    <div class="media-body pl-xl-3 ml-xl-3">
-                        <h3 class="h4 text-primary pb-1">For Freelancers</h3>
-                        <p>Grab the platform to enrich your potentical and turn your passion into profession.</p><a class="nav-link-style" href="#">Read more<i
-                                class="fa fa-chevron-right sm font-size-xl ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Q&A-->
-<section class="position-relative bg-faded-primary py-5 py-md-6 py-lg-7" style="margin-top: -200px;">
-    <div style="height: 200px;"></div>
-    <div class="cs-shape cs-shape-top cs-shape-curve bg-body">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
-            <path fill="currentColor" d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z">
-            </path>
-        </svg>
-    </div>
-    <div class="container mt-n4 py-3 py-md-2">
-        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-9">
-                <div class="accordion accordion-alt" id="faq">
-                    <div class="card border-0 box-shadow card-active">
-                        <div class="card-header">
-                            <h3 class="accordion-heading"><a href="#faq-1" role="button" data-toggle="collapse"
-                                    aria-expanded="true" aria-controls="faq-1">Can I post jobs and projects for free?<span class="accordion-indicator"></span></a></h3>
-                        </div>
-                        <div class="collapse show" id="faq-1" data-parent="#faq">
-                            <div class="card-body font-size-sm">
-                                <p>Yes! This is the right place to post your jobs and projects.</p>
-                                <p class="mb-0">Before that! Don't forget to register in our system member.You are always welcome here.</p>
+                    <!-- End Info -->
+
+                    <!-- Form -->
+                    <form class="mb-7">
+                        <div class="form-row">
+                            <div class="col-sm col-md-6 col-lg mb-2">
+                                <div class="js-form-message">
+                                    <label class="sr-only"
+                                        for="signupSrEmail">{{ __('nepali.Search for Services') }}..</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" name="search"
+                                            placeholder="{{ __('nepali.Search for Services') }}.."
+                                            aria-label="{{ __('nepali.Search for Services') }}.." required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-auto">
+                                <button type="submit"
+                                    class="btn btn-primary btn-block">{{ __('nepali.Search') }}</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="card border-0 box-shadow">
-                        <div class="card-header">
-                            <h3 class="accordion-heading"><a class="collapsed" href="#faq-2" role="button"
-                                    data-toggle="collapse" aria-expanded="true" aria-controls="faq-2">What are
-                                    the requirement to choose freelancers?<span class="accordion-indicator"></span></a></h3>
-                        </div>
-                        <div class="collapse" id="faq-2" data-parent="#faq">
-                            <div class="card-body font-size-sm">
-                                <p>First of all !</p>
-                                <p class="mb-0">Register yourself and then choose your category and skill you are looking for your project.</p>
+                    </form>
+                    <!-- End Form -->
+                </div>
+        <!-- Gallery -->
+        <div class="col-lg-5">
+            <div class="row align-items-end mx-n2">
+                <img src="/images/svg/banner.svg" width="600">
+            </div>
+        </div>
+        <!-- End Gallery -->
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Icon Blocks Section -->
+    <div class="container space-2 space-lg-2">
+
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-md-0">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <figure class="max-w-10rem mx-auto mb-4">
+                        <img class="img-fluid" src="/images/svg/icons/icon-1.svg" alt="SVG">
+                    </figure>
+                    <h3>Searching the Best Job</h3>
+                    <p>Find Jobs according to categories and work on what best qualifies your
+                        skills and
+                        payments you deserve.</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-4 mb-5 mb-md-0">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <figure class="max-w-10rem mx-auto mb-4">
+                        <img class="img-fluid" src="/images/svg/icons/icon-7.svg" alt="SVG">
+                    </figure>
+                    <h3>Quality Hires</h3>
+                    <p>Thousands of Qualified Freelancers ready for your projects and business.
+                        Either find them
+                        or let them bid.</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-4">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <figure class="max-w-10rem mx-auto mb-4">
+                        <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
+                    </figure>
+                    <h3>Simplified Payment</h3>
+                    <p>Using the national payment system, now the payments are faster and more
+                        secure. Contracts
+                        are there to backup.</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+        </div>
+    </div>
+    <!-- End Icon Blocks Section -->
+
+    <section class="container pt-3 pb-4 mt-3 mt-md-0 mb-md-3 pb-md-5 pt-md-5">
+        <h2 class="text-center mb-6">Explore the Marketplace</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-9.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6">Sales and Marketing</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-16.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6">Web Development</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-17.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6">Transalation</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-7.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6"> Architecture Design</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-11.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6">Financial Advices</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-13.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6"> Blogs Writing</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-14.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6"> Legal Advices</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 py-3">
+                <div class="mx-auto mb-5 text-center" style="max-width: 150px;"><img class="mb-3" width="60"
+                        src="/images/homepage/categories/icon-15.svg" alt="Icon" />
+                    <a href="">
+                        <h3 class="h6"> Networking</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="d-inline-block font-size-1 border bg-white text-center rounded-pill py-3 px-4">
+                Want to Explore more? <a class="font-weight-bold ml-3" href="#">View all Categories <span
+                        class="fas fa-angle-right ml-1"></span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <div class="overflow-hidden">
+        <div class="container space-top-2 space-top-lg-3 space-bottom-3">
+            <!-- Title -->
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                <h2>Features built for scale</h2>
+                <p>Get insights to dig down into what's powering your growth the most.</p>
+            </div>
+            <!-- End Title -->
+
+            <div class="row">
+                <div class="col-lg-7 mb-7 mb-lg-0">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-7">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="/images/svg/icons/icon-2.svg" alt="SVG">
+                                </figure>
+                                <h3 class="h4">Smart Dashboards</h3>
+                                <p class="text-body">This is where we really begin to visualize your napkin sketches and
+                                    make them into beautiful pixels.</p>
                             </div>
+                            <!-- End Icon Blocks -->
                         </div>
-                    </div>
-                    <div class="card border-0 box-shadow">
-                        <div class="card-header">
-                            <h3 class="accordion-heading"><a class="collapsed" href="#faq-3" role="button"
-                                    data-toggle="collapse" aria-expanded="true" aria-controls="faq-3">How to find freelancers of various categories?<span class="accordion-indicator"></span></a>
-                            </h3>
-                        </div>
-                        <div class="collapse" id="faq-3" data-parent="#faq">
-                            <div class="card-body font-size-sm">
-                                <p>Pretty Simple !</p>
-                                <p class="mb-0">Point to the Service and Category section in our header at the top of page. You can Choose there.</p>
+
+                        <div class="col-sm-6 mb-3 mb-sm-7">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="/images/svg/icons/icon-1.svg" alt="SVG">
+                                </figure>
+                                <h4>Control Center</h4>
+                                <p class="text-body">Now that we've aligned the details, it's time to get things mapped
+                                    out and organized.</p>
                             </div>
+                            <!-- End Icon Blocks -->
                         </div>
-                    </div>
-                    <div class="card border-0 box-shadow">
-                        <div class="card-header">
-                            <h3 class="accordion-heading"><a class="collapsed" href="#faq-4" role="button"
-                                    data-toggle="collapse" aria-expanded="true" aria-controls="faq-4">Is it possible
-                                    to upload files from Google Drive?<span class="accordion-indicator"></span></a>
-                            </h3>
-                        </div>
-                        <div class="collapse" id="faq-4" data-parent="#faq">
-                            <div class="card-body font-size-sm">
-                                <p>Yes !</p>
-                                <p class="mb-0">For accessibility of all, we have included feature there .</p>
+
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="/images/svg/icons/icon-15.svg" alt="SVG">
+                                </figure>
+                                <h4>Email Reports</h4>
+                                <p class="text-body">We strive to embrace and drive change in our industry which allows
+                                    us to keep our clients relevant.</p>
                             </div>
+                            <!-- End Icon Blocks -->
+                        </div>
+
+                        <div class="col-sm-6 mb-sm-0">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="/images/svg/icons/icon-26.svg" alt="SVG">
+                                </figure>
+                                <h4>Forecasting</h4>
+                                <p class="text-body">Staying focused allows us to turn every project we complete into
+                                    something we love.</p>
+                            </div>
+                            <!-- End Icon Blocks -->
                         </div>
                     </div>
+                </div>
+
+                <div class="col-sm-8 col-md-6 col-lg-5">
+                    <!-- Article -->
+                    <article class="position-relative">
+                        <a class="card shadow-none bg-img-hero w-100 min-h-450rem" href="#"
+                            style="background-image: url(/images/svg/ipad.svg);">
+                        </a>
+
+                        <!-- SVG Elements -->
+                        <figure class="max-w-19rem w-100 position-absolute bottom-0 right-0 z-index-n1">
+                            <div class="mb-n7 mr-n7">
+                                <img class="img-fluid" src="/images/svg/components/dots-2.svg" alt="Image Description">
+                            </div>
+                        </figure>
+                        <!-- End SVG Elements -->
+                    </article>
+                    <!-- End Article -->
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- Get Started on Skillpark -->
-<section class="bg-faded-primary">
-    <div class="container pb-7 md-0">
-        <div class="row align-items-center pb-3 pb-md-0">
-            <div class="col-md-6 col-lg-6 pb-5 pb-md-0">
-                <div class="mx-auto mx-md-0" style="max-width: 495px;"><img src="images/svg/login.svg"
-                        alt="Buy on Amazon" />
-                </div>
+    <!-- End Features Section -->
+
+    <div class="container space-bottom-3">
+        <div class="row">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+                <!-- Card -->
+                <article class="card h-100">
+                    <div class="w-sm-65 p-4">
+                        <h3>Explore the Freelancers</h3>
+                        <div class="mb-4">
+                            <p>Start your business on various platforms with one click.</p>
+                        </div>
+                        <a class="btn btn-sm btn-soft-primary btn-pill transition-3d-hover" href="#">Find out More <i
+                                class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="position-absolute bottom-0 right-0 w-sm-35 max-w-27rem">
+                        <img class="img-fluid" src="/images/svg/illustrations/support-man.svg"
+                            alt="Image Description">
+                    </div>
+                </article>
+                <!-- End Card -->
             </div>
-            <div class="col-md-6 col-lg-6 text-center">
-                <h2>Thousands of businesses trust Skillpark for their business.</h2>
-                <p class="font-size-sm text-muted pb-2">Register, Hire, Get the Job Done!</p>
-                @guest
-                <a class="btn btn-primary"
-                    href="{{ route('register') }}">Join Now</a>
-                    @else
-                <a class="btn btn-primary"
-                    href="{{ route('home') }}">Dashboard</a>
-                @endguest
+
+            <div class="col-lg-6">
+                <!-- Card -->
+                <article class="card h-100">
+                    <div class="w-sm-65 p-4">
+                        <h3>Skillpark gives every team the freedom to hire</h3>
+                        <div class="mb-4">
+                            <p>Evaluate your options better and learn more about them.</p>
+                        </div>
+                        <a class="btn btn-sm btn-soft-primary btn-pill transition-3d-hover" href="#">Find out More <i
+                                class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="position-absolute bottom-0 right-0 w-sm-35 max-w-27rem">
+                        <img class="img-fluid" src="/images/svg/illustrations/list-app.svg"
+                            alt="Image Description">
+                    </div>
+                </article>
+                <!-- End Card -->
             </div>
         </div>
     </div>
-</section>
+
+    <!-- CTA Section -->
+    <div class="container space-bottom-1">
+        <div class="w-lg-85 mx-lg-auto">
+            <div class="card overflow-hidden p-4">
+                <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
+                    <div class="col-md-5 offset-md-3 mb-3 mb-md-0">
+                        <h3 class="h4 mb-0">Thousands of businesses trust Skillpark for their business.</h3>
+                    </div>
+                    <div class="col-md-4 text-md-right">
+                        @guest
+                        <a class="btn btn-primary" href="{{ route('register') }}">Get Started</a>
+                        @else
+                        <a class="btn btn-primary" href="{{ url('home') }}">Dashboard</a>
+                        @endguest
+                    </div>
+                </div>
+
+                <!-- SVG Component -->
+                <figure class="w-25 d-none d-md-block position-absolute top-0 left-0 mt-n2">
+                    <img class="img-fluid" src="/images/svg/illustrations/apps.svg" alt="Image Description">
+                </figure>
+                <!-- End SVG Component -->
+            </div>
+        </div>
+    </div>
+    <!-- End CTA Section -->
+</main>
+<!-- ========== END MAIN CONTENT ========== -->
 
 @endsection

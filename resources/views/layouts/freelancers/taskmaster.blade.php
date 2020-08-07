@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.svg">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" color="#5bbad5" href="/safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#1dc8cc">
+    <meta name="msapplication-TileColor" content="#24cc7d">
     <meta name="theme-color" content="#ffffff">
     <!-- Page loading styles-->
     <style>
@@ -72,7 +72,7 @@
             height: 2.75rem;
             margin-bottom: .75rem;
             vertical-align: text-bottom;
-            border: .15em solid #2adb9e;
+            border: .15em solid #24cc7d;
             border-right-color: transparent;
             border-radius: 50%;
             -webkit-animation: spinner .75s linear infinite;
@@ -252,7 +252,7 @@
                                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
                                             data-toggle="dropdown">Popular Skills</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="">Front End Developer</a></li>
+                                            <li><a class="dropdown-item" href="">Skillpark End Developer</a></li>
                                             <li><a class="dropdown-item" href="">Back End Developer</a></li>
                                             <li><a class="dropdown-item" href="">Full Stack Developer</a>
                                             </li>

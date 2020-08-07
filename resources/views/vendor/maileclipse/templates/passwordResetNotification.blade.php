@@ -119,7 +119,7 @@
 </center></td>
 </tr>
 <tr>
-<td style="background: url('https://images.unsplash.com/photo-1533892743580-890e5b193113?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80') no-repeat center; background-color: #1dc8cc; background-position: center;" valign="top" bgcolor="#64594b"><!-- [if gte mso 9]>
+<td style="background: url('https://images.unsplash.com/photo-1533892743580-890e5b193113?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80') no-repeat center; background-color: #24cc7d; background-position: center;" valign="top" bgcolor="#64594b"><!-- [if gte mso 9]>
           <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:303px;">
             <v:fill type="tile" src="https://www.filepicker.io/api/file/ewEXNrLlTneFGtlB5ryy" color="#64594b" />
             <v:textbox inset="0,0,0,0">

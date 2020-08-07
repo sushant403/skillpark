@@ -326,7 +326,7 @@
                                         </li>											
                                         <li>
                                             <div class="applied_item">
-                                                <a href="#">Front End Developer</a>
+                                                <a href="#">Skillpark End Developer</a>
                                                 <ul class="view_dt_job">
                                                     <li><div class="vw1254"><i class="fas fa-map-marker-alt"></i>Australia</div></li>
                                                     <li><div class="vw1254"><i class="fas fa-briefcase"></i>Part Time</div></li>

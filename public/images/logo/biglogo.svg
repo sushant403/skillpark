@@ -11,12 +11,12 @@
       }
 
       .cls-2 {
-        fill: #1dc8cc;
+        fill: #24cc7d;
         filter: url(#filter);
       }
 
       .cls-3 {
-        fill: #1dc8cc;
+        fill: #24cc7d;
         filter: url(#filter-2);
       }
     </style>

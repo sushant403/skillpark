@@ -3,23 +3,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Skillpark Inc. | Hire Expert Freelancers Any Time
-    </title>
+    <title>Skillpark Inc. | Hire Expert Freelancers Any Time</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
         content="business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
     <meta name="author" content="Skillpark Inc.">
+
     <!-- Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Individual Title -->
+    <script>
+        document.title = 'Skillpark Inc. | Hire Expert Freelancers Any Time'; 
+    </script>
+
     <!-- Favicon and Touch Icons-->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" color="#5bbad5" href="/safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#1dc8cc">
+    <link rel="mask-icon" color="#5bbad5" href="/favicon.svg">
+    <meta name="msapplication-TileColor" content="#24cc7d">
     <meta name="theme-color" content="#ffffff">
+
     <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
+
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
@@ -28,312 +36,527 @@
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
     <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsparallaxer.css">
     <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="/vendor/aos/dist/aos.css">
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="/css/theme.css">
-    <link rel="stylesheet" media="screen" href="/css/theme.min.css">
+
+    <!-- CSS Skillpark Template -->
+    <link rel="stylesheet" href="/css/theme.css">
 </head>
-<!-- Body-->
-<main class="cs-page-wrapper">
-    <!-- Navbar (Floating dark)-->
-    <header class="cs-header navbar navbar-expand-lg navbar-light navbar-floating navbar-sticky" data-scroll-header>
-        <div class="container px-0 px-xl-3">
-            <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas"
-                data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button><a
-                class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="{{ url('/') }}"><img
-                    class="d-none d-lg-block" width="143" src="/images/logo/biglogo.svg" alt="Around" /><img
-                    class="d-lg-none" width="40" src="/images/logo/logo.svg" alt="Around" /></a>
+
+<body>
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="header header-box-shadow-on-scroll header-sticky-top header-show-hide"
+        data-hs-header-options='{
+   "fixMoment": 600,
+   "fixEffect": "slide"
+ }'>
+        <div class="header-section">
+            <div id="logoAndNav" class="container">
+                <!-- Nav -->
+                <nav class="js-mega-menu navbar navbar-expand-lg">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="/" aria-label="Skillpark">
+                        <img src="/images/logo/biglogo.svg" alt="Logo">
+                    </a>
+                    <!-- End Logo -->
+
+                    <!-- Responsive Toggle Button -->
+                    <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
+                        aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar"
+                        data-toggle="collapse" data-target="#navBar">
+                        <span class="navbar-toggler-default">
+                            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+                            </svg>
+                        </span>
+                        <span class="navbar-toggler-toggled">
+                            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <!-- End Responsive Toggle Button -->
+
+                    <!-- Navigation -->
+                    <div id="navBar" class="collapse navbar-collapse">
+                        <div class="navbar-body header-sticky-top-inner">
+                            <ul class="navbar-nav">
+                                <!-- Home -->
+                                <li class="hs-has-mega-menu navbar-nav-item">
+                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">Solutions</a>
+
+                                    <!-- Home - Mega Menu -->
+                                    <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
+                                        <div class="row no-gutters">
+                                            <div class="col-lg-6">
+                                                <!-- Banner Image -->
+                                                <div class="navbar-banner"
+                                                    style="background-image: url(/images/svg/banner.svg);">
+                                                    <div class="navbar-banner-content">
+                                                        <div class="mb-6">
+                                                            <span class="h2 d-block text-white">Skillpark Inc.</span>
+                                                            <p class="text-white">Experience the simplified modern way
+                                                                of hiring freelancers.</p>
+                                                        </div>
+                                                        <a class="btn btn-primary btn-sm transition-3d-hover"
+                                                            href="{{ route('register') }}">Get Started <i
+                                                                class="fas fa-angle-right fa-sm ml-1"></i></a>
+                                                    </div>
+                                                </div>
+                                                <!-- End Banner Image -->
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="row mega-menu-body">
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        <span class="d-block h5">How It Works</span>
+                                                        <a class="dropdown-item" href="/">About Skillpark</a>
+                                                        <a class="dropdown-item" href="">Hire Freelancers</a>
+                                                        <a class="dropdown-item" href="">Post Project</a>
+                                                        <a class="dropdown-item" href="">Explore Categories</a>
+                                                        <a class="dropdown-item" href="" target="_blank">Feature
+                                                            Business <span
+                                                                class="badge badge-primary badge-pill ml-2">New</span></a>
+                                                        <a class="dropdown-item" href="">Payment Methods</a>
+                                                        <a class="dropdown-item" href="">Advertisment</a>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <span class="d-block h5">Company</span>
+                                                        <div class="mb-3">
+                                                            <a class="dropdown-item" href="creators">Creators</a>
+                                                            <a class="dropdown-item" href="contact">Contact</a>
+                                                            <a class="dropdown-item" href="terms">Terms and
+                                                                Conditions</a>
+                                                            <a class="dropdown-item" href="blogs">Events and Blogs</a>
+                                                            <a class="dropdown-item" href="funds">Development Fund</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Home - Mega Menu -->
+                                </li>
+                                <!-- End Home -->
+
+                                <!-- Pages -->
+                                <li class="hs-has-sub-menu navbar-nav-item">
+                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                                        aria-labelledby="pagesSubMenu">Explore</a>
+
+                                    <!-- Pages - Submenu -->
+                                    <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
+                                        aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
+                                        <!-- Account -->
+                                        <div class="hs-has-sub-menu">
+                                            <a id="navLinkPagesAccount"
+                                                class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
+                                                href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                                                aria-controls="navSubmenuPagesAccount">Trending Skills <span
+                                                    class="badge badge-success badge-pill ml-2">New</span></a>
+
+                                            <div id="navSubmenuPagesAccount" class="hs-sub-menu dropdown-menu"
+                                                aria-labelledby="navLinkPagesAccount" style="min-width: 230px;">
+                                                <a class="dropdown-item" href="">Full Stack
+                                                    Developer</a>
+                                                <a class="dropdown-item" href="../account/login-and-security">IT
+                                                    &amp; Security</a>
+                                                <a class="dropdown-item" href="../account/notifications">C#</a>
+                                                <a class="dropdown-item" href="../account/preferences">Django</a>
+                                                <a class="dropdown-item" href="../account/orders">Laravel</a>
+                                                <a class="dropdown-item" href="../account/wishlist">PHP</a>
+                                                <a class="dropdown-item" href="../account/billing">Skillpark End &amp;
+                                                    Developer</a>
+                                            </div>
+                                            <!-- Account -->
+                                            <a class="dropdown-item" href="../blog/single-article">Freelancers</a>
+                                            <a class="dropdown-item" href="../blog/single-article">Companies</a>
+                                            <a class="dropdown-item" href="../blog/single-article">Popular Jobs</a>
+                                            <a class="dropdown-item" href="../blog/single-article">Featured</a>
+                                        </div>
+                                        <!-- End Pages - Submenu -->
+                                </li>
+                                <!-- End Pages -->
+
+                                <li class="navbar-nav-item">
+                                    <a href="" class="nav-link">Enterprise</a>
+                                </li>
 
 
-            <div class="d-flex align-items-center order-lg-3">
-                @guest
-                <a class="nav-link-style font-size-sm text-nowrap" href="{{ route('login') }}"><i
-                        class="fa fa-user font-size-xl mr-2"></i>{{__('nepali.Login')}}</a>
+                                <!-- Support -->
+                                <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{
+                                            "desktop": {
+                                            "position": "right",
+                                            "maxWidth": "260px"
+                                            }
+                                        }'>
+                                    <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">Support</a>
 
-                <a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block"
-                    href="{{ route('register') }}">{{__('nepali.Join')}}</a>
+                                    <!-- Docs - Submenu -->
+                                    <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu"
+                                        style="min-width: 330px;">
+                                        <!-- Promo Item -->
+                                        <div class="navbar-promo-item">
+                                            <a class="navbar-promo-link" href="">
+                                                <div class="media align-items-center">
+                                                    <img class="navbar-promo-icon" src="/images/svg/icons/icon-2.svg"
+                                                        alt="SVG">
+                                                    <div class="media-body">
+                                                        <span class="navbar-promo-title">
+                                                            Skillpark Inc.
+                                                            <span
+                                                                class="badge badge-primary badge-pill ml-1">v0.4.1</span>
+                                                        </span>
+                                                        <small class="navbar-promo-text">Under Development</small>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- End Promo Item -->
 
-                @else
-                <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
-                    <div class="navbar-tool dropdown"><a class="navbar-tool-icon-box" href="{{ url('dashboard') }}"><img
-                                class="navbar-tool-icon-box-img" src="{{ Auth::user()->avatar }}" alt="Avatar" /></a><a
-                            class="navbar-tool-label dropdown-toggle"
-                            href="account-profile"><small>Hello,</small>{{ Auth::user()->name }}</a>
-                        <ul class="dropdown-menu dropdown-menu-right" style="width: 15rem;">
-                            <li><a class="dropdown-item d-flex align-items-center" href="{{ url('coming-soon') }}"><i
-                                        class="fa fa-envelope font-size-base opacity-60 mr-2"></i>Messages<span
-                                        class="nav-indicator"></span><span
-                                        class="ml-auto font-size-xs text-muted">1</span></a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="{{ url('dashboard') }}"><i
-                                        class="fa fa-dashcube font-size-base opacity-60 mr-2"></i>Dashboard<span
-                                        class="ml-auto font-size-xs text-muted">34</span></a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="{{ url('settings') }}"><i
-                                        class="fa fa-cog font-size-base opacity-60 mr-2"></i>Settings<span
-                                        class="ml-auto font-size-xs text-muted">15</span></a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"">
-                                <i class=" fa fa-sign-out font-size-base opacity-60 mr-2"></i>Sign out</a></li>
+                                        <div class="navbar-promo-footer">
+                                            <!-- List -->
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="navbar-promo-footer-item">
+                                                        <span class="navbar-promo-footer-text">Questionaires</span>
+                                                        <a class="navbar-promo-footer-text" href="faq">
+                                                            FAQ
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 navbar-promo-footer-ver-divider">
+                                                    <div class="navbar-promo-footer-item">
+                                                        <span class="navbar-promo-footer-text">Have a question?</span>
+                                                        <a class="navbar-promo-footer-text"
+                                                            href="mailto:skillparknepal@gmail.com">
+                                                            Contact us
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End List -->
+                                        </div>
+                                    </div>
+                                    <!-- End Docs - Submenu -->
+                                </li>
+                                <!-- End Docs -->
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </ul>
+                                <!-- Search -->
+                                <div class="hs-unfold mr-2">
+                                    <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary"
+                                        href="javascript:;" data-hs-unfold-options='{
+                                                    "target": "#searchClassic",
+                                                    "type": "css-animation",
+                                                    "animationIn": "slideInUp"
+                                                }'>
+                                        <i class="fas fa-search la-lg"></i>
+                                    </a>
+
+                                    <div id="searchClassic"
+                                        class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0"
+                                        style="min-width: 400px;">
+                                        <form class="input-group input-group-sm input-group-merge">
+                                            <input type="text" class="form-control"
+                                                placeholder="{{ __('nepali.Search for Services') }}.."
+                                                aria-label="{{ __('nepali.Search for Services') }}..">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- End Search -->
+                                @guest
+                                    
+                                <li class="navbar-nav-item">
+                                    <a href="{{ route('login') }}" class="nav-link">{{ __('nepali.Login') }}</a>
+                                </li>
+
+                                <li class="navbar-nav-last-item">
+                                    <a class="btn btn-sm btn-primary" href="{{ route('register') }}">
+                                        {{ __('nepali.Join') }}
+                                    </a>
+                                </li>
+                                @else
+                                <li class="navbar-nav-last-item">
+                                    <a class="btn btn-sm btn-primary" href="{{ route('home') }}">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                @endguest
+                                <!-- End Button -->
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                @endguest
-            </div>
-
-            <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
-                <div class="cs-offcanvas-cap navbar-box-shadow">
-                    <h5 class="mt-1 mb-0">Menu</h5>
-                    <button class="close lead" type="button" data-toggle="offcanvas"
-                        data-offcanvas-id="primaryMenu"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="cs-offcanvas-body">
-                    <!-- Menu-->
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown dropdown-mega"><a class="nav-link dropdown-toggle" href="#"
-                                data-toggle="dropdown">How It Works</a>
-                            <div class="dropdown-menu"><a class="dropdown-column dropdown-column-img bg-secondary"
-                                    href="" style="background-image: url(/images/svg/work.svg);"></a>
-                                <div class="dropdown-column"><a class="dropdown-item" href="">About
-                                        Skillpark</a><a class="dropdown-item" href="g">Hire
-                                        Freelancers</a><a class="dropdown-item" href="age">Post
-                                        Project</a>
-                                    <a class="dropdown-item" href="">Explore
-                                        Skills / Categories</a><a class="dropdown-item" href="">Post a Job</a><a
-                                        class="dropdown-item" href="">Advertisement</a></div>
-                                <div class="dropdown-column"><a class="dropdown-item" href="">Creators</a><a
-                                        class="dropdown-item" href="">Payment Methods</a><a class="dropdown-item"
-                                        href="">Join Skillpark</a>
-                                    <a class="dropdown-item" href="">Events and Blogs</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown dropdown-mega"><a class="nav-link dropdown-toggle" href="#"
-                                data-toggle="dropdown">Services / Categories</a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-column mb-2 mb-lg-0">
-                                    <h5 class="dropdown-header">Technology and IT</h5><a class="dropdown-item"
-                                        href="blog-grid-rs">Networking</a><a class="dropdown-item"
-                                        href="blog-grid-ls">Engineering</a><a class="dropdown-item"
-                                        href="blog-grid-ns">Data Science & Analytics</a>
-                                    <a class="dropdown-item" href="blog-list-rs">Translation</a><a class="dropdown-item"
-                                        href="blog-list-ls">Cloud Computing</a><a class="dropdown-item"
-                                        href="blog-list-ns">Artificial Intelligence</a><a class="dropdown-item"
-                                        href="blog-single-rs">Software Development</a>
-                                </div>
-                                <div class="dropdown-column mb-2 mb-lg-0">
-                                    <h5 class="dropdown-header">Design and Creatives</h5><a class="dropdown-item"
-                                        href="portfolio-style-1">UX Design</a><a class="dropdown-item"
-                                        href="portfolio-style-2">Video Designing</a><a class="dropdown-item"
-                                        href="portfolio-style-3">Graphic Design</a>
-                                    <a class="dropdown-item" href="portfolio-single-side-gallery-grid">Art &
-                                        illustration
-                                    </a><a class="dropdown-item" href="portfolio-single-side-gallery-list">Audio
-                                        Production</a><a class="dropdown-item"
-                                        href="portfolio-single-carousel">Photography
-                                    </a>
-                                    <a class="dropdown-item" href="portfolio-single-wide-gallery">Motion
-                                        Graphics</a>
-                                </div>
-                                <div class="dropdown-column mb-2 mb-lg-0">
-                                    <h5 class="dropdown-header">Sales and Analytics</h5><a class="dropdown-item"
-                                        href="">SEO</a><a class="dropdown-item" href="">Email Automation</a><a
-                                        class="dropdown-item" href="">Public Relation</a><a class="dropdown-item"
-                                        href="">Digital Marketing</a><a class="dropdown-item" href="">Community
-                                        Management</a><a class="dropdown-item" href="">Market Research</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                                data-toggle="dropdown">Explore</a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
-                                        data-toggle="dropdown">Popular Skills</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="">Front End Developer</a></li>
-                                        <li><a class="dropdown-item" href="">Back End Developer</a></li>
-                                        <li><a class="dropdown-item" href="">Full Stack Developer</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="">Python</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="">C#</a></li>
-                                        <li><a class="dropdown-item" href="">PHP</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item" href="">Freelancers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="">Companies</a></li>
-                                <li><a class="dropdown-item" href="">Trending Jobs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                                data-toggle="dropdown">Completed Pages</a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
-                                        data-toggle="dropdown">Auth Users</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="home">Freelancer Home Page</a></li>
-                                        <li><a class="dropdown-item" href="client">Client Home Page</a></li>
-                                        <li><a class="dropdown-item" href="dashboard">Dashboard</a></li>
-                                        <li><a class="dropdown-item" href="settings">Settings</a></li>
-                                        <li><a class="dropdown-item" href="task">Task Page</a></li>
-                                        <li><a class="dropdown-item" href="services">Services List Skillpark</a></li>
-                                        <li><a class="dropdown-item" href="services/description">Service Description</a></li>
-                                        <li><a class="dropdown-item" href="user-details">User Details</a></li>
-                                        <li><a class="dropdown-item" href="post/project">Post Project</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item" href="about">About SKillpark</a></li>
-                                <li><a class="dropdown-item" href="creators">Creators</a></li>
-                                <li><a class="dropdown-item" href="contact">Contact</a></li>
-                                <li><a class="dropdown-item" href="policy">Privacy Policy</a></li>
-                                <li><a class="dropdown-item" href="terms">Terms and Condition</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                                data-toggle="dropdown">Support</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="lang/ne">
-                                        <div class="d-flex align-items-center">
-                                            <div class="font-size-xl text-muted"><img src="/images/svg/np.svg"
-                                                    style="width: 25px;max-width:unset">
-                                            </div>
-                                            <div class="pl-3"><span class="d-block text-heading">नेपाली</span><small
-                                                    class="d-block text-muted">Change to Nepali Language</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="dropdown-divider"></li>
-                                <li>
-                                    <a class="dropdown-item" href="lang/en">
-                                        <div class="d-flex align-items-center">
-                                            <div class="font-size-xl text-muted"><img src="/images/svg/en.svg"
-                                                    style="width: 25px;max-width:unset"></i></div>
-                                            <div class="pl-3"><span class="d-block text-heading">English</span><small
-                                                    class="d-block text-muted">Change to English Language</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="dropdown-divider"></li>
-                                <li>
-                                    <a class="dropdown-item" href="mailto:skillparknepal@gmail.com">
-                                        <div class="d-flex align-items-center">
-                                            <div class="font-size-xl text-muted"><i
-                                                    class="fas fa-question-circle fa-lg"></i>
-                                            </div>
-                                            <div class="pl-3"><span class="d-block text-heading">Support</span><small
-                                                    class="d-block text-muted">skillparknepal@gmail.com</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                    <!-- End Navigation -->
+                </nav>
+                <!-- End Nav -->
             </div>
         </div>
     </header>
+    <!-- ========== END HEADER ========== -->
+
 
     @yield('content')
 
-</main>
 
-<!-- Footer-->
-<footer class="cs-footer container pt-5">
-    <div class="row">
-        <div class="col-xl-6 col-lg-5 col-md-4 mb-5 text-center text-md-left">
-            <h2 class="mb-4">Contact Us</h2><a class="btn btn-danger mb-4" href="#"><i
-                    class="fa fa-envelope font-size-lg mr-2"></i>Email Now</a>
-            <div class="pt-2"><a class="social-btn sb-outline sb-lg sb-facebook mr-2 mb-2" href="#"><i
-                        class="fab fa-facebook"></i></a><a class="social-btn sb-outline sb-lg sb-twitter mr-2 mb-2"
-                    href="#"><i class="fab fa-twitter"></i></a><a
-                    class="social-btn sb-outline sb-lg sb-instagram mr-2 mb-2" href="#"><i
-                        class="fab fa-instagram"></i></a><a class="social-btn sb-outline sb-lg sb-google mr-2 mb-2"
-                    href="#"><i class="fab fa-google"></i></a></div>
-        </div>
-        <div class="col-xl-6 col-lg-7 col-md-8 mb-5">
-            <div class="row">
-                <div class="col-6 col-sm-4">
-                    <div class="cs-widget">
-                        <h4 class="cs-widget-title">Enterprise</h4>
-                        <ul>
-                            <li><a class="cs-widget-link" href="#">About</a></li>
-                            <li><a class="cs-widget-link" href="#">Jobs</a></li>
-                            <li><a class="cs-widget-link" href="#">Freelancers</a></li>
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-navy">
+        <div class="container">
+            <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
+                <div class="row justify-content-lg-between">
+                    <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
+                        <!-- Logo -->
+                        <div class="mb-4">
+                            <a href="/" aria-label="Skillpark">
+                                <img class="brand" src="/images/logo/biglogo-white.svg" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link media" href="javascript:;">
+                                    <span class="media">
+                                        <span class="fas fa-location-arrow mt-1 mr-2"></span>
+                                        <span class="media-body">
+                                            44700 Balkumari Road, Lalitpur
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link media" href="tel:9779860489494">
+                                    <span class="media">
+                                        <span class="fas fa-phone-alt mt-1 mr-2"></span>
+                                        <span class="media-body">
+                                            +977 (986) 048-9494
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
+                        <!-- End Nav Link -->
                     </div>
-                </div>
-                <div class="col-6 col-sm-4">
-                    <div class="cs-widget">
-                        <h4 class="cs-widget-title">Services</h4>
-                        <ul>
-                            <li><a class="cs-widget-link" href="#">Strategy</a></li>
-                            <li><a class="cs-widget-link" href="#">HR &amp; Talent</a></li>
-                            <li><a class="cs-widget-link" href="#">Training</a></li>
-                            <li><a class="cs-widget-link" href="#">Analytics</a></li>
-                            <li><a class="cs-widget-link" href="#">Sales &amp; Marketing</a></li>
+
+                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+                        <h5 class="text-white">Company</h5>
+
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+                            <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Careers <span
+                                        class="badge badge-primary ml-1">We're hiring</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="blogs">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="creators">Creators</a></li>
                         </ul>
+                        <!-- End Nav Link -->
                     </div>
-                </div>
-                <div class="d-none d-sm-block col-sm-4">
-                    <div class="cs-widget">
-                        <h4 class="cs-widget-title">Our news</h4>
-                        <ul>
-                            <li><a class="cs-widget-link" href="#">Latest news</a></li>
-                            <li><a class="cs-widget-link" href="#">Insights</a></li>
-                            <li><a class="cs-widget-link" href="#">Blogs</a></li>
-                            <li><a class="cs-widget-link" href="#">Events</a></li>
+
+                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+                        <h5 class="text-white">Features</h5>
+
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Release notes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
                         </ul>
+                        <!-- End Nav Link -->
+                    </div>
+
+                    <div class="col-6 col-md-3 col-lg">
+                        <h5 class="text-white">Documentation</h5>
+
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Status</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Tech Requirements</a></li>
+                        </ul>
+                        <!-- End Nav Link -->
+                    </div>
+
+                    <div class="col-6 col-md-3 col-lg">
+                        <h5 class="text-white">Resources</h5>
+
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq">
+                                    <span class="media align-items-center">
+                                        <i class="fa fa-info-circle mr-2"></i>
+                                        <span class="media-body">Help</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home">
+                                    <span class="media align-items-center">
+                                        <i class="fa fa-user-circle mr-2"></i>
+                                        <span class="media-body">Your Account</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End Nav Link -->
                     </div>
                 </div>
             </div>
+
+            <hr class="opacity-xs my-0">
+
+            <div class="space-1">
+                <div class="row align-items-md-center mb-7">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-white nav-x-sm align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="policy">Privacy &amp; Policy</a>
+                            </li>
+                            <li class="nav-item opacity mx-3">&#47;</li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="terms">Terms</a>
+                            </li>
+                            <li class="nav-item opacity mx-3">&#47;</li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Site Map</a>
+                            </li>
+                        </ul>
+                        <!-- End Nav Link -->
+                    </div>
+
+                    <div class="col-md-6 text-md-right">
+                        <ul class="list-inline mb-0">
+                            <!-- Social Networks -->
+                            <li class="list-inline-item">
+                                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-xs btn-icon btn-soft-light" href="https://github.com/skillpark">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <!-- End Social Networks -->
+
+                            <!-- Language -->
+                            <li class="list-inline-item">
+                                <div class="hs-unfold">
+                                    <a class="js-hs-unfold-invoker dropdown-toggle btn btn-xs btn-soft-light"
+                                        href="javascript:;" data-hs-unfold-options='{
+                                                        "target": "#footerLanguage",
+                                                        "type": "css-animation",
+                                                        "animationIn": "slideInDown"
+                                                        }'>
+                                        <i class="fa fa-globe"></i>&nbsp;
+                                        <span> English</span>
+                                    </a>
+
+                                    <div id="footerLanguage"
+                                        class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
+                                        <a class="dropdown-item active" href="/lang/en">English</a>
+                                        <a class="dropdown-item" href="/lang/ne">Nepali</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- End Language -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="w-md-75 text-lg-center mx-lg-auto">
+                    <p class="text-white opacity-sm small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
+                    <p class="text-white opacity-sm small">When you visit or interact with our sites, services or tools,
+                        we or our authorised service providers may use cookies for storing information to help provide
+                        you with a better, faster and safer experience and for marketing purposes.</p>
+                </div>
+                <!-- End Copyright -->
+            </div>
         </div>
-    </div>
-    <div class="border-top py-4">
-        <div class="d-md-flex align-items-center justify-content-between py-2 text-center text-md-left">
-            <ul class="list-inline font-size-sm mb-3 mb-md-0 order-md-2">
-                <li class="list-inline-item my-1"><a class="nav-link-style" href="#">Support</a></li>
-                <li class="list-inline-item my-1"><a class="nav-link-style" href="#">Privacy Policy</a></li>
-                <li class="list-inline-item my-1"><a class="nav-link-style" href="#">Terms &amp; Conditions</a></li>
-            </ul>
-            <p class="font-size-sm mb-0 mr-3 order-md-1"><span class="text-muted mr-1">© All rights reserved.
-                </span><a class="nav-link-style font-weight-normal" href="https://skillpark.herokuapp.com/"
-                    target="_blank" rel="noopener">Skillpark Inc.</a></p>
-        </div>
-    </div>
-</footer>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
 
-<!-- Vendor scripts: js libraries and plugins-->
-<script src="/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <!-- JS Global Compulsory -->
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- JS Global Compulsory -->
-<script src="/vendor/jquery/dist/jquery.min.js"></script>
-<script src="/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
-<script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
+    <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
+    <script src="/vendor/appear.js"></script>
+    <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
 
-<!-- JS Implementing Plugins -->
-<script src="/vendor/hs-header/dist/hs-header.min.js"></script>
-<script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-<script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
-<script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-<script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/vendor/slick-carousel/slick/slick.js"></script>
+    <!-- JS Skillpark -->
+    <script src="/js/hs.core.js"></script>
+    <script src="/js/hs.validation.js"></script>
 
-<!-- JS Front -->
-<script src="/js/theme.min.js"></script>
-<script src="/js/hs.core.js"></script>
-<script src="/js/hs.validation.js"></script>
-<script src="/js/hs.slick-carousel.js"></script>
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+      // initialization of header
+      var header = new HSHeader($('#header')).init();
+
+      // initialization of mega menu
+      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+        desktop: {
+          position: 'left'
+        }
+      }).init();
+
+      // initialization of unfold
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+      // initialization of form validation
+      $('.js-validate').each(function() {
+        $.HSCore.components.HSValidation.init($(this), {
+          rules: {
+            confirmPassword: {
+              equalTo: '#signupPassword'
+            }
+          }
+        });
+      });
+
+      // initialization of show animations
+      $('.js-animation-link').each(function () {
+        var showAnimation = new HSShowAnimation($(this)).init();
+      });
+
+      // initialization of go to
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+    });
+    </script>
+
 </body>
 
 </html>

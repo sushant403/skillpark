@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" color="#5bbad5" href="/safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#1dc8cc">
+    <meta name="msapplication-TileColor" content="#24cc7d">
     <meta name="theme-color" content="#ffffff">
     <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
@@ -161,7 +161,7 @@
                                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#"
                                             data-toggle="dropdown">Popular Skills</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="">Front End Developer</a></li>
+                                            <li><a class="dropdown-item" href="">Skillpark End Developer</a></li>
                                             <li><a class="dropdown-item" href="">Back End Developer</a></li>
                                             <li><a class="dropdown-item" href="">Full Stack Developer</a>
                                             </li>
@@ -316,7 +316,7 @@
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="/vendor/slick-carousel/slick/slick.js"></script>
 
-  <!-- JS Front -->
+  <!-- JS Skillpark -->
   <script src="/js/theme.min.js"></script>
   <script src="/js/hs.core.js"></script>
   <script src="/js/hs.validation.js"></script>

@@ -387,7 +387,7 @@
                                                 <a href="#">
                                                     <h4>Hari Singh</h4>
                                                 </a>
-                                                <span>Front End Developer</span>
+                                                <span>Skillpark End Developer</span>
                                                 <div class="avialable">About (To be Filled)</div>
                                             </div>
                                         </div>
@@ -688,7 +688,7 @@
                                             <a href="#">
                                                 <h4>Aakash Jha</h4>
                                             </a>
-                                            <span>Front End Developer</span>
+                                            <span>Skillpark End Developer</span>
                                             <div class="avialable">About (To be Filled)</div>
                                         </div>
                                     </div>

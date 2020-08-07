@@ -116,7 +116,7 @@
 
             <p>Skillpark Inc.'s privacy policies explain how we treat your personal data and protect your privacy when you use our Services. By using our Services, you agree that Skillpark Inc. can use such data in accordance with our privacy policies.</p>
             <p>We respond to notices of alleged copyright infringement and terminate accounts of repeat infringers according to the process set out in the U.S. Digital Millennium Copyright Act.</p>
-            <p>We provide information to help copyright holders manage their intellectual property online. If you think somebody is violating your copyrights and want to notify us, you can find information about submitting notices and Skillpark Inc.'s policy about responding to notices in <a href="../help-desk/index.html">our Help Center</a>.</p>
+            <p>We provide information to help copyright holders manage their intellectual property online. If you think somebody is violating your copyrights and want to notify us, you can find information about submitting notices and Skillpark Inc.'s policy about responding to notices in <a href="">our Help Center</a>.</p>
           </div>
 
           <div id="yourContent">
