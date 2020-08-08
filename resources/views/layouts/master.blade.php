@@ -84,7 +84,7 @@
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
                                     <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions')}}</a>
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
@@ -96,11 +96,11 @@
                                                     <div class="navbar-banner-content">
                                                         <div class="mb-6">
                                                             <span class="h2 d-block text-white">Skillpark Inc.</span>
-                                                            <p class="text-white">Experience the simplified modern way
-                                                                of hiring freelancers.</p>
+                                                            <p class="text-white">{{ __('nepali.Experience the simplified modern way
+                                                                of hiring freelancers.')}}</p>
                                                         </div>
                                                         <a class="btn btn-primary btn-sm transition-3d-hover"
-                                                            href="{{ route('register') }}">Get Started <i
+                                                            href="{{ route('register') }}">{{ __('nepali.Get Started')}} <i
                                                                 class="fas fa-angle-right fa-sm ml-1"></i></a>
                                                     </div>
                                                 </div>
@@ -193,7 +193,7 @@
                                             }
                                         }'>
                                     <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">{{ __('nepali.Support')}}</a>
 
                                     <!-- Docs - Submenu -->
                                     <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu"
@@ -222,18 +222,18 @@
                                             <div class="row no-gutters">
                                                 <div class="col-6">
                                                     <div class="navbar-promo-footer-item">
-                                                        <span class="navbar-promo-footer-text">Questionaires</span>
+                                                        <span class="navbar-promo-footer-text">{{ __('nepali.Questionaires')}}</span>
                                                         <a class="navbar-promo-footer-text" href="faq">
-                                                            FAQ
+                                                        {{ __('nepali.FAQ')}}
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="col-6 navbar-promo-footer-ver-divider">
                                                     <div class="navbar-promo-footer-item">
-                                                        <span class="navbar-promo-footer-text">Have a question?</span>
+                                                        <span class="navbar-promo-footer-text">{{ __('nepali.Have a question?')}}</span>
                                                         <a class="navbar-promo-footer-text"
                                                             href="mailto:skillparknepal@gmail.com">
-                                                            Contact us
+                                                            {{ __('nepali.Contact us')}}
                                                         </a>
                                                     </div>
                                                 </div>
@@ -286,7 +286,7 @@
                                 @else
                                 <li class="navbar-nav-last-item">
                                     <a class="btn btn-sm btn-primary" href="{{ route('home') }}">
-                                        Dashboard
+                                    {{ __('nepali.Dashboard')}}
                                     </a>
                                 </li>
                                 @endguest
@@ -312,12 +312,12 @@
             <!-- CTA -->
             <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
                 <div class="col-lg-5 mb-3 mb-lg-0">
-                    <h2 class="text">Thousands of businesses trust Skillpark for their business.</h2>
+                    <h2 class="text">{{ __('nepali.Thousands of businesses trust Skillpark for their business.')}}</h2>
                 </div>
                 <div class="col-lg-5 text-lg-right">
-                    <a class="btn btn-primary transition-3d-hover" href="{{ route('register') }}">Get Started</a>
+                    <a class="btn btn-primary transition-3d-hover" href="{{ route('register') }}">{{ __('nepali.Get Started')}}/a>
                     <small class="text-muted my-3 my-sm-0 mx-2 mx-sm-3">or</small>
-                    <a class="btn btn-secondary transition-3d-hover" href="{{ url('categories') }}">Explore</a>
+                    <a class="btn btn-secondary transition-3d-hover" href="{{ url('categories') }}">{{ __('nepali.Explore')}}</a>
                 </div>
             </div>
             <!-- End CTA -->
@@ -405,7 +405,7 @@
                     </div>
 
                     <div class="col-6 col-md-3 col-lg">
-                        <h5 class="text-white">Resources</h5>
+                        <h5 class="text-white">{{ __('nepali.Resources')}}</h5>
 
                         <!-- Nav Link -->
                         <ul class="nav nav-sm nav-x-0 nav-white flex-column">
@@ -413,7 +413,7 @@
                                 <a class="nav-link" href="faq">
                                     <span class="media align-items-center">
                                         <i class="fa fa-info-circle mr-2"></i>
-                                        <span class="media-body">Help</span>
+                                        <span class="media-body">{{ __('nepali.Help')}}</span>
                                     </span>
                                 </a>
                             </li>
@@ -421,7 +421,7 @@
                                 <a class="nav-link" href="home">
                                     <span class="media align-items-center">
                                         <i class="fa fa-user-circle mr-2"></i>
-                                        <span class="media-body">Your Account</span>
+                                        <span class="media-body">{{ __('nepali.Your Account')}}</span>
                                     </span>
                                 </a>
                             </li>
@@ -439,15 +439,15 @@
                         <!-- Nav Link -->
                         <ul class="nav nav-sm nav-white nav-x-sm align-items-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="policy">Privacy &amp; Policy</a>
+                                <a class="nav-link" href="policy">{{ __('nepali.Privacy &amp; Policy')}}</a>
                             </li>
                             <li class="nav-item opacity mx-3">&#47;</li>
                             <li class="nav-item">
-                                <a class="nav-link" href="terms">Terms</a>
+                                <a class="nav-link" href="terms">{{ __('nepali.Terms')}}</a>
                             </li>
                             <li class="nav-item opacity mx-3">&#47;</li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Site Map</a>
+                                <a class="nav-link" href="#">{{ __('nepali.Site Map')}}</a>
                             </li>
                         </ul>
                         <!-- End Nav Link -->
@@ -494,7 +494,7 @@
                                     <div id="footerLanguage"
                                         class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
                                         <a class="dropdown-item active" href="/lang/en">English</a>
-                                        <a class="dropdown-item" href="/lang/ne">Nepali</a>
+                                        <a class="dropdown-item" href="/lang/ne">नेपाली</a>
                                     </div>
                                 </div>
                             </li>
@@ -505,7 +505,7 @@
 
                 <!-- Copyright -->
                 <div class="w-md-75 text-lg-center mx-lg-auto">
-                    <p class="text-white opacity-sm small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
+                    <p class="text-white opacity-sm small">&copy; Skillpark Inc. 2020.{{ __('nepali.Get Started')}} All rights reserved.</p>
                     <p class="text-white opacity-sm small">When you visit or interact with our sites, services or tools,
                         we or our authorised service providers may use cookies for storing information to help provide
                         you with a better, faster and safer experience and for marketing purposes.</p>
