@@ -43,9 +43,10 @@
 
 <body>
     <!-- ========== HEADER ========== -->
-    <header id="header" class="header header-box-shadow-on-scroll header-sticky-top header-show-hide"
+    <header id="header"
+        class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide "
         data-hs-header-options='{
-   "fixMoment": 600,
+   "fixMoment": 500,
    "fixEffect": "slide"
  }'>
         <div class="header-section">
@@ -83,8 +84,8 @@
                             <ul class="navbar-nav">
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
-                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                        aria-haspopup="true" aria-expanded="false">Solutions</a>
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
@@ -92,14 +93,14 @@
                                             <div class="col-lg-6">
                                                 <!-- Banner Image -->
                                                 <div class="navbar-banner"
-                                                    style="background-image: url(/images/svg/banner.svg);">
+                                                    style="background-image: url(/images/svg/ipad.svg);">
                                                     <div class="navbar-banner-content">
                                                         <div class="mb-6">
                                                             <span class="h2 d-block text-white">Skillpark Inc.</span>
-                                                            <p class="text-white">Experience the simplified modern way
+                                                            <p>Experience the simplified modern way
                                                                 of hiring freelancers.</p>
                                                         </div>
-                                                        <a class="btn btn-primary btn-sm transition-3d-hover"
+                                                        <a class="btn btn-primary btn-sm"
                                                             href="{{ route('register') }}">Get Started <i
                                                                 class="fas fa-angle-right fa-sm ml-1"></i></a>
                                                     </div>
@@ -142,8 +143,8 @@
 
                                 <!-- Pages -->
                                 <li class="hs-has-sub-menu navbar-nav-item">
-                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                        aria-haspopup="true" aria-expanded="false"
                                         aria-labelledby="pagesSubMenu">Explore</a>
 
                                     <!-- Pages - Submenu -->
@@ -161,20 +162,20 @@
                                                 aria-labelledby="navLinkPagesAccount" style="min-width: 230px;">
                                                 <a class="dropdown-item" href="">Full Stack
                                                     Developer</a>
-                                                <a class="dropdown-item" href="../account/login-and-security">IT
+                                                <a class="dropdown-item" href="">IT
                                                     &amp; Security</a>
-                                                <a class="dropdown-item" href="../account/notifications">C#</a>
-                                                <a class="dropdown-item" href="../account/preferences">Django</a>
-                                                <a class="dropdown-item" href="../account/orders">Laravel</a>
-                                                <a class="dropdown-item" href="../account/wishlist">PHP</a>
-                                                <a class="dropdown-item" href="../account/billing">Skillpark End &amp;
+                                                <a class="dropdown-item" href="">C#</a>
+                                                <a class="dropdown-item" href="">Django</a>
+                                                <a class="dropdown-item" href="">Laravel</a>
+                                                <a class="dropdown-item" href="">PHP</a>
+                                                <a class="dropdown-item" href="">Skillpark End &amp;
                                                     Developer</a>
                                             </div>
                                             <!-- Account -->
-                                            <a class="dropdown-item" href="../blog/single-article">Freelancers</a>
-                                            <a class="dropdown-item" href="../blog/single-article">Companies</a>
-                                            <a class="dropdown-item" href="../blog/single-article">Popular Jobs</a>
-                                            <a class="dropdown-item" href="../blog/single-article">Featured</a>
+                                            <a class="dropdown-item" href="">Freelancers</a>
+                                            <a class="dropdown-item" href="">Companies</a>
+                                            <a class="dropdown-item" href="">Popular Jobs</a>
+                                            <a class="dropdown-item" href="">Featured</a>
                                         </div>
                                         <!-- End Pages - Submenu -->
                                 </li>
@@ -192,8 +193,8 @@
                                             "maxWidth": "260px"
                                             }
                                         }'>
-                                    <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">Support</a>
+                                    <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                        aria-haspopup="true" aria-expanded="false">Support</a>
 
                                     <!-- Docs - Submenu -->
                                     <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu"
@@ -261,8 +262,8 @@
                                         style="min-width: 400px;">
                                         <form class="input-group input-group-sm input-group-merge">
                                             <input type="text" class="form-control"
-                                                placeholder="What do you want to learn?"
-                                                aria-label="What do you want to learn?">
+                                                placeholder="{{ __('nepali.Search for Services') }}.."
+                                                aria-label="{{ __('nepali.Search for Services') }}..">
                                             <div class="input-group-append">
                                                 <button type="button" class="btn">
                                                     <i class="fas fa-search"></i>
@@ -272,16 +273,24 @@
                                     </div>
                                 </div>
                                 <!-- End Search -->
+                                @guest
 
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('login') }}" class="nav-link">Login</a>
+                                    <a href="{{ route('login') }}" class="nav-link">{{ __('nepali.Login') }}</a>
                                 </li>
 
                                 <li class="navbar-nav-last-item">
                                     <a class="btn btn-sm btn-primary" href="{{ route('register') }}">
-                                        Join
+                                        {{ __('nepali.Join') }}
                                     </a>
                                 </li>
+                                @else
+                                <li class="navbar-nav-last-item">
+                                    <a class="btn btn-sm btn-primary" href="{{ route('home') }}">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                @endguest
                                 <!-- End Button -->
                             </ul>
                         </div>
@@ -297,197 +306,215 @@
 
     @yield('content')
 
-
     <!-- ========== FOOTER ========== -->
-    <footer class="bg-navy">
-        <div class="container">
-            <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
-                <div class="row justify-content-lg-between">
-                    <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
-                        <!-- Logo -->
-                        <div class="mb-4">
-                            <a href="/" aria-label="Skillpark">
-                                <img class="brand" src="/images/logo/biglogo-white.svg" alt="Logo">
-                            </a>
-                        </div>
-                        <!-- End Logo -->
 
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link media" href="javascript:;">
-                                    <span class="media">
-                                        <span class="fas fa-location-arrow mt-1 mr-2"></span>
-                                        <span class="media-body">
-                                            44700 Balkumari Road, Lalitpur
-                                        </span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link media" href="tel:9779860489494">
-                                    <span class="media">
-                                        <span class="fas fa-phone-alt mt-1 mr-2"></span>
-                                        <span class="media-body">
-                                            +977 (986) 048-9494
-                                        </span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-                        <h5 class="text-white">Company</h5>
-
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Careers <span
-                                        class="badge badge-primary ml-1">We're hiring</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="blogs">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="creators">Creators</a></li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-                        <h5 class="text-white">Features</h5>
-
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Release notes</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg">
-                        <h5 class="text-white">Documentation</h5>
-
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Status</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Tech Requirements</a></li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg">
-                        <h5 class="text-white">Resources</h5>
-
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="faq">
-                                    <span class="media align-items-center">
-                                        <i class="fa fa-info-circle mr-2"></i>
-                                        <span class="media-body">Help</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="home">
-                                    <span class="media align-items-center">
-                                        <i class="fa fa-user-circle mr-2"></i>
-                                        <span class="media-body">Your Account</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
+    @guest
+    <footer class="gradient-x-overlay-sm-indigo overflow-hidden">
+        <div class="container space-top-2 space-bottom-1">
+            <!-- CTA -->
+            <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+                <div class="col-lg-5 mb-3 mb-lg-0">
+                    <h2 class="text">Thousands of businesses trust Skillpark for their business.</h2>
+                </div>
+                <div class="col-lg-5 text-lg-right">
+                    <a class="btn btn-primary" href="{{ route('register') }}">Get Started</a>
+                    <small class="text-muted my-3 my-sm-0 mx-2 mx-sm-3">or</small>
+                    <a class="btn btn-secondary" href="{{ url('categories') }}">Explore</a>
                 </div>
             </div>
+            <!-- End CTA -->
+    </footer>
+    @else
+    <div class="d-none"></div>
+    @endguest
 
-            <hr class="opacity-xs my-0">
-
-            <div class="space-1">
-                <div class="row align-items-md-center mb-7">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-white nav-x-sm align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="policy">Privacy &amp; Policy</a>
-                            </li>
-                            <li class="nav-item opacity mx-3">&#47;</li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="terms">Terms</a>
-                            </li>
-                            <li class="nav-item opacity mx-3">&#47;</li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Site Map</a>
-                            </li>
-                        </ul>
-                        <!-- End Nav Link -->
+    <footer class="container">
+        <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
+            <div class="row justify-content-lg-between">
+                <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
+                    <!-- Logo -->
+                    <div class="mb-4">
+                        <a href="/" aria-label="Skillpark">
+                            <img class="brand" src="/images/logo/biglogo.svg" alt="Logo">
+                        </a>
                     </div>
+                    <!-- End Logo -->
 
-                    <div class="col-md-6 text-md-right">
-                        <ul class="list-inline mb-0">
-                            <!-- Social Networks -->
-                            <li class="list-inline-item">
-                                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
-                                    <i class="fab fa-google"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-xs btn-icon btn-soft-light" href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-xs btn-icon btn-soft-light" href="https://github.com/skillpark">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </li>
-                            <!-- End Social Networks -->
+                    <!-- Nav Link -->
+                    <ul class="nav nav-sm nav-x-0 flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link media" href="javascript:;">
+                                <span class="media">
+                                    <span class="fas fa-location-arrow mt-1 mr-2"></span>
+                                    <span class="media-body">
+                                        44700 Balkumari Road, Lalitpur
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link media" href="tel:9779860489494">
+                                <span class="media">
+                                    <span class="fas fa-phone-alt mt-1 mr-2"></span>
+                                    <span class="media-body">
+                                        +977 (986) 048-9494
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Nav Link -->
+                </div>
 
-                            <!-- Language -->
-                            <li class="list-inline-item">
-                                <div class="hs-unfold">
-                                    <a class="js-hs-unfold-invoker dropdown-toggle btn btn-xs btn-soft-light"
-                                        href="javascript:;" data-hs-unfold-options='{
+                <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+                    <h5>Company</h5>
+
+                    <!-- Nav Link -->
+                    <ul class="nav nav-sm nav-x-0 flex-column">
+                        <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Careers <span
+                                    class="badge badge-primary ml-1">We're hiring</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="blogs">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="creators">Creators</a></li>
+                    </ul>
+                    <!-- End Nav Link -->
+                </div>
+
+                <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+                    <h5>Features</h5>
+
+                    <!-- Nav Link -->
+                    <ul class="nav nav-sm nav-x-0 flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Release notes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    </ul>
+                    <!-- End Nav Link -->
+                </div>
+
+                <div class="col-6 col-md-3 col-lg">
+                    <h5>Documentation</h5>
+
+                    <!-- Nav Link -->
+                    <ul class="nav nav-sm nav-x-0 flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Status</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tech Requirements</a></li>
+                    </ul>
+                    <!-- End Nav Link -->
+                </div>
+
+                <div class="col-6 col-md-3 col-lg">
+                    <h5>Resources</h5>
+
+                    <!-- Nav Link -->
+                    <ul class="nav nav-sm nav-x-0 flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq">
+                                <span class="media align-items-center">
+                                    <i class="fa fa-info-circle mr-2"></i>
+                                    <span class="media-body">Help</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home">
+                                <span class="media align-items-center">
+                                    <i class="fa fa-user-circle mr-2"></i>
+                                    <span class="media-body">Your Account</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Nav Link -->
+                </div>
+            </div>
+        </div>
+
+        <hr class="opacity-xs my-0">
+
+        <div class="space-1">
+            <div class="row align-items-md-center mb-7">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <!-- Nav Link -->
+                    <ul class="nav nav-sm nav-x-sm align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="policy">Privacy &amp; Policy</a>
+                        </li>
+                        <li class="nav-item opacity mx-3">&#47;</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="terms">Terms</a>
+                        </li>
+                        <li class="nav-item opacity mx-3">&#47;</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Site Map</a>
+                        </li>
+                    </ul>
+                    <!-- End Nav Link -->
+                </div>
+
+                <div class="col-md-6 text-md-right">
+                    <ul class="list-inline mb-0">
+                        <!-- Social Networks -->
+                        <li class="list-inline-item">
+                            <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-xs btn-icon btn-soft-secondary" href="https://github.com/skillpark">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <!-- End Social Networks -->
+
+                        <!-- Language -->
+                        <li class="list-inline-item">
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker dropdown-toggle btn btn-xs btn-soft-secondary"
+                                    href="javascript:;" data-hs-unfold-options='{
                                                         "target": "#footerLanguage",
                                                         "type": "css-animation",
                                                         "animationIn": "slideInDown"
                                                         }'>
-                                        <i class="fa fa-globe"></i>&nbsp;
-                                        <span> English</span>
-                                    </a>
+                                    <i class="fa fa-globe"></i>&nbsp;
+                                    <span> English</span>
+                                </a>
 
-                                    <div id="footerLanguage"
-                                        class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
-                                        <a class="dropdown-item active" href="/lang/en">English</a>
-                                        <a class="dropdown-item" href="/lang/ne">Nepali</a>
-                                    </div>
+                                <div id="footerLanguage"
+                                    class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
+                                    <a class="dropdown-item active" href="/lang/en">English</a>
+                                    <a class="dropdown-item" href="/lang/ne">Nepali</a>
                                 </div>
-                            </li>
-                            <!-- End Language -->
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+                        <!-- End Language -->
+                    </ul>
                 </div>
-
-                <!-- Copyright -->
-                <div class="w-md-75 text-lg-center mx-lg-auto">
-                    <p class="text-white opacity-sm small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
-                    <p class="text-white opacity-sm small">When you visit or interact with our sites, services or tools,
-                        we or our authorised service providers may use cookies for storing information to help provide
-                        you with a better, faster and safer experience and for marketing purposes.</p>
-                </div>
-                <!-- End Copyright -->
             </div>
+
+            <!-- Copyright -->
+            <div class="w-md-75 text-lg-center mx-lg-auto">
+                <p class="text-muted small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
+                <p class="text-muted small">When you visit or interact with our sites, services or tools,
+                    we or our authorised service providers may use cookies for storing information to help provide
+                    you with a better, faster and safer experience and for marketing purposes.</p>
+            </div>
+            <!-- End Copyright -->
         </div>
     </footer>
     <!-- ========== END FOOTER ========== -->
@@ -502,12 +529,10 @@
     <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
     <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    <script src="/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
     <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
-    <script src="/vendor/hs-counter/dist/hs-counter.min.js"></script>
     <script src="/vendor/appear.js"></script>
-    <script src="/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="/vendor/dzsparallaxer/dzsparallaxer.js"></script>
 
     <!-- JS Skillpark -->
     <script src="/js/hs.core.js"></script>
@@ -526,6 +551,11 @@
         }
       }).init();
 
+// initialization of video player
+$('.js-inline-video-player').each(function () {
+  var videoPlayer = new HSVideoPlayer($(this)).init();
+});
+
       // initialization of unfold
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
 
@@ -543,20 +573,6 @@
       // initialization of show animations
       $('.js-animation-link').each(function () {
         var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
-      // initialization of counter
-      $('.js-counter').each(function() {
-        var counter = new HSCounter($(this)).init();
-      });
-
-      // initialization of cubeportfolio
-      $('.cbp').each(function () {
-        var cbp = $.HSCore.components.HSCubeportfolio.init($(this), {
-          layoutMode: 'grid',
-          filters: '#filterControls',
-          displayTypeSpeed: 0
-        });
       });
 
       // initialization of go to

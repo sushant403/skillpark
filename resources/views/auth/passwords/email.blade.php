@@ -5,10 +5,10 @@
     document.title = 'Reset Password | SKILLPARK - Hire Expert Freelancers Any Time';
 </script>
 
-<div class="container py-5 py-sm-6 py-md-7">
+<div class="container">
     <div class="row justify-content-center pt-4">
         <div class="col-lg-7 col-md-9 col-sm-11">
-            <h1 class="h2 pb-3">Forgot your password?</h1>
+            <h2 class="h3 pb-3">Forgot your password?</h2>
             <p class="font-size-sm">Change your password in three easy steps. This helps to keep your new password
                 secure.</p>
             <ul class="list-unstyled font-size-sm pb-1 mb-4">
@@ -31,7 +31,6 @@
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                        <div class="invalid-feedback">Please provide a valid email address!</div>
                     </div>
                     <button class="btn btn-primary" type="submit">Request Verification Link</button>
                 </form>

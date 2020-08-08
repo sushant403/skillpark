@@ -36,11 +36,12 @@
 
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/theme.min.css">
 </head>
 
 <body>
     <!-- ========== HEADER ========== -->
-    <header id="header" class="header header-box-shadow-on-scroll header-sticky-top header-show-hide"
+    <header id="header" class="header header-bg-transparent header-show-hide"
         data-hs-header-options='{
    "fixMoment": 600,
    "fixEffect": "slide"
@@ -48,7 +49,7 @@
         <div class="header-section">
             <div id="logoAndNav" class="container">
                 <!-- Nav -->
-                <nav class="js-mega-menu navbar navbar-expand-lg">
+                <nav class="js-mega-menu navbar navbar-expand-lg py-0">
                     <!-- Logo -->
                     <a class="navbar-brand" href="/" aria-label="Skillpark">
                         <img src="/images/logo/biglogo.svg" alt="Logo">
@@ -80,7 +81,7 @@
                             <ul class="navbar-nav">
                                 @guest
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('login') }}" class="nav-link">{{ __('nepali.Login') }}</a>
+                                    <a href="{{ route('login') }}" class="nav-link"><i class="fa fa-user"></i>&nbsp; {{ __('nepali.Login') }}</a>
                                 </li>
 
                                 <li class="navbar-nav-last-item">
@@ -90,7 +91,7 @@
                                 </li>
                                 @else
                                 <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary" href="{{ route('hoe') }}">
+                                    <a class="btn btn-sm btn-primary" href="{{ url('home') }}">
                                         {{ __('nepali.Dashboard') }}
                                     </a>
                                 </li>
@@ -110,42 +111,6 @@
 
     @yield('content')
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="container space-2 text-center">
-        <!-- Logo -->
-        <a class="d-inline-flex align-items-center mb-3" href="/" aria-label="Skillpark">
-            <img class="brand" src="/images/logo/biglogo.svg" alt="Logo">
-        </a>
-        <!-- End Logo -->
-
-        <p class="font-size-1">&copy; Skillpark Inc. 2020. All rights reserved.</p>
-
-        <!-- Social Networks -->
-        <ul class="list-inline mb-0">
-            <li class="list-inline-item mb-2 mb-sm-0">
-                <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-            <li class="list-inline-item mb-2 mb-sm-0">
-                <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="#">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li class="list-inline-item mb-2 mb-sm-0">
-                <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="list-inline-item mb-2 mb-sm-0">
-                <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-        </ul>
-        <!-- End Social Networks -->
-    </footer>
-    <!-- ========== END FOOTER ========== -->
     <!-- JS Global Compulsory -->
     <script src="/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>

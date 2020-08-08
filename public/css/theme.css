@@ -2244,7 +2244,7 @@ pre code {
 .form-control {
     display: block;
     width: 100%;
-    height: calc(1.6em + 1.625rem);
+    height: calc(1.2em + 1.625rem);
     padding: 0.75rem 1rem;
     font-size: 1rem;
     font-weight: 400;
@@ -2776,7 +2776,7 @@ textarea.form-control.is-invalid {
     border: 0.0625rem solid transparent;
     padding: 0.75rem 1rem;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.2;
     border-radius: 0.3125rem;
     transition: all 0.2s ease-in-out;
 }
@@ -24856,6 +24856,312 @@ a:hover .text-hover-primary {
 /*------------------------------------
   File for your custom SCSS style
 ------------------------------------*/
+
+.social-btn {
+    display: inline-block;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid transparent;
+    transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    border-radius: .5rem;
+    background-color: #f3f3f9;
+    color: #6c6d89;
+    font-size: .9375rem;
+    text-align: center;
+    text-decoration: none !important
+}
+
+.social-btn>i {
+    line-height: 2.125rem
+}
+
+.social-btn:hover {
+    color: #fff
+}
+
+.social-btn:focus {
+    outline: none
+}
+
+.social-btn:active {
+    transition: none;
+    box-shadow: none !important
+}
+
+.social-btn.sb-light {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff
+}
+
+.social-btn.sb-light:hover {
+    background-color: #fff !important;
+    box-shadow: none !important
+}
+
+.sb-lg {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: .75rem;
+    font-size: 1rem
+}
+
+.sb-lg>i {
+    line-height: 2.625rem
+}
+
+.sb-sm {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: .5rem;
+    font-size: .8125rem
+}
+
+.sb-sm>i {
+    line-height: 1.625rem
+}
+
+.sb-outline {
+    border-color: #e5e5ef;
+    background-color: transparent
+}
+
+.sb-outline.sb-light {
+    border-color: rgba(255, 255, 255, 0.14);
+    background-color: transparent
+}
+
+.sb-outline:hover {
+    border-color: transparent
+}
+
+.sb-round {
+    border-radius: 50% !important
+}
+
+.sb-facebook:hover {
+    background-color: #3b5998
+}
+
+.sb-facebook:hover.sb-light {
+    color: #3b5998
+}
+
+.sb-twitter:hover {
+    background-color: #1da1f2
+}
+
+.sb-twitter:hover.sb-light {
+    color: #1da1f2
+}
+
+.sb-instagram:hover {
+    background-color: #5851db
+}
+
+.sb-instagram:hover.sb-light {
+    color: #5851db
+}
+
+.sb-google:hover {
+    background-color: #ea4335
+}
+
+.sb-google:hover.sb-light {
+    color: #ea4335
+}
+
+.sb-linkedin:hover {
+    background-color: #0077b5
+}
+
+.sb-linkedin:hover.sb-light {
+    color: #0077b5
+}
+
+.sb-pinterest:hover {
+    background-color: #bd081c
+}
+
+.sb-pinterest:hover.sb-light {
+    color: #bd081c
+}
+
+.sb-tumblr:hover {
+    background-color: #35465c
+}
+
+.sb-tumblr:hover.sb-light {
+    color: #35465c
+}
+
+.sb-behance:hover {
+    background-color: #1769ff
+}
+
+.sb-behance:hover.sb-light {
+    color: #1769ff
+}
+
+.sb-dribbble:hover {
+    background-color: #ea4c89
+}
+
+.sb-dribbble:hover.sb-light {
+    color: #ea4c89
+}
+
+.sb-vk:hover {
+    background-color: #45668e
+}
+
+.sb-vk:hover.sb-light {
+    color: #45668e
+}
+
+.sb-odnoklassniki:hover {
+    background-color: #ed812b
+}
+
+.sb-odnoklassniki:hover.sb-light {
+    color: #ed812b
+}
+
+.sb-skype:hover {
+    background-color: #00aff0
+}
+
+.sb-skype:hover.sb-light {
+    color: #00aff0
+}
+
+.sb-hangouts:hover {
+    background-color: #0f9d58
+}
+
+.sb-hangouts:hover.sb-light {
+    color: #0f9d58
+}
+
+.sb-messenger:hover {
+    background-color: #0084ff
+}
+
+.sb-messenger:hover.sb-light {
+    color: #0084ff
+}
+
+.sb-viber:hover {
+    background-color: #59267c
+}
+
+.sb-viber:hover.sb-light {
+    color: #59267c
+}
+
+.sb-telegram:hover {
+    background-color: #0088cc
+}
+
+.sb-telegram:hover.sb-light {
+    color: #0088cc
+}
+
+.sb-youtube:hover {
+    background-color: #ff0000
+}
+
+.sb-youtube:hover.sb-light {
+    color: #ff0000
+}
+
+.sb-figma:hover {
+    background-color: #a259ff
+}
+
+.sb-figma:hover.sb-light {
+    color: #a259ff
+}
+
+.sb-vimeo:hover {
+    background-color: #1ab7ea
+}
+
+.sb-vimeo:hover.sb-light {
+    color: #1ab7ea
+}
+
+.sb-wechat:hover {
+    background-color: #7bb32e
+}
+
+.sb-wechat:hover.sb-light {
+    color: #7bb32e
+}
+
+.sb-github:hover {
+    background-color: #4078c0
+}
+
+.sb-github:hover.sb-light {
+    color: #4078c0
+}
+
+.sb-gitlab:hover {
+    background-color: #fc6d26
+}
+
+.sb-gitlab:hover.sb-light {
+    color: #fc6d26
+}
+
+.sb-paypal:hover {
+    background-color: #003087
+}
+
+.sb-paypal:hover.sb-light {
+    color: #003087
+}
+
+.sb-slack:hover {
+    background-color: #3eb991
+}
+
+.sb-slack:hover.sb-light {
+    color: #3eb991
+}
+
+.sb-trello:hover {
+    background-color: #0079bf
+}
+
+.sb-trello:hover.sb-light {
+    color: #0079bf
+}
+
+.sb-twitch:hover {
+    background-color: #6441a5
+}
+
+.sb-twitch:hover.sb-light {
+    color: #6441a5
+}
+
+.sb-rss:hover {
+    background-color: #f26522
+}
+
+.sb-rss:hover.sb-light {
+    color: #f26522
+}
+
+.sb-email:hover {
+    background-color: #766df4
+}
+
+.sb-email:hover.sb-light {
+    color: #766df4
+}
 
 .js-cookie-consent {
     position: fixed;

@@ -7,20 +7,20 @@
 
 <!-- Page content-->
 <!-- Background image-->
-<div class="d-none d-md-block position-absolute w-50 h-90 bg-size-cover"
-    style="top: 0; right: 0; background-image: url(/images/add/login.jpg);"></div>
+<div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover"
+    style="top: 0; right: 0; background-image: url(/images/homepage/login.jpg);"></div>
 <!-- Actual content-->
-<section class="container d-flex align-items-center pt-7 pb-3 pb-md-4" style="flex: 1 0 auto;">
-    <div class="w-100 pt-3">
+<section class="container d-flex align-items-center pb-3 pb-md-4" style="flex: 1 0 auto;">
+    <div class="w-100 pt-0">
         <div class="row">
             <div class="col-lg-4 col-md-6 offset-lg-1">
                 <!-- Sign in view-->
                 <div class="cs-view show" id="signin-view">
-                    <h1 class="h2">Join Skillpark</h1>
+                    <h2 class="h4">Join Skillpark</h2>
                     <p class="font-size-ms text-muted mb-4">Connect with the verified businesses and clients and make
                         the most of your freelancing
                         life.</p>
-                    <form class="needs-validation" method="POST" action="{{ route('register') }}" novalidate>
+                    <form class="js-validate" method="POST" action="{{ route('register') }}" novalidate>
                         @csrf
 
                         @error('name')
@@ -28,11 +28,11 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                        <div class="input-group-overlay form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                        <div class="js-form-message input-group-overlay form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
                                         class="fa fa-user fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" type="text" name="name"
-                                value="{{ old('name') }}" placeholder="Full Name" required>
+                                value="{{ old('name') }}" placeholder="Full Name" tabindex="2" required data-msg="Please enter a valid name. (Eg. Sushant Poudel)">
                         </div>
 
                         @error('email')
@@ -40,11 +40,11 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                        <div class="input-group-overlay form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                        <div class="js-form-message input-group-overlay form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
                                         class="fa fa-envelope fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" type="email" name="email"
-                                value="{{ old('email') }}" placeholder="Email Address" required>
+                                value="{{ old('email') }}" placeholder="Email Address" tabindex="2" required data-msg="Please enter a valid email address.">
                         </div>
 
                         @error('password')
@@ -52,11 +52,11 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                        <div class="input-group-overlay cs-password-toggle form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text"><i
+                        <div class="js-form-message input-group-overlay cs-password-toggle form-group">
+                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
                                         class="fa fa-lock fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" name="password" type="password"
-                                placeholder="Password" required>
+                                placeholder="Password" c>
                             <label class="cs-password-toggle-btn">
                                 <input class="custom-control-input" type="checkbox"><span class="sr-only">Show
                                     password</span>
@@ -69,20 +69,18 @@
                                     style="color: #1dc8cc;">Cookie Policy</a>.</label>
                         </div>
                         <button class="btn btn-primary btn-block" type="submit">Agree &amp; Join</button>
-                        <p class="font-size-sm pt-3 mb-0">Already a Skillpark member? <a href='{{ route('login') }}'
-                                class='font-weight-medium'>Sign in</a></p>
                     </form>
                 </div>
                 <div class="border-top text-center mt-4 pt-4">
                     <p class="font-size-sm font-weight-medium text-heading">Or register via</p><a
                         class="social-btn sb-facebook sb-outline sb-lg mx-1 mb-2"
-                        href="{{ route('social.oauth', 'facebook') }}"><i class="fa fa-facebook"></i></a><a
+                        href="{{ route('social.oauth', 'facebook') }}"><i class="fab fa-facebook"></i></a><a
                         class="social-btn sb-twitter sb-outline sb-lg mx-1 mb-2"
-                        href="{{ route('social.oauth', 'twitter') }}"><i class="fa fa-twitter"></i></a><a
+                        href="{{ route('social.oauth', 'twitter') }}"><i class="fab fa-twitter"></i></a><a
                         class="social-btn sb-github sb-outline sb-lg mx-1 mb-2"
-                        href="{{ route('social.oauth', 'github') }}"><i class="fa fa-github"></i></a><a
+                        href="{{ route('social.oauth', 'github') }}"><i class="fab fa-github"></i></a><a
                         class="social-btn sb-google sb-outline sb-lg mx-1 mb-2"
-                        href="{{ route('social.oauth', 'google') }}"><i class="fa fa-google"></i></a>
+                        href="{{ route('social.oauth', 'google') }}"><i class="fab fa-google"></i></a>
                 </div>
             </div>
         </div>

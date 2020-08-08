@@ -4,10 +4,10 @@
 	 viewBox="0 0 1920 697.2" style="enable-background:new 0 0 1920 697.2;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:#F0F3F7;}
+	.st1{fill:#f8f7fd;}
 </style>
 <radialGradient id="SVGID_1_" cx="879.8046" cy="635.4874" r="1" gradientTransform="matrix(355.0001 -502.8869 -545.0056 -384.7327 35151.4805 687437.875)" gradientUnits="userSpaceOnUse">
-	<stop  offset="0" style="stop-color:#F0F3F7"/>
+	<stop  offset="0" style="stop-color:#f8f7fd"/>
 	<stop  offset="1" style="stop-color:#FFFFFF"/>
 </radialGradient>
 <rect class="st0" width="1920" height="1108"/>

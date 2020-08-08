@@ -8,7 +8,7 @@
     <!-- Hero Section -->
     <div class="position-relative bg-img-hero"
         style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-bottom-lg-3">
+        <div class="container space-top-3 space-bottom-3 vh-lg-100">
             <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
                 <div class="col-lg-6">
                     <!-- Info -->
@@ -20,7 +20,7 @@
                     <!-- End Info -->
 
                     <!-- Form -->
-                    <form class="mb-7">
+                    <form class="mb-3">
                         <div class="form-row">
                             <div class="col-sm col-md-6 col-lg-9 mb-2">
                                 <div class="js-form-message">
@@ -41,14 +41,37 @@
                         </div>
                     </form>
                     <!-- End Form -->
+                    <div class="col-lg-6">
+                        <!-- Tags -->
+                        <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
+                          <span class="d-block mr-sm-3 mb-2 mb-sm-1">Trending:</span>
+                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Flutter</a>
+                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Laravel</a>
+                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Django</a>
+                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Transalation</a>
+                        </div>
+                        <!-- End Tags -->
+                      </div>
                 </div>
-                <!-- Gallery -->
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="row align-items-end mx-n2">
-                        <img src="/images/svg/banner.svg" width="500">
-                    </div>
-                </div>
-                <!-- End Gallery -->
+                <!-- SVG Shape -->
+                <figure class="col-lg-6 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
+                    style="margin-top: 4.45rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
+
+                        <defs>
+                            <path id="mainHeroSVG1"
+                                d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z" />
+                        </defs>
+                        <clipPath id="mainHeroSVG2">
+                            <use xlink:href="#mainHeroSVG1" />
+                        </clipPath>
+                        <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
+                            <image width="700" height="700" xlink:href="/images/homepage/banner.jpg"
+                                transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
+                        </g>
+                    </svg>
+                </figure>
+                <!-- End SVG Shape -->
             </div>
         </div>
     </div>
@@ -58,7 +81,7 @@
     <div id="featuresSection" class="container space-2 space-lg-2">
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-            <h2 class="h2">Why Skillpark</h2>
+            <h2 class="h3">Why Skillpark</h2>
             <p>Modern and Simplified Freelancer Platform.</p>
         </div>
         <!-- End Title -->
@@ -92,7 +115,8 @@
                             <img class="img-fluid" src="/images/svg/icons/icon-7.svg" alt="SVG">
                         </figure>
                         <h4>Quality Hires</h4>
-                        <p class="font-size-1 text-body mb-0">Thousands of Qualified Freelancers ready for your projects and business.
+                        <p class="font-size-1 text-body mb-0">Thousands of Qualified Freelancers ready for your projects
+                            and business.
                             Either find them
                             or let them bid.</p>
                     </div>
@@ -112,7 +136,8 @@
                         </figure>
                         <h4>Collaborate easily
                         </h4>
-                        <p class="font-size-1 text-body mb-0">Use Skillpark to connect, share files, and track project milestones directly from the website.</p>
+                        <p class="font-size-1 text-body mb-0">Use Skillpark to connect, share files, and track project
+                            milestones directly from the website.</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
                         <span class="font-size-1">Learn more <i class="fas fa-angle-right fa-sm ml-1"></i></span>
@@ -129,9 +154,9 @@
                             <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
                         </figure>
                         <h4>Simplified Payment </h4>
-                        <p class="font-size-1 text-body mb-0">Using the national payment system, now the payments are faster and more
-                            secure. Contracts
-                            are there to backup.</p>
+                        <p class="font-size-1 text-body mb-0">Using the national payment system, now the payments are
+                            faster and more
+                            secure with contracts</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
                         <span class="font-size-1">Learn more <i class="fas fa-angle-right fa-sm ml-1"></i></span>
@@ -148,30 +173,29 @@
         <div class="row align-items-lg-center">
             <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
                 <div class="mb-5">
-                    <h2 class="mb-3">Lightning-fast development with pre-built solutions</h2>
-                    <p>Every team has a unique process for shipping software. Use an out-of-the-box workflow, or create
-                        one to match the way your team works.</p>
+                    <h2 class="mb-3">Grab the platform to enrich your potentical and turn your passion into profession.</h2>
+                    <p>Finding the passionate and independent job has never been this simple and secure.</p>
                 </div>
 
                 <!-- Info -->
                 <div class="media pb-3">
-                    <span class="icon icon-xs icon-soft-indigo icon-circle mr-3">
+                    <span class="icon icon-xs icon-soft-grey icon-circle mr-3">
                         <i class="fas fa-check"></i>
                     </span>
                     <div class="media-body">
-                        <p class="text-dark mb-0">Extensive API documentation</p>
+                        <p class="text-dark mb-0">Easy to Post Job <b>(and free)</b></p>
                     </div>
                 </div>
                 <div class="media py-3">
-                    <span class="icon icon-xs icon-soft-indigo icon-circle mr-3">
+                    <span class="icon icon-xs icon-soft-grey icon-circle mr-3">
                         <i class="fas fa-check"></i>
                     </span>
                     <div class="media-body">
-                        <p class="text-dark mb-0">Customizable &amp; open source</p>
+                        <p class="text-dark mb-0">Controlled &amp; dynamic bidding</p>
                     </div>
                 </div>
                 <div class="media pt-3">
-                    <span class="icon icon-xs icon-soft-indigo icon-circle mr-3">
+                    <span class="icon icon-xs icon-soft-grey icon-circle mr-3">
                         <i class="fas fa-check"></i>
                     </span>
                     <div class="media-body">
@@ -182,25 +206,35 @@
             </div>
 
             <div class="col-lg-7 order-lg-1">
-                <!-- Card Block -->
-                <div class="pr-lg-4" data-aos="fade-up">
-                    <div
-                        class="card shadow-none bg-soft-primary text-indigo text-center w-lg-75 overflow-hidden pt-9 px-5 mx-lg-auto">
-                        <div class="px-5 mb-5">
-                            <h3>Choose a workflow, or make your own with Front Software</h3>
-                        </div>
+                <!-- Video Block -->
+                <div id="youTubeVideoPlayerExample1" class="video-player bg-dark">
+                    <!-- Cover Image -->
+                    <img class="img-fluid video-player-preview" src="/images/homepage/videobanner.png" alt="Image">
 
-                        <!-- Device Mockup -->
-                        <div class="device device-half-iphone-x w-85 mx-auto">
-                            <img class="device-half-iphone-x-frame" src="/images/svg/components/half-iphone-x.svg"
-                                alt="Image Description">
-                            <img class="device-half-iphone-x-screen" src="/images/img/407x472/img7.jpg"
-                                alt="Image Description">
-                        </div>
-                        <!-- End Device Mockup -->
+                    <!-- Play Button -->
+                    <a class="js-inline-video-player video-player-btn video-player-centered" href="javascript:;"
+                        data-hs-video-player-options='{
+                                                        "videoId": "h2JcePh7vls",
+                                                        "parentSelector": "#youTubeVideoPlayerExample1",
+                                                        "targetSelector": "#youTubeVideoIframeExample1",
+                                                        "isAutoplay": true,
+                                                        "classMap": {
+                                                        "toggle": "video-player-played"
+                                                        }
+                                                    }'>
+                        <span class="video-player-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </a>
+                    <!-- End Play Button -->
+
+                    <!-- Video Iframe -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <div id="youTubeVideoIframeExample1"></div>
                     </div>
+                    <!-- End Video Iframe -->
                 </div>
-                <!-- End Card Block -->
+                <!-- End Video Block -->
             </div>
         </div>
     </div>
@@ -212,11 +246,11 @@
             <div class="card overflow-hidden p-5">
                 <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
                     <div class="col-md-8 col-lg-5 offset-lg-3 mb-3 mb-md-0">
-                        <h3 class="h4 text-indigo mb-0">Revolutionizing the way your team works!</h3>
+                        <h3 class="h4 text-grey mb-0">Revolutionizing the way Company hires!</h3>
                     </div>
 
                     <div class="col-md-4 text-md-right">
-                        <a class="btn btn-primary" href="#">Explore Docs</a>
+                        <a class="btn btn-primary" href="#">Learn More</a>
                     </div>
                 </div>
 
@@ -231,7 +265,7 @@
     <!-- End CTA Section -->
 
     <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-lg-3">
-        <h2 class="text-center mb-6">Explore the Marketplace</h2>
+        <h3 class="text-center mb-6">Explore the Marketplace</h3>
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
@@ -305,6 +339,59 @@
             </div>
         </div>
     </section>
+
+    <!-- Icon Blocks Section -->
+    <div id="aboutSection" class="container space-2 space-lg-1">
+        <!-- Title -->
+        <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
+            <h2 class="h3">What we do?</h2>
+            <p>A dynamic platform for modern job hiring.</p>
+        </div>
+        <!-- End Title -->
+
+        <div class="row">
+            <div class="col-md-4 mb-7">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <figure class="max-w-8rem mx-auto mb-4">
+                        <img class="img-fluid" src="/images/svg/icons/icon-45.svg" alt="SVG">
+                    </figure>
+                    <h3>Industry-leading freelancers</h3>
+                    <p>Achieve virtually any skills with the dynamicity of Skillpark.</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-4 mb-7">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <figure class="max-w-8rem mx-auto mb-4">
+                        <img class="img-fluid" src="/images/svg/icons/icon-14.svg" alt="SVG">
+                    </figure>
+                    <h3>Learn from the experts</h3>
+                    <p>Whether you're a startup or an enterprise, learn how to integrate with Skillpark.</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-4 mb-7">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <figure class="max-w-8rem mx-auto mb-4">
+                        <img class="img-fluid" src="/images/svg/icons/icon-23.svg" alt="SVG">
+                    </figure>
+                    <h3>Accelerate your business</h3>
+                    <p>We have helped power hundreds of businesses to build and run smoothly.</p>
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+        </div>
+        <img class="img-fluid d-none d-md-block w-75 mx-auto mb-7" src="/images/svg/components/three-pointers.svg"
+            alt="SVG Arrow">
+        <div class="w-md-60 w-lg-50 text-center mx-auto mb-7">
+            <p class="text-dark"><span class="font-weight-bold">It is fast and easy.</span> Create your new or
+                ongoing project with Qualified Freelancers.</p>
+        </div>
 
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
