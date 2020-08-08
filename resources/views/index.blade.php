@@ -81,13 +81,8 @@
     <div id="featuresSection" class="container space-2 space-lg-2">
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-<<<<<<< HEAD
             <h2 class="h3">Why Skillpark</h2>
             <p>Modern and Simplified Freelancer Platform.</p>
-=======
-            <h2 class="h2">{{ __('nepali.Why Skillpark')}}</h2>
-            <p>{{ __('nepali.Modern and Simplified Freelancer Platform.')}}</p>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
         </div>
         <!-- End Title -->
 
@@ -119,14 +114,9 @@
                         <figure class="w-100 max-w-8rem mb-4">
                             <img class="img-fluid" src="/images/svg/icons/icon-7.svg" alt="SVG">
                         </figure>
-<<<<<<< HEAD
                         <h4>Quality Hires</h4>
                         <p class="font-size-1 text-body mb-0">Thousands of Qualified Freelancers ready for your projects
                             and business.
-=======
-                        <h4>{{ __('nepali.Quality Hires')}}</h4>
-                        <p class="font-size-1 text-body mb-0">{{ __('nepali.Thousands of Qualified Freelancers ready for your projects and business.')}}
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                             Either find them
                             or let them bid.</p>
                     </div>
@@ -163,17 +153,10 @@
                         <figure class="w-100 max-w-8rem mb-4">
                             <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
                         </figure>
-<<<<<<< HEAD
                         <h4>Simplified Payment </h4>
                         <p class="font-size-1 text-body mb-0">Using the national payment system, now the payments are
                             faster and more
                             secure with contracts</p>
-=======
-                        <h4>{{ __('nepali.Simplified Payment ')}}</h4>
-                        <p class="font-size-1 text-body mb-0">Using the national payment system, now the payments are faster and more
-                            secure. Contracts
-                            are there to backup.</p>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                     </div>
                     <div class="card-footer border-0 pt-0">
                         <span class="font-size-1">Learn more <i class="fas fa-angle-right fa-sm ml-1"></i></span>
@@ -263,19 +246,11 @@
             <div class="card overflow-hidden p-5">
                 <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
                     <div class="col-md-8 col-lg-5 offset-lg-3 mb-3 mb-md-0">
-<<<<<<< HEAD
                         <h3 class="h4 text-grey mb-0">Revolutionizing the way Company hires!</h3>
                     </div>
 
                     <div class="col-md-4 text-md-right">
                         <a class="btn btn-primary" href="#">Learn More</a>
-=======
-                        <h3 class="h4 text-indigo mb-0">{{ __('nepali.Revolutionizing the way your team works!')}}</h3>
-                    </div>
-
-                    <div class="col-md-4 text-md-right">
-                        <a class="btn btn-primary" href="#">{{ __('nepali.Explore Docs')}}</a>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                     </div>
                 </div>
 
@@ -290,11 +265,7 @@
     <!-- End CTA Section -->
 
     <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-lg-3">
-<<<<<<< HEAD
         <h3 class="text-center mb-6">Explore the Marketplace</h3>
-=======
-        <h2 class="text-center mb-6">{{ __('nepali.Explore the Marketplace')}}</h2>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"

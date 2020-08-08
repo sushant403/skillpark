@@ -84,13 +84,8 @@
                             <ul class="navbar-nav">
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
-<<<<<<< HEAD
                                     <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false">Solutions</a>
-=======
-                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions')}}</a>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
@@ -102,19 +97,11 @@
                                                     <div class="navbar-banner-content">
                                                         <div class="mb-6">
                                                             <span class="h2 d-block text-white">Skillpark Inc.</span>
-<<<<<<< HEAD
                                                             <p style="color: #fff">Experience the simplified modern way
                                                                 of hiring freelancers.</p>
                                                         </div>
                                                         <a class="btn btn-primary btn-sm"
                                                             href="{{ route('register') }}">Get Started <i
-=======
-                                                            <p class="text-white">{{ __('nepali.Experience the simplified modern way
-                                                                of hiring freelancers.')}}</p>
-                                                        </div>
-                                                        <a class="btn btn-primary btn-sm transition-3d-hover"
-                                                            href="{{ route('register') }}">{{ __('nepali.Get Started')}} <i
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                                                                 class="fas fa-angle-right fa-sm ml-1"></i></a>
                                                     </div>
                                                 </div>
@@ -205,13 +192,8 @@
                                             "maxWidth": "260px"
                                             }
                                         }'>
-<<<<<<< HEAD
                                     <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false">Support</a>
-=======
-                                    <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">{{ __('nepali.Support')}}</a>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
 
                                     <!-- Docs - Submenu -->
                                     <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu"
@@ -319,13 +301,8 @@
                                 </li>
                                 @else
                                 <li class="navbar-nav-last-item">
-<<<<<<< HEAD
                                     <a class="btn btn-sm btn-primary" href="@hasrole('freelancer') {{ route('home') }} @else {{ route('client') }} @endhasrole">
                                         Dashboard
-=======
-                                    <a class="btn btn-sm btn-primary" href="{{ route('home') }}">
-                                    {{ __('nepali.Dashboard')}}
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                                     </a>
                                 </li>
                                 @endguest
@@ -355,15 +332,9 @@
                     <h2 class="text">{{ __('nepali.Thousands of businesses trust Skillpark for their business.')}}</h2>
                 </div>
                 <div class="col-lg-5 text-lg-right">
-<<<<<<< HEAD
                     <a class="btn btn-primary" href="{{ route('register') }}">Get Started</a>
                     <small class="text-muted my-3 my-sm-0 mx-2 mx-sm-3">or</small>
                     <a class="btn btn-secondary" href="{{ url('categories') }}">Explore</a>
-=======
-                    <a class="btn btn-primary transition-3d-hover" href="{{ route('register') }}">{{ __('nepali.Get Started')}}/a>
-                    <small class="text-muted my-3 my-sm-0 mx-2 mx-sm-3">or</small>
-                    <a class="btn btn-secondary transition-3d-hover" href="{{ url('categories') }}">{{ __('nepali.Explore')}}</a>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                 </div>
             </div>
             <!-- End CTA -->
@@ -438,7 +409,6 @@
                     <!-- End Nav Link -->
                 </div>
 
-<<<<<<< HEAD
                 <div class="col-6 col-md-3 col-lg">
                     <h5>Documentation</h5>
 
@@ -476,37 +446,10 @@
                         </li>
                     </ul>
                     <!-- End Nav Link -->
-=======
-                    <div class="col-6 col-md-3 col-lg">
-                        <h5 class="text-white">{{ __('nepali.Resources')}}</h5>
-
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="faq">
-                                    <span class="media align-items-center">
-                                        <i class="fa fa-info-circle mr-2"></i>
-                                        <span class="media-body">{{ __('nepali.Help')}}</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="home">
-                                    <span class="media align-items-center">
-                                        <i class="fa fa-user-circle mr-2"></i>
-                                        <span class="media-body">{{ __('nepali.Your Account')}}</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                 </div>
             </div>
         </div>
 
-<<<<<<< HEAD
         <hr class="opacity-xs my-0">
 
         <div class="space-1">
@@ -528,29 +471,6 @@
                     </ul>
                     <!-- End Nav Link -->
                 </div>
-=======
-            <hr class="opacity-xs my-0">
-
-            <div class="space-1">
-                <div class="row align-items-md-center mb-7">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-white nav-x-sm align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="policy">{{ __('nepali.Privacy &amp; Policy')}}</a>
-                            </li>
-                            <li class="nav-item opacity mx-3">&#47;</li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="terms">{{ __('nepali.Terms')}}</a>
-                            </li>
-                            <li class="nav-item opacity mx-3">&#47;</li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">{{ __('nepali.Site Map')}}</a>
-                            </li>
-                        </ul>
-                        <!-- End Nav Link -->
-                    </div>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
 
                 <div class="col-md-6 text-md-right">
                     <ul class="list-inline mb-0">
@@ -590,18 +510,10 @@
                                     <span> English</span>
                                 </a>
 
-<<<<<<< HEAD
                                 <div id="footerLanguage"
                                     class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
                                     <a class="dropdown-item active" href="/lang/en">English</a>
                                     <a class="dropdown-item" href="/lang/ne">Nepali</a>
-=======
-                                    <div id="footerLanguage"
-                                        class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
-                                        <a class="dropdown-item active" href="/lang/en">English</a>
-                                        <a class="dropdown-item" href="/lang/ne">नेपाली</a>
-                                    </div>
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
                                 </div>
                             </div>
                         </li>
@@ -610,23 +522,12 @@
                 </div>
             </div>
 
-<<<<<<< HEAD
             <!-- Copyright -->
             <div class="w-md-75 text-lg-center mx-lg-auto">
                 <p class="text-muted small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
                 <p class="text-muted small">When you visit or interact with our sites, services or tools,
                     we or our authorised service providers may use cookies for storing information to help provide
                     you with a better, faster and safer experience and for marketing purposes.</p>
-=======
-                <!-- Copyright -->
-                <div class="w-md-75 text-lg-center mx-lg-auto">
-                    <p class="text-white opacity-sm small">&copy; Skillpark Inc. 2020.{{ __('nepali.Get Started')}} All rights reserved.</p>
-                    <p class="text-white opacity-sm small">When you visit or interact with our sites, services or tools,
-                        we or our authorised service providers may use cookies for storing information to help provide
-                        you with a better, faster and safer experience and for marketing purposes.</p>
-                </div>
-                <!-- End Copyright -->
->>>>>>> 92ed594402066f59144f619e3d23531f7b626117
             </div>
             <!-- End Copyright -->
         </div>
