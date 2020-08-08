@@ -3,12 +3,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
 <style type="text/css">
-	.icon-22-0{fill:#24cc7d;}
+	.icon-22-0{fill:#1dc8cc;}
 	.icon-22-1{fill:none;stroke:#FFFFFF;}
 	.icon-22-2{fill:none;stroke:#BDC5D1;}
 	.icon-22-3{fill:#FFFFFF;stroke:#BDC5D1;}
 	.icon-22-4{fill:#BDC5D1;}
-	.icon-22-5{fill:none;stroke:#24cc7d;}
+	.icon-22-5{fill:none;stroke:#1dc8cc;}
 </style>
 <path class="icon-22-0 fill-primary" d="M51.9,32.8H16.6c-0.3,3.3-2.4,5.9-5,6.2v23.5c2.6,0.3,4.7,2.9,5,6.2l70.8,0c0.3-3.3,2.4-5.9,5-6.2V39
 	c-2.6-0.3-4.8-2.9-5-6.2L51.9,32.8"/>

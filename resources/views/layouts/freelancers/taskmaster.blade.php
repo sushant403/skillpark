@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.svg">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" color="#5bbad5" href="/safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#24cc7d">
+    <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
     <!-- Page loading styles-->
     <style>
@@ -72,7 +72,7 @@
             height: 2.75rem;
             margin-bottom: .75rem;
             vertical-align: text-bottom;
-            border: .15em solid #24cc7d;
+            border: .15em solid #1dc8cc;
             border-right-color: transparent;
             border-radius: 50%;
             -webkit-animation: spinner .75s linear infinite;

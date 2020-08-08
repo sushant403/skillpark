@@ -244,13 +244,13 @@ select {
   -o-border-radius: 5px;
   -ms-border-radius: 5px; }
 .form-radio-item input:checked + label {
-  background-color: #24cc7d;
+  background-color: #1dc8cc;
   color: #FFF;
   z-index: 1; }
 .form-radio-item input:focus + label {
   outline: none; }
 .form-radio-item input:hover {
-  background-color: #24cc7d;
+  background-color: #1dc8cc;
   color: #FFF; }
 
 .form-radio-item input + label:first-of-type {
@@ -293,12 +293,12 @@ select {
   -o-border-radius: 5px;
   -ms-border-radius: 5px; }
 .form-radio-flex input:checked + label {
-  border: 1px solid #24cc7d;
+  border: 1px solid #1dc8cc;
   z-index: 1; }
 .form-radio-flex input:focus + label {
   outline: none; }
 .form-radio-flex input:hover {
-  border: 1px solid #24cc7d; }
+  border: 1px solid #1dc8cc; }
 
 #signup-form-p-2 .form-radio-flex, #signup-form-p-2 .form-flex, #signup-form-p-2 .form-group input {
   width: 534px; }
@@ -491,11 +491,11 @@ input[type='file'] {
   color: #fca812; }
 
 .pw-very-strong .bar {
-  background: #24cc7d;
+  background: #1dc8cc;
   width: 100%; }
 
 .pw-very-strong .label {
-  color: #24cc7d; }
+  color: #1dc8cc; }
 
 .label {
   font-size: 11px; }
@@ -545,11 +545,11 @@ fieldset {
       .steps ul .current a .number {
         border: 2px solid #222; }
     .steps ul .done a {
-      color: #24cc7d; }
+      color: #1dc8cc; }
       .steps ul .done a .number {
         position: relative;
         font-size: 0px;
-        border: 2px solid #24cc7d; }
+        border: 2px solid #1dc8cc; }
         .steps ul .done a .number:after {
           position: absolute;
           left: 50%;
@@ -560,7 +560,7 @@ fieldset {
           -o-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           font-size: 14px;
-          color: #24cc7d;
+          color: #1dc8cc;
           font-family: 'Material-Design-Iconic-Font';
           content: '\f26b';
           font-weight: bold; }
@@ -598,7 +598,7 @@ fieldset {
         width: 150px;
         height: 50px;
         color: #fff;
-        background: #24cc7d;
+        background: #1dc8cc;
         align-items: center;
         -moz-align-items: center;
         -webkit-align-items: center;

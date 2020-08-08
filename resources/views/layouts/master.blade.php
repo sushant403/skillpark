@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" color="#5bbad5" href="/favicon.svg">
-    <meta name="msapplication-TileColor" content="#24cc7d">
+    <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Fontawesome kit's code here -->
@@ -83,7 +83,7 @@
                             <ul class="navbar-nav">
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
-                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
+                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link"
                                         href="javascript:;" aria-haspopup="true" aria-expanded="false">Solutions</a>
 
                                     <!-- Home - Mega Menu -->
@@ -92,7 +92,7 @@
                                             <div class="col-lg-6">
                                                 <!-- Banner Image -->
                                                 <div class="navbar-banner"
-                                                    style="background-image: url(/images/svg/banner.svg);">
+                                                    style="background-image: url(/images/svg/ipad.svg);">
                                                     <div class="navbar-banner-content">
                                                         <div class="mb-6">
                                                             <span class="h2 d-block text-white">Skillpark Inc.</span>
@@ -142,7 +142,7 @@
 
                                 <!-- Pages -->
                                 <li class="hs-has-sub-menu navbar-nav-item">
-                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
+                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link"
                                         href="javascript:;" aria-haspopup="true" aria-expanded="false"
                                         aria-labelledby="pagesSubMenu">Explore</a>
 
@@ -161,20 +161,20 @@
                                                 aria-labelledby="navLinkPagesAccount" style="min-width: 230px;">
                                                 <a class="dropdown-item" href="">Full Stack
                                                     Developer</a>
-                                                <a class="dropdown-item" href="../account/login-and-security">IT
+                                                <a class="dropdown-item" href="">IT
                                                     &amp; Security</a>
-                                                <a class="dropdown-item" href="../account/notifications">C#</a>
-                                                <a class="dropdown-item" href="../account/preferences">Django</a>
-                                                <a class="dropdown-item" href="../account/orders">Laravel</a>
-                                                <a class="dropdown-item" href="../account/wishlist">PHP</a>
-                                                <a class="dropdown-item" href="../account/billing">Skillpark End &amp;
+                                                <a class="dropdown-item" href="">C#</a>
+                                                <a class="dropdown-item" href="">Django</a>
+                                                <a class="dropdown-item" href="">Laravel</a>
+                                                <a class="dropdown-item" href="">PHP</a>
+                                                <a class="dropdown-item" href="">Skillpark End &amp;
                                                     Developer</a>
                                             </div>
                                             <!-- Account -->
-                                            <a class="dropdown-item" href="../blog/single-article">Freelancers</a>
-                                            <a class="dropdown-item" href="../blog/single-article">Companies</a>
-                                            <a class="dropdown-item" href="../blog/single-article">Popular Jobs</a>
-                                            <a class="dropdown-item" href="../blog/single-article">Featured</a>
+                                            <a class="dropdown-item" href="">Freelancers</a>
+                                            <a class="dropdown-item" href="">Companies</a>
+                                            <a class="dropdown-item" href="">Popular Jobs</a>
+                                            <a class="dropdown-item" href="">Featured</a>
                                         </div>
                                         <!-- End Pages - Submenu -->
                                 </li>
@@ -192,7 +192,7 @@
                                             "maxWidth": "260px"
                                             }
                                         }'>
-                                    <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
+                                    <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link"
                                         href="javascript:;" aria-haspopup="true" aria-expanded="false">Support</a>
 
                                     <!-- Docs - Submenu -->
@@ -273,7 +273,7 @@
                                 </div>
                                 <!-- End Search -->
                                 @guest
-                                    
+
                                 <li class="navbar-nav-item">
                                     <a href="{{ route('login') }}" class="nav-link">{{ __('nepali.Login') }}</a>
                                 </li>
@@ -305,8 +305,24 @@
 
     @yield('content')
 
-
     <!-- ========== FOOTER ========== -->
+
+    <footer class="gradient-x-overlay-sm-indigo overflow-hidden">
+        <div class="container space-top-2 space-bottom-1">
+            <!-- CTA -->
+            <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+                <div class="col-lg-5 mb-3 mb-lg-0">
+                    <h2 class="text">Thousands of businesses trust Skillpark for their business.</h2>
+                </div>
+                <div class="col-lg-5 text-lg-right">
+                    <a class="btn btn-primary transition-3d-hover" href="{{ route('register') }}">Get Started</a>
+                    <small class="text-muted my-3 my-sm-0 mx-2 mx-sm-3">or</small>
+                    <a class="btn btn-secondary transition-3d-hover" href="{{ url('categories') }}">Explore</a>
+                </div>
+            </div>
+            <!-- End CTA -->
+    </footer>
+
     <footer class="bg-navy">
         <div class="container">
             <div class="space-top-2 space-bottom-1 space-bottom-lg-2">

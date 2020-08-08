@@ -64,9 +64,9 @@
                         </div>
                         <div class="form-group">
                             <label class="mb-1">You agree to the SkillPark Inc. <a href="{{ url('agreement') }}"
-                                    style="color: #1dbf73;">User Agreement</a>, <a style="color: #1dbf73;"
+                                    style="color: #1dc8cc;">User Agreement</a>, <a style="color: #1dc8cc;"
                                     href="{{ url('policy') }}">Privacy Policy</a>, and <a href="{{ url('cookies') }}"
-                                    style="color: #1dbf73;">Cookie Policy</a>.</label>
+                                    style="color: #1dc8cc;">Cookie Policy</a>.</label>
                         </div>
                         <button class="btn btn-primary btn-block" type="submit">Agree &amp; Join</button>
                         <p class="font-size-sm pt-3 mb-0">Already a Skillpark member? <a href='{{ route('login') }}'

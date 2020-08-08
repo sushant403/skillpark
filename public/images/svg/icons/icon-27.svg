@@ -3,10 +3,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
 <style type="text/css">
-	.icon-27-0{fill:none;stroke:#24cc7d;}
+	.icon-27-0{fill:none;stroke:#1dc8cc;}
 	.icon-27-1{fill:none;stroke:#BDC5D1;}
 	.icon-27-2{fill:#BDC5D1;stroke:#BDC5D1;}
-	.icon-27-3{fill:#24cc7d;stroke:#24cc7d;}
+	.icon-27-3{fill:#1dc8cc;stroke:#1dc8cc;}
 	.icon-27-4{fill:#FFFFFF;}
 </style>
 <rect x="45" y="98" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 119.9994 207.4113)" class="icon-27-0 fill-none stroke-primary" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="30.1" height="11.4"/>

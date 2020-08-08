@@ -3,11 +3,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
 <style type="text/css">
-	.icon-56-0{fill:#24cc7d;}
+	.icon-56-0{fill:#1dc8cc;}
 	.icon-56-1{fill:#BDC5D1;}
 	.icon-56-2{fill:#FFFFFF;stroke:#BDC5D1;}
-	.icon-56-3{fill:#24cc7d;stroke:#FFFFFF;}
-	.icon-56-4{fill:#FFFFFF;stroke:#24cc7d;}
+	.icon-56-3{fill:#1dc8cc;stroke:#FFFFFF;}
+	.icon-56-4{fill:#FFFFFF;stroke:#1dc8cc;}
 </style>
 <path class="icon-56-0 fill-primary" d="M17.3,78.5L17.3,78.5c-1.8,0-3.3-1.5-3.3-3.3V38.5c0-1.8,1.5-3.3,3.3-3.3h0c1.8,0,3.3,1.5,3.3,3.3v36.6
 	C20.6,77,19.1,78.5,17.3,78.5z"/>

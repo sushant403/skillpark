@@ -5,8 +5,8 @@
 <style type="text/css">
 	.icon-white-11-0{fill:none;stroke:#FFFFFF;}
 	.icon-white-11-1{fill:#FFFFFF;}
-	.icon-white-11-2{fill:#FFFFFF;stroke:#24cc7d;}
-	.icon-white-11-3{fill:none;stroke:#24cc7d;}
+	.icon-white-11-2{fill:#FFFFFF;stroke:#1dc8cc;}
+	.icon-white-11-3{fill:none;stroke:#1dc8cc;}
 </style>
 <polyline class="icon-white-11-0 fill-none stroke-white" opacity=".5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="112.6,77.4 112.6,16.3 2,16.3 2,98.2 91.9,98.2 "/>
 <path class="icon-white-11-1 fill-white" d="M100.8,84.4h-86c-0.8,0-1.5-0.7-1.5-1.5V45.5c0-0.8,0.7-1.5,1.5-1.5h86c0.8,0,1.5,0.7,1.5,1.5V83

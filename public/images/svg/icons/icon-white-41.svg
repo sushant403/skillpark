@@ -4,9 +4,9 @@
 	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
 <style type="text/css">
 	.icon-white-41-0{fill:#FFFFFF;}
-	.icon-white-41-1{fill:#24cc7d;stroke:#FFFFFF;}
+	.icon-white-41-1{fill:#1dc8cc;stroke:#FFFFFF;}
 	.icon-white-41-2{fill:none;stroke:#FFFFFF;}
-	.icon-white-41-3{fill:#24cc7d;}
+	.icon-white-41-3{fill:#1dc8cc;}
 </style>
 <circle class="icon-white-41-0 fill-white" opacity=".15" cx="65" cy="65" r="55"/>
 <circle class="icon-white-41-1 fill-primary stroke-white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="55.1" cy="55.1" r="53.1"/>

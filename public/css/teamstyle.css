@@ -30,7 +30,7 @@ img {
     line-height: .7em;
 }
 .section-title {
-    color: #24cc7d;
+    color: #1dc8cc;
     font-size: 48px;
     font-weight: 300;
     text-transform: capitalize;
@@ -86,7 +86,7 @@ img {
 }
 
 #team .team-list>ul>li.active::after {
-    color: #24cc7d;
+    color: #1dc8cc;
     content: "";
     font-family: "Font Awesome 5 Free";
     margin-top: -10px;
@@ -135,7 +135,7 @@ img {
 
 #team .team-social>ul>li>a {
     border-radius: 50%;
-    color: #24cc7d;
+    color: #1dc8cc;
     display: block;
     font-size: 18px;
     height: 40px;
@@ -148,7 +148,7 @@ img {
     transition: .3s
 }
 #team .team-social>ul>li>a:hover {
-    background: #24cc7d;
+    background: #1dc8cc;
     color: #fff
 }
 
