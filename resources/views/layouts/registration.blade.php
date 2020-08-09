@@ -498,7 +498,7 @@
                                 <div id="footerLanguage"
                                     class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
                                     <a class="dropdown-item active" href="/lang/en">English</a>
-                                    <a class="dropdown-item" href="/lang/ne">Nepali</a>
+                                    <a class="dropdown-item" href="/lang/ne">नेपाली</a>
                                 </div>
                             </div>
                         </li>

@@ -85,7 +85,7 @@
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
                                     <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
-                                        aria-haspopup="true" aria-expanded="false">Solutions</a>
+                                        aria-haspopup="true" aria-expanded="false">{{__ ('nepali.Solutions') }}</a>
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
@@ -145,7 +145,7 @@
                                 <li class="hs-has-sub-menu navbar-nav-item">
                                     <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false"
-                                        aria-labelledby="pagesSubMenu">Explore</a>
+                                        aria-labelledby="pagesSubMenu">{{__ ('nepali.Explore') }}</a>
 
                                     <!-- Pages - Submenu -->
                                     <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
@@ -181,7 +181,7 @@
                                 <!-- End Pages -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="" class="nav-link">Enterprise</a>
+                                    <a href="" class="nav-link">{{__ ('nepali.Enterprise') }}</a>
                                 </li>
 
 
@@ -235,7 +235,7 @@
                                                             class="navbar-promo-footer-text">{{ __('nepali.Have a question?')}}</span>
                                                         <a class="navbar-promo-footer-text"
                                                             href="mailto:skillparknepal@gmail.com">
-                                                            {{ __('nepali.Contact us')}}
+                                                            {{ __('nepali.Contact Us')}}
                                                         </a>
                                                     </div>
                                                 </div>

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row justify-content-center pt-4">
         <div class="col-lg-7 col-md-9 col-sm-11">
-            <h2 class="h3 pb-3">Forgot your password?</h2>
+            <h2 class="h3 pb-3">{{__ ('nepali.Forgot your password?') }}</h2>
             <p class="font-size-sm">Change your password in three easy steps. This helps to keep your new password
                 secure.</p>
             <ul class="list-unstyled font-size-sm pb-1 mb-4">
@@ -23,7 +23,7 @@
                     @csrf
                     
                     <div class="form-group">
-                        <label class="form-label" for="recovery-email">Enter your email address</label>
+                        <label class="form-label" for="recovery-email">{{__ ('nepali.Enter your email address<') }}/label>
                         <input class="form-control" type="email" name="email" value="{{ old('email') }}"
                             autocomplete="off" required id="recovery-email">
                     @error('email')
@@ -32,7 +32,7 @@
                     </span>
                     @enderror
                     </div>
-                    <button class="btn btn-primary" type="submit">Request Verification Link</button>
+                    <button class="btn btn-primary" type="submit">{{__ ('nepali.Request Verification Link') }}</button>
                 </form>
             </div>
         </div>

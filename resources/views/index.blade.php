@@ -81,8 +81,8 @@
     <div id="featuresSection" class="container space-2 space-lg-2">
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-            <h2 class="h3">Why Skillpark</h2>
-            <p>Modern and Simplified Freelancer Platform.</p>
+            <h2 class="h3">{{__ ('nepali.Why Skillpark) }}</h2>
+            <p>{{__ ('nepali.Modern and Simplified Freelancer Platform') }}.</p>
         </div>
         <!-- End Title -->
 
@@ -114,7 +114,7 @@
                         <figure class="w-100 max-w-8rem mb-4">
                             <img class="img-fluid" src="/images/svg/icons/icon-7.svg" alt="SVG">
                         </figure>
-                        <h4>Quality Hires</h4>
+                        <h4>{{__ ('nepali.Quality Hires') }}</h4>
                         <p class="font-size-1 text-body mb-0">Thousands of Qualified Freelancers ready for your projects
                             and business.
                             Either find them
@@ -153,7 +153,7 @@
                         <figure class="w-100 max-w-8rem mb-4">
                             <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
                         </figure>
-                        <h4>Simplified Payment </h4>
+                        <h4>{{__ ('nepali.Simplified Payment') }} </h4>
                         <p class="font-size-1 text-body mb-0">Using the national payment system, now the payments are
                             faster and more
                             secure with contracts</p>
@@ -265,7 +265,7 @@
     <!-- End CTA Section -->
 
     <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-lg-3">
-        <h3 class="text-center mb-6">Explore the Marketplace</h3>
+        <h3 class="text-center mb-6">{{__ ('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
@@ -344,8 +344,8 @@
     <div id="aboutSection" class="container space-2 space-lg-1">
         <!-- Title -->
         <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
-            <h2 class="h3">What we do?</h2>
-            <p>A dynamic platform for modern job hiring.</p>
+            <h2 class="h3">{{__ ('nepali.What we do') }}?</h2>
+            <p>{{__ ('nepali.A dynamic platform for modern job hiring.') }}</p>
         </div>
         <!-- End Title -->
 
