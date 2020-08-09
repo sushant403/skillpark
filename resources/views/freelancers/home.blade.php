@@ -60,7 +60,7 @@
         </div>
 
         <div class="col-12 col-md-7 col-lg-8 col-xl-6">
-            
+
             <!-- post -->
             <div class="post">
                 <div class="post__head">
@@ -73,10 +73,12 @@
                     </div>
 
                     <div class="post__dropdown">
-                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu3"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         </a>
 
-                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"
+                            aria-labelledby="dropdownMenu3">
                             <li><a href="#">Hide</a></li>
                         </ul>
                     </div>
@@ -122,7 +124,8 @@
                 <div class="post__stats">
                     <div>
                         <a class="post__likes" href="#"><i class="fa fa-heart fa-sm"></i> <span>15</span></a>
-                        <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
+                        <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button"
+                            aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
                             <span>0</span></a>
                     </div>
                 </div>
@@ -148,10 +151,12 @@
                     </div>
 
                     <div class="post__dropdown">
-                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         </a>
 
-                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"
+                            aria-labelledby="dropdownMenu2">
                             <li><a href="#">Hide</a></li>
                         </ul>
                     </div>
@@ -197,7 +202,8 @@
                 <div class="post__stats">
                     <div>
                         <a class="post__likes" href="#"><i class="fa fa-heart fa-sm"></i> <span>15</span></a>
-                        <a class="post__comments" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
+                        <a class="post__comments" data-toggle="collapse" href="#collapse2" role="button"
+                            aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
                             <span>0</span></a>
                     </div>
                 </div>
@@ -223,10 +229,12 @@
                     </div>
 
                     <div class="post__dropdown">
-                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                         </a>
 
-                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"
+                            aria-labelledby="dropdownMenu1">
                             <li><a href="#">Hide</a></li>
                         </ul>
                     </div>
@@ -272,7 +280,8 @@
                 <div class="post__stats">
                     <div>
                         <a class="post__likes" href="#"><i class="fa fa-heart fa-sm"></i> <span>15</span></a>
-                        <a class="post__comments" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
+                        <a class="post__comments" data-toggle="collapse" href="#collapse1" role="button"
+                            aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
                             <span>0</span></a>
                     </div>
                 </div>
@@ -298,10 +307,12 @@
                     </div>
 
                     <div class="post__dropdown">
-                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu0"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         </a>
 
-                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu0">
+                        <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"
+                            aria-labelledby="dropdownMenu0">
                             <li><a href="#">Hide</a></li>
                         </ul>
                     </div>
@@ -347,7 +358,8 @@
                 <div class="post__stats">
                     <div>
                         <a class="post__likes" href="#"><i class="fa fa-heart fa-sm"></i> <span>15</span></a>
-                        <a class="post__comments" data-toggle="collapse" href="#collapse0" role="button" aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
+                        <a class="post__comments" data-toggle="collapse" href="#collapse0" role="button"
+                            aria-expanded="false" aria-controls="collapse1"><i class="fa fa-comment fa-sm"></i>
                             <span>0</span></a>
                     </div>
                 </div>
@@ -367,152 +379,6 @@
         </div>
 
         <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-            <!-- sidebox -->
-            <div class="sidebox sidebox--desk">
-                <h4 class="sidebox__title">Hot projects</h4>
-                <div class="sidebox__content">
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">PSD to HTML</a>
-                            <span>Rs. 200 - Rs. 250</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Skillpark-end Developer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">Mobile App</a>
-                            <span>Rs. 7000</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Java Developer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">Landing page</a>
-                            <span>Rs. 400</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>UX/UI Designer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">Site design</a>
-                            <span>Rs. 4000 - Rs. 5000</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>UX/UI Designer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">WP Plugin</a>
-                            <span>Rs. 3800</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Wordpress developer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="sidebox__more">View more</a>
-            </div>
-            <!-- end sidebox -->
-
-            <!-- sidebox -->
-            <div class="sidebox sidebox--desk">
-                <h4 class="sidebox__title">New projects</h4>
-                <div class="sidebox__content">
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">PSD to HTML</a>
-                            <span>Rs. 200 - Rs. 250</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Skillpark-end Developer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">Mobile App</a>
-                            <span>Rs. 7000</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Java Developer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">Landing page</a>
-                            <span>Rs. 400</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>UX/UI Designer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">Site design</a>
-                            <span>Rs. 4000 - Rs. 5000</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>UX/UI Designer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebox__job">
-                        <div class="sidebox__job-title">
-                            <a href="#">WP Plugin</a>
-                            <span>Rs. 3800</span>
-                        </div>
-                        <div class="post__wrap">
-                            <div class="post__company">
-                                <i class="fa fa-briefcase fa-sm"></i>
-                                <span>Wordpress developer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="sidebox__more">View more</a>
-            </div>
-            <!-- end sidebox -->
-
 
         </div>
     </div>

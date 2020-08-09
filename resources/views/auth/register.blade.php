@@ -56,7 +56,7 @@
                             <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
                                         class="fa fa-lock fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" name="password" type="password"
-                                placeholder="Password" c>
+                                placeholder="Password" minlength="8" required data-msg="Password is required and should be at least 8 characters">
                             <label class="cs-password-toggle-btn">
                                 <input class="custom-control-input" type="checkbox"><span class="sr-only">Show
                                     password</span>

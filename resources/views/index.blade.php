@@ -44,11 +44,11 @@
                     <div class="col-lg-6">
                         <!-- Tags -->
                         <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
-                          <span class="d-block mr-sm-3 mb-2 mb-sm-1">Trending:</span>
+                          <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted" style="font-size: 13px">Trending:</span>
                           <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Flutter</a>
                           <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Laravel</a>
                           <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Django</a>
-                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Transalation</a>
+                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Translation</a>
                         </div>
                         <!-- End Tags -->
                       </div>

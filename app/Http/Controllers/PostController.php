@@ -39,7 +39,7 @@ class PostController extends Controller
             'budget' => 'required',
             'delivery_time' => 'required',
         ]);
-
+        
         Project::create($request->all());
 
         return redirect()->route('client')->with('success','You successfuly added the project.');
