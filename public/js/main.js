@@ -27,15 +27,6 @@ $(document).ready(function () {
 	});
 
 	/*==============================
-	Scroll bar
-	==============================*/
-	$('.messages__list, .messages__chat').mCustomScrollbar({
-		axis: "y",
-		scrollbarPosition: "outside",
-		theme: "custom-bar"
-	});
-
-	/*==============================
 	Range sliders
 	==============================*/
 	function initializeSlider() {

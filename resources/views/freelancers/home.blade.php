@@ -1,62 +1,14 @@
 @extends('layouts.freelancers.freelancermaster')
 
 @section('content')
-
+<script>
+    document.title = 'Home - {{ Auth::user()->name }}';
+</script>
+<main class="bg-light" role="main" id="content">
 <div class="container" style="padding-top: 20px;">
     <div class="row">
         <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-            <!-- filter -->
-            <div class="sidebox">
-                <h4 class="sidebox__title">Filters <button type="button">Clear all</button></h4>
 
-                <div class="filter">
-                    <div class="filter__group">
-                        <label class="filter__label">Keyword:</label>
-                        <input type="text" class="filter__input" placeholder="Keyword">
-                    </div>
-
-                    <div class="filter__group">
-                        <label for="sort" class="filter__label">Sort by:</label>
-
-                        <div class="filter__select-wrap">
-                            <select name="sort" id="sort" class="filter__select">
-                                <option value="0">Relevance</option>
-                                <option value="1">Newest</option>
-                                <option value="2">Oldest</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="filter__group">
-                        <label for="categoty" class="filter__label">Category:</label>
-
-                        <div class="filter__select-wrap">
-                            <select name="categoty" id="categoty" class="filter__select">
-                                <option>Admin Support</option>
-                                <option>Customer Service</option>
-                                <option>Data Analytics</option>
-                                <option>Design & Creative</option>
-                                <option>Legal</option>
-                                <option>Software Developing</option>
-                                <option>IT & Networking</option>
-                                <option>Writing</option>
-                                <option>Translation</option>
-                                <option>Sales & Marketing</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="filter__group filter__group--last">
-                        <label class="filter__label">Location:</label>
-                        <input type="text" class="filter__input" placeholder="Location">
-                    </div>
-
-                    <div class="filter__group">
-                        <button class="filter__btn" type="button"><span>Search</span></button>
-                    </div>
-                </div>
-            </div>
-            <!-- end filter -->
         </div>
 
         <div class="col-12 col-md-7 col-lg-8 col-xl-6">
@@ -383,8 +335,15 @@
         </div>
     </div>
     <!-- end main content -->
-
-    <script>
-        document.title = 'Home - {{ Auth::user()->name }}';
-    </script>
-    @endsection
+</div>
+</main>
+<script>
+// initialization of select2
+$('.js-custom-select').each(function () {
+  var select2 = $.HSCore.components.HSSelect2.init($(this));
+});
+</script>
+<script>
+    document.title = 'Home - {{ Auth::user()->name }}';
+</script>
+@endsection

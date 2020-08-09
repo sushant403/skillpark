@@ -222,15 +222,17 @@
                                             <div class="row no-gutters">
                                                 <div class="col-6">
                                                     <div class="navbar-promo-footer-item">
-                                                        <span class="navbar-promo-footer-text">{{ __('nepali.Questionaires')}}</span>
+                                                        <span
+                                                            class="navbar-promo-footer-text">{{ __('nepali.Questionaires')}}</span>
                                                         <a class="navbar-promo-footer-text" href="faq">
-                                                        {{ __('nepali.FAQ')}}
+                                                            {{ __('nepali.FAQ')}}
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="col-6 navbar-promo-footer-ver-divider">
                                                     <div class="navbar-promo-footer-item">
-                                                        <span class="navbar-promo-footer-text">{{ __('nepali.Have a question?')}}</span>
+                                                        <span
+                                                            class="navbar-promo-footer-text">{{ __('nepali.Have a question?')}}</span>
                                                         <a class="navbar-promo-footer-text"
                                                             href="mailto:skillparknepal@gmail.com">
                                                             {{ __('nepali.Contact us')}}
@@ -300,11 +302,40 @@
                                     </a>
                                 </li>
                                 @else
-                                <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary" href="@hasrole('freelancer') {{ route('home') }} @else {{ route('client') }} @endhasrole">
-                                        Dashboard
+                                <!-- Account Login -->
+                                <li class="navbar-nav-last-item pl-0 dropdown">
+                                    <!-- Account Sidebar Toggle Button -->
+                                    <a style="padding-top: 1rem;padding-bottom:1rem"
+                                        class="hs-mega-menu-invoker nav-link dropdown-toggle u-sidebar--account__toggle-bg ml-1"
+                                        href="javascript:;" id="dropdownSubMenu" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="position-relative">
+                                            <span
+                                                class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
+                                            <img class="u-sidebar--account__toggle-img" src="/images/spacer.png"
+                                                width="35" alt="Profile">
+                                        </span>
                                     </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownSubMenu"
+                                        style="min-width: 230px;">
+                                        <a class="dropdown-item" href="dashboard"><i class="fa fa-dashcube"></i>&nbsp;
+                                            Dashboard</a>
+                                        <a class="dropdown-item" href="dashboard"><i class="fa fa-user-alt"></i>&nbsp;
+                                            Profile</a>
+                                        <a class="dropdown-item" href="settings"><i class="fa fa-gear"></i>&nbsp;
+                                            Settings</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                                                class="fa fa-sign-out-alt"></i>&nbsp; Logout</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                    <!-- End Account Sidebar Toggle Button -->
                                 </li>
+                                <!-- End Account Login -->
                                 @endguest
                                 <!-- End Button -->
                             </ul>
@@ -582,8 +613,8 @@
                                         <label class="input-label">Email</label>
                                         <div class="input-group input-group-sm mb-2">
                                             <input type="email" class="form-control" name="email" id="signinEmail"
-                                                placeholder="Email" value="{{ old('email') }}" aria-label="Email" required
-                                                data-msg="Please enter a valid email address.">
+                                                placeholder="Email" value="{{ old('email') }}" aria-label="Email"
+                                                required data-msg="Please enter a valid email address.">
                                         </div>
                                         @error('email')
                                         <span class="feedback" style="color:red;font-size:12px" role="alert">

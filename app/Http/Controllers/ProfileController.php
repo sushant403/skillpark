@@ -30,7 +30,7 @@ class ProfileController extends Controller
 
     public function editProfile()
     {
-        return view('userprofile.edit-profile');
+        return view('userprofile.edit-profile.personal');
     }
 
     public function task()

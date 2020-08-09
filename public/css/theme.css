@@ -67,7 +67,7 @@ body {
     line-height: 1.6;
     color: #677788;
     text-align: left;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -24848,8 +24848,149 @@ a:hover .text-hover-primary {
 }
 
 /*------------------------------------
+  Sidebar Account
+------------------------------------*/
+.u-sidebar--account__footer-offset {
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 10.3125rem;
+  }
+  
+  .u-sidebar__content--account {
+    padding: 1.5rem 3rem;
+  }
+  
+  /* Holder */
+  .u-sidebar--account__holder {
+    background-color: #f6f9fc;
+    padding: 1.5rem 3rem;
+  }
+  
+  .u-sidebar--account__holder-img {
+    width: 3rem;
+    border-radius: 0.25rem;
+  }
+  
+  .u-sidebar--account__holder-text {
+    display: block;
+    font-size: 0.75rem;
+    color: #8f95a0;
+  }
+  
+  /* Toggle */
+  .u-sidebar--account__toggle-bg {
+    position: relative;
+    top: 0.0625rem;
+    padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+    background-color: rgba(55, 182, 255, 0.1);
+    border-radius: 6.1875rem;
+  }
+
+  .u-sidebar--account__toggle-bg:hover {
+    opacity: 1;
+  }
+  
+  @media (max-width: 767px) {
+    .u-sidebar--account__toggle-bg {
+      padding-left: 0.25rem;
+    }
+  }
+  
+  .u-sidebar--account__toggle-bg:hover .u-sidebar--account__toggle-text {
+    color: #666;
+    opacity: 1;
+  }
+  
+  .u-sidebar--account__toggle-text {
+    color: #677788;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    margin-right: 0.3125rem;
+  }
+  
+  @media (max-width: 767px) {
+    .u-sidebar--account__toggle-text {
+      padding: 5px;
+      padding-left: 10px;
+    }
+  }
+  
+  .u-sidebar--account__toggle-img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+  }
+  
+  /* List */
+  .u-sidebar--account__list {
+    margin-bottom: 0;
+  }
+  
+  .u-sidebar--account__list-item {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .u-sidebar--account__list-link {
+    display: block;
+    font-size: 0.875rem;
+    color: #828286;
+    border-radius: 0.25rem;
+    padding: 0.625rem;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .u-sidebar--account__list-link.active, .u-sidebar--account__list-link:hover {
+    color: #333;
+    opacity: 1;
+  }
+  
+  .u-sidebar--account__list-link.active .u-sidebar--account__list-icon, .u-sidebar--account__list-link:hover .u-sidebar--account__list-icon {
+    color: #333;
+  }
+  
+  .u-sidebar--account__list-icon {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    vertical-align: inherit;
+    width: 1.125rem;
+    font-size: 0.8125rem;
+    color: #8f95a0;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .u-sidebar--account__list-divider {
+    border-top-width: 0.0625rem;
+    border-top-style: solid;
+    border-top-color: #e4ecf7;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer Links */
+  .u-sidebar__footer--account {
+    padding: 0 3rem 1.5rem;
+  }
+  
+  .u-sidebar__footer--account__text {
+    position: relative;
+    z-index: 1;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .u-sidebar__footer--account__text:hover {
+    color: #fff;
+  }
+  
+
+/*------------------------------------
   File for your custom SCSS style
 ------------------------------------*/
+
 
 .social-btn {
     display: inline-block;

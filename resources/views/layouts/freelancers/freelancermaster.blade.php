@@ -14,9 +14,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Individual Title -->
-  <script>
-    document.title = 'Skillpark Inc. | Hire Expert Freelancers Any Time'; 
-  </script>
 
   <!-- Favicon and Touch Icons-->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
@@ -36,15 +33,18 @@
   <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
   <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsparallaxer.css">
   <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
+  <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
+
 
   <!-- CSS Skillpark Template -->
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/theme.css">
 </head>
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide"
+  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide"
     data-hs-header-options='{
    "fixMoment": 700,
    "fixEffect": "slide"
@@ -64,11 +64,11 @@
        "hideOnScroll": "true"
       }'>
               <img class="dropdown-item-icon mr-2" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
-              <span class="d-none d-sm-inline-block">Language</span>
+              <span class="d-none d-sm-inline-block">English</span>
             </a>
 
             <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
-              <a class="dropdown-item active" href="/lang/en">English</a>
+              <a class="dropdown-item" href="/lang/en">English</a>
               <a class="dropdown-item" href="/lang/ne">Nepali</a>
             </div>
           </div>
@@ -103,6 +103,7 @@
           </div>
 
           <ul class="list-inline ml-2 mb-0">
+            @guest
             <!-- Account Login -->
             <li class="list-inline-item">
               <div class="hs-unfold">
@@ -112,6 +113,33 @@
               </div>
             </li>
             <!-- End Account Login -->
+            @else
+            <!-- Account Login -->
+            <li class="list-inline-item dropdown">
+              <!-- Account Sidebar Toggle Button -->
+              <a id="sidebarNavToggler"
+                class="hs-mega-menu-invoker nav-link btn btn-xs u-btn-text-secondary dropdown-toggle u-sidebar--account__toggle-bg ml-1 px-3"
+                href="javascript:;" id="dropdownSubMenu" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <span class="position-relative">
+                  <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
+                  <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35" alt="Profile">
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownSubMenu" style="min-width: 230px;">
+                <a class="dropdown-item" href="dashboard"><i class="fa fa-user-alt"></i>&nbsp; Profile</a>
+                <a class="dropdown-item" href="settings"><i class="fa fa-gear"></i>&nbsp; Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out-alt"></i>&nbsp; Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>
+              </div>
+              <!-- End Account Sidebar Toggle Button -->
+            </li>
+            <!-- End Account Login -->
+            @endguest
           </ul>
         </div>
       </div>
@@ -121,7 +149,7 @@
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
           <!-- Logo -->
-          <a class="navbar-brand" href="index.html" aria-label="Front">
+          <a class="navbar-brand" href="" aria-label="Front">
             <img src="/images/logo/biglogo.svg" alt="Logo">
           </a>
           <!-- End Logo -->
@@ -154,11 +182,13 @@
                 </li>
 
                 <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-labelledby="pagesSubMenu">Saved Jobs</a>
+                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-labelledby="pagesSubMenu">Saved
+                    Jobs</a>
                 </li>
 
                 <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-labelledby="blogSubMenu">Trending</a>
+                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                    aria-labelledby="blogSubMenu">Trending</a>
                 </li>
 
                 <li class="navbar-nav-item">
@@ -169,13 +199,19 @@
                   <a class="hs-mega-menu-invoker nav-link" href="javascript:;">Messages</a>
                 </li>
 
+                @hasrole('freelancer')
                 <li class="navbar-nav-last-item">
-                  <a class="btn btn-sm btn-primary"
-                    href=""
-                    target="_blank">
+                  <a class="btn btn-sm btn-primary" href="dashboard">
                     Dashboard
                   </a>
                 </li>
+                @else
+                <li class="navbar-nav-last-item">
+                  <a class="btn btn-sm btn-primary" href="dashboard">
+                    Post Job
+                  </a>
+                </li>
+                @endhasrole
                 <!-- End Button -->
               </ul>
             </div>
@@ -188,13 +224,13 @@
   </header>
   <!-- ========== END HEADER ========== -->
 
-  <div class="space-bottom-2 pt-5"></div>
+  <div class="space-bottom-2 pt-7"></div>
 
   @yield('content')
 
   <!-- ========== FOOTER ========== -->
-  <footer class="gradient-x-overlay-sm-indigo overflow-hidden">
-    <div class="container space-top-2 space-bottom-1">
+  <footer class="gradient-x-overlay-sm-indigo overflow-hidden pt-3">
+    <div class="container space-top-2 space-bottom-1 bg-white">
 
       <!-- Content -->
       <div class="row">
@@ -270,45 +306,86 @@
   <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
   <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
   <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
-  <script src="/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
-  <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
-  <script src="/vendor/appear.js"></script>
+  <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
+  <script src="/vendor/hs-add-field/dist/hs-add-field.min.js"></script>
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="/vendor/appear.js"></script>
 
   <!-- JS Skillpark -->
+  <script src="/js/main.js"></script>
   <script src="/js/hs.core.js"></script>
   <script src="/js/hs.validation.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/hs.select2.js"></script>
 
-  <!-- JS Plugins Init. -->
-  <script>
-    $(document).on('ready', function () {
-    // initialization of sticky blocks
-    $('.js-sticky-block').each(function () {
-      var stickyBlock = new HSStickyBlock($(this)).init();
-    });
-  });
-
-      // initialization of unfold
-      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-
-      // initialization of form validation
-      $('.js-validate').each(function() {
-        $.HSCore.components.HSValidation.init($(this), {
-          rules: {
-            confirmPassword: {
-              equalTo: '#signupPassword'
-            }
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of header
+        var header = new HSHeader($('#header')).init();
+  
+        // initialization of mega menu
+        var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+          desktop: {
+            position: 'left'
           }
+        }).init();
+  
+        // initialization of unfold
+        var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+  
+        // initialization of form validation
+        $('.js-validate').each(function() {
+          $.HSCore.components.HSValidation.init($(this), {
+            rules: {
+              confirmPassword: {
+                equalTo: '#signupPassword'
+              }
+            }
+          });
+        });
+  
+        // initialization of show animations
+        $('.js-animation-link').each(function () {
+          var showAnimation = new HSShowAnimation($(this)).init();
+        });
+  
+        // initialization of masked input
+        $('.js-masked-input').each(function () {
+          var mask = $.HSCore.components.HSMask.init($(this));
+        });
+  
+        // initialization of file attach
+        $('.js-file-attach').each(function () {
+          var customFile = new HSFileAttach($(this)).init();
+        });
+  
+        // initialization of add input filed
+        $('.js-add-field').each(function () {
+          new HSAddField($(this), {
+            addedField: () => {
+              $('.js-add-field .js-custom-select-dynamic').each(function () {
+                var select2dynamic = $.HSCore.components.HSSelect2.init($(this));
+              });
+            }
+          }).init();
+        });
+  
+        // initialization of select2
+        $('.js-custom-select').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+  
+        // initialization of quilljs editor
+        var quill = $.HSCore.components.HSQuill.init('.js-quill');
+  
+        // initialization of go to
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
         });
       });
-
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
-    });
-  </script>
+    </script>
 
 </body>
 
