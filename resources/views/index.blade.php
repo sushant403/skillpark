@@ -82,7 +82,7 @@
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
             <h2 class="h3">{{__ ('nepali.Why Skillpark) }}</h2>
-            <p>Modern and Simplified Freelancer Platform.</p>
+            <p><?php echo e(__ ('Modern and Simplified Freelancer Platform')); ?>.</p>
         </div>
         <!-- End Title -->
 
