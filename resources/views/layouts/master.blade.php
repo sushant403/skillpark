@@ -85,7 +85,7 @@
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
                                     <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
-                                        aria-haspopup="true" aria-expanded="false">{{__ ('nepali.Solutions') }}</a>
+                                        aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions') }}</a>
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
@@ -145,7 +145,7 @@
                                 <li class="hs-has-sub-menu navbar-nav-item">
                                     <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false"
-                                        aria-labelledby="pagesSubMenu">{{__ ('nepali.Explore') }}</a>
+                                        aria-labelledby="pagesSubMenu">{{ __('nepali.Explore') }}</a>
 
                                     <!-- Pages - Submenu -->
                                     <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
@@ -181,7 +181,7 @@
                                 <!-- End Pages -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="" class="nav-link">{{__ ('nepali.Enterprise') }}</a>
+                                    <a href="" class="nav-link">{{ __('nepali.Enterprise') }}</a>
                                 </li>
 
 
@@ -193,7 +193,7 @@
                                             }
                                         }'>
                                     <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
-                                        aria-haspopup="true" aria-expanded="false">Support</a>
+                                        aria-haspopup="true" aria-expanded="false">{{ __('nepali.Support') }}</a>
 
                                     <!-- Docs - Submenu -->
                                     <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu"
@@ -256,7 +256,7 @@
                                                     "type": "css-animation",
                                                     "animationIn": "slideInUp"
                                                 }'>
-                                            <i class="fas fa-search la-lg"></i>&nbsp; Search
+                                            <i class="fas fa-search la-lg"></i>&nbsp; {{ __('nepali.Search') }}
                                         </a>
 
                                         <div id="searchClassic"

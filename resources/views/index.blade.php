@@ -44,7 +44,7 @@
                     <div class="col-lg-6">
                         <!-- Tags -->
                         <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
-                          <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted" style="font-size: 13px">Trending:</span>
+                          <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted" style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
                           <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Flutter</a>
                           <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Laravel</a>
                           <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Django</a>
@@ -81,8 +81,8 @@
     <div id="featuresSection" class="container space-2 space-lg-2">
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-            <h2 class="h3">Why Skillpark</h2>
-            <p>Modern and Simplified Freelancer Platform</p>
+            <h2 class="h3">{{ __('nepali.Why Skillpark') }}</h2>
+            <p>{{ __('nepali.Modern and Simplified Freelancer Platform') }}</p>
         </div>
         <!-- End Title -->
 
@@ -101,7 +101,7 @@
                             payments you deserve.</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">{{ __('nepali.Learn more ')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -114,7 +114,7 @@
                         <figure class="w-100 max-w-8rem mb-4">
                             <img class="img-fluid" src="/images/svg/icons/icon-7.svg" alt="SVG">
                         </figure>
-                        <h4>{{__ ('nepali.Quality Hires') }}</h4>
+                        <h4>{{ __('nepali.Quality Hires') }}</h4>
                         <p class="font-size-1 text-body mb-0">Thousands of Qualified Freelancers ready for your projects
                             and business.
                             Either find them
@@ -140,7 +140,7 @@
                             milestones directly from the website.</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">Learn more <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -153,13 +153,13 @@
                         <figure class="w-100 max-w-8rem mb-4">
                             <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
                         </figure>
-                        <h4>{{__ ('nepali.Simplified Payment') }} </h4>
+                        <h4>{{ __('nepali.Simplified Payment') }} </h4>
                         <p class="font-size-1 text-body mb-0">Using the national payment system, now the payments are
                             faster and more
                             secure with contracts</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">Learn more <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -246,11 +246,11 @@
             <div class="card overflow-hidden p-5">
                 <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
                     <div class="col-md-8 col-lg-5 offset-lg-3 mb-3 mb-md-0">
-                        <h3 class="h4 text-grey mb-0">Revolutionizing the way Company hires!</h3>
+                        <h3 class="h4 text-grey mb-0">{{ __('nepali.Revolutionizing the way Company hires!') }}</h3>
                     </div>
 
                     <div class="col-md-4 text-md-right">
-                        <a class="btn btn-primary" href="#">Learn More</a>
+                        <a class="btn btn-primary" href="#">{{ __('nepali.Learn more') }}</a>
                     </div>
                 </div>
 
@@ -265,7 +265,7 @@
     <!-- End CTA Section -->
 
     <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-lg-3">
-        <h3 class="text-center mb-6">{{__ ('nepali.Explore the Marketplace') }}</h3>
+        <h3 class="text-center mb-6">{{ __('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
@@ -334,7 +334,7 @@
         </div>
         <div class="text-center">
             <div class="d-inline-block font-size-1 border bg-white text-center rounded-pill py-3 px-4">
-                Want to Explore more? <a class="font-weight-bold ml-3" href="#">View all Categories <span
+                {{ __('nepali.Want to Explore more?') }} <a class="font-weight-bold ml-3" href="#">View all Categories <span
                         class="fas fa-angle-right ml-1"></span></a>
             </div>
         </div>
@@ -344,8 +344,8 @@
     <div id="aboutSection" class="container space-2 space-lg-1">
         <!-- Title -->
         <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
-            <h2 class="h3">{{__ ('nepali.What we do') }}?</h2>
-            <p>{{__ ('nepali.A dynamic platform for modern job hiring.') }}</p>
+            <h2 class="h3">{{ __('nepali.What we do?') }}?</h2>
+            <p>{{ __('nepali.A dynamic platform for modern job hiring.') }}</p>
         </div>
         <!-- End Title -->
 
