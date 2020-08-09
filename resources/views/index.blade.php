@@ -81,8 +81,8 @@
     <div id="featuresSection" class="container space-2 space-lg-2">
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-            <h2 class="h3">{{__ ('nepali.Why Skillpark) }}</h2>
-            <p><?php echo e(__ ('Modern and Simplified Freelancer Platform')); ?>.</p>
+            <h2 class="h3">Why Skillpark</h2>
+            <p>Modern and Simplified Freelancer Platform</p>
         </div>
         <!-- End Title -->
 
