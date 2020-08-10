@@ -42,23 +42,24 @@
     <!-- ========== HEADER ========== -->
     <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-show-hide"
         data-hs-header-options='{
-   "fixMoment": 700,
+   "fixMoment": 400,
    "fixEffect": "slide"
  }'>
 
         <div class="header-section">
             <!-- Topbar -->
-            <div class="container header-hide-content pt-2">
+            <div class="container py-2">
                 <div class="d-flex align-items-center">
+                    <img src="/images/logo/biglogo.svg" class="mr-4" width="130px" />
                     <!-- Language -->
                     <div class="hs-unfold">
                         <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
                             href="javascript:;" data-hs-unfold-options='{
-       "target": "#languageDropdown",
-       "type": "css-animation",
-       "event": "hover",
-       "hideOnScroll": "true"
-      }'>
+                                                                            "target": "#languageDropdown",
+                                                                            "type": "css-animation",
+                                                                            "event": "hover",
+                                                                            "hideOnScroll": "true"
+                                                                            }'>
                             <img class="dropdown-item-icon mr-2" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
                             <span class="d-none d-sm-inline-block">English</span>
                         </a>
@@ -70,30 +71,12 @@
                     </div>
                     <!-- End Language -->
 
-                    <div class="ml-auto">
-                        <!-- Jump To -->
-                        <div class="hs-unfold d-sm-none mr-2">
-                            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
-                                href="javascript:;" data-hs-unfold-options='{
-         "target": "#jumpToDropdown",
-         "type": "css-animation",
-         "event": "hover",
-         "hideOnScroll": "true"
-        }'>
-                                Jump to
-                            </a>
 
-                            <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                                <a class="dropdown-item" href="">Help</a>
-                                <a class="dropdown-item" href="">Contacts</a>
-                            </div>
-                        </div>
-                        <!-- End Jump To -->
+                    <div class="ml-auto">
 
                         <!-- Links -->
                         <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
                             <a class="nav-link" href="">Help</a>
-                            <a class="nav-link" href="">Report</a>
                         </div>
                         <!-- End Links -->
                     </div>
@@ -143,87 +126,170 @@
                 </div>
             </div>
             <!-- End Topbar -->
-
-            <div id="logoAndNav" class="container">
-                <!-- Nav -->
-                <nav class="js-mega-menu navbar navbar-expand-lg">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="" aria-label="Front">
-                        <img src="/images/logo/biglogo.svg" alt="Logo">
-                    </a>
-                    <!-- End Logo -->
-
-                    <!-- Responsive Toggle Button -->
-                    <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
-                        aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar"
-                        data-toggle="collapse" data-target="#navBar">
-                        <span class="navbar-toggler-default">
-                            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor"
-                                    d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
-                            </svg>
-                        </span>
-                        <span class="navbar-toggler-toggled">
-                            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor"
-                                    d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
-                            </svg>
-                        </span>
-                    </button>
-                    <!-- End Responsive Toggle Button -->
-
-                    <!-- Navigation -->
-                    <div id="navBar" class="collapse navbar-collapse">
-                        <div class="navbar-body header-abs-top-inner">
-                            <ul class="navbar-nav">
-                                <!-- Home -->
-                                <li class="navbar-nav-item">
-                                    <a class="hs-mega-menu-invoker nav-link" href="home">Find Jobs</a>
-                                </li>
-
-                                <li class="navbar-nav-item">
-                                    <a class="hs-mega-menu-invoker nav-link" href="saved-jobs"
-                                        aria-labelledby="pagesSubMenu">Saved
-                                        Jobs</a>
-                                </li>
-
-                                <li class="navbar-nav-item">
-                                    <a class="hs-mega-menu-invoker nav-link" href="trending"
-                                        aria-labelledby="blogSubMenu">Trending</a>
-                                </li>
-
-                                <li class="navbar-nav-item">
-                                    <a class="hs-mega-menu-invoker nav-link" href="messages">Messages</a>
-                                </li>
-
-                                @hasrole('freelancer')
-                                <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary" href="dashboard">
-                                        Dashboard
-                                    </a>
-                                </li>
-                                @else
-                                <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary" href="dashboard">
-                                        Post Job
-                                    </a>
-                                </li>
-                                @endhasrole
-                                <!-- End Button -->
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Navigation -->
-                </nav>
-                <!-- End Nav -->
-            </div>
         </div>
     </header>
     <!-- ========== END HEADER ========== -->
 
-    <div class="space-bottom-2 pt-7"></div>
+    <div class="pt-7"></div>
 
-    @yield('content')
+
+    <!-- ========== MAIN ========== -->
+    <main id="content" role="main" class="bg-light">
+
+        <!-- Breadcrumb Section -->
+        <div class="bg-navy d-lg-none d-sm-block"
+            style="background-image: url(/images/svg/components/abstract-shapes-20.svg);">
+            <div class="container space-1 space-top-lg-2 space-bottom-lg-3">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <!-- Breadcrumb -->
+                        <ol class="breadcrumb breadcrumb-light breadcrumb-no-gutter mb-0">
+                            <li class="breadcrumb-item">Account</li>
+                            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                        </ol>
+                        <!-- End Breadcrumb -->
+                    </div>
+                    <div class="col-auto">
+                        <!-- Responsive Toggle Button -->
+                        <button type="button" class="navbar-toggler btn btn-icon btn-sm rounde-circle d-lg-none"
+                            aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav"
+                            data-toggle="collapse" data-target="#sidebarNav">
+                            <span class="navbar-toggler-default">
+                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+                                </svg>
+                            </span>
+                            <span class="navbar-toggler-toggled">
+                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <!-- End Responsive Toggle Button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcrumb Section -->
+        <!-- Content Section -->
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- Navbar -->
+                    <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+                        <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
+                            <!-- Card -->
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <!-- Avatar -->
+                                    <div class="d-none d-lg-block text-center mb-5">
+                                        <div class="avatar avatar-xxl avatar-circle mb-3">
+                                            <img class="avatar-img" src="{{ Auth::user()->avatar }}"
+                                                alt="{{ Auth::user()->name }}">
+                                            <img class="avatar-status avatar-lg-status"
+                                                src="/images/svg/illustrations/top-vendor.svg" alt="Image"
+                                                data-toggle="tooltip" data-placement="top" title="Verified user">
+                                        </div>
+
+                                        <h4 class="card-title">{{ Auth::user()->name }}</h4>
+                                        <p class="card-text font-size-1">{{ Auth::user()->email }}</p>
+                                    </div>
+                                    <!-- End Avatar -->
+
+                                    <h6 class="text-cap small">Account</h6>
+
+                                    <!-- List -->
+                                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+                                        <li class="nav-item">
+                                            <a class="{{ Request::is('settings') ? 'nav-link-active' : 'nav-link' }}"
+                                                href="settings">
+                                                <i class="fas fa-id-card nav-icon"></i>
+                                                Personal info
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="{{ Request::is('auth') ? 'nav-link-active' : 'nav-link' }}"
+                                                href="auth">
+                                                <i class="fas fa-shield-alt nav-icon"></i>
+                                                Login &amp; security
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="{{ Request::is('notification') ? 'nav-link-active' : 'nav-link' }}"
+                                                href="notification">
+                                                <i class="fas fa-bell nav-icon"></i>
+                                                Notifications
+                                                <span class="badge badge-soft-navy badge-pill nav-link-badge">1</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="{{ Request::is('preference') ? 'nav-link-active' : 'nav-link' }}"
+                                                href="preference">
+                                                <i class="fas fa-sliders-h nav-icon"></i>
+                                                Preferences
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- End List -->
+
+                                    <h6 class="text-cap small">Privacy</h6>
+
+                                    <!-- List -->
+                                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                                        <li class="nav-item">
+                                            <a class="{{ Request::is('terms') ? 'nav-link-active' : 'nav-link' }}"
+                                                href="terms">
+                                                <i class="fas fa-book-open nav-icon"></i>
+                                                Terms &amp; Conditions
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                 document.getElementById('logout').submit();">
+                                                <i class="fas fa-sign-out-alt nav-icon"></i>
+                                                Logout
+                                            </a>
+                                            <form id="logout" action="{{ route('logout') }}" method="POST"
+                                                style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </li>
+                                    </ul>
+                                    <!-- End List -->
+
+                                    <div class="d-lg-none">
+                                        <div class="dropdown-divider"></div>
+
+                                        <!-- List -->
+                                        <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                                            <li class="nav-item">
+                                                <a class="nav-link text-primary" href="#">
+                                                    <i class="fas fa-sign-out-alt nav-icon"></i>
+                                                    Log out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- End List -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+                        </div>
+                    </div>
+                    <!-- End Navbar -->
+                </div>
+
+
+                @yield('content')
+
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Content Section -->
+    </main>
+    <!-- ========== END MAIN ========== -->
 
     <!-- ========== FOOTER ========== -->
     <footer class="gradient-x-overlay-sm-indigo overflow-hidden pt-3">

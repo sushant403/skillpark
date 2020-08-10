@@ -1,22 +1,21 @@
 @extends('layouts.freelancers.freelancermaster')
 
 @section('content')
+
+<link rel="stylesheet" href="/css/style.css">
+
 <!-- Body Start -->	
-<main class="browse-section">				
+<main class="browse-section bg-light pt-3">				
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4">
-                <div class="account_dt_left">
-                    <div class="job-center-dt">
+                <div class="account_dt_left py-1 bg-white">
+                    <div class="job-center-dt py-4 bg-white">
                         <img src="{{ Auth::user()->avatar }}" alt="">
                         <div class="job-urs-dts">
-                            <div class="dp_upload">
-                                <input type="file" id="file">
-                                <label for="file">Upload Photo</label>
-                            </div>
-                            <h4>{{ Auth::user()->name }}</h4>
-                            <span>UX Designer</span>
-                            <div class="avialable">Available Full Time<a href="#"><i class="far fa-edit"></i></a></div>
+                            <h4 class="py-1">{{ Auth::user()->name }}</h4>
+                            <span>{{ Auth::user()->tagline }}</span>
+                            <div class="avialable pt-3">Edit Profile<a href="settings"><i class="far fa-edit"></i></a></div>
                         </div>													
                     </div>
                     <div class="my_websites">
@@ -112,15 +111,6 @@
                 </div>
             </div>
             <div class="col-lg-9 col-md-8 mainpage">
-                <div class="account_heading">
-                    <div class="account_hd_left">
-                        <h2>Manage Your Account</h2>
-                    </div>
-                    <div class="account_hd_right">
-                        <a  href="{{ route('logout') }}" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();" class="main_lg_btn"> Logout</a>
-                    </div>
-                </div>
                 <div class="account_tabs">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
@@ -139,16 +129,13 @@
                             <a class="nav-link" href="jobs">Jobs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="bids">Bids</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="settings"><i class="fas fa-cog"></i></a>
+                            <a class="nav-link" href="settings"><i class="fa fa-gear"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="total_1254">
                     <div class="row">
-                        <div class="col-lg-4 col-12">
+                        <div class="col-lg-4 col-6">
                             <div class="collection_item">
                                 <div class="coll_icon">
                                     <i class="fas fa-suitcase col_icon1"></i>
@@ -157,7 +144,7 @@
                                 <span>30</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-12">
+                        <div class="col-lg-4 col-6">
                             <div class="collection_item">
                                 <div class="coll_icon">
                                     <i class="fas fa-bullseye col_icon2"></i>
@@ -166,7 +153,7 @@
                                 <span>10</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-12">
+                        <div class="col-lg-4 col-6">
                             <div class="collection_item">
                                 <div class="coll_icon">
                                     <i class="fas fa-heart col_icon3"></i>
@@ -303,7 +290,7 @@
                 </div>
                 <div class="dsh150">
                     <div class="row">							
-                        <div class="col-lg-7">
+                        <div class="col-lg-12">
                             <div class="view_chart">
                                 <div class="view_chart_header">
                                     <h4>Applied Jobs</h4>										
@@ -370,66 +357,7 @@
                                     <a href="#" class="btn-veiw10">View All</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="view_chart">
-                                <div class="view_chart_header">
-                                    <h4>Order Plans Summery</h4>										
-                                </div>
-                                <div class="view_applied_jobs_body">
-                                    <ul class="all_paid_plans scrollstyle_4">
-                                        <li>
-                                            <div class="plan_dts">
-                                                <div class="plan_dt_left">
-                                                    <h4>Professional Plans</h4>
-                                                    <p>Order No : #12345</p>
-                                                    <p>Date : 10 October 2018</p>
-                                                </div>
-                                                <div class="plan_dt_right">
-                                                    <button class="paid_btn">Paid</button>
-                                                </div>
-                                            </div>
-                                        </li>										
-                                        <li>
-                                            <div class="plan_dts">
-                                                <div class="plan_dt_left">
-                                                    <h4>Professional Plans</h4>
-                                                    <p>Order No : #12358</p>
-                                                    <p>Date : 10 September 2018</p>
-                                                </div>
-                                                <div class="plan_dt_right">
-                                                    <button class="paid_btn">Paid</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="plan_dts">
-                                                <div class="plan_dt_left">
-                                                    <h4>Professional Plans</h4>
-                                                    <p>Order No : #12358</p>
-                                                    <p>Date : 10 August 2018</p>
-                                                </div>
-                                                <div class="plan_dt_right">
-                                                    <button class="paid_btn">Paid</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="plan_dts">
-                                                <div class="plan_dt_left">
-                                                    <h4>Professional Plans</h4>
-                                                    <p>Order No : #12365</p>
-                                                    <p>Date : 10 July 2018</p>
-                                                </div>
-                                                <div class="plan_dt_right">
-                                                    <button class="paid_btn">Paid</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>										
-                                </div>
-                            </div>
-                        </div>							
+                        </div>					
                     </div>						
                 </div>						
             </div>																																						
@@ -442,10 +370,5 @@
 <script>
 document.title = '{{ Auth::user()->name }} | Dashboard';
 </script>
-
-<script src="/js/chart-1.js"></script>
-<script src="/js/chart-views.js"></script>
-<script src="/js/chart-pie.js"></script>
-<script src="/js/Chart.min.js"></script>
 
 @endsection

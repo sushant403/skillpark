@@ -13,11 +13,6 @@
     <!-- Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Individual Title -->
-    <script>
-        document.title = 'Skillpark Inc. | Hire Expert Freelancers Any Time'; 
-    </script>
-
     <!-- Favicon and Touch Icons-->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
     <link rel="manifest" href="site.webmanifest">
@@ -84,13 +79,13 @@
                             <ul class="navbar-nav">
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
-                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions') }}</a>
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
                                         <div class="row no-gutters">
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-5">
                                                 <!-- Banner Image -->
                                                 <div class="navbar-banner"
                                                     style="background-image: url(/images/svg/banner.svg);">
@@ -167,8 +162,7 @@
                                                 <a class="dropdown-item" href="">Django</a>
                                                 <a class="dropdown-item" href="">Laravel</a>
                                                 <a class="dropdown-item" href="">PHP</a>
-                                                <a class="dropdown-item" href="">Skillpark End &amp;
-                                                    Developer</a>
+                                                <a class="dropdown-item" href="">FrontEnd Developer</a>
                                             </div>
                                             <!-- Account -->
                                             <a class="dropdown-item" href="">Freelancers</a>
@@ -374,7 +368,7 @@
     <div class="d-none"></div>
     @endguest
 
-    <footer class="container">
+    <footer class="container text-sm-center text-lg-left">
         <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
             <div class="row justify-content-lg-between">
                 <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
@@ -387,7 +381,7 @@
                     <!-- End Logo -->
 
                     <!-- Nav Link -->
-                    <ul class="nav nav-sm nav-x-0 flex-column">
+                    <ul class="nav nav-sm nav-x-0 flex-column text-sm-center text-lg-left">
                         <li class="nav-item">
                             <a class="nav-link media" href="javascript:;">
                                 <span class="media">
@@ -462,16 +456,20 @@
                         <li class="nav-item">
                             <a class="nav-link" href="faq">
                                 <span class="media align-items-center">
-                                    <i class="fa fa-info-circle mr-2"></i>
-                                    <span class="media-body">Help</span>
+                                    <span class="media-body">
+                                        <i class="fa fa-info-circle mr-1"></i>&nbsp;Help</span>
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="home">
                                 <span class="media align-items-center">
-                                    <i class="fa fa-user-circle mr-2"></i>
-                                    <span class="media-body">Your Account</span>
+                                    <span class="media-body">
+                                        @guest
+                                        <i class="fa fa-user-circle mr-1"></i>&nbsp;Register/Login</span>
+                                        @else
+                                        <i class="fa fa-user-circle mr-1"></i>&nbsp;Your Account</span>
+                                        @endguest
                                 </span>
                             </a>
                         </li>
@@ -485,7 +483,7 @@
 
         <div class="space-1">
             <div class="row align-items-md-center mb-7">
-                <div class="col-md-6 mb-4 mb-md-0">
+                <div class="col-md-6 col-sm-7 mb-4 mb-md-0 mx-auto">
                     <!-- Nav Link -->
                     <ul class="nav nav-sm nav-x-sm align-items-center">
                         <li class="nav-item">
@@ -543,8 +541,8 @@
 
                                 <div id="footerLanguage"
                                     class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
-                                    <a class="dropdown-item active" href="/lang/en">English</a>
-                                    <a class="dropdown-item" href="/lang/ne">Nepali</a>
+                                    <a class="dropdown-item" href="/lang/en">English</a>
+                                    <a class="dropdown-item" href="/lang/ne">नेपाली</a>
                                 </div>
                             </div>
                         </li>

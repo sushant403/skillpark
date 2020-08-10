@@ -68,7 +68,7 @@
                   <h3>Languages</h3>
                   <ul>
                      <li>English&nbsp;&nbsp;- <span>Fluent</span></li>
-                     <li>Nepali&nbsp;<strong>(español)</strong>&nbsp;- <span>Conversational</span></li>
+                     <li>नेपाली&nbsp;<strong>(español)</strong>&nbsp;- <span>Conversational</span></li>
                      <li>French&nbsp;<strong>(français)</strong>&nbsp;- <span>Basic</span></li>
                   </ul>
                </div>

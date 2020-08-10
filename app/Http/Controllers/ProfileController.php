@@ -30,12 +30,18 @@ class ProfileController extends Controller
 
     public function editProfile()
     {
-        return view('userprofile.edit-profile.personal');
+        $cities = City::all();
+        return view('userprofile.editprofile.personal', compact('cities'));
     }
 
     public function task()
     {
         return view('services.task');
+    }
+
+    public function auth()
+    {
+        return view('userprofile.editprofile.auth');
     }
 
     public function userDetails()

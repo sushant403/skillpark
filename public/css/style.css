@@ -91,7 +91,7 @@ video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    /* vertical-align: baseline; */
     scroll-behavior: smooth;
     font-family: 'Muli', sans-serif;
 }
@@ -125,9 +125,8 @@ section {
 
 body {
     line-height: 1;
-    font-family: 
     overflow-x: hidden;
-    background: #fafafa;
+    background: #fff;
     margin: 0 auto;
 }
 
@@ -558,11 +557,6 @@ i.icon.delete:before{
 }
 
 /* === 01 Main Homepage === */
-@media (min-width: 1310px) {
-  .container {
-    max-width: 1310px;
-  }
-}
 /* === Main Header === */
 *:hover{
     transition: 0.3s;
@@ -947,7 +941,7 @@ header {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid #1dc8cc !;
+    border-bottom: 1px solid #1dc8cc ;
 }
 
 .rsp-search:focus+.r-sh1 {
@@ -1902,12 +1896,11 @@ span.right-cm {
 }
 
 .job-center-dt img {
-    width: 110px;
+    width: auto;
     height: 110px;
     margin-bottom: 28px;
-    border-radius: 100%;
+    border-radius: 50%;
     display: inline-block;
-    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .featured-candidates .owl-carousel .owl-nav.disabled {

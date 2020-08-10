@@ -59,10 +59,11 @@ section {
     display: block;
 }
 
+
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 0.95rem;
     font-weight: 400;
     line-height: 1.6;
     color: #677788;
@@ -629,25 +630,25 @@ pre code {
 
 @media (min-width: 576px) {
     .container {
-        max-width: 540px;
+        max-width: 560px;
     }
 }
 
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 740px;
     }
 }
 
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        max-width: 980px;
     }
 }
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1160px;
     }
 }
 
@@ -24916,7 +24917,7 @@ a:hover .text-hover-primary {
   }
   
   .u-sidebar--account__toggle-img {
-    width: 1.5rem;
+    width: auto;
     height: 1.5rem;
     border-radius: 50%;
   }

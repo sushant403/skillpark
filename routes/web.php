@@ -38,7 +38,11 @@ Route::middleware(['verified','auth'])->group(function () {
 
     //user-accounts routes
     Route::get('/dashboard', 'ProfileController@dashboard');
+
     Route::get('/settings', 'ProfileController@editProfile');
+    Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
+
+    Route::get('/auth', 'ProfileController@auth');
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
     Route::get('/services', 'ProfileController@serviceList');

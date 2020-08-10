@@ -30,21 +30,17 @@
 
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-  <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsparallaxer.css">
   <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
   <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
 
 
   <!-- CSS Skillpark Template -->
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/theme.css">
 </head>
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide"
+  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-show-hide"
     data-hs-header-options='{
    "fixMoment": 700,
    "fixEffect": "slide"
@@ -69,7 +65,7 @@
 
             <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
               <a class="dropdown-item" href="/lang/en">English</a>
-              <a class="dropdown-item" href="/lang/ne">Nepali</a>
+              <a class="dropdown-item" href="/lang/ne">नेपाली</a>
             </div>
           </div>
           <!-- End Language -->
@@ -127,7 +123,7 @@
                 </span>
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownSubMenu" style="min-width: 230px;">
-                <a class="dropdown-item" href="dashboard"><i class="fa fa-user-alt"></i>&nbsp; Profile</a>
+                <a class="dropdown-item pb-2" href="dashboard"><i class="fa fa-dashcube"></i>&nbsp; Dashboard</a>
                 <a class="dropdown-item" href="settings"><i class="fa fa-gear"></i>&nbsp; Settings</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -178,25 +174,21 @@
               <ul class="navbar-nav">
                 <!-- Home -->
                 <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;">Find Jobs</a>
+                  <a class="hs-mega-menu-invoker nav-link" href="home">Find Jobs</a>
                 </li>
 
                 <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-labelledby="pagesSubMenu">Saved
+                  <a class="hs-mega-menu-invoker nav-link" href="saved-jobs" aria-labelledby="pagesSubMenu">Saved
                     Jobs</a>
                 </li>
 
                 <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                  <a class="hs-mega-menu-invoker nav-link" href="trending"
                     aria-labelledby="blogSubMenu">Trending</a>
                 </li>
 
                 <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;">Categories</a>
-                </li>
-
-                <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="javascript:;">Messages</a>
+                  <a class="hs-mega-menu-invoker nav-link" href="messages">Messages</a>
                 </li>
 
                 @hasrole('freelancer')
@@ -230,7 +222,7 @@
 
   <!-- ========== FOOTER ========== -->
   <footer class="gradient-x-overlay-sm-indigo overflow-hidden pt-3">
-    <div class="container space-top-2 space-bottom-1 bg-white">
+    <div class="container space-top-2 space-bottom-1 bg-white text-center">
 
       <!-- Content -->
       <div class="row">
@@ -282,16 +274,6 @@
       </div>
     </div>
     <!-- End Content -->
-
-    <!-- SVG Background Shape -->
-    <figure class="w-35 position-absolute top-0 right-0 z-index-n1 mt-n11 mr-n11">
-      <img class="img-fluid" src="/images/svg/components/half-circle-1.svg" alt="Image Description">
-    </figure>
-
-    <figure class="w-25 position-absolute bottom-0 left-0 z-index-n1 mb-n11 ml-n11">
-      <img class="img-fluid" src="/images/svg/components/half-circle-2.svg" alt="Image Description">
-    </figure>
-    <!-- End SVG Background Shape -->
   </footer>
   <!-- ========== END FOOTER ========== -->
 
@@ -304,88 +286,64 @@
   <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
   <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
   <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-  <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
-  <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
-  <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
-  <script src="/vendor/hs-add-field/dist/hs-add-field.min.js"></script>
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-  <script src="/vendor/appear.js"></script>
+  <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
 
-  <!-- JS Skillpark -->
-  <script src="/js/main.js"></script>
+  <!-- JS Front -->
   <script src="/js/hs.core.js"></script>
   <script src="/js/hs.validation.js"></script>
+  <script src="/js/hs.mask.js"></script>
   <script src="/js/hs.select2.js"></script>
 
-    <!-- JS Plugins Init. -->
-    <script>
-      $(document).on('ready', function () {
-        // initialization of header
-        var header = new HSHeader($('#header')).init();
-  
-        // initialization of mega menu
-        var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
-          desktop: {
-            position: 'left'
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      var header = new HSHeader($('#header')).init();
+    });
+
+      // initialization of unfold
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+      // initialization of form validation
+      $('.js-validate').each(function() {
+        $.HSCore.components.HSValidation.init($(this), {
+          rules: {
+            confirmPassword: {
+              equalTo: '#signupPassword'
+            }
           }
-        }).init();
-  
-        // initialization of unfold
-        var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-  
-        // initialization of form validation
-        $('.js-validate').each(function() {
-          $.HSCore.components.HSValidation.init($(this), {
-            rules: {
-              confirmPassword: {
-                equalTo: '#signupPassword'
-              }
-            }
-          });
-        });
-  
-        // initialization of show animations
-        $('.js-animation-link').each(function () {
-          var showAnimation = new HSShowAnimation($(this)).init();
-        });
-  
-        // initialization of masked input
-        $('.js-masked-input').each(function () {
-          var mask = $.HSCore.components.HSMask.init($(this));
-        });
-  
-        // initialization of file attach
-        $('.js-file-attach').each(function () {
-          var customFile = new HSFileAttach($(this)).init();
-        });
-  
-        // initialization of add input filed
-        $('.js-add-field').each(function () {
-          new HSAddField($(this), {
-            addedField: () => {
-              $('.js-add-field .js-custom-select-dynamic').each(function () {
-                var select2dynamic = $.HSCore.components.HSSelect2.init($(this));
-              });
-            }
-          }).init();
-        });
-  
-        // initialization of select2
-        $('.js-custom-select').each(function () {
-          var select2 = $.HSCore.components.HSSelect2.init($(this));
-        });
-  
-        // initialization of quilljs editor
-        var quill = $.HSCore.components.HSQuill.init('.js-quill');
-  
-        // initialization of go to
-        $('.js-go-to').each(function () {
-          var goTo = new HSGoTo($(this)).init();
         });
       });
-    </script>
+
+      // initialization of show animations
+      $('.js-animation-link').each(function () {
+        var showAnimation = new HSShowAnimation($(this)).init();
+      });
+
+      // initialization of masked input
+      $('.js-masked-input').each(function () {
+        var mask = $.HSCore.components.HSMask.init($(this));
+      });
+
+      // initialization of file attach
+      $('.js-file-attach').each(function () {
+        var customFile = new HSFileAttach($(this)).init();
+      });
+
+      // initialization of select2
+      $('.js-custom-select').each(function () {
+        var select2 = $.HSCore.components.HSSelect2.init($(this));
+      });
+
+      // initialization of go to
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+  </script>
 
 </body>
 

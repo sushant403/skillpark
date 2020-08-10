@@ -1,9 +1,12 @@
 @extends('layouts.freelancers.freelancermaster')
 
 @section('content')
+
+<link rel="stylesheet" href="/css/main.css">
 <script>
     document.title = 'Home - {{ Auth::user()->name }}';
 </script>
+
 <main class="bg-light" role="main" id="content">
 <div class="container" style="padding-top: 20px;">
     <div class="row">
@@ -337,12 +340,6 @@
     <!-- end main content -->
 </div>
 </main>
-<script>
-// initialization of select2
-$('.js-custom-select').each(function () {
-  var select2 = $.HSCore.components.HSSelect2.init($(this));
-});
-</script>
 <script>
     document.title = 'Home - {{ Auth::user()->name }}';
 </script>

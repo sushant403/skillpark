@@ -78,7 +78,7 @@
     <!-- End Hero Section -->
 
     <!-- Features Section -->
-    <div id="featuresSection" class="container space-2 space-lg-2">
+    <div id="featuresSection" class="container space-2 space-lg-2 text-center">
         <!-- Title -->
         <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
             <h2 class="h3">{{ __('nepali.Why Skillpark') }}</h2>
@@ -91,7 +91,7 @@
                 <!-- Icon Blocks -->
                 <a class="card h-100" href="#">
                     <div class="card-body">
-                        <figure class="w-100 max-w-8rem mb-4">
+                        <figure class="w-100 max-w-8rem mb-4 mx-auto">
                             <img class="img-fluid" src="/images/svg/icons/icon-1.svg" alt="SVG">
                         </figure>
                         <h4>{{ __('nepali.Searching the Best Job')}}</h4>
@@ -111,7 +111,7 @@
                 <!-- Icon Blocks -->
                 <a class="card h-100" href="#">
                     <div class="card-body">
-                        <figure class="w-100 max-w-8rem mb-4">
+                        <figure class="w-100 max-w-8rem mb-4 mx-auto">
                             <img class="img-fluid" src="/images/svg/icons/icon-7.svg" alt="SVG">
                         </figure>
                         <h4>{{ __('nepali.Quality Hires') }}</h4>
@@ -131,7 +131,7 @@
                 <!-- Icon Blocks -->
                 <a class="card h-100" href="#">
                     <div class="card-body">
-                        <figure class="w-100 max-w-8rem mb-4">
+                        <figure class="w-100 max-w-8rem mb-4 mx-auto">
                             <img class="img-fluid" src="/images/svg/icons/icon-2.svg" alt="SVG">
                         </figure>
                         <h4>{{ __('nepali.Collaborate easily')}}
@@ -150,7 +150,7 @@
                 <!-- Icon Blocks -->
                 <a class="card h-100" href="#">
                     <div class="card-body">
-                        <figure class="w-100 max-w-8rem mb-4">
+                        <figure class="w-100 max-w-8rem mb-4 mx-auto">
                             <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
                         </figure>
                         <h4>{{ __('nepali.Simplified Payment') }} </h4>
@@ -173,8 +173,8 @@
         <div class="row align-items-lg-center">
             <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
                 <div class="mb-5">
-                    <h2 class="mb-3">Grab the platform to enrich your potentical and turn your passion into profession.</h2>
-                    <p>Finding the passionate and independent job has never been this simple and secure.</p>
+                    <h2 class="mb-3">{{ __('Grab the platform to enrich your potential and turn your passion into profession.') }}</h2>
+                    <p>{{ __('Finding the passionate and independent job has never been this simple and secure.') }}</p>
                 </div>
 
                 <!-- Info -->

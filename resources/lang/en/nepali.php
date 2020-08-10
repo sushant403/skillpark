@@ -40,7 +40,7 @@ return [
     'Hire expert freelancers for any job, any time'=> 'Hire expert freelancers for any job, any time',
     'Seek the perfect freelancer talents for your business!'=> 'Seek the perfect freelancer talents for your business!',
     'Searching the Best Job'=> 'Search',
-    'Explore the Marketplace'=> 'Search',
+    'Explore the Marketplace'=> 'Explore the Marketplace',
     'Quality Hires'=> 'Quality Hires',
     'Simplified Payment'=> 'Search',
     'Organized Transparency'=> 'Search',
