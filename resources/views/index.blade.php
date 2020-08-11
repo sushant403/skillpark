@@ -344,7 +344,7 @@
     <div id="aboutSection" class="container space-2 space-lg-1">
         <!-- Title -->
         <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
-            <h2 class="h3">{{ __('nepali.What we do?') }}?</h2>
+            <h2 class="h3">{{ __('nepali.What we do?') }}</h2>
             <p>{{ __('nepali.A dynamic platform for modern job hiring.') }}</p>
         </div>
         <!-- End Title -->

@@ -34,7 +34,10 @@ Route::middleware(['verified','auth'])->group(function () {
     Route::post('register/user-information', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
 
     Route::get('/home', 'HomeController@freelancer')->name('home'); //user feeds
+    Route::post('/home', 'HomeController@freelancerSearch')->name('home'); //user feeds
+
     Route::get('/client', 'HomeController@client')->name('client'); //client feeds
+    Route::post('/client', 'HomeController@clientSearch')->name('client'); //client feeds
 
     //user-accounts routes
     Route::get('/dashboard', 'ProfileController@dashboard');
@@ -60,9 +63,6 @@ Route::middleware(['verified','auth'])->group(function () {
     
     Route::get('/post/proposal', 'PostController@showProposalForm');
     Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
-    
-    Route::get('client', 'SearchController@searchInfo')->name('client');
-    Route::post('client', 'SearchController@searchAction')->name('searchInfo');
 
 });
 

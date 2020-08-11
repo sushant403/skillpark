@@ -243,7 +243,7 @@
 
                                 <!-- Search -->
                                 <li class="navbar-nav-item">
-                                    <div class="hs-unfold mr-2">
+                                    <div class="hs-unfold">
                                         <a class="js-hs-unfold-invoker nav-link" href="javascript:;"
                                             data-hs-unfold-options='{
                                                     "target": "#searchClassic",
@@ -543,8 +543,19 @@
 
                                 <div id="footerLanguage"
                                     class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
-                                    <a class="dropdown-item" href="/lang/en">English</a>
-                                    <a class="dropdown-item" href="/lang/ne">नेपाली</a>
+                                        <!-- Nav Link -->
+                                        <a class="nav-link" href="/lang/ne">
+                                            <img class="max-w-3rem mr-1" src="/images/svg/np.svg"
+                                                alt="Nepal Flag">
+                                            Nepali
+                                        </a>
+                                        <a class="nav-link active " href="/lang/en">
+                                            <img class="max-w-3rem mr-1"
+                                                src="/vendor/flag-icon-css/flags/4x3/us.svg"
+                                                alt="United States Flag">
+                                            English
+                                        </a>
+                                        <!-- End Nav Link -->
                                 </div>
                             </div>
                         </li>

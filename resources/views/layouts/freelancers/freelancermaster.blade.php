@@ -422,10 +422,10 @@
 
           <!-- Nav Link -->
           <ul class="nav nav-sm nav-x-0 flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Placing an order</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Shipping options</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Tracking a package</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Country availability</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Posting a Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Bidding options</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Tracking activity</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Location Based</a></li>
           </ul>
           <!-- End Nav Link -->
         </div>
@@ -436,8 +436,8 @@
           <!-- Nav Link -->
           <ul class="nav nav-sm nav-x-0 flex-column">
             <li class="nav-item"><a class="nav-link" href="#">Financing</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Recycling</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Return policy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Trending</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hiring policy</a></li>
           </ul>
           <!-- End Nav Link -->
         </div>
@@ -448,7 +448,7 @@
           <!-- Nav Link -->
           <ul class="nav nav-sm nav-x-0 flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="../help-desk/index.html">
+              <a class="nav-link" href="../help-desk/index">
                 <span class="media align-items-center">
                   <i class="fas fa-info-circle mr-2"></i>
                   <span class="media-body">Help</span>
@@ -471,8 +471,7 @@
                     "type": "css-animation",
                     "animationIn": "slideInDown"
                    }'>
-                  <img class="dropdown-item-icon" src="/vendor/flag-icon-css/flags/4x3/us.svg"
-                    alt="English">
+                  <img class="dropdown-item-icon" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="English">
                   <span>English</span>
                 </a>
 
@@ -487,8 +486,7 @@
                         <div class="col-6">
                           <!-- Nav Link -->
                           <a class="nav-link" href="/lang/ne">
-                            <img class="max-w-3rem mr-1" src="/images/svg/np.svg"
-                              alt="Nepal Flag">
+                            <img class="max-w-3rem mr-1" src="/images/svg/np.svg" alt="Nepal Flag">
                             Nepali
                           </a>
                           <a class="nav-link active " href="/lang/en">
@@ -548,13 +546,13 @@
           <!-- Links -->
           <ul class="nav nav-sm justify-content-md-end">
             <li class="nav-item">
-              <a class="nav-link pl-0" href="../pages/privacy.html">Privacy &amp; policy</a>
+              <a class="nav-link pl-0" href="../pages/privacy">Privacy &amp; policy</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/terms.html">Terms &amp; conditions</a>
+              <a class="nav-link" href="../pages/terms">Terms &amp; conditions</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pr-0" href="../pages/careers.html">Careers</a>
+              <a class="nav-link pr-0" href="../pages/careers">Careers</a>
             </li>
           </ul>
           <!-- End Links -->
@@ -636,6 +634,11 @@
       // initialization of select2
       $('.js-custom-select').each(function () {
         var select2 = $.HSCore.components.HSSelect2.init($(this));
+          $('.js-custom-select-multiple').select2({
+          placeholder: 'Select options',
+          width: '100%',
+         maximumSelectionLength: 3,
+        });
       });
 
       // initialization of go to

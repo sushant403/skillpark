@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
+use App\Skill;
+use App\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,11 +31,27 @@ class HomeController extends Controller
 
     public function freelancer()
     {
-        return view('freelancers.home');
+        $cities = City::all();
+        $categories = Category::all();
+        $skills = Skill::all();
+        return view('freelancers.home', compact(['cities', 'categories', 'skills']));
+    }
+
+    public function freelancerSearch()
+    {
+        return redirect()->route('home');
     }
 
     public function client()
     {
-        return view('clients.home');
+        $cities = City::all();
+        $categories = Category::all();
+        $skills = Skill::all();
+        return view('clients.home', compact(['cities', 'categories', 'skills']));
+    }
+
+    public function clientSearch()
+    {
+        return redirect()->route('client');
     }
 }
