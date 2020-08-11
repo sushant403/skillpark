@@ -89,11 +89,10 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 0.9rem;
     font: inherit;
     /* vertical-align: baseline; */
     scroll-behavior: smooth;
-    font-family: 'Muli', sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -692,9 +691,6 @@ header {
     font-size: 14px;
 }
 
-.navbar {
-    padding: 0px;
-}
 
 .navbar-light .navbar-nav .nav-item {
     padding: 0 8px;
@@ -788,7 +784,6 @@ header {
     font-weight: 500;
     border: 0;
     padding: 0 20px;
-    font-family: 'Muli', sans-serif;
     background: #fff;
     border-radius: 3px;
     color: #242424;
@@ -1005,7 +1000,6 @@ header {
     padding: 8px 20px;
     clear: both;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     white-space: nowrap;
     background-color: transparent;
     border: 0;
@@ -1415,7 +1409,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     background: #fff;
     padding: 8px 20px;
     border-radius: 3px;
@@ -1435,7 +1428,6 @@ span.right-cm {
     font-weight: 500;
     color: #fff;
     background: #1dc8cc;
-    font-family: 'Muli', sans-serif;
     padding: 8px 20px;
     border-radius: 3px;
     margin-left: 5px;
@@ -1474,7 +1466,6 @@ span.right-cm {
     font-size: 14px;
     color: #757575;
     line-height: 1.2;
-    font-family: 'Muli', sans-serif;
 }
 
 .line-shape1 {
@@ -1501,7 +1492,6 @@ span.right-cm {
     font-size: 18px;
     color: #242424;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     line-height: 1.2;
     text-align: left;
     margin-bottom: 13px;
@@ -1509,7 +1499,6 @@ span.right-cm {
 
 .offer-text-dt p {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     font-weight: 400;
     line-height: 26px;
@@ -1523,7 +1512,6 @@ span.right-cm {
     font-weight: 500;
     text-align: left;
     margin-bottom: 0;
-    font-family: 'Muli', sans-serif;
 }
 
 .offer-text-dt a:hover {
@@ -1591,7 +1579,6 @@ span.right-cm {
     color: #242424;
     font-weight: 500;
     line-height: 1.2;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 5px;
     margin-top: 3px;
 }
@@ -1648,7 +1635,6 @@ span.right-cm {
     color: #242424;
     font-weight: 500;
     line-height: 1.2;
-    font-family: 'Muli', sans-serif;
     text-align: left;
     margin-bottom: 13px;
     text-overflow: ellipsis;
@@ -1658,7 +1644,6 @@ span.right-cm {
 
 .job-des-dt p {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     font-weight: 400;
     line-height: 26px;
@@ -1730,7 +1715,6 @@ span.right-cm {
 .link-j1 {
     font-size: 13px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     background: #fff;
     padding: 15px;
@@ -1849,7 +1833,6 @@ span.right-cm {
     font-weight: 500;
     color: #242424;
     margin-top: 18px;
-    font-family: 'Muli', sans-serif;
 }
 
 .p-category>a p {
@@ -1920,7 +1903,6 @@ span.right-cm {
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 8px;
 }
 
@@ -2004,7 +1986,6 @@ span.right-cm {
 .view-links {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -2027,7 +2008,6 @@ span.right-cm {
 .text152 p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     line-height: 2;
     text-align: left;
@@ -2041,7 +2021,6 @@ span.right-cm {
     line-height: 24px;
     text-align: left;
     margin-top: 20px;
-    font-family: 'Muli', sans-serif;
 }
 
 .btext-heading i {
@@ -2053,7 +2032,6 @@ span.right-cm {
 .text-step1 p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     line-height: 2;
     text-align: left;
@@ -2069,7 +2047,6 @@ span.right-cm {
 .btn-152 {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -2089,7 +2066,6 @@ span.right-cm {
 .btn-153 {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -2160,7 +2136,6 @@ span.right-cm {
     font-weight: 500;
     color: #fff;
     position: absolute;
-    font-family: 'Muli', sans-serif;
     right: 6px;
     top: 5px;
     border-radius: 3px;
@@ -2182,7 +2157,6 @@ span.right-cm {
 
 .about-jobby p {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #acacac;
     line-height: 26px;
     text-align: left;
@@ -2328,7 +2302,6 @@ span.right-cm {
     font-size: 16px;
     color: #404145;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     line-height: 1.333;
     text-align: left;
     margin-bottom: 14px;
@@ -2341,7 +2314,6 @@ span.right-cm {
     line-height: 32px;
     text-align: center;
     margin-bottom: 0;
-    font-family: 'Muli', sans-serif;
 }
 
 .footer-links ul li a:hover {
@@ -2718,7 +2690,6 @@ span.right-cm {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .filter-button {
@@ -2751,7 +2722,6 @@ span.right-cm {
 
 .bbnr-right .plan-btn {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     border-style: solid;
     border-width: 1px;
@@ -2773,7 +2743,6 @@ span.right-cm {
     line-height: 24px;
     margin-bottom: 5px;
     color: #fff;
-    font-family: 'Muli', sans-serif;
 }
 
 .bbnr-text p {
@@ -2782,7 +2751,6 @@ span.right-cm {
     line-height: 24px;
     margin-bottom: 5px;
     color: #fff;
-    font-family: 'Muli', sans-serif;
 }
 
 .bbnr-left {
@@ -2837,7 +2805,6 @@ span.right-cm {
     background: transparent;
     color: #242424;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     font-size: 14px;
     line-height: 24px;
     padding: 0 0 10px;
@@ -2976,7 +2943,6 @@ span.right-cm {
     background: transparent;
     color: #242424;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     font-size: 14px;
     line-height: 24px;
     padding: 0 0 10px;
@@ -3075,7 +3041,6 @@ span.right-cm {
 
 .job_dts h4 {
     font-size: 18px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
 }
@@ -3083,7 +3048,6 @@ span.right-cm {
 .apply_job {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -3110,7 +3074,6 @@ span.right-cm {
 .apply_job_rt {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -3129,7 +3092,6 @@ span.right-cm {
 .bookmark_rt {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     text-transform: uppercase;
     border-radius: 3px;
@@ -3168,13 +3130,11 @@ span.right-cm {
 .apply_job_form .modal-title {
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .apply_job_form .close {
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .apply_job_form .close {
@@ -3200,7 +3160,6 @@ span.right-cm {
 .jb_frm h3 {
     font-size: 22px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
     text-align: center;
@@ -3212,7 +3171,6 @@ span.right-cm {
     font-size: 14px;
     width: 100%;
     height: 40px;
-    font-family: 'Muli', sans-serif;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     color: #242424;
@@ -3247,7 +3205,6 @@ span.right-cm {
     border-radius: 3px;
     color: #fff;
     cursor: pointer;
-    font-family: 'Muli', sans-serif;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -3266,7 +3223,6 @@ span.right-cm {
 .file-form p {
     font-size: 12px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     padding-top: 12px;
     line-height: 24px;
     color: #757575;
@@ -3298,14 +3254,12 @@ span.right-cm {
 .apply_check label {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
 .apply_job50 {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -3326,7 +3280,6 @@ span.right-cm {
 .apply_job_close {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-transform: uppercase;
     border-radius: 3px;
@@ -3373,7 +3326,6 @@ span.right-cm {
 .dwn-header h6 {
     font-size: 14px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     line-height: 24px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -3392,7 +3344,6 @@ span.right-cm {
     padding-left: 10px;
     float: left;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     padding-top: 5px;
 }
@@ -3436,7 +3387,6 @@ span.right-cm {
     font-size: 14px;
     text-align: left;
     display: block;
-    font-family: 'Muli', sans-serif;
     color: #1dc8cc;
 }
 
@@ -3447,7 +3397,6 @@ span.right-cm {
 .total_days {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     border-radius: 3px;
     background-color: #efefef;
@@ -3461,7 +3410,6 @@ span.right-cm {
 
 .bid_title {
     font-size: 18px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
     line-height: 24px;
@@ -3517,7 +3465,6 @@ span.right-cm {
     border-radius: 3px;
     color: #757575;
     cursor: pointer;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     display: inline-block;
     font-size: 12px;
@@ -3555,7 +3502,6 @@ span.right-cm {
 .web_link {
     color: #757575;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
 }
 
 .web_link:hover {
@@ -3598,7 +3544,6 @@ span.right-cm {
 .group_skills_bar h6 {
     font-size: 14px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -3611,7 +3556,6 @@ span.right-cm {
     height: 40px;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     border: 1px solid #1dc8cc;
     border-radius: 20px;
@@ -3644,7 +3588,6 @@ span.right-cm {
 .rtl_left h6 {
     font-size: 14px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     margin-bottom: 0;
     line-height: 24px;
@@ -3688,7 +3631,6 @@ span.right-cm {
 .rtl_left2 h6 {
     font-size: 14px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -3696,7 +3638,6 @@ span.right-cm {
 .rtl_right2 span {
     font-size: 14px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     margin-bottom: 0;
 }
@@ -3729,7 +3670,6 @@ span.right-cm {
 .social_leftt3 h6 {
     font-size: 14px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -3737,7 +3677,6 @@ span.right-cm {
 .social_right3 a {
     font-size: 14px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     margin-bottom: 0;
 }
@@ -3843,7 +3782,6 @@ span.right-cm {
 .account_hd_left h2 {
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     line-height: 30px;
     color: #242424;
 }
@@ -3860,7 +3798,6 @@ span.right-cm {
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 3px;
-    font-family: 'Muli', sans-serif;
 }
 
 .main_lg_btn:hover {
@@ -3885,7 +3822,6 @@ span.right-cm {
     padding: 10px 12px;
     color: #242424;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
 }
 
@@ -3932,7 +3868,6 @@ span.right-cm {
 .collection_item h4 {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     margin-top: 20px;
     margin-bottom: 20px;
     color: #757575;
@@ -3941,7 +3876,6 @@ span.right-cm {
 .collection_item span {
     font-size: 30px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     margin: 0;
     color: #242424;
 }
@@ -3977,7 +3911,6 @@ span.right-cm {
     font-size: 16px;
     font-weight: 600;
     float: left;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     margin-bottom: 0;
     padding-top: 0;
@@ -4054,7 +3987,6 @@ span.right-cm {
 
 .static_left h6 {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
     margin-bottom: 0;
@@ -4062,7 +3994,6 @@ span.right-cm {
 
 .static_right span {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     font-weight: 400;
 }
@@ -4113,7 +4044,6 @@ span.right-cm {
 .priorty {
     font-size: 12px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     background: #1dc8cc;
     color: #fff;
     padding: 5px 12px;
@@ -4158,7 +4088,6 @@ span.right-cm {
     background: #1dc8cc;
     text-transform: uppercase;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     font-size: 14px;
 }
@@ -4194,7 +4123,6 @@ span.right-cm {
 .applied_item h4 {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
     margin-bottom: 0;
@@ -4226,14 +4154,12 @@ span.right-cm {
     font-size: 14px;
     color: #757575;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     line-height: 24px;
 }
 
 .apled_btn50 {
     margin-top: 20px;
     font-size: 12px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #fff;
     border: 0;
@@ -4257,7 +4183,6 @@ span.right-cm {
     color: #fff;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     padding: 15px 0;
 }
@@ -4270,7 +4195,6 @@ span.right-cm {
 .plan_dt_left h4 {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
     margin-bottom: 5px;
@@ -4293,7 +4217,6 @@ span.right-cm {
     margin-bottom: 5px;
     font-weight: 400;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     line-height: 24px;
 }
@@ -4304,7 +4227,6 @@ span.right-cm {
 
 .paid_btn {
     font-size: 12px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #fff;
     border: 0;
@@ -4355,7 +4277,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #757575;
-    font-family: 'Muli', sans-serif;
 }
 
 .edit_link_profile i {
@@ -4368,7 +4289,6 @@ span.right-cm {
 
 .user_about_des {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     font-weight: 400;
     line-height: 26px;
@@ -4394,7 +4314,6 @@ span.right-cm {
 .portfolio_left h4 {
     font-size: 18px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 2.5;
     margin-bottom: 0;
@@ -4403,7 +4322,6 @@ span.right-cm {
 .add_portfolio_btn {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     background: #1dc8cc;
     color: #fff;
     border: 0;
@@ -4434,7 +4352,6 @@ span.right-cm {
 
 .portfolio_title {
     font-size: 16px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
     text-overflow: ellipsis;
@@ -4478,7 +4395,6 @@ span.right-cm {
 .overlay_items a {
     font-size: 14px;
     color: #fff;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
 }
 
@@ -4529,13 +4445,11 @@ span.right-cm {
     margin-left: 10px;
     color: #757575;
     line-height: 24px;
-    font-family: 'Muli', sans-serif;
 }
 
 .dash_noti .noti-p-link {
     color: #1dc8cc;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -4689,7 +4603,6 @@ span.right-cm {
     color: #fff;
     font-weight: 500;
     line-height: 18px;
-    font-family: 'Muli', sans-serif;
     top: 21px;
 }
 
@@ -4713,7 +4626,6 @@ span.right-cm {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 3px;
-    font-family: 'Muli', sans-serif;
 }
 
 .usr-mg-info p {
@@ -4721,7 +4633,6 @@ span.right-cm {
     font-size: 13px;
     font-weight: 400;
     margin-bottom: 5px;
-    font-family: 'Muli', sans-serif;
 }
 
 .usr-mg-info p img {
@@ -4738,7 +4649,6 @@ span.right-cm {
     color: #847577;
     font-size: 12px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .ed-options50 {
@@ -4866,7 +4776,6 @@ span.right-cm {
     float: left;
     width: 100%;
     margin-top: 7px;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
 }
 
@@ -4941,7 +4850,6 @@ span.right-cm {
     font-size: 14px;
     padding: 0 15px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     border: 1px solid #e5e5e5;
     height: 40px;
     border-radius: 3px;
@@ -5049,7 +4957,6 @@ span.right-cm {
     font-weight: 600;
     border-radius: 3px;
     margin-bottom: 0px;
-    font-family: 'Muli', sans-serif;
     outline: none;
 }
 
@@ -5068,7 +4975,6 @@ span.right-cm {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     margin-bottom: 0px;
-    font-family: 'Muli', sans-serif;
     outline: none;
 }
 
@@ -5121,7 +5027,6 @@ span.right-cm {
     padding: 20px;
     font-size: 14px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     line-height: 24px;
 }
@@ -5183,7 +5088,6 @@ span.right-cm {
     color: #242424;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     display: block;
     padding: .8rem 1rem;
     background-color: #fff;
@@ -5223,7 +5127,6 @@ span.right-cm {
 .apled_btn60 {
     margin-top: 20px;
     font-size: 12px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #fff;
     border: 0;
@@ -5252,7 +5155,6 @@ span.right-cm {
 .applied_item a {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
     margin-bottom: 0;
@@ -5314,7 +5216,6 @@ span.right-cm {
     display: flex;
     line-height: 1.8;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -5326,7 +5227,6 @@ span.right-cm {
     display: flex;
     line-height: 1.8;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -5342,7 +5242,6 @@ span.right-cm {
 .candi_dt a {
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
 }
@@ -5350,7 +5249,6 @@ span.right-cm {
 .candi_cate {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #847577;
     line-height: 24px;
     padding: 5px 0;
@@ -5359,7 +5257,6 @@ span.right-cm {
 .apled_btn70 {
     margin-top: 20px;
     font-size: 12px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #757575;
     border: 0;
@@ -5395,7 +5292,6 @@ span.right-cm {
 
 .label15 {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
     margin-bottom: 10px;
@@ -5406,7 +5302,6 @@ span.right-cm {
     font-size: 14px;
     width: 100%;
     height: 130px;
-    font-family: 'Muli', sans-serif;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     color: #242424;
@@ -5417,7 +5312,6 @@ span.right-cm {
     margin-top: 45px;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     padding-bottom: 15px;
     float: left;
@@ -5441,7 +5335,6 @@ span.right-cm {
     padding: 10px 20px;
     font-size: 14px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -5473,7 +5366,6 @@ span.right-cm {
 .drag-text1 {
     text-align: center;
     padding: 11px 0;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 12px;
     text-transform: none;
@@ -5504,7 +5396,6 @@ span.right-cm {
 .upload_dt {
     font-size: 12px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     margin-top: 10px;
     line-height: 24px;
@@ -5513,7 +5404,6 @@ span.right-cm {
 .post_jp_btn {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -5542,7 +5432,6 @@ span.right-cm {
     border: 1px solid #e5e5e5;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
 }
 
 .bid_dt13 span {
@@ -5598,14 +5487,12 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
 }
 
 .fpd150 p {
     font-size: 14px;
     font-weight: 400;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     margin-top: 3px;
 }
 
@@ -5632,7 +5519,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     line-height: 26px;
 }
 
@@ -5645,7 +5531,6 @@ span.right-cm {
     padding: 0 10px;
     font-size: 12px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     background: #1dc8cc;
     border: 0;
@@ -5678,7 +5563,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 10px;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -5689,14 +5573,12 @@ span.right-cm {
     border: 1px solid #e5e5e5;
     color: #1dc8cc;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .earning_right p {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 10px;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -5708,7 +5590,6 @@ span.right-cm {
 .withdraw_btn {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     color: #fff;
     background: #1dc8cc;
@@ -5733,7 +5614,6 @@ span.right-cm {
     width: 100%;
     padding: 20px 30px;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     color: #757575;
     background: #fafafa;
@@ -5774,7 +5654,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -5782,7 +5661,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 0;
 }
 
@@ -5800,7 +5678,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
 }
 
 .transaction_body .table td,
@@ -5814,7 +5691,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -5822,7 +5698,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 0;
 }
 
@@ -5838,7 +5713,6 @@ span.right-cm {
     display: inline-block;
     color: #fff;
     border-radius: 20px;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
 }
 
@@ -5886,7 +5760,6 @@ span.right-cm {
     padding: 12px;
     font-size: 13px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -5898,7 +5771,6 @@ span.right-cm {
     font-size: 14px;
     width: 100%;
     height: 40px;
-    font-family: 'Muli', sans-serif;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     color: #242424;
@@ -5968,7 +5840,6 @@ span.right-cm {
     width: 100%;
     padding: 0 55px;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
 }
 
@@ -6001,7 +5872,6 @@ span.right-cm {
     background: #1dc8cc;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
 }
 
@@ -6034,7 +5904,6 @@ span.right-cm {
 
 .jp_faq_item h4 {
     font-size: 18px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
     line-height: 24px;
@@ -6048,7 +5917,6 @@ span.right-cm {
 
 .jp_faq_item p {
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     color: #757575;
     line-height: 26px;
@@ -6095,7 +5963,6 @@ span.right-cm {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
     margin-top: 0;
@@ -6113,14 +5980,12 @@ span.right-cm {
 .plan_price span {
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
 .plan_price ins {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-decoration: none;
 }
@@ -6151,7 +6016,6 @@ span.right-cm {
     font-weight: 400;
     line-height: 26px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     text-align: center;
 }
 
@@ -6171,7 +6035,6 @@ span.right-cm {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     padding: 15px 0;
     border:none;
 }
@@ -6192,7 +6055,6 @@ span.right-cm {
     font-size: 16px;
     font-weight: 600;
     float: left;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     margin-bottom: 0;
     padding-top: 0;
@@ -6217,7 +6079,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     padding: 15px 20px;
 }
 
@@ -6281,7 +6142,6 @@ span.right-cm {
 .pymt_mthd_body p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     padding-top: 20px;
     float: left;
@@ -6298,7 +6158,6 @@ span.right-cm {
 .thank_you h1 {
     font-size: 48px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 20px;
     margin-top: 40px;
     text-align: center;
@@ -6308,7 +6167,6 @@ span.right-cm {
 .thank_you p {
     font-size: 18px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     text-align: center;
     color: #757575;
     margin-bottom: 0;
@@ -6334,7 +6192,6 @@ span.right-cm {
 .lr_btn {
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #fff;
     text-transform: uppercase;
     border-radius: 3px;
@@ -6360,7 +6217,6 @@ span.right-cm {
     margin-top: 30px;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
 }
@@ -6384,7 +6240,6 @@ span.right-cm {
     padding: 10px 0;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -6406,7 +6261,6 @@ span.right-cm {
     margin-top: 30px;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
 }
@@ -6425,7 +6279,6 @@ span.right-cm {
     float: right;
     margin-top: 30px;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     line-height: 24px;
 }
@@ -6452,7 +6305,6 @@ span.right-cm {
     color: #757575;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
 }
 
 .choose_profile {
@@ -6464,7 +6316,6 @@ span.right-cm {
 .choose_profile h3 {
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 15px;
     color: #242424;
 }
@@ -6472,7 +6323,6 @@ span.right-cm {
 .choose_profile p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 0;
     color: #757575;
 }
@@ -6506,7 +6356,6 @@ span.right-cm {
 .plan_price1 span {
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -6526,7 +6375,6 @@ span.right-cm {
     font-weight: 400;
     line-height: 26px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     text-align: left;
 }
 
@@ -6584,7 +6432,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     line-height: 24px;
 }
 
@@ -6605,7 +6452,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     line-height: 24px;
 }
 
@@ -6616,7 +6462,6 @@ span.right-cm {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 17px;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     color: #242424;
 }
@@ -6626,7 +6471,6 @@ span.right-cm {
     font-size: 14px;
     text-align: left;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     line-height: 26px;
     color: #757575;
     margin-bottom: 0;
@@ -6642,7 +6486,6 @@ span.right-cm {
     border-radius: 3px;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .read_btn:hover {
@@ -6670,7 +6513,6 @@ span.right-cm {
 .subscribe_body h3 {
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     line-height: 36px;
     color: #242424;
     margin-top: 20px;
@@ -6681,7 +6523,6 @@ span.right-cm {
     font-size: 12px;
     width: 100%;
     height: 40px;
-    font-family: 'Muli', sans-serif;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     color: #242424;
@@ -6700,7 +6541,6 @@ span.right-cm {
     border: 0;
     border-radius: 3px;
     background: #1dc8cc;
-    font-family: 'Muli', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 500;
@@ -6758,7 +6598,6 @@ span.right-cm {
     margin-right: 10px;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
 }
 
@@ -6827,7 +6666,6 @@ span.right-cm {
 .cmmnt_dt_left a {
     font-size: 18px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 7px;
     color: #242424;
     text-align: left;
@@ -6841,7 +6679,6 @@ span.right-cm {
 .cmmnt_dt_left span {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
 }
 
@@ -6849,7 +6686,6 @@ span.right-cm {
     color: #242424;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .cmmnt_dt_right a:hover {
@@ -6866,7 +6702,6 @@ span.right-cm {
     margin-top: 15px;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     line-height: 26px;
 }
@@ -6879,7 +6714,6 @@ span.right-cm {
     border-radius: 3px;
     background: #efefef;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -6928,7 +6762,6 @@ span.right-cm {
     padding: 0 20px;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     color: #fff;
     background: #1dc8cc;
@@ -6952,7 +6785,6 @@ span.right-cm {
     color: #242424;
     font-weight: 400;
     font-size: 12px;
-    font-family: 'Muli', sans-serif;
     width: 100%;
     border-radius: 3px;
     padding: 0 20px 0 40px;
@@ -6975,7 +6807,6 @@ span.right-cm {
     color: #242424;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     text-align: left;
 }
 
@@ -6996,7 +6827,6 @@ span.right-cm {
 .about_des p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-align: center;
     line-height: 26px;
@@ -7017,7 +6847,6 @@ span.right-cm {
 }
 
 .choose_des p {
-    font-family: 'Muli', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
@@ -7085,7 +6914,6 @@ span.right-cm {
     margin-top: 20px;
     font-size: 18px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     text-align: center;
 }
@@ -7093,7 +6921,6 @@ span.right-cm {
 .team_item span {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-align: center;
 }
@@ -7157,7 +6984,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -7181,7 +7007,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 400;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     text-align: left;
     line-height: 24px;
 }
@@ -7221,7 +7046,6 @@ span.right-cm {
 .policy_des p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-align: left;
     line-height: 26px;
@@ -7235,7 +7059,6 @@ span.right-cm {
 .policy_des10 h4 {
     font-size: 18px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     text-align: left;
     line-height: 24px;
@@ -7253,7 +7076,6 @@ span.right-cm {
     font-size: 14px;
     width: 100%;
     height: 50px;
-    font-family: 'Muli', sans-serif;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     color: #242424;
@@ -7278,7 +7100,6 @@ span.right-cm {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
 }
 
 .help_btn:hover {
@@ -7295,7 +7116,6 @@ span.right-cm {
 .faq_left h4 {
     font-size: 18px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 0;
     color: #242424;
@@ -7311,7 +7131,6 @@ span.right-cm {
     color: #242424;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     display: block;
     padding: .8rem 1rem;
     background-color: #fff;
@@ -7366,14 +7185,12 @@ span.right-cm {
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 8px;
-    font-family: 'Muli', sans-serif;
 }
 
 .faq_heading span {
     font-size: 14px;
     color: #757575;
     line-height: 1.2;
-    font-family: 'Muli', sans-serif;
 }
 
 .line-shape1 {
@@ -7397,7 +7214,6 @@ span.right-cm {
     text-transform: uppercase;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: 'Muli', sans-serif;
 }
 
 .faq_more a:hover {
@@ -7423,7 +7239,6 @@ span.right-cm {
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: 'Muli', sans-serif;
     padding: 15px 0;
     float: left;
     width: 100%;
@@ -7475,7 +7290,6 @@ span.right-cm {
     font-size: 14px;
     color: #fff;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     text-align: left;
     line-height: 24px;
     margin-bottom: 0;
@@ -7521,7 +7335,6 @@ span.right-cm {
 .vdt-list {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-align: left;
     line-height: 24px;
@@ -7535,7 +7348,6 @@ span.right-cm {
 .vdt-list {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Muli', sans-serif;
     color: #757575;
     text-align: left;
     line-height: 24px;
@@ -7553,7 +7365,6 @@ span.right-cm {
     margin-bottom: 0;
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     text-align: left;
 }
@@ -7581,7 +7392,6 @@ span.right-cm {
 .vhls140 h4 {
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     text-align: left;
     margin-bottom: 15px;
@@ -7611,7 +7421,6 @@ span.right-cm {
     font-size: 14px;
     font-weight: 500;
     color: #242424;
-    font-family: 'Muli', sans-serif;
     padding: 15px 20px;
 }
 
@@ -7622,7 +7431,6 @@ span.right-cm {
 .jsk1145 .totalinv2 {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Muli', sans-serif;
     color: #242424;
     margin-bottom: 0px;
     margin-bottom: 10px;
@@ -7641,7 +7449,6 @@ span.right-cm {
 .leftfooter p {
     font-size: 14px;
     color: #757575;
-    font-family: 'Muli', sans-serif;
     font-weight: 400;
     text-align: left;
 }
@@ -7656,7 +7463,6 @@ span.right-cm {
     background: #1dc8cc;
     padding: 10px 20px;
     color: #fff;
-    font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 14px;
     text-align: center;

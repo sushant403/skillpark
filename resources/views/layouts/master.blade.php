@@ -312,6 +312,8 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownSubMenu"
                                         style="min-width: 230px;">
+                                        <a class="dropdown-item" href="home"><i class="fa fa-coffee"></i>&nbsp;
+                                            Homepage</a>
                                         <a class="dropdown-item" href="dashboard"><i class="fa fa-dashcube"></i>&nbsp;
                                             Dashboard</a>
                                         <a class="dropdown-item" href="dashboard"><i class="fa fa-user-alt"></i>&nbsp;
@@ -368,7 +370,7 @@
     <div class="d-none"></div>
     @endguest
 
-    <footer class="container text-sm-center text-lg-left">
+    <footer class="container text-center text-lg-left">
         <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
             <div class="row justify-content-lg-between">
                 <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
@@ -381,7 +383,7 @@
                     <!-- End Logo -->
 
                     <!-- Nav Link -->
-                    <ul class="nav nav-sm nav-x-0 flex-column text-sm-center text-lg-left">
+                    <ul class="nav nav-sm nav-x-0 flex-column align-items-center text-lg-left">
                         <li class="nav-item">
                             <a class="nav-link media" href="javascript:;">
                                 <span class="media">

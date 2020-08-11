@@ -7,7 +7,7 @@
   <!-- SEO Meta Tags-->
   <meta name="description" content="Skillpark Inc.">
   <meta name="keywords"
-    content="business, consulting, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
+    content="business, freelance, heiring space, services, dashboard, multipurpose, software, landing, html5, css3, javascript">
   <meta name="author" content="Skillpark Inc.">
 
   <!-- Viewport-->
@@ -30,6 +30,7 @@
 
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
   <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
   <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
 
@@ -40,7 +41,8 @@
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-show-hide"
+  <header id="header" style="font-size: 0.9rem"
+    class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide"
     data-hs-header-options='{
    "fixMoment": 700,
    "fixEffect": "slide"
@@ -48,7 +50,7 @@
 
     <div class="header-section">
       <!-- Topbar -->
-      <div class="container header-hide-content pt-2">
+      <div class="container header-hide-content py-2">
         <div class="d-flex align-items-center">
           <!-- Language -->
           <div class="hs-unfold">
@@ -56,7 +58,7 @@
               href="javascript:;" data-hs-unfold-options='{
        "target": "#languageDropdown",
        "type": "css-animation",
-       "event": "hover",
+       "event": "click",
        "hideOnScroll": "true"
       }'>
               <img class="dropdown-item-icon mr-2" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
@@ -84,131 +86,309 @@
               </a>
 
               <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                <a class="dropdown-item" href="">Help</a>
-                <a class="dropdown-item" href="">Contacts</a>
+                <a class="dropdown-item" href="home">Find Jobs</a>
+                <a class="dropdown-item" href="faq">Help</a>
+                <a class="dropdown-item" href="report">Report</a>
               </div>
             </div>
             <!-- End Jump To -->
 
             <!-- Links -->
             <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-              <a class="nav-link" href="">Help</a>
-              <a class="nav-link" href="">Report</a>
+              <a class="nav-link" href="home">Find Jobs</a>
+              <a class="nav-link" href="faq">Help</a>
+              <a class="nav-link" href="report">Report</a>
             </div>
             <!-- End Links -->
           </div>
-
-          <ul class="list-inline ml-2 mb-0">
-            @guest
-            <!-- Account Login -->
-            <li class="list-inline-item">
-              <div class="hs-unfold">
-                <a class="btn btn-icon btn-xs" href="">
-                  <i class="fas fa-user-circle"></i>
-                </a>
-              </div>
-            </li>
-            <!-- End Account Login -->
-            @else
-            <!-- Account Login -->
-            <li class="list-inline-item dropdown">
-              <!-- Account Sidebar Toggle Button -->
-              <a id="sidebarNavToggler"
-                class="hs-mega-menu-invoker nav-link btn btn-xs u-btn-text-secondary dropdown-toggle u-sidebar--account__toggle-bg ml-1 px-3"
-                href="javascript:;" id="dropdownSubMenu" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <span class="position-relative">
-                  <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                  <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35" alt="Profile">
-                </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownSubMenu" style="min-width: 230px;">
-                <a class="dropdown-item pb-2" href="dashboard"><i class="fa fa-dashcube"></i>&nbsp; Dashboard</a>
-                <a class="dropdown-item" href="settings"><i class="fa fa-gear"></i>&nbsp; Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out-alt"></i>&nbsp; Logout</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-                </form>
-              </div>
-              <!-- End Account Sidebar Toggle Button -->
-            </li>
-            <!-- End Account Login -->
-            @endguest
-          </ul>
         </div>
       </div>
       <!-- End Topbar -->
 
-      <div id="logoAndNav" class="container">
+      <div id="logoAndNav" class="container ">
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
-          <!-- Logo -->
-          <a class="navbar-brand" href="" aria-label="Front">
-            <img src="/images/logo/biglogo.svg" alt="Logo">
-          </a>
-          <!-- End Logo -->
+          <div class="navbar-nav-wrap">
+            <!-- Logo -->
+            <a class="navbar-brand navbar-nav-wrap-brand" href="#" aria-label="Skillpark">
+              <img src="/images/logo/biglogo.svg" alt="Logo">
+            </a>
+            <!-- End Logo -->
 
-          <!-- Responsive Toggle Button -->
-          <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle" aria-label="Toggle navigation"
-            aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
-            <span class="navbar-toggler-default">
-              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor"
-                  d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
-              </svg>
-            </span>
-            <span class="navbar-toggler-toggled">
-              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor"
-                  d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
-              </svg>
-            </span>
-          </button>
-          <!-- End Responsive Toggle Button -->
+            <!-- Secondary Content -->
+            <div class="navbar-nav-wrap-content">
+              <!-- Search Classic -->
+              <div class="hs-unfold d-lg-none d-inline-block position-static">
+                <a class="js-hs-unfold-invoker btn btn-xs btn-icon rounded-circle" href="javascript:;"
+                  data-hs-unfold-options='{
+                    "target": "#searchClassic",
+                    "type": "css-animation",
+                    "animationIn": "slideInUp"
+                   }'>
+                  <i class="fas fa-search"></i>
+                </a>
 
-          <!-- Navigation -->
-          <div id="navBar" class="collapse navbar-collapse">
-            <div class="navbar-body header-abs-top-inner">
+                <div id="searchClassic" class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0">
+                  <form class="input-group input-group-sm input-group-merge">
+                    <input type="text" class="form-control" style="background: #f7faff" placeholder="Search for Jobs"
+                      aria-label="Search for Jobs">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- End Search Classic -->
+
+              <!-- Account -->
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
+                  style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
+                    "target": "#accountDropdown",
+                    "type": "css-animation",
+                    "event": "click",
+                    "duration": 50,
+                    "delay": 0,
+                    "hideOnScroll": "true"
+                   }'>
+                  <span class="position-relative">
+                    <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
+                    <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35" alt="Profile">
+                  </span>
+                </a>
+
+                <div id="accountDropdown"
+                  class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
+                  style="min-width: 245px;">
+                  <div class="card">
+                    <!-- Header -->
+                    <div class="card-header p-4">
+                      <a class="media align-items-center" href="settings">
+                        <div class="avatar mr-3">
+                          <img class="avatar-img" src="{{ Auth::user()->avatar }}" alt="Image Description">
+                        </div>
+                        <div class="media-body">
+                          <span class="d-block font-weight-bold">{{ Auth::user()->name }} </span>
+                          <span class="d-block small text-muted">{{ Auth::user()->email }}</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- End Header -->
+
+                    <!-- Body -->
+                    <div class="card-body py-3">
+                      <a class="dropdown-item px-0" href="dashboard">
+                        <span class="dropdown-item-icon">
+                          <i class="fa fa-dashcube"></i>
+                        </span>
+                        Dashboard
+                      </a>
+                      <a class="dropdown-item px-0" href="messages">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                        Messages
+                      </a>
+                      <a class="dropdown-item px-0" href="settings">
+                        <span class="dropdown-item-icon">
+                          <i class="fa fa-gear"></i>
+                        </span>
+                        Settings
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+
+                      <a class="dropdown-item px-0" href="faq">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-question-circle"></i>
+                        </span>
+                        Help
+                      </a>
+                      <a class="dropdown-item px-0" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                      </form>
+                    </div>
+                    <!-- End Body -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Account -->
+            </div>
+            <!-- End Secondary Content -->
+
+            <!-- Responsive Toggle Button -->
+            <button type="button"
+              class="navbar-toggler navbar-nav-wrap-navbar-toggler btn btn-icon btn-sm rounded-circle"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse"
+              data-target="#navBar">
+              <span class="navbar-toggler-default">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+                </svg>
+              </span>
+              <span class="navbar-toggler-toggled">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                </svg>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+
+            <!-- Navigation -->
+            <div id="navBar" class="navbar-nav-wrap-navbar collapse navbar-collapse">
               <ul class="navbar-nav">
-                <!-- Home -->
-                <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="home">Find Jobs</a>
-                </li>
-
-                <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="saved-jobs" aria-labelledby="pagesSubMenu">Saved
-                    Jobs</a>
-                </li>
-
-                <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="trending"
-                    aria-labelledby="blogSubMenu">Trending</a>
-                </li>
-
-                <li class="navbar-nav-item">
-                  <a class="hs-mega-menu-invoker nav-link" href="messages">Messages</a>
-                </li>
-
-                @hasrole('freelancer')
-                <li class="navbar-nav-last-item">
-                  <a class="btn btn-sm btn-primary" href="dashboard">
-                    Dashboard
+                <!-- Catgories -->
+                <li class="hs-has-sub-menu navbar-nav-item">
+                  <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-haspopup="true"
+                    aria-expanded="false" aria-labelledby="coursesSubMenu">
+                    <i class="fa fa-th font-size-1 mr-1"></i>
+                    Categories
                   </a>
+
+                  <!-- Courses - Submenu -->
+                  <div id="coursesSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="coursesMegaMenu"
+                    style="min-width: 270px;">
+                    <!-- Development -->
+                    <div class="hs-has-sub-menu">
+                      <a id="navLinkCoursesDevelopment" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
+                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="navSubmenuCoursesDevelopment">
+                        <span class="min-w-4rem text-center opacity-lg mr-1">
+                          <i class="fa fa-laptop-code font-size-1 mr-1"></i>
+                        </span>
+                        Development
+                      </a>
+
+                      <div id="navSubmenuCoursesDevelopment" class="hs-sub-menu dropdown-menu"
+                        aria-labelledby="navLinkCoursesDevelopment" style="min-width: 270px;">
+                        <a class="dropdown-item" href="#">All Web Development</a>
+                        <a class="dropdown-item" href="#">Web Development</a>
+                        <a class="dropdown-item" href="#">Mobile apps</a>
+                        <a class="dropdown-item" href="#">Programming languages</a>
+                        <a class="dropdown-item" href="#">Game development</a>
+                        <a class="dropdown-item" href="#">Databases</a>
+                        <a class="dropdown-item" href="#">Software testing</a>
+                        <a class="dropdown-item" href="#">Other</a>
+                      </div>
+                    </div>
+                    <!-- End Development -->
+
+                    <!-- Business -->
+                    <div class="hs-has-sub-menu">
+                      <a id="navLinkCoursesBusiness" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
+                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="navSubmenuCoursesBusiness">
+                        <span class="min-w-4rem text-center opacity-lg mr-1">
+                          <i class="fa fa-chart-bar font-size-1 mr-1"></i>
+                        </span>
+                        Business
+                      </a>
+
+                      <div id="navSubmenuCoursesBusiness" class="hs-sub-menu dropdown-menu"
+                        aria-labelledby="navLinkCoursesBusiness" style="min-width: 270px;">
+                        <a class="dropdown-item" href="#">All Business</a>
+                        <a class="dropdown-item" href="#">Finance</a>
+                        <a class="dropdown-item" href="#">Communications</a>
+                        <a class="dropdown-item" href="#">Management</a>
+                        <a class="dropdown-item" href="#">Strategy</a>
+                        <a class="dropdown-item" href="#">Project management</a>
+                        <a class="dropdown-item" href="#">Data & Analytics</a>
+                        <a class="dropdown-item" href="#">Other</a>
+                      </div>
+                    </div>
+                    <!-- Business -->
+
+                    <!-- IT & Software -->
+                    <div class="hs-has-sub-menu">
+                      <a id="navLinkCoursesITSoftware" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
+                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="navSubmenuCoursesITSoftware">
+                        <span class="min-w-4rem text-center opacity-lg mr-1">
+                          <i class="fa fa-desktop font-size-1 mr-1"></i>
+                        </span>
+                        IT & Software
+                      </a>
+
+                      <div id="navSubmenuCoursesITSoftware" class="hs-sub-menu dropdown-menu"
+                        aria-labelledby="navLinkCoursesITSoftware" style="min-width: 270px;">
+                        <a class="dropdown-item" href="#">All IT & Software</a>
+                        <a class="dropdown-item" href="#">IT Sertification</a>
+                        <a class="dropdown-item" href="#">Network & security</a>
+                        <a class="dropdown-item" href="#">Hardware</a>
+                        <a class="dropdown-item" href="#">Operating systems</a>
+                        <a class="dropdown-item" href="#">Other</a>
+                      </div>
+                    </div>
+                    <!-- IT & Software -->
+
+                    <!-- Design -->
+                    <div class="hs-has-sub-menu">
+                      <a id="navLinkDesignServices" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
+                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="navSubmenuDesignServices">
+                        <span class="min-w-4rem text-center opacity-lg mr-1">
+                          <i class="fa fa-pencil-ruler font-size-1 mr-1"></i>
+                        </span>
+                        Design
+                      </a>
+
+                      <div id="navSubmenuDesignServices" class="hs-sub-menu dropdown-menu"
+                        aria-labelledby="navLinkDesignServices" style="min-width: 270px;">
+                        <a class="dropdown-item" href="#">All Design</a>
+                        <a class="dropdown-item" href="#">Web design</a>
+                        <a class="dropdown-item" href="#">Graphic design</a>
+                        <a class="dropdown-item" href="#">Design tools</a>
+                        <a class="dropdown-item" href="#">User experience</a>
+                        <a class="dropdown-item" href="#">Game design</a>
+                        <a class="dropdown-item" href="#">Design thinking</a>
+                        <a class="dropdown-item" href="#">3D & animation</a>
+                        <a class="dropdown-item" href="#">Fashion</a>
+                        <a class="dropdown-item" href="#">Architectural design</a>
+                        <a class="dropdown-item" href="#">Interior design</a>
+                        <a class="dropdown-item" href="#">Other</a>
+                      </div>
+                    </div>
+                    <!-- Design -->
+
+                    <div class="dropdown-divider my-3"></div>
+
+                    <div class="px-4">
+                      <a class="btn btn-block btn-sm btn-primary transition-3d-hover" href="#">All Categories</a>
+                    </div>
+                  </div>
+                  <!-- End Categories - Submenu -->
                 </li>
-                @else
-                <li class="navbar-nav-last-item">
-                  <a class="btn btn-sm btn-primary" href="dashboard">
-                    Post Job
-                  </a>
+                <!-- End Categories -->
+
+                <li class="navbar-nav-item">
+                  <a href="saved-jobs" class="nav-link"><i class="fa fa-bookmark font-size-1 mr-1"></i> Saved Jobs</a>
                 </li>
-                @endhasrole
-                <!-- End Button -->
+
+                <!-- Search Form -->
+                <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
+                  <form class="input-group input-group-sm input-group-merge" style="width: 55%;">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fa fa-search"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" style="background:#f7faff"
+                      placeholder="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole"
+                      aria-label="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole">
+                  </form>
+                </li>
+                <!-- End Search Form -->
+
               </ul>
             </div>
+            <!-- End Navigation -->
           </div>
-          <!-- End Navigation -->
         </nav>
         <!-- End Nav -->
       </div>
@@ -216,64 +396,171 @@
   </header>
   <!-- ========== END HEADER ========== -->
 
-  <div class="space-bottom-2 pt-7"></div>
+  </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="space-bottom-2 pt-5"></div>
 
   @yield('content')
 
   <!-- ========== FOOTER ========== -->
-  <footer class="gradient-x-overlay-sm-indigo overflow-hidden pt-3">
-    <div class="container space-top-2 space-bottom-1 bg-white text-center">
-
-      <!-- Content -->
-      <div class="row">
-        <div class="col-6 col-lg-3 order-lg-2 mb-7 mb-lg-0">
-          @hasrole('freelancer')
-          <h5>Freelancer</h5>
-          <ul class="nav nav-sm nav-x-0 flex-column">
-            <li class="nav-item"><a class="nav-link" href="">Trending Jobs</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Popular Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Careers</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Location</a></li>
-          </ul>
-          @else
-          <h5>Clients</h5>
-          <ul class="nav nav-sm nav-x-0 flex-column">
-            <li class="nav-item"><a class="nav-link" href="">Trending Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Popular Freelancers</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Featured Clients</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Location</a></li>
-          </ul>
-          @endhasrole
+  <footer class="border-top">
+    <div class="container">
+      <div class="row justify-content-lg-between space-top-2 space-bottom-lg-2">
+        <div class="col-lg-3 mb-5">
+          <div class="d-flex align-items-start flex-column h-100">
+            <a class="w-100 mb-3 mb-lg-auto" href="" aria-label="Skillpark">
+              <img class="brand" src="/images/logo/biglogo.svg" alt="Logo">
+            </a>
+            <p class="small text-muted mb-0">&copy; Skillpark Inc. 2020.</p>
+          </div>
         </div>
 
-        <div class="col-6 col-lg-3 order-lg-3 mb-7 mb-lg-0">
-          <h5>Legal</h5>
+        <div class="col-6 col-md-4 col-lg-3 ml-lg-auto mb-5 mb-lg-0">
+          <h5>Account</h5>
 
           <!-- Nav Link -->
           <ul class="nav nav-sm nav-x-0 flex-column">
-            <li class="nav-item"><a class="nav-link" href="faq">Help</a></li>
-            <li class="nav-item"><a class="nav-link" href="terms">Terms &amp; Conditions</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="privacy">Privacy &amp; Policy</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Placing an order</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shipping options</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Tracking a package</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Country availability</a></li>
           </ul>
           <!-- End Nav Link -->
         </div>
 
-        <div class="col-sm-6 col-lg-3 order-lg-1 mb-3 mb-lg-0">
-          <!-- Logo -->
-          <a class="d-inline-flex align-items-center" href="" aria-label="skillpark">
-            <img class="brand" src="/images/logo/biglogo.svg" alt="Logo">
-          </a>
-          <!-- End Logo -->
+        <div class="col-6 col-md-4 col-lg-3 mb-5 mb-lg-0">
+          <h5>Company</h5>
+
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Financing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Recycling</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Return policy</a></li>
+          </ul>
+          <!-- End Nav Link -->
         </div>
 
-        <div class="col-sm-6 col-lg-3 order-lg-4 align-self-center align-self-lg-start">
-          <p class="small">&copy; Skillpark Inc. 2020</p>
+        <div class="col-md-4 col-lg-2 mb-5 mb-lg-0">
+          <h5>Our Location</h5>
+
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="../help-desk/index.html">
+                <span class="media align-items-center">
+                  <i class="fas fa-info-circle mr-2"></i>
+                  <span class="media-body">Help</span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="media align-items-center">
+                  <i class="fas fa-user-circle mr-2"></i>
+                  <span class="media-body">Your Account</span>
+                </span>
+              </a>
+            </li>
+            <li class="position-relative">
+              <!-- Country -->
+              <div class="hs-unfold position-static">
+                <a class="js-hs-unfold-invoker nav-link" href="javascript:;" data-hs-unfold-options='{
+                    "target": "#footerCountry",
+                    "type": "css-animation",
+                    "animationIn": "slideInDown"
+                   }'>
+                  <img class="dropdown-item-icon" src="/vendor/flag-icon-css/flags/4x3/us.svg"
+                    alt="English">
+                  <span>English</span>
+                </a>
+
+                <div id="footerCountry"
+                  class="hs-unfold-content dropdown-menu dropdown-card dropdown-menu-md-right dropdown-menu-bottom w-100 w-sm-auto mb-0">
+                  <div class="card">
+                    <!-- Body -->
+                    <div class="card-body">
+                      <h5>Skillpark available in</h5>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <!-- Nav Link -->
+                          <a class="nav-link" href="/lang/ne">
+                            <img class="max-w-3rem mr-1" src="/images/svg/np.svg"
+                              alt="Nepal Flag">
+                            Nepali
+                          </a>
+                          <a class="nav-link active " href="/lang/en">
+                            <img class="max-w-3rem mr-1" src="/vendor/flag-icon-css/flags/4x3/us.svg"
+                              alt="United States Flag">
+                            English
+                          </a>
+                          <!-- End Nav Link -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Body -->
+
+                    <!-- Footer -->
+                    <!-- End Footer -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Country -->
+            </li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+      </div>
+
+      <hr class="my-0">
+
+      <div class="row align-items-md-center space-1">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <!-- Social Networks -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                <i class="fab fa-google"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- End Social Networks -->
+        </div>
+
+        <div class="col-md-8 text-md-right">
+          <!-- Links -->
+          <ul class="nav nav-sm justify-content-md-end">
+            <li class="nav-item">
+              <a class="nav-link pl-0" href="../pages/privacy.html">Privacy &amp; policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/terms.html">Terms &amp; conditions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pr-0" href="../pages/careers.html">Careers</a>
+            </li>
+          </ul>
+          <!-- End Links -->
         </div>
       </div>
     </div>
-    <!-- End Content -->
   </footer>
   <!-- ========== END FOOTER ========== -->
 
@@ -283,16 +570,18 @@
   <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- JS Implementing Plugins -->
+  <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
   <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
   <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
   <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+  <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
   <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
   <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
 
-  <!-- JS Front -->
+  <!-- JS Skillpark -->
   <script src="/js/hs.core.js"></script>
   <script src="/js/hs.validation.js"></script>
   <script src="/js/hs.mask.js"></script>
@@ -304,6 +593,9 @@
       // initialization of header
       var header = new HSHeader($('#header')).init();
     });
+
+      // initialization of HSMegaMenu component
+      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
 
       // initialization of unfold
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
@@ -318,6 +610,13 @@
           }
         });
       });
+      
+      $(document).on('ready', function () {
+    // initialization of sticky blocks
+    $('.js-sticky-block').each(function () {
+      var stickyBlock = new HSStickyBlock($(this)).init();
+     });
+    });
 
       // initialization of show animations
       $('.js-animation-link').each(function () {

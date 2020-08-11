@@ -19,20 +19,20 @@
                     new secure password..</li>
             </ul>
             <div class="bg-secondary rounded-lg px-3 py-4 p-sm-4">
-                <form method="POST" action="{{ route('password.email') }}" class="needs-validation p-2" novalidate >
+                <form method="POST" action="{{ route('password.email') }}" class="needs-validation p-2" novalidate>
                     @csrf
-                    
+
                     <div class="form-group">
-                        <label class="form-label" for="recovery-email">{{ __('nepali.Enter your email address<') }}/label>
+                        <label class="form-label" for="recovery-email">{{ __('Enter your email address') }}</label>
                         <input class="form-control" type="email" name="email" value="{{ old('email') }}"
                             autocomplete="off" required id="recovery-email">
-                    @error('email')
-                    <span class="feedback" style="color:red;font-size:13px" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
+                        @error('email')
+                        <span class="feedback" style="color:red;font-size:13px" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
-                    <button class="btn btn-primary" type="submit">{{ __('nepali.Request Verification Link') }}</button>
+                    <button class="btn btn-primary" type="submit">{{ __('Request Verification Link') }}</button>
                 </form>
             </div>
         </div>

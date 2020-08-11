@@ -4,8 +4,8 @@
 
 <link rel="stylesheet" href="/css/style.css">
 
-<!-- Body Start -->	
-<main class="browse-section bg-light pt-3">				
+<!-- Body Start -->
+<main class="browse-section bg-light pt-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4">
@@ -15,8 +15,9 @@
                         <div class="job-urs-dts">
                             <h4 class="py-1">{{ Auth::user()->name }}</h4>
                             <span>{{ Auth::user()->tagline }}</span>
-                            <div class="avialable pt-3">Edit Profile<a href="settings"><i class="far fa-edit"></i></a></div>
-                        </div>													
+                            <div class="avialable pt-3">Edit Profile<a href="settings"><i class="far fa-edit"></i></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="my_websites">
                         <ul>
@@ -29,7 +30,8 @@
                         <div class="group_bar1">
                             <span>85%</span>
                             <div class="progress skill_process">
-                                <div class="progress-bar progress_bar_skills" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar progress_bar_skills" role="progressbar" style="width: 85%;"
+                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <a href="#" class="skiils_button">Complete Required Skills</a>
@@ -44,8 +46,8 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>								
-                                <span>4.9</span> 									
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
                             </div>
                         </div>
                     </div>
@@ -102,10 +104,14 @@
                             <a href="#"><i class="far fa-edit"></i></a>
                         </div>
                         <ul class="social_accounts">
-                            <li><a href="#" class="social_links"><i class="fab fa-facebook-f f1"></i>http://facebook.com/---</a></li>
-                            <li><a href="#" class="social_links"><i class="fab fa-twitter t1"></i>http://twitter.com/---</a></li>
-                            <li><a href="#" class="social_links"><i class="fab fa-linkedin-in l1"></i>http://linkedin.com/---</a></li>
-                            <li><a href="#" class="social_links"><i class="fab fa-github g1"></i>http://github.com/---</a></li>
+                            <li><a href="#" class="social_links"><i
+                                        class="fab fa-facebook-f f1"></i>http://facebook.com/---</a></li>
+                            <li><a href="#" class="social_links"><i
+                                        class="fab fa-twitter t1"></i>http://twitter.com/---</a></li>
+                            <li><a href="#" class="social_links"><i
+                                        class="fab fa-linkedin-in l1"></i>http://linkedin.com/---</a></li>
+                            <li><a href="#" class="social_links"><i
+                                        class="fab fa-github g1"></i>http://github.com/---</a></li>
                         </ul>
                     </div>
                 </div>
@@ -169,11 +175,12 @@
                         <div class="col-lg-6">
                             <div class="view_chart">
                                 <div class="view_chart_header">
-                                    <h4>Static Analytics</h4>										
+                                    <h4>Static Analytics</h4>
                                 </div>
                                 <div class="view_chart_body">
                                     <div class="pie_chart_view">
-                                        <canvas id="pieChart" width="367" height="183" class="chartjs-render-monitor" style="display: block; width: 367px; height: 183px;"></canvas>
+                                        <canvas id="pieChart" width="367" height="183" class="chartjs-render-monitor"
+                                            style="display: block; width: 367px; height: 183px;"></canvas>
                                     </div>
                                     <ul class="static_list">
                                         <li>
@@ -197,7 +204,7 @@
                                                     <span>20</span>
                                                 </div>
                                             </div>
-                                        </li>	
+                                        </li>
                                         <li>
                                             <div class="static_items">
                                                 <div class="static_left">
@@ -208,7 +215,7 @@
                                                     <span>10</span>
                                                 </div>
                                             </div>
-                                        </li>	
+                                        </li>
                                         <li>
                                             <div class="static_items">
                                                 <div class="static_left">
@@ -219,7 +226,7 @@
                                                     <span>20</span>
                                                 </div>
                                             </div>
-                                        </li>	
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -227,7 +234,7 @@
                         <div class="col-lg-6">
                             <div class="view_chart">
                                 <div class="view_chart_header">
-                                    <h4>Notes</h4>										
+                                    <h4>Notes</h4>
                                 </div>
                                 <div class="view_chart_body">
                                     <ul class="all_notes scrollstyle_4">
@@ -240,7 +247,8 @@
                                                     <button class="note_btn"><i class="far fa-edit"></i></button>
                                                     <button class="note_btn"><i class="far fa-trash-alt"></i></button>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis accumsan mi.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+                                                    accumsan mi.</p>
                                             </div>
                                         </li>
                                         <li>
@@ -252,7 +260,8 @@
                                                     <button class="note_btn"><i class="far fa-edit"></i></button>
                                                     <button class="note_btn"><i class="far fa-trash-alt"></i></button>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis accumsan mi.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+                                                    accumsan mi.</p>
                                             </div>
                                         </li>
                                         <li>
@@ -264,7 +273,8 @@
                                                     <button class="note_btn"><i class="far fa-edit"></i></button>
                                                     <button class="note_btn"><i class="far fa-trash-alt"></i></button>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis accumsan mi.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+                                                    accumsan mi.</p>
                                             </div>
                                         </li>
                                         <li>
@@ -276,24 +286,26 @@
                                                     <button class="note_btn"><i class="far fa-edit"></i></button>
                                                     <button class="note_btn"><i class="far fa-trash-alt"></i></button>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis accumsan mi.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+                                                    accumsan mi.</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="add_note">
-                                    <button class="add_note_btn" type="button" data-toggle="modal" data-target="#addnoteModal">Add Note</button>
+                                    <button class="add_note_btn" type="button" data-toggle="modal"
+                                        data-target="#addnoteModal">Add Note</button>
                                 </div>
                             </div>
-                        </div>							
+                        </div>
                     </div>
                 </div>
                 <div class="dsh150">
-                    <div class="row">							
+                    <div class="row">
                         <div class="col-lg-12">
                             <div class="view_chart">
                                 <div class="view_chart_header">
-                                    <h4>Applied Jobs</h4>										
+                                    <h4>Applied Jobs</h4>
                                 </div>
                                 <div class="view_applied_jobs_body">
                                     <ul class="all_applied_jobs scrollstyle_4">
@@ -301,24 +313,46 @@
                                             <div class="applied_item">
                                                 <a href="#">Wordpress Developer</a>
                                                 <ul class="view_dt_job">
-                                                    <li><div class="vw1254"><i class="fas fa-map-marker-alt"></i>Australia</div></li>
-                                                    <li><div class="vw1254"><i class="fas fa-briefcase"></i>Full Time</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs. 590009 - Manual</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-clock"></i>1 day ago</div></li>
+                                                    <li>
+                                                        <div class="vw1254"><i
+                                                                class="fas fa-map-marker-alt"></i>Australia</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="fas fa-briefcase"></i>Full Time
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs.
+                                                            590009 - Manual</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-clock"></i>1 day ago</div>
+                                                    </li>
                                                 </ul>
                                                 <div class="btn_link23">
                                                     <button class="apled_btn50">Applied</button>
                                                 </div>
                                             </div>
-                                        </li>											
+                                        </li>
                                         <li>
                                             <div class="applied_item">
                                                 <a href="#">Skillpark End Developer</a>
                                                 <ul class="view_dt_job">
-                                                    <li><div class="vw1254"><i class="fas fa-map-marker-alt"></i>Australia</div></li>
-                                                    <li><div class="vw1254"><i class="fas fa-briefcase"></i>Part Time</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs. 50000 / hr</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-clock"></i>2 day ago</div></li>
+                                                    <li>
+                                                        <div class="vw1254"><i
+                                                                class="fas fa-map-marker-alt"></i>Australia</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="fas fa-briefcase"></i>Part Time
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs.
+                                                            50000 / hr</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-clock"></i>2 day ago</div>
+                                                    </li>
                                                 </ul>
                                                 <div class="btn_link23">
                                                     <button class="apled_btn50">Applied</button>
@@ -329,10 +363,21 @@
                                             <div class="applied_item">
                                                 <a href="#">Back End Developer</a>
                                                 <ul class="view_dt_job">
-                                                    <li><div class="vw1254"><i class="fas fa-map-marker-alt"></i>India</div></li>
-                                                    <li><div class="vw1254"><i class="fas fa-briefcase"></i>Full Time</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs. 1200000 - Fixed</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-clock"></i>4 day ago</div></li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="fas fa-map-marker-alt"></i>India
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="fas fa-briefcase"></i>Full Time
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs.
+                                                            1200000 - Fixed</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-clock"></i>4 day ago</div>
+                                                    </li>
                                                 </ul>
                                                 <div class="btn_link23">
                                                     <button class="apled_btn50">Applied</button>
@@ -343,10 +388,21 @@
                                             <div class="applied_item">
                                                 <a href="#">Wordpress Developer</a>
                                                 <ul class="view_dt_job">
-                                                    <li><div class="vw1254"><i class="fas fa-map-marker-alt"></i>Australia</div></li>
-                                                    <li><div class="vw1254"><i class="fas fa-briefcase"></i>Full Time</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs. 700000 - Manual</div></li>
-                                                    <li><div class="vw1254"><i class="far fa-clock"></i>5 day ago</div></li>
+                                                    <li>
+                                                        <div class="vw1254"><i
+                                                                class="fas fa-map-marker-alt"></i>Australia</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="fas fa-briefcase"></i>Full Time
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs.
+                                                            700000 - Manual</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="vw1254"><i class="far fa-clock"></i>5 day ago</div>
+                                                    </li>
                                                 </ul>
                                                 <div class="btn_link23">
                                                     <button class="apled_btn50">Applied</button>
@@ -357,18 +413,17 @@
                                     <a href="#" class="btn-veiw10">View All</a>
                                 </div>
                             </div>
-                        </div>					
-                    </div>						
-                </div>						
-            </div>																																						
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>					
-</main>
-<!-- Body End -->
+    </div>
+    <!-- Body End -->
 
 
-<script>
-document.title = '{{ Auth::user()->name }} | Dashboard';
-</script>
+    <script>
+        document.title = '{{ Auth::user()->name }} | Dashboard';
+    </script>
 
-@endsection
+    @endsection

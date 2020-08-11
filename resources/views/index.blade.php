@@ -267,7 +267,7 @@
     <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-lg-3">
         <h3 class="text-center mb-6">{{ __('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-9.svg" alt="Icon" />
                     <a href="">
@@ -275,7 +275,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-16.svg" alt="Icon" />
                     <a href="">
@@ -283,7 +283,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-17.svg" alt="Icon" />
                     <a href="">
@@ -291,7 +291,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-7.svg" alt="Icon" />
                     <a href="">
@@ -299,7 +299,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-11.svg" alt="Icon" />
                     <a href="">
@@ -307,7 +307,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-13.svg" alt="Icon" />
                     <a href="">
@@ -315,7 +315,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-14.svg" alt="Icon" />
                     <a href="">
@@ -323,7 +323,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 py-3">
+            <div class="col-sm-3 col-md-3 py-3 w-50">
                 <div class="mx-auto mb-5 text-center"><img class="mb-3" width="60"
                         src="/images/homepage/categories/icon-15.svg" alt="Icon" />
                     <a href="">

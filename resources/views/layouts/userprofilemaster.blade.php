@@ -40,26 +40,26 @@
 
 <body>
     <!-- ========== HEADER ========== -->
-    <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-show-hide"
+    <header id="header" style="font-size: 0.9rem"
+        class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide"
         data-hs-header-options='{
-   "fixMoment": 400,
-   "fixEffect": "slide"
- }'>
+ "fixMoment": 700,
+ "fixEffect": "slide"
+}'>
 
         <div class="header-section">
             <!-- Topbar -->
-            <div class="container py-2">
+            <div class="container header-hide-content py-2">
                 <div class="d-flex align-items-center">
-                    <img src="/images/logo/biglogo.svg" class="mr-4" width="130px" />
                     <!-- Language -->
                     <div class="hs-unfold">
                         <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
                             href="javascript:;" data-hs-unfold-options='{
-                                                                            "target": "#languageDropdown",
-                                                                            "type": "css-animation",
-                                                                            "event": "hover",
-                                                                            "hideOnScroll": "true"
-                                                                            }'>
+     "target": "#languageDropdown",
+     "type": "css-animation",
+     "event": "click",
+     "hideOnScroll": "true"
+    }'>
                             <img class="dropdown-item-icon mr-2" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
                             <span class="d-none d-sm-inline-block">English</span>
                         </a>
@@ -71,70 +71,211 @@
                     </div>
                     <!-- End Language -->
 
-
                     <div class="ml-auto">
+                        <!-- Jump To -->
+                        <div class="hs-unfold d-sm-none mr-2">
+                            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
+                                href="javascript:;" data-hs-unfold-options='{
+       "target": "#jumpToDropdown",
+       "type": "css-animation",
+       "event": "hover",
+       "hideOnScroll": "true"
+      }'>
+                                Jump to
+                            </a>
+
+                            <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
+                                <a class="dropdown-item" href="home">Find Jobs</a>
+                                <a class="dropdown-item" href="faq">Help</a>
+                                <a class="dropdown-item" href="report">Report</a>
+                            </div>
+                        </div>
+                        <!-- End Jump To -->
 
                         <!-- Links -->
                         <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-                            <a class="nav-link" href="">Help</a>
+                            <a class="nav-link" href="home">Find Jobs</a>
+                            <a class="nav-link" href="faq">Help</a>
+                            <a class="nav-link" href="report">Report</a>
                         </div>
                         <!-- End Links -->
                     </div>
-
-                    <ul class="list-inline ml-2 mb-0">
-                        @guest
-                        <!-- Account Login -->
-                        <li class="list-inline-item">
-                            <div class="hs-unfold">
-                                <a class="btn btn-icon btn-xs" href="">
-                                    <i class="fas fa-user-circle"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <!-- End Account Login -->
-                        @else
-                        <!-- Account Login -->
-                        <li class="list-inline-item dropdown">
-                            <!-- Account Sidebar Toggle Button -->
-                            <a id="sidebarNavToggler"
-                                class="hs-mega-menu-invoker nav-link btn btn-xs u-btn-text-secondary dropdown-toggle u-sidebar--account__toggle-bg ml-1 px-3"
-                                href="javascript:;" id="dropdownSubMenu" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <span class="position-relative">
-                                    <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                                    <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35"
-                                        alt="Profile">
-                                </span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownSubMenu" style="min-width: 230px;">
-                                <a class="dropdown-item pb-2" href="dashboard"><i class="fa fa-dashcube"></i>&nbsp;
-                                    Dashboard</a>
-                                <a class="dropdown-item" href="settings"><i class="fa fa-gear"></i>&nbsp; Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out-alt"></i>&nbsp; Logout</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                            <!-- End Account Sidebar Toggle Button -->
-                        </li>
-                        <!-- End Account Login -->
-                        @endguest
-                    </ul>
                 </div>
             </div>
             <!-- End Topbar -->
+
+            <div id="logoAndNav" class="container ">
+                <!-- Nav -->
+                <nav class="js-mega-menu navbar navbar-expand-lg">
+                    <div class="navbar-nav-wrap">
+                        <!-- Logo -->
+                        <a class="navbar-brand navbar-nav-wrap-brand" href="#" aria-label="Skillpark">
+                            <img src="/images/logo/biglogo.svg" alt="Logo">
+                        </a>
+                        <!-- End Logo -->
+
+                        <!-- Secondary Content -->
+                        <div class="navbar-nav-wrap-content">
+                            <!-- Search Classic -->
+                            <div class="hs-unfold d-lg-none d-inline-block position-static">
+                                <a class="js-hs-unfold-invoker btn btn-xs btn-icon rounded-circle" href="javascript:;"
+                                    data-hs-unfold-options='{
+                  "target": "#searchClassic",
+                  "type": "css-animation",
+                  "animationIn": "slideInUp"
+                 }'>
+                                    <i class="fas fa-search"></i>
+                                </a>
+
+                                <div id="searchClassic"
+                                    class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0">
+                                    <form class="input-group input-group-sm input-group-merge">
+                                        <input type="text" class="form-control" style="background: #f7faff"
+                                            placeholder="Search for Jobs" aria-label="Search for Jobs">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- End Search Classic -->
+
+                            <!-- Account -->
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
+                                    style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
+                  "target": "#accountDropdown",
+                  "type": "css-animation",
+                  "event": "click",
+                  "duration": 50,
+                  "delay": 0,
+                  "hideOnScroll": "true"
+                 }'>
+                                    <span class="position-relative">
+                                        <span class="u-sidebar--account__toggle-text">Freelancer User</span>
+                                        <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35"
+                                            alt="Profile">
+                                    </span>
+                                </a>
+
+                                <div id="accountDropdown"
+                                    class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
+                                    style="min-width: 245px;">
+                                    <div class="card">
+                                        <!-- Header -->
+                                        <div class="card-header p-4">
+                                            <a class="media align-items-center" href="settings">
+                                                <div class="avatar mr-3">
+                                                    <img class="avatar-img" src="default.png" alt="Image Description">
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="d-block font-weight-bold">Freelancer User </span>
+                                                    <span
+                                                        class="d-block small text-muted">freelancer@skillpark.com.np</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- End Header -->
+
+                                        <!-- Body -->
+                                        <div class="card-body py-3">
+                                            <a class="dropdown-item px-0" href="dashboard">
+                                                <span class="dropdown-item-icon">
+                                                    <i class="fa fa-dashcube"></i>
+                                                </span>
+                                                Dashboard
+                                            </a>
+                                            <a class="dropdown-item px-0" href="messages">
+                                                <span class="dropdown-item-icon">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>
+                                                Messages
+                                            </a>
+                                            <a class="dropdown-item px-0" href="settings">
+                                                <span class="dropdown-item-icon">
+                                                    <i class="fa fa-gear"></i>
+                                                </span>
+                                                Settings
+                                            </a>
+
+                                            <div class="dropdown-divider"></div>
+
+                                            <a class="dropdown-item px-0" href="faq">
+                                                <span class="dropdown-item-icon">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </span>
+                                                Help
+                                            </a>
+                                            <a class="dropdown-item px-0" href="http://skillpark.com.np/logout" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+                                            <form id="logout-form" action="http://skillpark.com.np/logout" method="POST"
+                                                style="display: none;">
+                                                <input type="hidden" name="_token"
+                                                    value="gU7RsANrDgwiczXKyNN2y5B2LlFTHPWfA38uaaK5"> </form>
+                                        </div>
+                                        <!-- End Body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Account -->
+                        </div>
+                        <!-- End Secondary Content -->
+
+                        <!-- Responsive Toggle Button -->
+                        <button type="button"
+                            class="navbar-toggler navbar-nav-wrap-navbar-toggler btn btn-icon btn-sm rounded-circle"
+                            aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar"
+                            data-toggle="collapse" data-target="#navBar">
+                            <span class="navbar-toggler-default">
+                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+                                </svg>
+                            </span>
+                            <span class="navbar-toggler-toggled">
+                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <!-- End Responsive Toggle Button -->
+
+                        <!-- Navigation -->
+                        <div id="navBar" class="navbar-nav-wrap-navbar collapse navbar-collapse">
+                            <ul class="navbar-nav">
+
+                                <li class="navbar-nav-item">
+                                    <a href="home" class="nav-link"><i class="fa fa-briefcase font-size-1 mr-1"></i>
+                                        Find Jobs</a>
+                                </li>
+
+                                <li class="navbar-nav-item">
+                                    <a href="saved-jobs" class="nav-link"><i
+                                            class="fa fa-bookmark font-size-1 mr-1"></i> Saved Jobs</a>
+                                </li>
+
+                                <li class="navbar-nav-item">
+                                    <a href="recommended" class="nav-link"><i
+                                            class="fa fa-dice-four font-size-1 mr-1"></i> Recommended</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- End Navigation -->
+                    </div>
+                </nav>
+                <!-- End Nav -->
+            </div>
         </div>
     </header>
     <!-- ========== END HEADER ========== -->
 
-    <div class="pt-7"></div>
-
-
     <!-- ========== MAIN ========== -->
     <main id="content" role="main" class="bg-light">
+        <div class="py-7"></div>
 
         <!-- Breadcrumb Section -->
         <div class="bg-navy d-lg-none d-sm-block"
@@ -258,21 +399,6 @@
                                         </li>
                                     </ul>
                                     <!-- End List -->
-
-                                    <div class="d-lg-none">
-                                        <div class="dropdown-divider"></div>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
-                                            <li class="nav-item">
-                                                <a class="nav-link text-primary" href="#">
-                                                    <i class="fas fa-sign-out-alt nav-icon"></i>
-                                                    Log out
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!-- End List -->
-                                    </div>
                                 </div>
                             </div>
                             <!-- End Card -->
