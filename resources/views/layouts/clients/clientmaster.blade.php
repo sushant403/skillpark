@@ -29,7 +29,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
     <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
@@ -38,81 +37,25 @@
 
 
     <!-- CSS Skillpark Template -->
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/theme.css">
 </head>
 
 <body>
     <!-- ========== HEADER ========== -->
     <header id="header" style="font-size: 0.9rem"
-        class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide"
-        data-hs-header-options='{
+        class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top" data-hs-header-options='{
    "fixMoment": 700,
    "fixEffect": "slide"
  }'>
 
         <div class="header-section">
-            <!-- Topbar -->
-            <div class="container header-hide-content py-2">
-                <div class="d-flex align-items-center">
-                    <!-- Language -->
-                    <div class="hs-unfold">
-                        <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
-                            href="javascript:;" data-hs-unfold-options='{
-       "target": "#languageDropdown",
-       "type": "css-animation",
-       "event": "click",
-       "hideOnScroll": "true"
-      }'>
-                            <img class="dropdown-item-icon mr-2" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
-                            <span class="d-none d-sm-inline-block">English</span>
-                        </a>
-
-                        <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
-                            <a class="dropdown-item" href="/lang/en">English</a>
-                            <a class="dropdown-item" href="/lang/ne">नेपाली</a>
-                        </div>
-                    </div>
-                    <!-- End Language -->
-
-                    <div class="ml-auto">
-                        <!-- Jump To -->
-                        <div class="hs-unfold d-sm-none mr-2">
-                            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
-                                href="javascript:;" data-hs-unfold-options='{
-         "target": "#jumpToDropdown",
-         "type": "css-animation",
-         "event": "hover",
-         "hideOnScroll": "true"
-        }'>
-                                Jump to
-                            </a>
-
-                            <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                                <a class="dropdown-item" href="home">Find Jobs</a>
-                                <a class="dropdown-item" href="faq">Help</a>
-                                <a class="dropdown-item" href="report">Report</a>
-                            </div>
-                        </div>
-                        <!-- End Jump To -->
-
-                        <!-- Links -->
-                        <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-                            <a class="nav-link" href="home">Find Jobs</a>
-                            <a class="nav-link" href="faq">Help</a>
-                            <a class="nav-link" href="report">Report</a>
-                        </div>
-                        <!-- End Links -->
-                    </div>
-                </div>
-            </div>
-            <!-- End Topbar -->
-
             <div id="logoAndNav" class="container ">
                 <!-- Nav -->
                 <nav class="js-mega-menu navbar navbar-expand-lg">
                     <div class="navbar-nav-wrap">
                         <!-- Logo -->
-                        <a class="navbar-brand navbar-nav-wrap-brand" href="#" aria-label="Skillpark">
+                        <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('client') }}" aria-label="Skillpark">
                             <img src="/images/logo/biglogo.svg" alt="Logo">
                         </a>
                         <!-- End Logo -->
@@ -123,10 +66,10 @@
                             <div class="hs-unfold d-lg-none d-inline-block position-static">
                                 <a class="js-hs-unfold-invoker btn btn-xs btn-icon rounded-circle" href="javascript:;"
                                     data-hs-unfold-options='{
-                    "target": "#searchClassic",
-                    "type": "css-animation",
-                    "animationIn": "slideInUp"
-                   }'>
+                                                                        "target": "#searchClassic",
+                                                                        "type": "css-animation",
+                                                                        "animationIn": "slideInUp"
+                                                                    }'>
                                     <i class="fas fa-search"></i>
                                 </a>
 
@@ -149,13 +92,13 @@
                             <div class="hs-unfold">
                                 <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
                                     style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
-                    "target": "#accountDropdown",
-                    "type": "css-animation",
-                    "event": "click",
-                    "duration": 50,
-                    "delay": 0,
-                    "hideOnScroll": "true"
-                   }'>
+                                                    "target": "#accountDropdown",
+                                                    "type": "css-animation",
+                                                    "event": "click",
+                                                    "duration": 50,
+                                                    "delay": 0,
+                                                    "hideOnScroll": "true"
+                                                }'>
                                     <span class="position-relative">
                                         <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
                                         <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}"
@@ -400,7 +343,8 @@
 
                                 <li class="navbar-nav-item">
                                     <a href="/post/project" class="nav-link py-3"><button class="btn btn-primary"><i
-                                                class="fa fa-briefcase font-size-1 mr-1"></i> Post a Project</button></a>
+                                                class="fa fa-briefcase font-size-1 mr-1"></i> Post a
+                                            Project</button></a>
                                 </li>
 
                             </ul>
@@ -418,7 +362,7 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
-    <div class="space-bottom-2 pt-5"></div>
+    <div class="space-bottom-1 pt-6"></div>
 
     @yield('content')
 
@@ -507,7 +451,7 @@
                                                     <a class="nav-link" href="/lang/ne">
                                                         <img class="max-w-3rem mr-1" src="/images/svg/np.svg"
                                                             alt="Nepal Flag">
-                                                        Nepali
+                                                        नेपाली
                                                     </a>
                                                     <a class="nav-link active " href="/lang/en">
                                                         <img class="max-w-3rem mr-1"

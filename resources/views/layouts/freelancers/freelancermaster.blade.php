@@ -487,7 +487,7 @@
                           <!-- Nav Link -->
                           <a class="nav-link" href="/lang/ne">
                             <img class="max-w-3rem mr-1" src="/images/svg/np.svg" alt="Nepal Flag">
-                            Nepali
+                            नेपाली
                           </a>
                           <a class="nav-link active " href="/lang/en">
                             <img class="max-w-3rem mr-1" src="/vendor/flag-icon-css/flags/4x3/us.svg"

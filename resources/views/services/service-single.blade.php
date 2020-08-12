@@ -10,7 +10,6 @@
                     <li class="nav-overview selected"><a href="#overview">Overview</a></li>
                     <li class="nav-description"><a href="#description">Description</a></li>
                     <li class="nav-aboutSeller"><a href="#aboutSeller">About The Seller</a></li>
-                    <li class="nav-packagesTable"><a href="#packagesTable">Compare Packages</a></li>
                     <li class="nav-recommendations"><a href="#recommendations">Recommendations</a></li>
                     <li class="nav-faq"><a href="#faq">FAQ</a></li>
                     <li class="nav-reviews"><a href="#reviews">Reviews</a></li>
@@ -23,9 +22,6 @@
                             <i class="fa fa-heart" aria-hidden="true"></i>
                             Save
                         </button>
-                    </li>
-                    <li>
-                        <span class="collect-count">138</span>
                     </li>
                     <li class="ml-2">
                         <button>
@@ -42,71 +38,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 left">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Library</li>
-                    </ol>
-                </nav>
                 <h2>I will do mobile and website wireframes and prototyping</h2>
-                <div id="overview" class="seller-overview d-flex align-items-center">
-                    <div class="user-profile-image d-flex">
-                        <label class="profile-pict" for="profile_image">
-                            <img src="images/user/s2.png" class="profile-pict-img img-fluid" alt="">
-                        </label>
-                        <div class="profile-name">
-                            <span class="user-status">
-                                <a href="#" class="seller-link">Askbootstrap</a>
-                            </span>
-                            <div class="seller-level">Level 1 Seller</div>
-                        </div>
-                    </div>
-                    <div class="user-info d-flex">
-                        <span class="user-info-rating d-flex">
-                            <div class="star-rating-s15-wrapper">
-                                <span class="star-rating-s15 rate-10">
-                                </span>
-                            </div>
-                            <span class="total-rating-out-five">5.0</span>
-                            <span class="total-rating">(36)</span>
-                        </span>
-                        <span class="orders-in-queue">2 Orders in Queue</span>
-                    </div>
-                </div>
-                <div class="slider mt-4">
+                <div class="slider mt-2">
                     <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
-                        <a href="images/list/v1.png">
-                            <img class="img-fluid" src="images/list/v1.png" />
+                        <a href="/images/svg/discussion-scene.svg">
+                            <img class="img-fluid" src="/images/svg/discussion-scene.svg" />
                         </a>
-                        <a href="images/list/v2.png">
-                            <img class="img-fluid" src="images/list/v2.png" />
-                        </a>
-                        <a href="images/list/v3.png">
-                            <img class="img-fluid" src="images/list/v3.png" />
-                        </a>
-                        <a href="images/list/v4.png">
-                            <img class="img-fluid" src="images/list/v4.png" />
-                        </a>
-                        <a href="images/list/v5.png">
-                            <img class="img-fluid" src="images/list/v5.png" />
-                        </a>
-                    </div>
-                    <div class="slider-nav slick-slider-single">
-                        <div class="item-slick">
-                            <img class="img-fluid" src="images/list/v1.png" alt="Alt">
-                        </div>
-                        <div class="item-slick">
-                            <img class="img-fluid" src="images/list/v2.png" alt="Alt">
-                        </div>
-                        <div class="item-slick">
-                            <img class="img-fluid" src="images/list/v3.png" alt="Alt">
-                        </div>
-                        <div class="item-slick">
-                            <img class="img-fluid" src="images/list/v4.png" alt="Alt">
-                        </div>
-                        <div class="item-slick">
-                            <img class="img-fluid" src="images/list/v5.png" alt="Alt">
-                        </div>
                     </div>
                 </div>
                 <div id="description" class="description">
@@ -147,28 +84,20 @@
                 <div class="profile-card">
                     <div class="user-profile-image d-flex">
                         <label class="profile-pict" for="profile_image">
-                            <img src="images/user/s2.png" class="profile-pict-img img-fluid" alt="">
+                            <img src="/{{ Auth::user()->avatar }}" class="profile-pict-img img-fluid" alt="">
                         </label>
                         <div class="right">
                             <div class="profile-name">
                                 <span class="user-status">
-                                    <a href="#" class="seller-link">Askbootstrap</a>
+                                    <a href="#" class="seller-link">{{ Auth::user()->name }}</a>
                                 </span>
-                                <div class="seller-level">Website and mobile wireframes UI UX </div>
+                                <div class="seller-level">{{ Auth::user()->tagline }}</div>
                             </div>
                             <div class="user-info">
                                 <span class="user-info-rating d-flex align-items-center">
                                     <div class="star-rating-s15-wrapper">
-                                        <span class="star-rating-s15 rate-10">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span>
+                                        <i class="fa fa-map-marker"></i> Kathmandu
                                     </div>
-                                    <span class="total-rating-out-five">5.0</span>
-                                    <span class="total-rating">(36 reviews)</span>
                                 </span>
                                 <a href="#">Contact Me</a>
                             </div>
@@ -176,9 +105,8 @@
                     </div>
                     <div class="stats-desc">
                         <ul class="user-stats">
-                            <li>From<strong>India</strong></li>
-                            <li>Member since<strong>Sep 2018</strong></li>
-                            <li>Avg. Response Time<strong>1 hour</strong></li>
+                            <li>From<strong>Kathmandu</strong></li>
+                            <li>Member since<strong>{{ Auth::user()->created_at }}</strong></li>
                         </ul>
                         <article class="seller-desc">
                             <div class="inner">- Wireframes for mobile apps &amp; Website <br />
@@ -197,289 +125,9 @@
                             </div>
                         </article>
                     </div>
-                    <div id="packagesTable" class="table-package">
-                        <h3>Compare Packages</h3>
-                        <table>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <tbody>
-                                <tr class="package-type">
-                                    <th>Package</th>
-                                    <td>
-                                        <p class="price">$8,029 </p>
-                                        <b class="type">Basic</b><b class="title">10 Screens</b>
-                                    </td>
-                                    <td>
-                                        <p class="price">$11,240 </p>
-                                        <b class="type">Standard</b><b class="title">15
-                                            Screens</b>
-                                    </td>
-                                    <td>
-                                        <p class="price">$16,057 </p>
-                                        <b class="type">Premium</b><b class="title">25 Screens
-                                        </b>
-                                    </td>
-                                </tr>
-                                <tr class="description">
-                                    <th></th>
-                                    <td>I will design rough sketches for upto 5 Screens of your website/Mobile app.
-                                    </td>
-                                    <td>I will design rough sketches for upto 10 Screens of your website/Mobile app.
-                                    </td>
-                                    <td>I will design rough sketches for upto 20 Screens of your website/Mobile app.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="fit-popover fit-popover-top fit-tooltip" data-position="top"><span
-                                                class="fit-popover-content">Source File</span></div>
-                                    </th>
-                                    <td class="boolean-pricing-factor included"></td>
-                                    <td class="boolean-pricing-factor included"></td>
-                                    <td class="boolean-pricing-factor included"></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="fit-popover fit-popover-top fit-tooltip" data-position="top"><span
-                                                class="fit-popover-content">Commercial Use</span></div>
-                                    </th>
-                                    <td class="boolean-pricing-factor included"></td>
-                                    <td class="boolean-pricing-factor included"></td>
-                                    <td class="boolean-pricing-factor included"></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="fit-popover fit-popover-top fit-tooltip" data-position="top"><span
-                                                class="fit-popover-content">Interactive Mockup</span></div>
-                                    </th>
-                                    <td class="boolean-pricing-factor"></td>
-                                    <td class="boolean-pricing-factor included"></td>
-                                    <td class="boolean-pricing-factor included"></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="fit-popover fit-popover-top fit-tooltip" data-position="top"><span
-                                                class="fit-popover-content"># of Pages / Screens</span></div>
-                                    </th>
-                                    <td>10</td>
-                                    <td>15</td>
-                                    <td>25</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="fit-popover fit-popover-top fit-tooltip" data-position="top"><span
-                                                class="fit-popover-content">Revisions</span></div>
-                                    </th>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr class="delivery-time">
-                                    <th>Delivery Time</th>
-                                    <td>
-                                        <div class="fake-radio-wrapper">
-                                            <div><input type="hidden" name="gig_items[1][4694800919471][gig_item_id]"
-                                                    value="117210558"><input type="hidden"
-                                                    name="gig_items[1][4694800919471][quantity]" value="0"></div>
-                                            <label class="fake-radio"><input type="radio" name="1" value="0"
-                                                    checked=""><span class="radio-img"></span><span>3
-                                                    days</span></label>
-                                            <label class="fake-radio">
-                                                <input type="radio" name="1" value="1"><span
-                                                    class="radio-img"></span><span>2 days</span>
-                                                <p class="faster-price">(+$2,008)</p>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="fake-radio-wrapper">
-                                            <div><input type="hidden" name="gig_items[2][0007284419489][gig_item_id]"
-                                                    value="117210558"><input type="hidden"
-                                                    name="gig_items[2][0007284419489][quantity]" value="0"></div>
-                                            <label class="fake-radio"><input type="radio" name="2" value="0"
-                                                    checked=""><span class="radio-img"></span><span>4
-                                                    days</span></label>
-                                            <label class="fake-radio">
-                                                <input type="radio" name="2" value="1"><span
-                                                    class="radio-img"></span><span>3 days</span>
-                                                <p class="faster-price">(+$4,818)</p>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="fake-radio-wrapper">
-                                            <div><input type="hidden" name="gig_items[3][1724678919506][gig_item_id]"
-                                                    value="117210558"><input type="hidden"
-                                                    name="gig_items[3][1724678919506][quantity]" value="0"></div>
-                                            <label class="fake-radio"><input type="radio" name="3" value="0"
-                                                    checked=""><span class="radio-img"></span><span>7
-                                                    days</span></label>
-                                            <label class="fake-radio">
-                                                <input type="radio" name="3" value="1"><span
-                                                    class="radio-img"></span><span>5 days</span>
-                                                <p class="faster-price">(+$8,029)</p>
-                                            </label>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="select-package">
-                                    <th>Total</th>
-                                    <td>
-                                        <p class="price-label">$8,029</p>
-                                        <button type="submit">Select</button>
-                                    </td>
-                                    <td>
-                                        <p class="price-label">$11,240</p>
-                                        <button type="submit">Select</button>
-                                    </td>
-                                    <td>
-                                        <p class="price-label">$16,057</p>
-                                        <button type="submit">Select</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     <div id="recommendations" class="recommended">
                         <h3>Recommended For You</h3>
-                        <div class="recommended-slider recommend">
-                            <div>
-                                <a href="#">
-                                    <img class="img-fluid" src="images/list/v1.png" />
-                                </a>
-                                <div class="inner-slider">
-                                    <div class="inner-wrapper">
-                                        <div class="d-flex align-items-center">
-                                            <span class="seller-image">
-                                                <img class="img-fluid" src="images/user/s1.png" alt='' />
-                                            </span>
-                                            <span class="seller-name">
-                                                <a href="profile.html">Marcin Kowalski</a>
-                                                <span class="level hint--top level-one-seller">
-                                                    Level 1 Seller
-                                                </span>
-                                            </span>
-                                        </div>
-                                        <h3>I will create professional audio ads or radio commercials for your project
-                                        </h3>
-                                        <div class="content-info">
-                                            <div class="rating-wrapper">
-                                                <span class="gig-rating text-body-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"
-                                                        width="15" height="15">
-                                                        <path fill="currentColor"
-                                                            d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                                        </path>
-                                                    </svg>
-                                                    5.0
-                                                    <span>(7)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="footer">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                            <div class="price">
-                                                <a href="#">
-                                                    Starting At <span> $1,205</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <img class="img-fluid" src="images/list/v2.png" />
-                                </a>
-                                <div class="inner-slider">
-                                    <div class="inner-wrapper">
-                                        <div class="d-flex align-items-center">
-                                            <span class="seller-image">
-                                                <img class="img-fluid" src="images/user/s2.png" alt='' />
-                                            </span>
-                                            <span class="seller-name">
-                                                <a href="profile.html">Marcin Kowalski</a>
-                                                <span class="level hint--top level-one-seller">
-                                                    Level 1 Seller
-                                                </span>
-                                            </span>
-                                        </div>
-                                        <h3>I will create professional audio ads or radio commercials for your project
-                                        </h3>
-                                        <div class="content-info">
-                                            <div class="rating-wrapper">
-                                                <span class="gig-rating text-body-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"
-                                                        width="15" height="15">
-                                                        <path fill="currentColor"
-                                                            d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                                        </path>
-                                                    </svg>
-                                                    5.0
-                                                    <span>(7)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="footer">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                            <div class="price">
-                                                <a href="#">
-                                                    Starting At <span> $1,205</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <img class="img-fluid" src="images/list/v3.png" />
-                                </a>
-                                <div class="inner-slider">
-                                    <div class="inner-wrapper">
-                                        <div class="d-flex align-items-center">
-                                            <span class="seller-image">
-                                                <img class="img-fluid" src="images/user/s3.png" alt='' />
-                                            </span>
-                                            <span class="seller-name">
-                                                <a href="profile.html">Marcin Kowalski</a>
-                                                <span class="level hint--top level-one-seller">
-                                                    Level 1 Seller
-                                                </span>
-                                            </span>
-                                        </div>
-                                        <h3>I will create professional audio ads or radio commercials for your project
-                                        </h3>
-                                        <div class="content-info">
-                                            <div class="rating-wrapper">
-                                                <span class="gig-rating text-body-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"
-                                                        width="15" height="15">
-                                                        <path fill="currentColor"
-                                                            d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                                        </path>
-                                                    </svg>
-                                                    5.0
-                                                    <span>(7)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="footer">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                            <div class="price">
-                                                <a href="#">
-                                                    Starting At <span> $1,205</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div id="faq" class="faq">
@@ -490,7 +138,7 @@
                                 <h2 class="mb-0">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Collapsible Group Item #1
+                                        Some Custom Skillpark User Question
                                     </button>
                                 </h2>
                             </div>
@@ -518,7 +166,7 @@
                                 <h2 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                         data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
+                                        Some Custom Skillpark User Question
                                     </button>
                                 </h2>
                             </div>
@@ -547,7 +195,7 @@
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                         data-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Collapsible Group Item #3
+                                        Some Custom Skillpark User Question
                                     </button>
                                 </h2>
                             </div>
@@ -573,13 +221,6 @@
                     </div>
                 </div>
                 <div id="reviews" class="review-section">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h4 class="m-0"> 37 Reviews </h4>
-                        <select class="custom-select custom-select-sm border-0 shadow-sm ml-2">
-                            <option>Most Relevant</option>
-                            <option>Most Recent</option>
-                        </select>
-                    </div>
                     <div class=" row">
                         <div class="col-md-6">
                             <table class="stars-counters">
@@ -809,15 +450,10 @@
             </div>
             <div class="col-lg-4 right">
                 <div class="sticky">
-                    <ul class="nav nav-tabs">
-                        <li><a class="active" data-toggle="tab" href="#basic">Basic</a></li>
-                        <li><a data-toggle="tab" href="#standard">Standard</a></li>
-                        <li><a data-toggle="tab" href="#Premium">Premium</a></li>
-                    </ul>
                     <div class="tab-content">
                         <div id="basic" class="tab-pane fade show active">
                             <div class="header">
-                                <h3><b class="title">10 Screens</b><span class="price">$8,029</span></h3>
+                                <h3><b class="title">10 Screens</b><span class="price">Rs. 8,029</span></h3>
                                 <p>I will design rough sketches for upto 5 Screens of your website/Mobile app.
                                 </p>
                             </div>
@@ -836,60 +472,6 @@
                                             aria-hidden="true"></i>Commercial
                                         Use
                                     </li>
-                                    <li class="feature"><i class="fa fa-check" aria-hidden="true"></i>Interactive
-                                        Mockup
-                                    </li>
-                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>10
-                                        Pages
-                                    </li>
-                                </ul>
-                            </article>
-                            <button>Continue ($8,029)</button>
-                        </div>
-                        <div id="standard" class="tab-pane fade">
-                            <div class="header">
-                                <h3><b class="title">20 Screens</b><span class="price">$16,029</span></h3>
-                                <p>I will design rough sketches for upto 5 Screens of your website/Mobile app.
-                                </p>
-                            </div>
-                            <article>
-                                <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 Days
-                                    Delivery</b>
-                                <ul class="features">
-                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Source
-                                        File
-                                    </li>
-                                    <li class="feature included"><i class="fa fa-check"
-                                            aria-hidden="true"></i>Commercial
-                                        Use
-                                    </li>
-                                    <li class="feature"><i class="fa fa-check" aria-hidden="true"></i>Interactive
-                                        Mockup
-                                    </li>
-                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>10
-                                        Pages
-                                    </li>
-                                </ul>
-                            </article>
-                            <button>Continue ($16,029)</button>
-                        </div>
-                        <div id="Premium" class="tab-pane fade">
-                            <div class="header">
-                                <h3><b class="title">30 Screens</b><span class="price">$24,029</span></h3>
-                                <p>I will design rough sketches for upto 5 Screens of your website/Mobile app.
-                                </p>
-                            </div>
-                            <article>
-                                <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 Days
-                                    Delivery</b>
-                                <ul class="features">
-                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Source
-                                        File
-                                    </li>
-                                    <li class="feature included"><i class="fa fa-check"
-                                            aria-hidden="true"></i>Commercial
-                                        Use
-                                    </li>
                                     <li class="feature included"><i class="fa fa-check"
                                             aria-hidden="true"></i>Interactive
                                         Mockup
@@ -899,7 +481,7 @@
                                     </li>
                                 </ul>
                             </article>
-                            <button>Continue ($24,029)</button>
+                            <button>Continue (Rs. 8,029)</button>
                         </div>
                     </div>
                     <div class="contact-seller-wrapper">
@@ -912,223 +494,9 @@
     <div class="container mt-5">
         <div class="view_slider recommended">
             <h3>People Who Viewed This Service Also Viewed</h3>
-            <div class="view recommended-slider">
-                <div>
-                    <a href="product-detail.html">
-                        <img class="img-fluid" src="images/list/v1.png" />
-                    </a>
-                    <div class="inner-slider">
-                        <div class="inner-wrapper">
-                            <div class="d-flex align-items-center">
-                                <span class="seller-image">
-                                    <img class="img-fluid" src="images/user/s1.png" alt='' />
-                                </span>
-                                <span class="seller-name">
-                                    <a href="profile.html">Marcin Kowalski</a>
-                                    <span class="level hint--top level-one-seller">
-                                        Level 1 Seller
-                                    </span>
-                                </span>
-                            </div>
-                            <h3>I will create professional audio ads or radio commercials for your project</h3>
-                            <div class="content-info">
-                                <div class="rating-wrapper">
-                                    <span class="gig-rating text-body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
-                                            height="15">
-                                            <path fill="currentColor"
-                                                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                            </path>
-                                        </svg>
-                                        5.0
-                                        <span>(7)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="footer">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <div class="price">
-                                    <a href="#">
-                                        Starting At <span> $1,205</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <a href="product-detail.html">
-                        <img class="img-fluid" src="images/list/v2.png" />
-                    </a>
-                    <div class="inner-slider">
-                        <div class="inner-wrapper">
-                            <div class="d-flex align-items-center">
-                                <span class="seller-image">
-                                    <img class="img-fluid" src="images/user/s2.png" alt='' />
-                                </span>
-                                <span class="seller-name">
-                                    <a href="profile.html">Marcin Kowalski</a>
-                                    <span class="level hint--top level-one-seller">
-                                        Level 1 Seller
-                                    </span>
-                                </span>
-                            </div>
-                            <h3>I will create professional audio ads or radio commercials for your project</h3>
-                            <div class="content-info">
-                                <div class="rating-wrapper">
-                                    <span class="gig-rating text-body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
-                                            height="15">
-                                            <path fill="currentColor"
-                                                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                            </path>
-                                        </svg>
-                                        5.0
-                                        <span>(7)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="footer">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <div class="price">
-                                    <a href="#">
-                                        Starting At <span> $1,205</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <a href="product-detail.html">
-                        <img class="img-fluid" src="images/list/v3.png" />
-                    </a>
-                    <div class="inner-slider">
-                        <div class="inner-wrapper">
-                            <div class="d-flex align-items-center">
-                                <span class="seller-image">
-                                    <img class="img-fluid" src="images/user/s3.png" alt='' />
-                                </span>
-                                <span class="seller-name">
-                                    <a href="profile.html">Marcin Kowalski</a>
-                                    <span class="level hint--top level-one-seller">
-                                        Level 1 Seller
-                                    </span>
-                                </span>
-                            </div>
-                            <h3>I will create professional audio ads or radio commercials for your project</h3>
-                            <div class="content-info">
-                                <div class="rating-wrapper">
-                                    <span class="gig-rating text-body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
-                                            height="15">
-                                            <path fill="currentColor"
-                                                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                            </path>
-                                        </svg>
-                                        5.0
-                                        <span>(7)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="footer">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <div class="price">
-                                    <a href="#">
-                                        Starting At <span> $1,205</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <a href="product-detail.html">
-                        <img class="img-fluid" src="images/list/v4.png" />
-                    </a>
-                    <div class="inner-slider">
-                        <div class="inner-wrapper">
-                            <div class="d-flex align-items-center">
-                                <span class="seller-image">
-                                    <img class="img-fluid" src="images/user/s4.png" alt='' />
-                                </span>
-                                <span class="seller-name">
-                                    <a href="profile.html">Marcin Kowalski</a>
-                                    <span class="level hint--top level-one-seller">
-                                        Level 1 Seller
-                                    </span>
-                                </span>
-                            </div>
-                            <h3>I will create professional audio ads or radio commercials for your project</h3>
-                            <div class="content-info">
-                                <div class="rating-wrapper">
-                                    <span class="gig-rating text-body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
-                                            height="15">
-                                            <path fill="currentColor"
-                                                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                            </path>
-                                        </svg>
-                                        5.0
-                                        <span>(7)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="footer">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <div class="price">
-                                    <a href="#">
-                                        Starting At <span> $1,205</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <a href="product-detail.html">
-                        <img class="img-fluid" src="images/list/v5.png" />
-                    </a>
-                    <div class="inner-slider">
-                        <div class="inner-wrapper">
-                            <div class="d-flex align-items-center">
-                                <span class="seller-image">
-                                    <img class="img-fluid" src="images/user/s5.png" alt='' />
-                                </span>
-                                <span class="seller-name">
-                                    <a href="profile.html">Marcin Kowalski</a>
-                                    <span class="level hint--top level-one-seller">
-                                        Level 1 Seller
-                                    </span>
-                                </span>
-                            </div>
-                            <h3>I will create professional audio ads or radio commercials for your project</h3>
-                            <div class="content-info">
-                                <div class="rating-wrapper">
-                                    <span class="gig-rating text-body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
-                                            height="15">
-                                            <path fill="currentColor"
-                                                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
-                                            </path>
-                                        </svg>
-                                        5.0
-                                        <span>(7)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="footer">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <div class="price">
-                                    <a href="#">
-                                        Starting At <span> $1,205</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
         </div>
     </div>
 </div>

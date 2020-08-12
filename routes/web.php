@@ -30,39 +30,45 @@ Route::middleware(['verified','auth'])->group(function () {
 
     Route::post('/home', 'UserController@store'); //stores default avatar
     
+    //add additional info
     Route::get('register/user-information', 'Auth\ProfileInfoController@showProfile');
     Route::post('register/user-information', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
 
-    Route::get('/home', 'HomeController@freelancer')->name('home'); //user feeds
-    Route::post('/home', 'HomeController@freelancerSearch')->name('home'); //user feeds
+    //middleware protected roles
 
-    Route::get('/client', 'HomeController@client')->name('client'); //client feeds
-    Route::post('/client', 'HomeController@clientSearch')->name('client'); //client feeds
+    //freelancer only
+    Route::group(['middleware' => ['role:freelancer']], function () {
+        Route::get('/home', 'HomeController@freelancer')->name('home'); //user feeds
+        Route::post('/home', 'HomeController@freelancerSearch')->name('home'); //user feeds
+
+        //bidding proposal
+        Route::get('/post/proposal', 'PostController@showProposalForm');
+        Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
+    });
+
+    //client only
+    Route::group(['middleware' => ['role:client']], function () {
+        Route::get('/client', 'HomeController@client')->name('client'); //client feeds
+        Route::post('/client', 'HomeController@clientSearch')->name('client'); //client feeds
+        
+        Route::get('/services', 'ProfileController@serviceList');
+        Route::get('/services/description', 'ProfileController@serviceSingle');
+
+        //post projects for client
+        Route::get('/post/project', 'PostController@showProjectForm');
+        Route::post('/post/project', 'PostController@postProject')->name('post-project');
+    });
 
     //user-accounts routes
     Route::get('/dashboard', 'ProfileController@dashboard');
 
     Route::get('/settings', 'ProfileController@editProfile');
     Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
-
     Route::get('/auth', 'ProfileController@auth');
+
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
-    Route::get('/services', 'ProfileController@serviceList');
-    Route::get('/services/description', 'ProfileController@serviceSingle');
-    
 
-    Route::middleware(['verified','freelancer'])->group(function () {
-    });
-
-    Route::middleware(['verified', 'client'])->group(function () {
-    });
-
-    Route::get('/post/project', 'PostController@showProjectForm');
-    Route::post('/post/project', 'PostController@postProject')->name('post-project');
-    
-    Route::get('/post/proposal', 'PostController@showProposalForm');
-    Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
 
 });
 
@@ -70,6 +76,5 @@ Route::middleware(['verified','auth'])->group(function () {
 Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
 Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
 Route::get('login/{driver}/callback', 'Auth\SocialAuthController@handleProviderCallback')->name('social.callback');
-
 
 //creators of SKILLPARK (sushant,divesh,nitika)

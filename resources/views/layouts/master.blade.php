@@ -79,8 +79,9 @@
                             <ul class="navbar-nav">
                                 <!-- Home -->
                                 <li class="hs-has-mega-menu navbar-nav-item">
-                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2" href="javascript:;"
-                                        aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions') }}</a>
+                                    <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
+                                        href="javascript:;" aria-haspopup="true"
+                                        aria-expanded="false">{{ __('nepali.Solutions') }}</a>
 
                                     <!-- Home - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu col-lg-10" aria-labelledby="homeMegaMenu">
@@ -298,38 +299,94 @@
                                 @else
                                 <!-- Account Login -->
                                 <li class="navbar-nav-last-item pl-0 dropdown">
-                                    <!-- Account Sidebar Toggle Button -->
-                                    <a style="padding-top: 1rem;padding-bottom:1rem"
-                                        class="hs-mega-menu-invoker nav-link dropdown-toggle u-sidebar--account__toggle-bg ml-1"
-                                        href="javascript:;" id="dropdownSubMenu" role="button" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <span class="position-relative">
-                                            <span
-                                                class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                                            <img class="u-sidebar--account__toggle-img" src="/images/spacer.png"
-                                                width="35" alt="Profile">
-                                        </span>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownSubMenu"
-                                        style="min-width: 230px;">
-                                        <a class="dropdown-item" href="home"><i class="fa fa-coffee"></i>&nbsp;
-                                            Homepage</a>
-                                        <a class="dropdown-item" href="dashboard"><i class="fa fa-dashcube"></i>&nbsp;
-                                            Dashboard</a>
-                                        <a class="dropdown-item" href="dashboard"><i class="fa fa-user-alt"></i>&nbsp;
-                                            Profile</a>
-                                        <a class="dropdown-item" href="settings"><i class="fa fa-gear"></i>&nbsp;
-                                            Settings</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                                class="fa fa-sign-out-alt"></i>&nbsp; Logout</a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                            style="display: none;">
-                                            @csrf
-                                        </form>
+                                    <!-- Account -->
+                                    <div class="hs-unfold">
+                                        <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
+                                            style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
+                    "target": "#accountDropdown",
+                    "type": "css-animation",
+                    "event": "click",
+                    "duration": 50,
+                    "delay": 0,
+                    "hideOnScroll": "true"
+                   }'>
+                                            <span class="position-relative">
+                                                <span
+                                                    class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
+                                                <img class="u-sidebar--account__toggle-img" src="/images/spacer.png"
+                                                    width="35" alt="Profile">
+                                            </span>
+                                        </a>
+
+                                        <div id="accountDropdown"
+                                            class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
+                                            style="min-width: 245px;">
+                                            <div class="card">
+                                                <!-- Header -->
+                                                <div class="card-header p-4">
+                                                    <a class="media align-items-center" href="settings">
+                                                        <div class="avatar mr-3">
+                                                            <img class="avatar-img" src="{{ Auth::user()->avatar }}"
+                                                                alt="Image Description">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <span
+                                                                class="d-block font-weight-bold">{{ Auth::user()->name }}
+                                                            </span>
+                                                            <span
+                                                                class="d-block small text-muted">{{ Auth::user()->email }}</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <!-- End Header -->
+
+                                                <!-- Body -->
+                                                <div class="card-body py-3">
+                                                    <a class="dropdown-item px-0" href="dashboard">
+                                                        <span class="dropdown-item-icon">
+                                                            <i class="fa fa-home"></i>
+                                                        </span>
+                                                        Homepage
+                                                    </a>
+                                                    <a class="dropdown-item px-0" href="dashboard">
+                                                        <span class="dropdown-item-icon">
+                                                            <i class="fa fa-dashcube"></i>
+                                                        </span>
+                                                        Dashboard
+                                                    </a>
+                                                    <a class="dropdown-item px-0" href="messages">
+                                                        <span class="dropdown-item-icon">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </span>
+                                                        Messages
+                                                    </a>
+                                                    <a class="dropdown-item px-0" href="settings">
+                                                        <span class="dropdown-item-icon">
+                                                            <i class="fa fa-gear"></i>
+                                                        </span>
+                                                        Settings
+                                                    </a>
+
+                                                    <div class="dropdown-divider"></div>
+
+                                                    <a class="dropdown-item px-0" href="faq">
+                                                        <span class="dropdown-item-icon">
+                                                            <i class="fas fa-question-circle"></i>
+                                                        </span>
+                                                        Help
+                                                    </a>
+                                                    <a class="dropdown-item px-0" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                        style="display: none;">
+                                                        @csrf
+                                                    </form>
+                                                </div>
+                                                <!-- End Body -->
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- End Account Sidebar Toggle Button -->
+                                    <!-- End Account -->
                                 </li>
                                 <!-- End Account Login -->
                                 @endguest
@@ -383,7 +440,7 @@
                     <!-- End Logo -->
 
                     <!-- Nav Link -->
-                    <ul class="nav nav-sm nav-x-0 flex-column align-items-center text-lg-left">
+                    <ul class="nav nav-sm nav-x-0 flex-column align-items-center">
                         <li class="nav-item">
                             <a class="nav-link media" href="javascript:;">
                                 <span class="media">
@@ -469,9 +526,9 @@
                                     <span class="media-body">
                                         @guest
                                         <i class="fa fa-user-circle mr-1"></i>&nbsp;Register/Login</span>
-                                        @else
-                                        <i class="fa fa-user-circle mr-1"></i>&nbsp;Your Account</span>
-                                        @endguest
+                                    @else
+                                    <i class="fa fa-user-circle mr-1"></i>&nbsp;Your Account</span>
+                                @endguest
                                 </span>
                             </a>
                         </li>
@@ -543,19 +600,17 @@
 
                                 <div id="footerLanguage"
                                     class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
-                                        <!-- Nav Link -->
-                                        <a class="nav-link" href="/lang/ne">
-                                            <img class="max-w-3rem mr-1" src="/images/svg/np.svg"
-                                                alt="Nepal Flag">
-                                            Nepali
-                                        </a>
-                                        <a class="nav-link active " href="/lang/en">
-                                            <img class="max-w-3rem mr-1"
-                                                src="/vendor/flag-icon-css/flags/4x3/us.svg"
-                                                alt="United States Flag">
-                                            English
-                                        </a>
-                                        <!-- End Nav Link -->
+                                    <!-- Nav Link -->
+                                    <a class="nav-link" href="/lang/ne">
+                                        <img class="max-w-3rem mr-1" src="/images/svg/np.svg" alt="Nepal Flag">
+                                        नेपाली
+                                    </a>
+                                    <a class="nav-link active " href="/lang/en">
+                                        <img class="max-w-3rem mr-1" src="/vendor/flag-icon-css/flags/4x3/us.svg"
+                                            alt="United States Flag">
+                                        English
+                                    </a>
+                                    <!-- End Nav Link -->
                                 </div>
                             </div>
                         </li>
