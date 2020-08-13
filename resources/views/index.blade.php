@@ -8,7 +8,7 @@
     <!-- Hero Section -->
     <div class="position-relative bg-img-hero"
         style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-bottom-3 vh-100">
+        <div class="container space-top-3 space-bottom-3 vh-100 vh-sm-90">
             <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
                 <div class="col-lg-6">
                     <!-- Info -->

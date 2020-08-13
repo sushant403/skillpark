@@ -6,8 +6,8 @@
     document.title = 'Home - {{ Auth::user()->name }}';
 </script>
 
-<main class="bg-light" role="main" id="content">
-    <div class="container" style="padding-top: 20px;">
+<main class="bg-light pt-4" role="main" id="content">
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-5 col-lg-3 col-xl-3 bg-white">
                 <!-- Filters -->

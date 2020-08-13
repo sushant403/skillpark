@@ -262,7 +262,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -296,7 +296,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -330,7 +330,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -364,7 +364,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -398,7 +398,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -432,7 +432,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -466,7 +466,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -500,7 +500,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
