@@ -5,13 +5,13 @@
 <link rel="stylesheet" href="/css/style.css">
 
 <!-- Body Start -->
-<main class="browse-section bg-light pt-3">
+<main class="browse-section bg-light pt-7">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4">
                 <div class="account_dt_left py-1 bg-white">
                     <div class="job-center-dt py-4 bg-white">
-                        <img src="{{ Auth::user()->avatar }}" alt="">
+                        <img src="{{ Auth::user()->avatar }}" width="100" alt="">
                         <div class="job-urs-dts">
                             <h4 class="py-1">{{ Auth::user()->name }}</h4>
                             <span>{{ Auth::user()->tagline }}</span>
@@ -35,66 +35,6 @@
                             </div>
                         </div>
                         <a href="#" class="skiils_button">Complete Required Skills</a>
-                    </div>
-                    <div class="rlt_section">
-                        <div class="rtl_left">
-                            <h6>Rating</h6>
-                        </div>
-                        <div class="rtl_right">
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rlt_section">
-                        <div class="rtl_left">
-                            <h6>Location</h6>
-                        </div>
-                        <div class="rtl_right">
-                            <span><i class="fas fa-map-marker-alt lc_icon"></i> </span>
-                        </div>
-                        <div class="my_location">
-                            <div id="map"></div>
-                        </div>
-                        <ul class="rlt_section2">
-                            <li>
-                                <div class="rtl_left2">
-                                    <h6>Hourly Rate</h6>
-                                </div>
-                                <div class="rtl_right2">
-                                    <span>Rs. 50000 / hr</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="rtl_left2">
-                                    <h6>Age</h6>
-                                </div>
-                                <div class="rtl_right2">
-                                    <span>28</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="rtl_left2">
-                                    <h6>Experenice</h6>
-                                </div>
-                                <div class="rtl_right2">
-                                    <span>5 Year</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="rtl_left2">
-                                    <h6>Job Done</h6>
-                                </div>
-                                <div class="rtl_right2">
-                                    <span>69</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                     <div class="social_section3 mb80">
                         <div class="social_leftt3">
@@ -186,7 +126,7 @@
                                         <li>
                                             <div class="static_items">
                                                 <div class="static_left">
-                                                    <div class="color_box" style="background-color: #ff4500;"></div>
+                                                    <div class="color_box" style="background-color: #1dc8cc;"></div>
                                                     <h6>Applied Jobs</h6>
                                                 </div>
                                                 <div class="static_right">
@@ -277,19 +217,6 @@
                                                     accumsan mi.</p>
                                             </div>
                                         </li>
-                                        <li>
-                                            <div class="note_item">
-                                                <div class="note_left">
-                                                    <div class="priorty priorty_medium">Medium Priorty</div>
-                                                </div>
-                                                <div class="note_right">
-                                                    <button class="note_btn"><i class="far fa-edit"></i></button>
-                                                    <button class="note_btn"><i class="far fa-trash-alt"></i></button>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
-                                                    accumsan mi.</p>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                                 <div class="add_note">
@@ -315,7 +242,7 @@
                                                 <ul class="view_dt_job">
                                                     <li>
                                                         <div class="vw1254"><i
-                                                                class="fas fa-map-marker-alt"></i>Australia</div>
+                                                                class="fas fa-map-marker-alt"></i>Kathmandu</div>
                                                     </li>
                                                     <li>
                                                         <div class="vw1254"><i class="fas fa-briefcase"></i>Full Time
@@ -323,7 +250,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="vw1254"><i class="far fa-money-bill-alt"></i>Rs.
-                                                            590009 - Manual</div>
+                                                            5000 - Manual</div>
                                                     </li>
                                                     <li>
                                                         <div class="vw1254"><i class="far fa-clock"></i>1 day ago</div>
@@ -340,7 +267,7 @@
                                                 <ul class="view_dt_job">
                                                     <li>
                                                         <div class="vw1254"><i
-                                                                class="fas fa-map-marker-alt"></i>Australia</div>
+                                                                class="fas fa-map-marker-alt"></i>Kathmandu</div>
                                                     </li>
                                                     <li>
                                                         <div class="vw1254"><i class="fas fa-briefcase"></i>Part Time
@@ -390,7 +317,7 @@
                                                 <ul class="view_dt_job">
                                                     <li>
                                                         <div class="vw1254"><i
-                                                                class="fas fa-map-marker-alt"></i>Australia</div>
+                                                                class="fas fa-map-marker-alt"></i>Kathmandu</div>
                                                     </li>
                                                     <li>
                                                         <div class="vw1254"><i class="fas fa-briefcase"></i>Full Time
@@ -420,7 +347,43 @@
         </div>
     </div>
     <!-- Body End -->
-
+    <!-- Add Note Model Start -->
+    <div class="apply_job_form">
+        <div class="modal fade" id="addnoteModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-jb" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Note</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="jb_frm">
+                            <h3>Do Not Forget.</h3>
+                            <div class="form_inputs">
+                                <div class="form-group">
+                                    <label class="input-label" for="FormControlSelect1">Select</label>
+                                    <select id="FormControlSelect1" class="form-control">
+                                        <option>Normal Priority</option>
+                                        <option>High Priority</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="note-input" placeholder="Note"></textarea>
+                                </div>
+                                <div class="apply_btn150">
+                                    <button class="apply_job50" type="button">ADD NOTE</button>
+                                    <button class="apply_job_close" type="button" data-dismiss="modal">CANCEL</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Note Model End -->
 
     <script>
         document.title = '{{ Auth::user()->name }} | Dashboard';

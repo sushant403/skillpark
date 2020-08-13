@@ -34,6 +34,7 @@
 
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/theme.css">
+
 </head>
 
 <body>
@@ -775,6 +776,7 @@
         $(document).on('ready', function () {
       // initialization of header
       var header = new HSHeader($('#header')).init();
+    });
 
       // initialization of mega menu
       var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
@@ -811,7 +813,6 @@ $('.js-inline-video-player').each(function () {
       $('.js-go-to').each(function () {
         var goTo = new HSGoTo($(this)).init();
       });
-    });
     </script>
 
 </body>

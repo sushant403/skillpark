@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
     <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="/vendor/slick-master/slick/slick.css">
     <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
 
 
@@ -539,6 +540,7 @@
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
     <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
     <script src="/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="/vendor/slick-master/slick/slick.js"></script>
     <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
     <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
@@ -550,6 +552,7 @@
     <script src="/js/hs.validation.js"></script>
     <script src="/js/hs.mask.js"></script>
     <script src="/js/hs.slick-carousel.js"></script>
+    <script src="/js/custom.js"></script>
     <script src="/js/hs.select2.js"></script>
 
     <!-- JS Plugins Init. -->

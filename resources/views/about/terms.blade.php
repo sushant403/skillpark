@@ -6,10 +6,10 @@
 <main id="content" role="main">
     <!-- Hero Section -->
     <div class="bg-img-hero" style="background-image: url(../../assets/svg/components/abstract-shapes-12.svg);">
-      <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
+      <div class="container space-top-3 position-relative z-index-2">
         <div class="w-md-80 w-lg-60 text-center mx-md-auto">
           <h1>Skillpark Inc. Terms &amp; Conditions</h1>
-          <p>Effective date: 1 January 2019</p>
+          <p>Effective date: 1 January 2020</p>
         </div>
       </div>
     </div>
