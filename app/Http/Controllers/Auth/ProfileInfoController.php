@@ -36,9 +36,9 @@ class ProfileInfoController extends Controller
 
         $user->syncRoles($role);
 
-        if($user->hasRole('client')){
-            return redirect()-> route('client');
+        if($user->hasRole('freelancer')){
+            return redirect()-> route('freelancer');
         }
-            return redirect()-> route('home');
+            return redirect()-> route('client');
     }
 }

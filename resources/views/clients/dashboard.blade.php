@@ -1,17 +1,15 @@
-@extends('layouts.freelancers.freelancermaster')
+@extends('layouts.clients.clientmaster')
 
 @section('content')
 
-<link rel="stylesheet" href="/css/style.css">
-
 <!-- Body Start -->
-<main class="browse-section bg-light pt-7">
+<main class="browse-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4">
                 <div class="account_dt_left py-1 bg-white">
                     <div class="job-center-dt py-4 bg-white">
-                        <img src="{{ Auth::user()->avatar }}" width="100" alt="">
+                        <img src="/{{ Auth::user()->avatar }}" width="100" alt="">
                         <div class="job-urs-dts">
                             <h4 class="py-1">{{ Auth::user()->name }}</h4>
                             <span>{{ Auth::user()->tagline }}</span>
@@ -56,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-md-8 mainpage">
+            <div class="col-lg-9 col-md-8 pt-sm-5 mainpage">
                 <div class="account_tabs">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">

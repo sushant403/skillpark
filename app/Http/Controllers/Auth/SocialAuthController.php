@@ -35,13 +35,12 @@ class SocialAuthController extends Controller
      */
     public function show()
     {
-        $user = \App\User::find(Auth::user()->id);
+        $user = User::find(Auth::user()->id);
     
             if($user->hasRole('freelancer')){
-                return route('home');
+                return route('freelancer');
             }
                 return route('client');
-        
     }
 
     /**
@@ -91,10 +90,10 @@ class SocialAuthController extends Controller
      */
     protected function sendSuccessResponse()
     {
-        $user = \App\User::find(Auth::user()->id);
+        $user = User::find(Auth::user()->id);
     
             if($user->hasRole('freelancer')){
-                return redirect()-> route('home');
+                return redirect()-> route('freelancer');
             }
                 return redirect()-> route('client');
     }

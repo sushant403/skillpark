@@ -36,6 +36,7 @@
 
 
   <!-- CSS Skillpark Template -->
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/theme.css">
 </head>
 
@@ -155,7 +156,7 @@
                    }'>
                   <span class="position-relative">
                     <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                    <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35" alt="Profile">
+                    <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}" width="35" alt="">
                   </span>
                 </a>
 
@@ -167,7 +168,7 @@
                     <div class="card-header p-4">
                       <a class="media align-items-center" href="settings">
                         <div class="avatar mr-3">
-                          <img class="avatar-img" src="{{ Auth::user()->avatar }}" alt="Image Description">
+                          <img class="avatar-img" src="{{ Auth::user()->avatar }}" alt="">
                         </div>
                         <div class="media-body">
                           <span class="d-block font-weight-bold">{{ Auth::user()->name }} </span>
@@ -179,7 +180,7 @@
 
                     <!-- Body -->
                     <div class="card-body py-3">
-                      <a class="dropdown-item px-0" href="dashboard">
+                      <a class="dropdown-item px-0" href="fp/dashboard">
                         <span class="dropdown-item-icon">
                           <i class="fa fa-dashcube"></i>
                         </span>

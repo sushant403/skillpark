@@ -8,7 +8,7 @@
     <!-- Hero Section -->
     <div class="position-relative bg-img-hero"
         style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-bottom-3 vh-lg-100">
+        <div class="container space-top-3 space-bottom-3 vh-100">
             <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
                 <div class="col-lg-6">
                     <!-- Info -->
@@ -264,7 +264,7 @@
     </div>
     <!-- End CTA Section -->
 
-    <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-lg-3">
+    <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-3">
         <h3 class="text-center mb-6">{{ __('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3 w-50">

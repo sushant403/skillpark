@@ -39,7 +39,7 @@ class HomeController extends Controller
 
     public function freelancerSearch()
     {
-        return redirect()->route('home');
+        return redirect()->route('freelancer');
     }
 
     public function client()

@@ -12,7 +12,7 @@
             <div class="col-12 col-md-5 col-lg-3 col-xl-3 bg-white">
                 <!-- Filters -->
                 <div class="border-bottom pb-4 mb-4 pt-4">
-                    <form enctype="multipart/form-data" method="POST" action="{{ route('home') }}">
+                    <form enctype="multipart/form-data" method="POST" action="{{ route('freelancer') }}">
                         @csrf
                         <h4>Budget</h4>
                         <!-- radioes -->

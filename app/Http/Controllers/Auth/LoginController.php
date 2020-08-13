@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -36,10 +34,10 @@ class LoginController extends Controller
 
     public function redirectTo(){
 
-        $user = \App\User::find(Auth::user()->id);
+        $user = User::find(Auth::user()->id);
 
         if($user->hasRole('freelancer')){
-            return route('home');
+            return route('freelancer');
         }
             return route('client');
     }

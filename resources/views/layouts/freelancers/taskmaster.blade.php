@@ -286,7 +286,7 @@
                                 </li>
                                 @else
                                 <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary" href="{{ route('home') }}">
+                                    <a class="btn btn-sm btn-primary" href="{{ route('freelancer') }}">
                                         Dashboard
                                     </a>
                                 </li>

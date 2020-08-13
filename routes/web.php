@@ -37,9 +37,11 @@ Route::middleware(['verified','auth'])->group(function () {
     //middleware protected roles
 
     //freelancer only
-    Route::group(['middleware' => ['role:freelancer']], function () {
-        Route::get('/home', 'HomeController@freelancer')->name('home'); //user feeds
-        Route::post('/home', 'HomeController@freelancerSearch')->name('home'); //user feeds
+    Route::group(['middleware' => ['role:freelancer'], 'prefix' => 'fp'], function () {
+        Route::get('/home', 'HomeController@freelancer')->name('freelancer'); //user feeds
+        Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
+
+        Route::get('/dashboard', 'ProfileController@freelancerDashboard');
 
         //bidding proposal
         Route::get('/post/proposal', 'PostController@showProposalForm');
@@ -47,9 +49,11 @@ Route::middleware(['verified','auth'])->group(function () {
     });
 
     //client only
-    Route::group(['middleware' => ['role:client']], function () {
-        Route::get('/client', 'HomeController@client')->name('client'); //client feeds
-        Route::post('/client', 'HomeController@clientSearch')->name('client'); //client feeds
+    Route::group(['middleware' => ['role:client'], 'prefix' => 'cp'], function () {
+        Route::get('/home', 'HomeController@client')->name('client'); //client feeds
+        Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
+
+        Route::get('/dashboard', 'ProfileController@clientDashboard');
         
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');
@@ -60,15 +64,14 @@ Route::middleware(['verified','auth'])->group(function () {
     });
 
     //user-accounts routes
-    Route::get('/dashboard', 'ProfileController@dashboard');
 
     Route::get('/settings', 'ProfileController@editProfile');
     Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
+
     Route::get('/auth', 'ProfileController@auth');
 
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
-
 
 });
 

@@ -23,9 +23,14 @@ class ProfileController extends Controller
         $this->middleware('verified');
     }
 
-    public function dashboard()
+    public function freelancerDashboard()
     {
-        return view('userprofile.dashboard');
+        return view('freelancers.dashboard');
+    }
+
+    public function clientDashboard()
+    {
+        return view('clients.dashboard');
     }
 
     public function editProfile()
@@ -42,11 +47,6 @@ class ProfileController extends Controller
     public function auth()
     {
         return view('userprofile.editprofile.auth');
-    }
-
-    public function userDetails()
-    {
-        return view('clients.freelancer-profile');
     }
 
     public function serviceList()
