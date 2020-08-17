@@ -17,6 +17,8 @@ Route::get('/contact', function () {return view('about.contact');});
 
 Route::get('/policy', function () {return view('about.policy');});
 
+Route::get('/faq', function () {return view('about.faq');});
+
 Route::get('/terms', function () {return view('about.terms');});
 
 Route::get('/coming-soon', function () {return view('about.coming-soon');});
