@@ -44,18 +44,32 @@ Route::middleware(['verified','auth'])->group(function () {
         Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
 
         Route::get('/dashboard', 'ProfileController@freelancerDashboard');
+    
+        //user-accounts routes
+        Route::get('/settings', 'ProfileController@editProfile');
+        Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
+
+        Route::get('/auth', 'ProfileController@auth');
 
         //bidding proposal
         Route::get('/post/proposal', 'PostController@showProposalForm');
         Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
     });
+    
+    //============================Roles Middleware==================================
 
     //client only
     Route::group(['middleware' => ['role:client'], 'prefix' => 'cp'], function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
-        Route::get('/dashboard', 'ProfileController@clientDashboard');
+        Route::get('/dashboard', 'ProfileController@clientDashboard');    
+        
+        //user-accounts routes
+        Route::get('/settings', 'ProfileController@editProfile');
+        Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
+
+        Route::get('/auth', 'ProfileController@auth');
         
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');
@@ -64,13 +78,6 @@ Route::middleware(['verified','auth'])->group(function () {
         Route::get('/post/project', 'PostController@showProjectForm');
         Route::post('/post/project', 'PostController@postProject')->name('post-project');
     });
-
-    //user-accounts routes
-
-    Route::get('/settings', 'ProfileController@editProfile');
-    Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
-
-    Route::get('/auth', 'ProfileController@auth');
 
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
