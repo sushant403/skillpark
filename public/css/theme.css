@@ -21525,9 +21525,9 @@ label.btn {
 
 .slick-arrow-centered-y {
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    transform: translate(0, -50%); */
 }
 
 /*------------------------------------
@@ -24674,7 +24674,7 @@ a:hover .text-hover-primary {
 }
 
 .slick {
-    background: url(../svg/components/circle-preloader.svg) no-repeat 50% 50%;
+    background: url(/images/svg/components/circle-preloader.svg) no-repeat 50% 50%;
 }
 
 .slick .js-next,

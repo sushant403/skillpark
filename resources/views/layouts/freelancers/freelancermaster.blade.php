@@ -130,14 +130,15 @@
                 </a>
 
                 <div id="searchClassic" class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0">
-                  <form class="input-group input-group-sm input-group-merge">
-                    <input type="text" class="form-control" style="background: #f7faff" placeholder="Search for Jobs"
-                      aria-label="Search for Jobs">
-                    <div class="input-group-append">
-                      <div class="input-group-text">
-                        <i class="fas fa-search"></i>
-                      </div>
+                  <form class="js-validate d-flex align-items-center">
+                    <label class="sr-only" for="signupSrEmail">Search for apps</label>
+                    <div class="d-inline-block w-75 mr-2">
+                      <input type="email" class="form-control" name="email" id="signupSrEmail"
+                        placeholder="Search for apps" aria-label="Search for apps">
                     </div>
+                    <button type="submit" class="btn btn-primary">
+                      <span class="fas fa-search"></span>
+                    </button>
                   </form>
                 </div>
               </div>
@@ -272,10 +273,8 @@
                         <a class="dropdown-item" href="#">Web Development</a>
                         <a class="dropdown-item" href="#">Mobile apps</a>
                         <a class="dropdown-item" href="#">Programming languages</a>
-                        <a class="dropdown-item" href="#">Game development</a>
                         <a class="dropdown-item" href="#">Databases</a>
                         <a class="dropdown-item" href="#">Software testing</a>
-                        <a class="dropdown-item" href="#">Other</a>
                       </div>
                     </div>
                     <!-- End Development -->
@@ -300,7 +299,6 @@
                         <a class="dropdown-item" href="#">Strategy</a>
                         <a class="dropdown-item" href="#">Project management</a>
                         <a class="dropdown-item" href="#">Data & Analytics</a>
-                        <a class="dropdown-item" href="#">Other</a>
                       </div>
                     </div>
                     <!-- Business -->
@@ -319,11 +317,10 @@
                       <div id="navSubmenuCoursesITSoftware" class="hs-sub-menu dropdown-menu"
                         aria-labelledby="navLinkCoursesITSoftware" style="min-width: 270px;">
                         <a class="dropdown-item" href="#">All IT & Software</a>
-                        <a class="dropdown-item" href="#">IT Sertification</a>
+                        <a class="dropdown-item" href="#">IT Certification</a>
                         <a class="dropdown-item" href="#">Network & security</a>
                         <a class="dropdown-item" href="#">Hardware</a>
                         <a class="dropdown-item" href="#">Operating systems</a>
-                        <a class="dropdown-item" href="#">Other</a>
                       </div>
                     </div>
                     <!-- IT & Software -->
@@ -345,14 +342,9 @@
                         <a class="dropdown-item" href="#">Web design</a>
                         <a class="dropdown-item" href="#">Graphic design</a>
                         <a class="dropdown-item" href="#">Design tools</a>
-                        <a class="dropdown-item" href="#">User experience</a>
                         <a class="dropdown-item" href="#">Game design</a>
                         <a class="dropdown-item" href="#">Design thinking</a>
                         <a class="dropdown-item" href="#">3D & animation</a>
-                        <a class="dropdown-item" href="#">Fashion</a>
-                        <a class="dropdown-item" href="#">Architectural design</a>
-                        <a class="dropdown-item" href="#">Interior design</a>
-                        <a class="dropdown-item" href="#">Other</a>
                       </div>
                     </div>
                     <!-- Design -->
@@ -368,20 +360,21 @@
                 <!-- End Categories -->
 
                 <li class="navbar-nav-item">
-                  <a href="saved-jobs" class="nav-link"><i class="fa fa-bookmark font-size-1 mr-1"></i> Saved Jobs</a>
+                  <a href="saved-jobs" class="nav-link px-0 px-md-3"><i class="fa fa-bookmark font-size-1 mr-1"></i> Saved Jobs</a>
                 </li>
 
                 <!-- Search Form -->
                 <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
-                  <form class="input-group input-group-sm input-group-merge" style="width: 55%;">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fa fa-search"></i>
-                      </div>
+                  <form class="d-flex align-items-center">
+                    <label class="sr-only" for="signupSEmail">Search for apps</label>
+                    <div class="d-inline-block w-65 mr-2">
+                      <input type="text" class="form-control" name="search" id="signupSEmail"
+                        placeholder="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole"
+                        aria-label="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole">
                     </div>
-                    <input type="text" class="form-control" style="background:#f7faff"
-                      placeholder="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole"
-                      aria-label="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole">
+                    <button type="submit" class="btn btn-primary">
+                      <span class="fas fa-search"></span>
+                    </button>
                   </form>
                 </li>
                 <!-- End Search Form -->
@@ -408,7 +401,7 @@
   <!-- ========== FOOTER ========== -->
   <footer class="border-top">
     <div class="container">
-      <div class="row justify-content-lg-between space-top-2 space-bottom-lg-2">
+      <div class="row justify-content-lg-between">
         <div class="col-lg-3 mb-5">
           <div class="d-flex align-items-start flex-column h-100">
             <a class="w-100 mb-3 mb-lg-auto" href="" aria-label="Skillpark">
@@ -593,6 +586,16 @@
       var header = new HSHeader($('#header')).init();
     });
 
+    // initialization of select2
+    $('.js-custom-select').each(function () {
+      var select2 = $.HSCore.components.HSSelect2.init($(this));
+        $('.js-custom-select-multiple').select2({
+        placeholder: 'Select options',
+        width: '100%',
+      maximumSelectionLength: 3,
+      });
+    });
+
       // initialization of HSMegaMenu component
       var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
 
@@ -630,16 +633,6 @@
       // initialization of file attach
       $('.js-file-attach').each(function () {
         var customFile = new HSFileAttach($(this)).init();
-      });
-
-      // initialization of select2
-      $('.js-custom-select').each(function () {
-        var select2 = $.HSCore.components.HSSelect2.init($(this));
-          $('.js-custom-select-multiple').select2({
-          placeholder: 'Select options',
-          width: '100%',
-         maximumSelectionLength: 3,
-        });
       });
 
       // initialization of go to

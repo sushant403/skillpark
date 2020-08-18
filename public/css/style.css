@@ -1968,7 +1968,7 @@ header {
 .slick-arrow:after {
     content: "";
     display: inline-block;
-    background: url(../images/arrows.svg) no-repeat;
+    /* background: url(/images/svg/components/arrows.svg) no-repeat; */
     background-position-x: 0%;
     background-position-y: 0%;
     background-size: auto;

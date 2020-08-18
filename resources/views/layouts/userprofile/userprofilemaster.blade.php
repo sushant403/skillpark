@@ -85,7 +85,7 @@
                             </a>
 
                             <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                                <a class="dropdown-item" href="home">Find Jobs</a>
+                                <a class="dropdown-item" href="@hasrole('freelancer') fp/home @else cp/home @endhasrole">Home</a>
                                 <a class="dropdown-item" href="faq">Help</a>
                                 <a class="dropdown-item" href="report">Report</a>
                             </div>
@@ -94,7 +94,7 @@
 
                         <!-- Links -->
                         <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-                            <a class="nav-link" href="home">Find Jobs</a>
+                            <a class="nav-link" href="@hasrole('freelancer') fp/home @else cp/home @endhasrole">Home</a>
                             <a class="nav-link" href="faq">Help</a>
                             <a class="nav-link" href="report">Report</a>
                         </div>
@@ -109,7 +109,7 @@
                 <nav class="js-mega-menu navbar navbar-expand-lg">
                     <div class="navbar-nav-wrap">
                         <!-- Logo -->
-                        <a class="navbar-brand navbar-nav-wrap-brand" href="#" aria-label="Skillpark">
+                        <a class="navbar-brand navbar-nav-wrap-brand" href="/cp/home" aria-label="Skillpark">
                             <img src="/images/logo/biglogo.svg" alt="Logo">
                         </a>
                         <!-- End Logo -->

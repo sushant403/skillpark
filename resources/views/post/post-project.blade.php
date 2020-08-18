@@ -55,7 +55,7 @@
                         <a class="card text-center h-100 transition-3d-hover" href="#">
                             <div class="card-body p-lg-5">
                                 <figure class="max-w-8rem w-100 mx-auto mb-4">
-                                    <img class="img-fluid" src="/images/svg/icons/icon-44.svg" alt="SVG">
+                                    <img class="img-fluid" src="/images/svg/icons/icon-31.svg" alt="SVG">
                                 </figure>
                                 <h3 class="h4">Simplified Payments</h3>
                                 <p class="text-body mb-0">Your money is safe with us, until the project is completed.
@@ -107,9 +107,9 @@
                     <!-- Input -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Description about your project</label>
-                        <textarea class="form-control" rows="5" name="description"
+                        <textarea class="form-control" rows="5" minlength="50" name="description"
                             placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..."
-                            required data-msg="Please enter the description of your project"></textarea>
+                            required data-msg="Please describe your project in at least 50 characters"></textarea>
                     </div>
                     <!-- End Input -->
 

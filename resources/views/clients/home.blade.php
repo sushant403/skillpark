@@ -5,8 +5,6 @@
     document.title = 'Home - {{ Auth::user()->name }}';
 </script>
 
-</style>
-
 <main class="py-2" role="main" id="content">
     <div class="container">
         <div class="row">
@@ -247,6 +245,75 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row pt-4">
+                    <div class="col-lg-4 col-md-7 col-sm-10 mx-auto pb-sm-4 pb-lg-0">
+                        <div class="container ">
+                            <div class="row">
+                                <article class="card h-100">
+                                    <div class="w-sm-65 p-4">
+                                        <h3>Explore the Freelancers</h3>
+                                        <div class="mb-4">
+                                            <p>Start your business on various platforms with just a post.</p>
+                                        </div>
+                                        <a class="btn btn-sm btn-soft-primary btn-pill transition-3d-hover"
+                                            href="post/project">Post Your Project <i class="fas fa-angle-right ml-1"></i></a>
+                                    </div>
+
+                                    <div class="position-absolute bottom-0 right-0 w-sm-35 max-w-27rem">
+                                        <img class="img-fluid" src="/images/svg/illustrations/support-man.svg"
+                                            alt="Image Description">
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        <div class="js-slick-carousel slick slick-equal-height slick-gutters-1" style="height: 255px"
+                            data-hs-slick-carousel-options='{
+                                        "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4\"></span>",
+                                        "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4\"></span>",
+                                        "adaptiveHeight": true,
+                                        "autoplay": true,
+                                        "autoplaySpeed": 5000,
+                                        "infinite": true,
+                                        "responsive": [{
+                                            "breakpoint": 992,
+                                            "settings": {
+                                                "slidesToShow": 2
+                                            }
+                                            }, {
+                                            "breakpoint": 768,
+                                            "settings": {
+                                            "slidesToShow": 1
+                                            }
+                                        }]
+                                        }'>
+                            <div class="js-slide bg-img-hero-center"
+                                style="background-image: url('/images/banner/job2.jpg');">
+                                <div class="w-100 text-center space-1">
+                                    <h4 class="text-white"></h4>
+                                </div>
+                            </div>
+                            <div class="js-slide bg-img-hero-center"
+                                style="background-image: url('/images/banner/job1.jpg');">
+                                <div class="w-100 text-center space-1">
+                                    <h4 class="text-white"></h4>
+                                    <p class="text-white mb-0"></p>
+                                </div>
+                            </div>
+                            <div class="js-slide bg-img-hero-center"
+                                style="background-image: url('/images/banner/job3.jpg');">
+                                <div class="w-100 text-center space-1">
+                                    <h4 class="text-white"></h4>
+                                    <p class="text-white mb-0"></p>
+                                    <p class="text-white mb-0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="main-page best-selling">
                     <div class="view_slider recommended pt-5">
                         <div class="container">
@@ -262,7 +329,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -296,7 +363,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -330,7 +397,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -364,7 +431,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -398,7 +465,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -432,7 +499,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -466,7 +533,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>
@@ -500,7 +567,7 @@
                                         <div class="inner-wrapper">
                                             <div class="d-flex align-items-center">
                                                 <span class="seller-image">
-                                                    <img class="img-fluid" src="/{{ Auth::user()->avatar }}" alt='' />
+                                                    <img class="img-fluid" src="{{ Auth::user()->avatar }}" alt='' />
                                                 </span>
                                                 <span class="seller-name">
                                                     <a href="#">{{ Auth::user()->name }}</a>

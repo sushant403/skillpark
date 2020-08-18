@@ -6,7 +6,7 @@
     document.title = 'Home - {{ Auth::user()->name }}';
 </script>
 
-<main class="bg-light pt-4" role="main" id="content">
+<main class="bg-light pt-5" role="main" id="content">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-5 col-lg-3 col-xl-3 bg-white">
@@ -349,96 +349,57 @@
                  "stickyOffsetBottom": 20
                }'>
                     <div class="mb-7">
-                        <div class="mb-3">
-                            <h3>Featured Jobs</h3>
-                        </div>
 
-                        <div class="sidebox sidebox--desk">
-                            <div class="sidebox__content">
-                                <div class="sidebox__job">
-                                    <div class="sidebox__job-title">
-                                        <a href="#">PSD to HTML</a>
-                                        <span>Rs. 200 - Rs. 250</span>
-                                    </div>
-                                    <div class="post__wrap">
-                                        <div class="post__company">
-                                            <i class="fa fa-briefcase fa-sm"></i>
-                                            <span>Front-end Developer</span>
-                                        </div>
-                                    </div>
+                        <!-- App Info -->
+                        <div class="mr-lg-2">
+                            <div class="mb-3">
+                                <div class="text-center mx-auto mb-3">
+                                    <img class="img-fluid" src="/images/svg/work.svg" alt="" width="130">
                                 </div>
 
-                                <div class="sidebox__job">
-                                    <div class="sidebox__job-title">
-                                        <a href="#">Mobile App</a>
-                                        <span>Rs. 7000</span>
-                                    </div>
-                                    <div class="post__wrap">
-                                        <div class="post__company">
-                                            <i class="fa fa-briefcase fa-sm"></i>
-                                            <span>Java Developer</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sidebox__job">
-                                    <div class="sidebox__job-title">
-                                        <a href="#">Landing page</a>
-                                        <span>Rs. 400</span>
-                                    </div>
-                                    <div class="post__wrap">
-                                        <div class="post__company">
-                                            <i class="fa fa-briefcase fa-sm"></i>
-                                            <span>UX/UI Designer</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sidebox__job">
-                                    <div class="sidebox__job-title">
-                                        <a href="#">Site design</a>
-                                        <span>Rs. 4000 - Rs. 5000</span>
-                                    </div>
-                                    <div class="post__wrap">
-                                        <div class="post__company">
-                                            <i class="fa fa-briefcase fa-sm"></i>
-                                            <span>UX/UI Designer</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sidebox__job">
-                                    <div class="sidebox__job-title">
-                                        <a href="#">WP Plugin</a>
-                                        <span>Rs. 3800</span>
-                                    </div>
-                                    <div class="post__wrap">
-                                        <div class="post__company">
-                                            <i class="fa fa-briefcase fa-sm"></i>
-                                            <span>Wordpress developer</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a class="btn btn-sm btn-block btn-primary transition-3d-hover" href="#">My Bidding</a>
                             </div>
-                            <a href="#" class="sidebox__more">View more</a>
-                        </div>
-                        <!-- end sidebox -->
-                    </div>
 
-                    <div class="mb-7">
-                        <div class="mb-3">
-                            <h3>Popular</h3>
-                        </div>
+                            <div class="mb-md-3">
+                                <h3 class="h5">Categories</h3>
 
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Business</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Adventure</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Community</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Announcements</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Tutorials</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Resources</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Classic</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Photography</a>
-                        <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Interview</a>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Featured</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Flutter</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Django</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">C++</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Laravel</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Logo Design</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Analysis</a></span>
+                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
+                                        href="#">Admin</a></span>
+                            </div>
+
+                            <div class="d-none d-md-block mb-3">
+                                <h3 class="h5">Quick links</h3>
+
+                                <ul class="list-unstyled font-size-1">
+                                    <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i>
+                                            Support</a></li>
+                                    <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i>
+                                            Documentation</a></li>
+                                    <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i> Privacy
+                                            Policy</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="d-none d-md-block">
+                                <a class="small text-body" href="#"><i class="far fa-flag mr-1"></i> Report abuse</a>
+                            </div>
+                        </div>
+                        <!-- End App Info -->
+
                     </div>
                 </div>
             </div>

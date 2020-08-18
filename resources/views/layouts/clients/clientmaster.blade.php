@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
     <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="/vendor/slick-master/slick/slick.css">
     <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
 
 
@@ -56,7 +55,8 @@
                 <nav class="js-mega-menu navbar navbar-expand-lg">
                     <div class="navbar-nav-wrap">
                         <!-- Logo -->
-                        <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('client') }}" aria-label="Skillpark">
+                        <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('client') }}"
+                            aria-label="Skillpark">
                             <img src="/images/logo/biglogo.svg" alt="Logo">
                         </a>
                         <!-- End Logo -->
@@ -343,7 +343,7 @@
                                 <!-- End Search Form -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="/post/project" class="nav-link py-3"><button class="btn btn-primary"><i
+                                    <a href="{{ route('post-project') }}" class="nav-link py-3"><button class="btn btn-primary"><i
                                                 class="fa fa-briefcase font-size-1 mr-1"></i> Post a
                                             Project</button></a>
                                 </li>
@@ -368,15 +368,15 @@
     @yield('content')
 
     <!-- ========== FOOTER ========== -->
-    <footer class="border-top">
+    <footer class="border-top text-center">
         <div class="container">
-            <div class="row justify-content-lg-between space-top-2 space-bottom-lg-2">
+            <div class="row justify-content-lg-between">
                 <div class="col-lg-3 mb-5">
-                    <div class="d-flex align-items-start flex-column h-100">
+                    <div class="d-flex align-items-start justify-content-center flex-column h-100">
                         <a class="w-100 mb-3 mb-lg-auto" href="" aria-label="Skillpark">
                             <img class="brand" src="/images/logo/biglogo.svg" alt="Logo">
                         </a>
-                        <p class="small text-muted mb-0">&copy; Skillpark Inc. 2020.</p>
+                        <p class="small text-muted mb-0 mx-auto">&copy; Skillpark Inc. 2020.</p>
                     </div>
                 </div>
 
@@ -413,16 +413,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../help-desk/index">
                                 <span class="media align-items-center">
-                                    <i class="fas fa-info-circle mr-2"></i>
-                                    <span class="media-body">Help</span>
+                                    <span class="media-body"><i class="fas fa-info-circle mr-2"></i>Help</span>
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <span class="media align-items-center">
-                                    <i class="fas fa-user-circle mr-2"></i>
-                                    <span class="media-body">Your Account</span>
+                                    <span class="media-body"><i class="fas fa-user-circle mr-2"></i>Your Account</span>
                                 </span>
                             </a>
                         </li>
@@ -510,7 +508,7 @@
 
                 <div class="col-md-8 text-md-right">
                     <!-- Links -->
-                    <ul class="nav nav-sm justify-content-md-end">
+                    <ul class="nav nav-sm justify-content-sm-center">
                         <li class="nav-item">
                             <a class="nav-link pl-0" href="../pages/privacy">Privacy &amp; policy</a>
                         </li>
@@ -540,11 +538,9 @@
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
     <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
     <script src="/vendor/slick-carousel/slick/slick.js"></script>
-    <script src="/vendor/slick-master/slick/slick.js"></script>
     <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
     <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
     <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
 
     <!-- JS Skillpark -->
@@ -552,7 +548,6 @@
     <script src="/js/hs.validation.js"></script>
     <script src="/js/hs.mask.js"></script>
     <script src="/js/hs.slick-carousel.js"></script>
-    <script src="/js/custom.js"></script>
     <script src="/js/hs.select2.js"></script>
 
     <!-- JS Plugins Init. -->
@@ -560,7 +555,7 @@
         $(document).on('ready', function () {
       // initialization of header
       var header = new HSHeader($('#header')).init();
-    });
+     });
 
       // initialization of HSMegaMenu component
       var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
@@ -578,13 +573,20 @@
           }
         });
       });
+
+        $(document).on('ready', function () {
+        // initialization of slick carousel
+        $('.js-slick-carousel').each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+        });
+        });
       
-      $(document).on('ready', function () {
-    // initialization of sticky blocks
-    $('.js-sticky-block').each(function () {
-      var stickyBlock = new HSStickyBlock($(this)).init();
-     });
-    });
+        $(document).on('ready', function () {
+        // initialization of sticky blocks
+        $('.js-sticky-block').each(function () {
+        var stickyBlock = new HSStickyBlock($(this)).init();
+        });
+        });
 
       // initialization of slick carousel
       $('.js-slick-carousel').each(function() {
