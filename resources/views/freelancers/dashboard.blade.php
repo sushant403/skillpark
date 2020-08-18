@@ -13,7 +13,7 @@
                         <div class="job-urs-dts">
                             <h4 class="py-1">{{ Auth::user()->name }}</h4>
                             <span>{{ Auth::user()->tagline }}</span>
-                            <div class="avialable pt-3">Edit Profile<a href="settings"><i class="far fa-edit"></i></a>
+                            <div class="avialable pt-3">Edit Profile<a href={{ url('settings') }}><i class="far fa-edit"></i></a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                             <a class="nav-link" href="jobs">Jobs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="settings"><i class="fa fa-gear"></i></a>
+                            <a class="nav-link" href={{ url('settings') }}><i class="fa fa-gear"></i></a>
                         </li>
                     </ul>
                 </div>

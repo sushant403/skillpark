@@ -1,14 +1,8 @@
 @extends('layouts.master')
 @section('content')
 <!--FAQ-->
-<section class="position-relative bg-secondary py-5 py-md-6 py-lg-7" style="margin-top: -200px;">
-    <div style="height: 200px;"></div>
-    <div class="cs-shape cs-shape-top cs-shape-curve bg-body">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
-            <path fill="currentColor" d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z">
-            </path>
-        </svg>
-    </div>
+<section class="position-relative">
+    <div style="height: 150px;"></div>
     <div class="container mt-n4 py-3 py-md-2">
         <h2 class="text-center mb-5">Questions &amp; Answers</h2>
         <div class="row justify-content-center">

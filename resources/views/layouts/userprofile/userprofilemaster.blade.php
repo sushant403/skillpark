@@ -166,7 +166,7 @@
                                     <div class="card">
                                         <!-- Header -->
                                         <div class="card-header p-4">
-                                            <a class="media align-items-center" href="settings">
+                                            <a class="media align-items-center" href={{ url('settings') }}>
                                                 <div class="avatar mr-3">
                                                     <img class="avatar-img" src="default.png" alt="Image Description">
                                                 </div>
@@ -193,7 +193,7 @@
                                                 </span>
                                                 Messages
                                             </a>
-                                            <a class="dropdown-item px-0" href="settings">
+                                            <a class="dropdown-item px-0" href={{ url('settings') }}>
                                                 <span class="dropdown-item-icon">
                                                     <i class="fa fa-gear"></i>
                                                 </span>
@@ -345,14 +345,14 @@
                                     <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
                                         <li class="nav-item">
                                             <a class="{{ Request::is('settings') ? 'nav-link-active' : 'nav-link' }}"
-                                                href="settings">
+                                                href={{ url('settings') }}>
                                                 <i class="fas fa-id-card nav-icon"></i>
                                                 Personal info
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="{{ Request::is('auth') ? 'nav-link-active' : 'nav-link' }}"
-                                                href="auth">
+                                                href={{ url('auth') }}>
                                                 <i class="fas fa-shield-alt nav-icon"></i>
                                                 Login &amp; security
                                             </a>

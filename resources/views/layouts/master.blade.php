@@ -325,7 +325,7 @@
                                             <div class="card">
                                                 <!-- Header -->
                                                 <div class="card-header p-4">
-                                                    <a class="media align-items-center" href="settings">
+                                                    <a class="media align-items-center" href={{ url('settings') }}>
                                                         <div class="avatar mr-3">
                                                             <img class="avatar-img" src="{{ Auth::user()->avatar }}"
                                                                 alt="Image Description">
@@ -361,7 +361,7 @@
                                                         </span>
                                                         Messages
                                                     </a>
-                                                    <a class="dropdown-item px-0" href="settings">
+                                                    <a class="dropdown-item px-0" href={{ url('settings') }}>
                                                         <span class="dropdown-item-icon">
                                                             <i class="fa fa-gear"></i>
                                                         </span>

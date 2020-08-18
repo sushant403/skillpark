@@ -44,12 +44,6 @@ Route::middleware(['verified','auth'])->group(function () {
         Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
 
         Route::get('/dashboard', 'ProfileController@freelancerDashboard');
-    
-        //user-accounts routes
-        Route::get('/settings', 'ProfileController@editProfile');
-        Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
-
-        Route::get('/auth', 'ProfileController@auth');
 
         //bidding proposal
         Route::get('/post/proposal', 'PostController@showProposalForm');
@@ -65,12 +59,6 @@ Route::middleware(['verified','auth'])->group(function () {
 
         Route::get('/dashboard', 'ProfileController@clientDashboard');    
         
-        //user-accounts routes
-        Route::get('/settings', 'ProfileController@editProfile');
-        Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
-
-        Route::get('/auth', 'ProfileController@auth');
-        
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');
 
@@ -81,6 +69,11 @@ Route::middleware(['verified','auth'])->group(function () {
 
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
+
+    //user-accounts routes
+    Route::get('/settings', 'ProfileController@editProfile');
+    Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
+    Route::get('/auth', 'ProfileController@auth');
 
 });
 
