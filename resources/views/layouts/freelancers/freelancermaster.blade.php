@@ -157,7 +157,7 @@
                    }'>
                   <span class="position-relative">
                     <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                    <img class="u-sidebar--account__toggle-img" src="/{{ Auth::user()->avatar }}" width="35" alt="">
+                    <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}" width="35" alt="">
                   </span>
                 </a>
 
@@ -169,7 +169,7 @@
                     <div class="card-header p-4">
                       <a class="media align-items-center" href={{ url('settings') }}>
                         <div class="avatar mr-3">
-                          <img class="avatar-img" src="/{{ Auth::user()->avatar }}" alt="">
+                          <img class="avatar-img" src="{{ Auth::user()->avatar }}" alt="">
                         </div>
                         <div class="media-body">
                           <span class="d-block font-weight-bold">{{ Auth::user()->name }} </span>

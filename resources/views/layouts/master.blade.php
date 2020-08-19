@@ -85,8 +85,8 @@
                                   "maxWidth": "900px"
                                 }
                               }'>
-                                    <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">About</a>
+                                    <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions') }}</a>
 
                                     <!-- About - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
@@ -390,7 +390,7 @@
                                             <span class="position-relative">
                                                 <span
                                                     class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                                                <img class="u-sidebar--account__toggle-img" src="/images/spacer.png"
+                                                <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}"
                                                     width="35" alt="Profile">
                                             </span>
                                         </a>
@@ -800,16 +800,16 @@
 
                                     <div class="text-center"><a
                                             class="social-btn sb-facebook sb-outline sb-lg mx-1 mb-2"
-                                            href="http://skillpark.herokuapp.com/oauth/facebook"><i
+                                            href="{{ route('social.oauth', 'facebook') }}"><i
                                                 class="fab fa-facebook" aria-hidden="true"></i></a>
                                         <a class="social-btn sb-twitter sb-outline sb-lg mx-1 mb-2"
-                                            href="http://skillpark.herokuapp.com/oauth/twitter"><i
+                                            href="{{ route('social.oauth', 'twitter') }}"><i
                                                 class="fab fa-twitter" aria-hidden="true"></i></a>
                                         <a class="social-btn sb-github sb-outline sb-lg mx-1 mb-2"
-                                            href="http://skillpark.herokuapp.com/oauth/github"><i class="fab fa-github"
+                                            href="{{ route('social.oauth', 'github') }}"><i class="fab fa-github"
                                                 aria-hidden="true"></i></a>
                                         <a class="social-btn sb-google sb-outline sb-lg mx-1 mb-2"
-                                            href="http://skillpark.herokuapp.com/oauth/google"><i class="fab fa-google"
+                                            href="{{ route('social.oauth', 'google') }}"><i class="fab fa-google"
                                                 aria-hidden="true"></i></a>
                                     </div>
 

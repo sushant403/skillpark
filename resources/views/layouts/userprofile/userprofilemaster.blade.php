@@ -85,7 +85,8 @@
                             </a>
 
                             <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                                <a class="dropdown-item" href="@hasrole('freelancer') fp/home @else cp/home @endhasrole">Home</a>
+                                <a class="dropdown-item"
+                                    href="@hasrole('freelancer') fp/home @else cp/home @endhasrole">Home</a>
                                 <a class="dropdown-item" href="faq">Help</a>
                                 <a class="dropdown-item" href="report">Report</a>
                             </div>
@@ -114,115 +115,6 @@
                         </a>
                         <!-- End Logo -->
 
-                        <!-- Secondary Content -->
-                        <div class="navbar-nav-wrap-content">
-                            <!-- Search Classic -->
-                            <div class="hs-unfold d-lg-none d-inline-block position-static">
-                                <a class="js-hs-unfold-invoker btn btn-xs btn-icon rounded-circle" href="javascript:;"
-                                    data-hs-unfold-options='{
-                  "target": "#searchClassic",
-                  "type": "css-animation",
-                  "animationIn": "slideInUp"
-                 }'>
-                                    <i class="fas fa-search"></i>
-                                </a>
-
-                                <div id="searchClassic"
-                                    class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0">
-                                    <form class="input-group input-group-sm input-group-merge">
-                                        <input type="text" class="form-control" style="background: #f7faff"
-                                            placeholder="Search for Jobs" aria-label="Search for Jobs">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">
-                                                <i class="fas fa-search"></i>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- End Search Classic -->
-
-                            <!-- Account -->
-                            <div class="hs-unfold">
-                                <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
-                                    style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
-                  "target": "#accountDropdown",
-                  "type": "css-animation",
-                  "event": "click",
-                  "duration": 50,
-                  "delay": 0,
-                  "hideOnScroll": "true"
-                 }'>
-                                    <span class="position-relative">
-                                        <span class="u-sidebar--account__toggle-text">Freelancer User</span>
-                                        <img class="u-sidebar--account__toggle-img" src="/images/spacer.png" width="35"
-                                            alt="Profile">
-                                    </span>
-                                </a>
-
-                                <div id="accountDropdown"
-                                    class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
-                                    style="min-width: 245px;">
-                                    <div class="card">
-                                        <!-- Header -->
-                                        <div class="card-header p-4">
-                                            <a class="media align-items-center" href={{ url('settings') }}>
-                                                <div class="avatar mr-3">
-                                                    <img class="avatar-img" src="default.png" alt="Image Description">
-                                                </div>
-                                                <div class="media-body">
-                                                    <span class="d-block font-weight-bold">Freelancer User </span>
-                                                    <span
-                                                        class="d-block small text-muted">freelancer@skillpark.com.np</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- End Header -->
-
-                                        <!-- Body -->
-                                        <div class="card-body py-3">
-                                            <a class="dropdown-item px-0" href="dashboard">
-                                                <span class="dropdown-item-icon">
-                                                    <i class="fa fa-dashcube"></i>
-                                                </span>
-                                                Dashboard
-                                            </a>
-                                            <a class="dropdown-item px-0" href="messages">
-                                                <span class="dropdown-item-icon">
-                                                    <i class="fas fa-envelope"></i>
-                                                </span>
-                                                Messages
-                                            </a>
-                                            <a class="dropdown-item px-0" href={{ url('settings') }}>
-                                                <span class="dropdown-item-icon">
-                                                    <i class="fa fa-gear"></i>
-                                                </span>
-                                                Settings
-                                            </a>
-
-                                            <div class="dropdown-divider"></div>
-
-                                            <a class="dropdown-item px-0" href="faq">
-                                                <span class="dropdown-item-icon">
-                                                    <i class="fas fa-question-circle"></i>
-                                                </span>
-                                                Help
-                                            </a>
-                                            <a class="dropdown-item px-0" href="http://skillpark.com.np/logout" onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
-                                            <form id="logout-form" action="http://skillpark.com.np/logout" method="POST"
-                                                style="display: none;">
-                                                <input type="hidden" name="_token"
-                                                    value="gU7RsANrDgwiczXKyNN2y5B2LlFTHPWfA38uaaK5"> </form>
-                                        </div>
-                                        <!-- End Body -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Account -->
-                        </div>
-                        <!-- End Secondary Content -->
-
                         <!-- Responsive Toggle Button -->
                         <button type="button"
                             class="navbar-toggler navbar-nav-wrap-navbar-toggler btn btn-icon btn-sm rounded-circle"
@@ -243,32 +135,114 @@
                         </button>
                         <!-- End Responsive Toggle Button -->
 
-                        <!-- Navigation -->
-                        <div id="navBar" class="navbar-nav-wrap-navbar collapse navbar-collapse">
-                            <ul class="navbar-nav">
+                        <!-- Account -->
+                        <div class="hs-unfold">
+                            <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
+                                style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
+                                            "target": "#accountDropdown",
+                                            "type": "css-animation",
+                                            "event": "click",
+                                            "duration": 50,
+                                            "delay": 0,
+                                            "hideOnScroll": "true"
+                                            }'>
+                                <span class="position-relative">
+                                    <span class="u-sidebar--account__toggle-text">{{ Auth::user()->Name }}</span>
+                                    <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}"
+                                        width="35" alt="Profile">
+                                </span>
+                            </a>
 
-                                <li class="navbar-nav-item">
-                                    <a href="home" class="nav-link"><i class="fa fa-briefcase font-size-1 mr-1"></i>
-                                        Find Jobs</a>
-                                </li>
+                            <div id="accountDropdown"
+                                class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
+                                style="min-width: 245px;">
+                                <div class="card">
+                                    <!-- Header -->
+                                    <div class="card-header p-4">
+                                        <a class="media align-items-center" href={{ url('settings') }}>
+                                            <div class="avatar mr-3">
+                                                <img class="avatar-img" src="{{ Auth::user()->avatar }}"
+                                                    alt="Image Description">
+                                            </div>
+                                            <div class="media-body">
+                                                <span class="d-block font-weight-bold">Freelancer User </span>
+                                                <span
+                                                    class="d-block small text-muted">freelancer@skillpark.com.np</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- End Header -->
 
-                                <li class="navbar-nav-item">
-                                    <a href="saved-jobs" class="nav-link"><i
-                                            class="fa fa-bookmark font-size-1 mr-1"></i> Saved Jobs</a>
-                                </li>
+                                    <!-- Body -->
+                                    <div class="card-body py-3">
+                                        <a class="dropdown-item px-0" href="dashboard">
+                                            <span class="dropdown-item-icon">
+                                                <i class="fa fa-dashcube"></i>
+                                            </span>
+                                            Dashboard
+                                        </a>
+                                        <a class="dropdown-item px-0" href="messages">
+                                            <span class="dropdown-item-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            Messages
+                                        </a>
+                                        <a class="dropdown-item px-0" href={{ url('settings') }}>
+                                            <span class="dropdown-item-icon">
+                                                <i class="fa fa-gear"></i>
+                                            </span>
+                                            Settings
+                                        </a>
 
-                                <li class="navbar-nav-item">
-                                    <a href="recommended" class="nav-link"><i
-                                            class="fa fa-dice-four font-size-1 mr-1"></i> Recommended</a>
-                                </li>
+                                        <div class="dropdown-divider"></div>
 
-                            </ul>
+                                        <a class="dropdown-item px-0" href="faq">
+                                            <span class="dropdown-item-icon">
+                                                <i class="fas fa-question-circle"></i>
+                                            </span>
+                                            Help
+                                        </a>
+                                        <a class="dropdown-item px-0" href="http://skillpark.com.np/logout" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+                                        <form id="logout-form" action="http://skillpark.com.np/logout" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                            </form>
+                                    </div>
+                                    <!-- End Body -->
+                                </div>
+                            </div>
                         </div>
-                        <!-- End Navigation -->
+                        <!-- End Account -->
                     </div>
-                </nav>
-                <!-- End Nav -->
+                    <!-- End Secondary Content -->
+
+                    <!-- Navigation -->
+                    <div id="navBar" class="navbar-nav-wrap-navbar collapse navbar-collapse">
+                        <ul class="navbar-nav">
+
+                            <li class="navbar-nav-item">
+                                <a href="home" class="nav-link"><i class="fa fa-briefcase font-size-1 mr-1"></i>
+                                    Find Jobs</a>
+                            </li>
+
+                            <li class="navbar-nav-item">
+                                <a href="saved-jobs" class="nav-link"><i class="fa fa-bookmark font-size-1 mr-1"></i>
+                                    Saved Jobs</a>
+                            </li>
+
+                            <li class="navbar-nav-item">
+                                <a href="recommended" class="nav-link"><i class="fa fa-dice-four font-size-1 mr-1"></i>
+                                    Recommended</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- End Navigation -->
             </div>
+            </nav>
+            <!-- End Nav -->
+        </div>
         </div>
     </header>
     <!-- ========== END HEADER ========== -->
