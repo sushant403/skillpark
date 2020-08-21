@@ -8,8 +8,8 @@
     <!-- Hero Section -->
     <div class="position-relative bg-img-hero"
         style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-bottom-3 vh-100 vh-sm-90">
-            <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
+        <div class="container space-top-3 space-bottom-3 vh-sm-95 vh-lg-100">
+            <div class="row justify-content-lg-between align-items-lg-center pt-md-5">
                 <div class="col-lg-6">
                     <!-- Info -->
                     <div class="mb-5">
@@ -44,14 +44,19 @@
                     <div class="col-lg-6">
                         <!-- Tags -->
                         <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
-                          <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted" style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
-                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Flutter</a>
-                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Laravel</a>
-                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Django</a>
-                          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Translation</a>
+                            <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted"
+                                style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
+                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                                href="javascript:;">Flutter</a>
+                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                                href="javascript:;">Laravel</a>
+                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                                href="javascript:;">Django</a>
+                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                                href="javascript:;">Translation</a>
                         </div>
                         <!-- End Tags -->
-                      </div>
+                    </div>
                 </div>
                 <!-- SVG Shape -->
                 <figure class="col-lg-6 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
@@ -101,7 +106,8 @@
                             payments you deserve.</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i
+                                class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -121,7 +127,8 @@
                             or let them bid.</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i
+                                class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -140,7 +147,8 @@
                             milestones directly from the website.</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i
+                                class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -159,7 +167,8 @@
                             secure with contracts</p>
                     </div>
                     <div class="card-footer border-0 pt-0">
-                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i class="fas fa-angle-right fa-sm ml-1"></i></span>
+                        <span class="font-size-1">{{ __('nepali.Learn more')}}<i
+                                class="fas fa-angle-right fa-sm ml-1"></i></span>
                     </div>
                 </a>
                 <!-- End Icon Blocks -->
@@ -173,7 +182,9 @@
         <div class="row align-items-lg-center">
             <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
                 <div class="mb-5">
-                    <h2 class="mb-3">{{ __('Grab the platform to enrich your potential and turn your passion into profession.') }}</h2>
+                    <h2 class="mb-3">
+                        {{ __('Grab the platform to enrich your potential and turn your passion into profession.') }}
+                    </h2>
                     <p>{{ __('Finding the passionate and independent job has never been this simple and secure.') }}</p>
                 </div>
 
@@ -240,31 +251,7 @@
     </div>
     <!-- End Features Section -->
 
-    <!-- CTA Section -->
-    <div class="container">
-        <div class="w-lg-85 mx-lg-auto">
-            <div class="card overflow-hidden p-5">
-                <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
-                    <div class="col-md-8 col-lg-5 offset-lg-3 mb-3 mb-md-0">
-                        <h3 class="h4 text-grey mb-0">{{ __('nepali.Revolutionizing the way Company hires!') }}</h3>
-                    </div>
-
-                    <div class="col-md-4 text-md-right">
-                        <a class="btn btn-primary" href="#">{{ __('nepali.Learn more') }}</a>
-                    </div>
-                </div>
-
-                <!-- SVG Component -->
-                <figure class="w-35 position-absolute top-0 left-0 mt-n11 ml-n11">
-                    <img class="img-fluid" src="/images/svg/components/half-circle-2.svg" alt="Image Description">
-                </figure>
-                <!-- End SVG Component -->
-            </div>
-        </div>
-    </div>
-    <!-- End CTA Section -->
-
-    <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-3">
+    <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-2">
         <h3 class="text-center mb-6">{{ __('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3 w-50">
@@ -334,8 +321,8 @@
         </div>
         <div class="text-center">
             <div class="d-inline-block font-size-1 border bg-white text-center rounded-pill py-3 px-4">
-                {{ __('nepali.Want to Explore more?') }} <a class="font-weight-bold ml-3" href="#">View all Categories <span
-                        class="fas fa-angle-right ml-1"></span></a>
+                {{ __('nepali.Want to Explore more?') }} <a class="font-weight-bold ml-3" href="#">View all Categories
+                    <span class="fas fa-angle-right ml-1"></span></a>
             </div>
         </div>
     </section>
@@ -343,7 +330,7 @@
     <!-- Icon Blocks Section -->
     <div id="aboutSection" class="container">
         <!-- Title -->
-        <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
+        <div class="w-lg-65 text-center mx-auto space-2">
             <h2 class="h3">{{ __('nepali.What we do?') }}</h2>
             <p>{{ __('nepali.A dynamic platform for modern job hiring.') }}</p>
         </div>
@@ -388,10 +375,79 @@
         </div>
         <img class="img-fluid d-none d-md-block w-75 mx-auto mb-7" src="/images/svg/components/three-pointers.svg"
             alt="SVG Arrow">
-        <div class="w-md-60 w-lg-50 text-center mx-auto mb-7">
-            <p class="text-dark"><span class="font-weight-bold">It is fast and easy.</span> Create your new or
-                ongoing project with Qualified Freelancers.</p>
+
+        <!-- CTA Section -->
+        <div class="container">
+            <div class="w-lg-85 mx-lg-auto">
+                <div class="card overflow-hidden p-5">
+                    <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
+                        <div class="col-md-8 col-lg-5 offset-lg-3 mb-3 mb-md-0">
+                            <h3 class="h4 text-grey mb-0">{{ __('nepali.Revolutionizing the way Company hires!') }}</h3>
+                        </div>
+
+                        <div class="col-md-4 text-md-right">
+                            <a class="btn btn-primary" href="#">{{ __('nepali.Learn more') }}</a>
+                        </div>
+                    </div>
+
+                    <!-- SVG Component -->
+                    <figure class="w-35 position-absolute top-0 left-0 mt-n11 ml-n11">
+                        <img class="img-fluid" src="/images/svg/components/half-circle-2.svg" alt="Image Description">
+                    </figure>
+                    <!-- End SVG Component -->
+                </div>
+            </div>
         </div>
+        <!-- End CTA Section -->
+
+        <!-- Step Section -->
+        <div class="container space-top-2 space-top-lg-3 space-bottom-lg-2">
+            <!-- Title -->
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                <span class="d-block small font-weight-bold text-cap mb-2">Hire with confidence</span>
+                <h3>How we give you a better match</h3>
+            </div>
+            <!-- End Title -->
+
+            <!-- Step -->
+            <ul class="step step-md step-centered">
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">1</span>
+                        <div class="step-content">
+                            <h3>Tap into an amazing talent network
+                                </h3>
+                            <p>Get unmatched quality from proven independent professionals and specialized agencies.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">2</span>
+                        <div class="step-content">
+                            <h3>Get a smarter shortlist, instantly</h3>
+                            <p>Our instant matching tech generates a shortlist based on the criteria you select.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">3</span>
+                        <div class="step-content">
+                            <h3>Simplified Secure Billing Options</h3>
+                            <p>Find any service within minutes and know exactly what you’ll pay. No hourly rates, just a fixed price.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- End Step -->
+        </div>
+        <!-- End Step Section -->
+
 
 </main>
 <!-- ========== END MAIN CONTENT ========== -->

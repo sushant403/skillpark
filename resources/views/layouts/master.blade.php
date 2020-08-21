@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Skillpark Inc. | Hire Expert Freelancers Any Time</title>
+    <title>@yield('title', 'Skillpark Inc. | Hire Expert Freelancers Any Time')</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
@@ -97,8 +97,6 @@
                                                     <div class="navbar-promo-card navbar-promo-item">
                                                         <a class="navbar-promo-link" href="{{ url('about') }}">
                                                             <div class="media align-items-center">
-                                                                <img class="navbar-promo-icon"
-                                                                    src="/images/svg/icons/icon-22.svg" alt="SVG">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">About</span>
                                                                     <span class="navbar-promo-text">Ideas and Motive
@@ -113,8 +111,6 @@
                                                     <div class="navbar-promo-card navbar-promo-item">
                                                         <a class="navbar-promo-link" href="{{ url('about') }}">
                                                             <div class="media align-items-center">
-                                                                <img class="navbar-promo-icon"
-                                                                    src="/images/svg/icons/icon-7.svg" alt="SVG">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">Freelancer
                                                                         Marketplace</span>
@@ -132,8 +128,6 @@
                                                     <div class="navbar-promo-card navbar-promo-item">
                                                         <a class="navbar-promo-link" href="{{ url('about') }}">
                                                             <div class="media align-items-center">
-                                                                <img class="navbar-promo-icon"
-                                                                    src="/images/svg/icons/icon-3.svg" alt="SVG">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">How It Works</span>
                                                                     <span class="navbar-promo-text">Process Protocal
@@ -148,8 +142,6 @@
                                                     <div class="navbar-promo-card navbar-promo-item">
                                                         <a class="navbar-promo-link" href="javascript:;">
                                                             <div class="media align-items-center">
-                                                                <img class="navbar-promo-icon"
-                                                                    src="/images/svg/icons/icon-13.svg" alt="SVG">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">Post Project</span>
                                                                     <span class="navbar-promo-text">Hiring Made
@@ -166,8 +158,6 @@
                                                     <div class="navbar-promo-card navbar-promo-item">
                                                         <a class="navbar-promo-link disabled" href="{{ url('about') }}">
                                                             <div class="media align-items-center">
-                                                                <img class="navbar-promo-icon"
-                                                                    src="/images/svg/icons/icon-31.svg" alt="SVG">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">Payment
                                                                         Method</span>
@@ -183,8 +173,6 @@
                                                     <div class="navbar-promo-card navbar-promo-item">
                                                         <a class="navbar-promo-link" href="{{ url('creators') }}">
                                                             <div class="media align-items-center">
-                                                                <img class="navbar-promo-icon"
-                                                                    src="/images/svg/icons/icon-67.svg" alt="SVG">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">Creators</span>
                                                                     <span class="navbar-promo-text">Founder & CEO</span>
@@ -200,11 +188,9 @@
                                             <div class="col-lg-4 navbar-promo d-none d-lg-block">
                                                 <a class="d-block navbar-promo-inner" href="register">
                                                     <div class="position-relative">
-                                                        <img class="img-fluid rounded mb-3" src="/images/svg/banner.svg"
-                                                            alt="Image Description">
+                                                        <img class="img-fluid rounded" src="/images/svg/banner.svg"
+                                                            alt="">
                                                     </div>
-                                                    <span class="btn btn-primary btn-sm">Get Started on Skillpark <i
-                                                            class="fas fa-angle-right fa-sm ml-1"></i></span>
                                                 </a>
                                             </div>
                                             <!-- End Promo -->
@@ -488,11 +474,11 @@
 
     @guest
     <footer class="gradient-x-overlay-sm-indigo overflow-hidden">
-        <div class="container space-top-2 space-bottom-1">
+        <div class="container space-top-1 space-bottom-1">
             <!-- CTA -->
             <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
                 <div class="col-lg-5 mb-3 mb-lg-0">
-                    <h2 class="text">{{ __('nepali.Thousands of businesses trust Skillpark for their business.')}}</h2>
+                    <h3 class="text">{{ __('nepali.Thousands of businesses trust Skillpark for their business.')}}</h3>
                 </div>
                 <div class="col-lg-5 text-lg-right">
                     <a class="btn btn-primary" href="{{ route('register') }}">Get Started</a>
@@ -550,8 +536,7 @@
                     <!-- Nav Link -->
                     <ul class="nav nav-sm nav-x-0 flex-column">
                         <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Careers <span
-                                    class="badge badge-primary ml-1">We're hiring</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
                         <li class="nav-item"><a class="nav-link" href="blogs">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
                         <li class="nav-item"><a class="nav-link" href="creators">Creators</a></li>
@@ -578,9 +563,9 @@
                     <!-- Nav Link -->
                     <ul class="nav nav-sm nav-x-0 flex-column">
                         <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Status</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tech Requirements</a></li>
                     </ul>
                     <!-- End Nav Link -->
@@ -600,7 +585,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="home">
+                            <a class="nav-link" href="@hasrole('freelancer') {{ route('freelancer') }} @else {{ route('client') }} @endhasrole">
                                 <span class="media align-items-center">
                                     <span class="media-body">
                                         @guest
@@ -701,9 +686,6 @@
             <!-- Copyright -->
             <div class="w-md-75 text-lg-center mx-lg-auto">
                 <p class="text-muted small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
-                <p class="text-muted small">When you visit or interact with our sites, services or tools,
-                    we or our authorised service providers may use cookies for storing information to help provide
-                    you with a better, faster and safer experience and for marketing purposes.</p>
             </div>
             <!-- End Copyright -->
         </div>
@@ -775,7 +757,7 @@
                                         <div class="input-group input-group-sm mb-2">
                                             <input type="password" class="form-control" name="password"
                                                 id="signinPassword" placeholder="Password" aria-label="Password"
-                                                required data-msg="Your password is invalid. Please try again.">
+                                                required data-msg="Password is invalid. Please try again.">
                                         </div>
                                         @error('password')
                                         <span class="feedback" style="color:red;font-size:13px" role="alert">

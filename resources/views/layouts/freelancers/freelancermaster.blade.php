@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Skillpark Inc. | Hire Expert Freelancers Any Time</title>
+  <title>@yield('title', 'Skillpark Inc. | Home')</title>
   <!-- SEO Meta Tags-->
   <meta name="description" content="Skillpark Inc.">
   <meta name="keywords"
@@ -399,7 +399,7 @@
   @yield('content')
 
   <!-- ========== FOOTER ========== -->
-  <footer class="border-top">
+  <footer class="border-top text-center">
     <div class="container">
       <div class="row justify-content-lg-between">
         <div class="col-lg-3 mb-5">
@@ -407,7 +407,7 @@
             <a class="w-100 mb-3 mb-lg-auto" href="" aria-label="Skillpark">
               <img class="brand" src="/images/logo/biglogo.svg" alt="Logo">
             </a>
-            <p class="small text-muted mb-0">&copy; Skillpark Inc. 2020.</p>
+            <p class="small text-muted mb-0 mx-auto">&copy; Skillpark Inc. 2020.</p>
           </div>
         </div>
 
@@ -437,23 +437,22 @@
         </div>
 
         <div class="col-md-4 col-lg-2 mb-5 mb-lg-0">
-          <h5>Our Location</h5>
+          <h5>Account Services</h5>
 
           <!-- Nav Link -->
           <ul class="nav nav-sm nav-x-0 flex-column">
             <li class="nav-item">
               <a class="nav-link" href="../help-desk/index">
                 <span class="media align-items-center">
-                  <i class="fas fa-info-circle mr-2"></i>
-                  <span class="media-body">Help</span>
+                  <span class="media-body"> <i class="fas fa-info-circle mr-2"></i>Help</span>
                 </span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <span class="media align-items-center">
-                  <i class="fas fa-user-circle mr-2"></i>
-                  <span class="media-body">Your Account</span>
+                  <span class="media-body">
+                    <i class="fas fa-user-circle mr-2"></i>Your Account</span>
                 </span>
               </a>
             </li>
@@ -538,7 +537,7 @@
 
         <div class="col-md-8 text-md-right">
           <!-- Links -->
-          <ul class="nav nav-sm justify-content-md-end">
+          <ul class="nav nav-sm justify-content-md-end justify-content-center">
             <li class="nav-item">
               <a class="nav-link pl-0" href="../pages/privacy">Privacy &amp; policy</a>
             </li>

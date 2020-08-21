@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Skillpark Inc. | Hire Expert Freelancers Any Time</title>
+    <title>@yield('title', 'Skillpark Inc. | Home')</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
@@ -102,8 +102,8 @@
                                                 }'>
                                     <span class="position-relative">
                                         <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                                        <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}"
-                                            width="35" alt="">
+                                        <img class="u-sidebar--account__toggle-img"
+                                            src="{{ asset( Auth::user()->avatar ) }}" width="35" alt="">
                                     </span>
                                 </a>
 
@@ -115,7 +115,8 @@
                                         <div class="card-header p-4">
                                             <a class="media align-items-center" href={{ url('settings') }}>
                                                 <div class="avatar mr-3">
-                                                    <img class="avatar-img" src="{{ Auth::user()->avatar }}" alt="">
+                                                    <img class="avatar-img" src="{{ asset( Auth::user()->avatar ) }}"
+                                                        alt="">
                                                 </div>
                                                 <div class="media-body">
                                                     <span class="d-block font-weight-bold">{{ Auth::user()->name }}
@@ -343,8 +344,9 @@
                                 <!-- End Search Form -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('post-project') }}" class="nav-link py-3"><button class="btn btn-primary"><i
-                                                class="fa fa-briefcase font-size-1 mr-1"></i> Post a
+                                    <a href="{{ route('post-project') }}" class="nav-link py-3"><button
+                                            class="btn btn-primary"><i class="fa fa-briefcase font-size-1 mr-1"></i>
+                                            Post a
                                             Project</button></a>
                                 </li>
 
@@ -573,13 +575,6 @@
           }
         });
       });
-
-        $(document).on('ready', function () {
-        // initialization of slick carousel
-        $('.js-slick-carousel').each(function() {
-        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
-        });
-        });
       
         $(document).on('ready', function () {
         // initialization of sticky blocks
@@ -622,6 +617,11 @@
       $('.js-go-to').each(function () {
         var goTo = new HSGoTo($(this)).init();
       });
+
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];;
+        var date = new Date();
+
+        document.getElementById('date').innerHTML = months[date.getMonth()] ;
     </script>
 
 </body>

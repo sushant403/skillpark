@@ -1,10 +1,7 @@
 @extends('layouts.freelancers.freelancermaster')
 
+@section('title',  Auth::user()->name . ' - Home')
 @section('content')
-
-<script>
-    document.title = 'Home - {{ Auth::user()->name }}';
-</script>
 
 <main class="bg-light pt-5" role="main" id="content">
     <div class="container">
