@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\City;
+use App\User;
 use App\Skill;
 use App\Category;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -16,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -26,7 +27,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $user = Auth::user();
+        
+        if(!auth()->check()) {
+            return view('index');
+        }
+        else{
+            if($user->hasRole('freelancer')){
+                return redirect()-> route('freelancer');
+            }
+                return redirect()->route('client');
+        }
     }
 
     public function freelancer()

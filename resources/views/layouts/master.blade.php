@@ -86,7 +86,8 @@
                                 }
                               }'>
                                     <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
-                                        href="javascript:;" aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions') }}</a>
+                                        href="javascript:;" aria-haspopup="true"
+                                        aria-expanded="false">{{ __('nepali.Solutions') }}</a>
 
                                     <!-- About - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
@@ -376,8 +377,8 @@
                                             <span class="position-relative">
                                                 <span
                                                     class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                                                <img class="u-sidebar--account__toggle-img" src="{{ Auth::user()->avatar }}"
-                                                    width="35" alt="Profile">
+                                                <img class="u-sidebar--account__toggle-img"
+                                                    src="{{ Auth::user()->avatar }}" width="35" alt="Profile">
                                             </span>
                                         </a>
 
@@ -585,7 +586,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="@hasrole('freelancer') {{ route('freelancer') }} @else {{ route('client') }} @endhasrole">
+                            <a class="nav-link"
+                                href="@guest login @else @hasrole('freelancer') {{ route('freelancer') }} @else {{ route('client') }} @endhasrole @endguest">
                                 <span class="media align-items-center">
                                     <span class="media-body">
                                         @guest
@@ -782,11 +784,11 @@
 
                                     <div class="text-center"><a
                                             class="social-btn sb-facebook sb-outline sb-lg mx-1 mb-2"
-                                            href="{{ route('social.oauth', 'facebook') }}"><i
-                                                class="fab fa-facebook" aria-hidden="true"></i></a>
+                                            href="{{ route('social.oauth', 'facebook') }}"><i class="fab fa-facebook"
+                                                aria-hidden="true"></i></a>
                                         <a class="social-btn sb-twitter sb-outline sb-lg mx-1 mb-2"
-                                            href="{{ route('social.oauth', 'twitter') }}"><i
-                                                class="fab fa-twitter" aria-hidden="true"></i></a>
+                                            href="{{ route('social.oauth', 'twitter') }}"><i class="fab fa-twitter"
+                                                aria-hidden="true"></i></a>
                                         <a class="social-btn sb-github sb-outline sb-lg mx-1 mb-2"
                                             href="{{ route('social.oauth', 'github') }}"><i class="fab fa-github"
                                                 aria-hidden="true"></i></a>

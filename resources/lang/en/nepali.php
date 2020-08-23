@@ -72,7 +72,7 @@ return [
     'Modern and Simplified Freelancer Platform'=> 'Modern and Simplified Freelancer Platform.',
     'Collaborate easily'=> 'Collaborate easily ',
     'Simplified Payment'=> 'Simplified Payment',
-    'What we do?'=> 'What we do?',
+    'What we do?'=> 'What we do',
     'A dynamic platform for modern job hiring.'=> 'A dynamic platform for modern job hiring.',
     'Explore'=> 'Explore',
     'Grab the platform to enrich your potentical and turn your passion into profession.'=> 'Grab the platform to enrich your potentical and turn your passion into profession.',

@@ -251,7 +251,56 @@
     </div>
     <!-- End Features Section -->
 
-    <section class="container pt-5 pb-4 mt-3 mt-md-0 pb-md-5 space-2">
+    <!-- Step Section -->
+    <div class="container space-top-2 space-bottom-1">
+        <!-- Title -->
+        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-1 mb-md-9">
+            <span class="d-block small font-weight-bold text-cap mb-2">Hire with confidence</span>
+            <h3>Qualified Freelancers Awaits</h3>
+        </div>
+        <!-- End Title -->
+
+        <!-- Step -->
+        <ul class="step step-md step-centered">
+            <li class="step-item">
+                <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-primary">1</span>
+                    <div class="step-content">
+                        <h4>Tap into an amazing talent network
+                        </h4>
+                        <p>Get unmatched quality from proven independent professionals and specialized agencies.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step-item">
+                <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-primary">2</span>
+                    <div class="step-content">
+                        <h4>Get a smarter shortlist, instantly</h4>
+                        <p>Our instant matching tech generates a shortlist based on the criteria you select.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step-item">
+                <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-primary">3</span>
+                    <div class="step-content">
+                        <h4>Dynamic Bidding System</h4>
+                        <p>Find any service within minutes and know exactly what you’ll pay. No hourly rates, just a
+                            fixed price.
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- End Step -->
+    </div>
+    <!-- End Step Section -->
+
+    <section class="container pb-4 pb-md-5 space-2">
         <h3 class="text-center mb-6">{{ __('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
             <div class="col-sm-3 col-md-3 py-3 w-50">
@@ -399,56 +448,6 @@
             </div>
         </div>
         <!-- End CTA Section -->
-
-        <!-- Step Section -->
-        <div class="container space-top-2 space-top-lg-3 space-bottom-lg-2">
-            <!-- Title -->
-            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-                <span class="d-block small font-weight-bold text-cap mb-2">Hire with confidence</span>
-                <h3>How we give you a better match</h3>
-            </div>
-            <!-- End Title -->
-
-            <!-- Step -->
-            <ul class="step step-md step-centered">
-                <li class="step-item">
-                    <div class="step-content-wrapper">
-                        <span class="step-icon step-icon-soft-primary">1</span>
-                        <div class="step-content">
-                            <h3>Tap into an amazing talent network
-                                </h3>
-                            <p>Get unmatched quality from proven independent professionals and specialized agencies.
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="step-item">
-                    <div class="step-content-wrapper">
-                        <span class="step-icon step-icon-soft-primary">2</span>
-                        <div class="step-content">
-                            <h3>Get a smarter shortlist, instantly</h3>
-                            <p>Our instant matching tech generates a shortlist based on the criteria you select.</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="step-item">
-                    <div class="step-content-wrapper">
-                        <span class="step-icon step-icon-soft-primary">3</span>
-                        <div class="step-content">
-                            <h3>Simplified Secure Billing Options</h3>
-                            <p>Find any service within minutes and know exactly what you’ll pay. No hourly rates, just a fixed price.
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <!-- End Step -->
-        </div>
-        <!-- End Step Section -->
-
-
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
 

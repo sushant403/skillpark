@@ -67,23 +67,24 @@
                             <div class="hs-unfold d-lg-none d-inline-block position-static">
                                 <a class="js-hs-unfold-invoker btn btn-xs btn-icon rounded-circle" href="javascript:;"
                                     data-hs-unfold-options='{
-                                                                        "target": "#searchClassic",
-                                                                        "type": "css-animation",
-                                                                        "animationIn": "slideInUp"
-                                                                    }'>
+                                                                "target": "#searchClassic",
+                                                                "type": "css-animation",
+                                                                "animationIn": "slideInUp"
+                                                                }'>
                                     <i class="fas fa-search"></i>
                                 </a>
 
                                 <div id="searchClassic"
                                     class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0">
-                                    <form class="input-group input-group-sm input-group-merge">
-                                        <input type="text" class="form-control" style="background: #f7faff"
-                                            placeholder="Search for Jobs" aria-label="Search for Jobs">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">
-                                                <i class="fas fa-search"></i>
-                                            </div>
+                                    <form class="js-validate d-flex align-items-center">
+                                        <label class="sr-only" for="signupSrEmail">Search for apps</label>
+                                        <div class="d-inline-block w-75 mr-2">
+                                            <input type="email" class="form-control" name="email" id="signupSrEmail"
+                                                placeholder="Search for apps" aria-label="Search for apps">
                                         </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            <span class="fas fa-search"></span>
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -330,15 +331,15 @@
 
                                 <!-- Search Form -->
                                 <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
-                                    <form class="input-group input-group-sm input-group-merge">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <i class="fa fa-search"></i>
-                                            </div>
+                                    <form class="d-flex align-items-center">
+                                        <label class="sr-only" for="signupSEmail">Search for apps</label>
+                                        <div class="d-inline-block w-85 mr-2">
+                                            <input type="text" class="form-control" name="search" id="signupSEmail"
+                                                placeholder=" Search for Jobs " aria-label=" Search for Jobs ">
                                         </div>
-                                        <input type="text" class="form-control" style="background:#f7faff"
-                                            placeholder="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole"
-                                            aria-label="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole">
+                                        <button type="submit" class="btn btn-primary">
+                                            <span class="fas fa-search"></span>
+                                        </button>
                                     </form>
                                 </li>
                                 <!-- End Search Form -->

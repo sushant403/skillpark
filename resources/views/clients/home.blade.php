@@ -268,7 +268,8 @@
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12">
-                        <div class="js-slick-carousel slick slick-equal-height slick-gutters-1" style="height: 255px" data-hs-slick-carousel-options='{
+                        <div class="js-slick-carousel slick slick-equal-height slick-gutters-1" style="height: 255px"
+                            data-hs-slick-carousel-options='{
                                                             "fade": true,
                                                             "infinite": true,
                                                             "autoplay": true,
@@ -289,18 +290,21 @@
                                                                 }
                                                             }]
                                                             }'>
-                                                            <div class="js-slide bg-img-hero-center" style="background-image: url(/images/banner/job2.jpg);">
-                                                                <div class="w-100 text-center space-3">
-                                                                </div>
-                                                            </div>
-                                                            <div class="js-slide bg-img-hero-center" style="background-image: url(/images/banner/job1.jpg);">
-                                                                <div class="w-100 text-center space-3">
-                                                                </div>
-                                                            </div>
-                                                            <div class="js-slide bg-img-hero-center" style="background-image: url(/images/banner/job3.jpg);">
-                                                                <div class="w-100 text-center space-3">
-                                                                </div>
-                                                            </div>
+                            <div class="js-slide bg-img-hero-center"
+                                style="background-image: url(/images/banner/job2.jpg);">
+                                <div class="w-100 text-center space-3">
+                                </div>
+                            </div>
+                            <div class="js-slide bg-img-hero-center"
+                                style="background-image: url(/images/banner/job1.jpg);">
+                                <div class="w-100 text-center space-3">
+                                </div>
+                            </div>
+                            <div class="js-slide bg-img-hero-center"
+                                style="background-image: url(/images/banner/job3.jpg);">
+                                <div class="w-100 text-center space-3">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,14 +325,14 @@
                                                 "breakpoint": 992,
                                                 "settings": {
                                                     "slidesToShow": 2,
-                                                    "slidesToScroll": 3,
+                                                    "slidesToScroll": 1,
                                                     "arrows": false
                                                 }
                                                 }, {
                                                 "breakpoint": 768,
                                                 "settings": {
                                                 "slidesToShow": 1,
-                                                "slidesToScroll": 3,
+                                                "slidesToScroll": 1,
                                                 "arrows": false
                                                 }
                                             }]
@@ -342,7 +346,8 @@
                                     <div class="inner-wrapper">
                                         <div class="d-flex align-items-center">
                                             <span class="seller-image">
-                                                <img class="img-fluid" src="{{ asset( Auth::user()->avatar ) }}" alt='' />
+                                                <img class="img-fluid" src="{{ asset( Auth::user()->avatar ) }}"
+                                                    alt='' />
                                             </span>
                                             <span class="seller-name">
                                                 <a href="#">{{ Auth::user()->name }}</a>

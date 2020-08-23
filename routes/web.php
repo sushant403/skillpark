@@ -1,37 +1,52 @@
 <?php
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{locale}', function ($locale) {
-    session()->put ('locale',$locale);
+    session()->put('locale', $locale);
     return redirect()->back();
 });
 
-Route::get('/', function () {return view('index');});
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/about', function () { return view('about.about');});
+Route::get('/about', function () {
+    return view('about.about');
+});
 
-Route::get('/creators', function () {return view('about.creators');});
+Route::get('/creators', function () {
+    return view('about.creators');
+});
 
-Route::get('/contact', function () {return view('about.contact');});
+Route::get('/contact', function () {
+    return view('about.contact');
+});
 
-Route::get('/policy', function () {return view('about.policy');});
+Route::get('/policy', function () {
+    return view('about.policy');
+});
 
-Route::get('/faq', function () {return view('about.faq');});
+Route::get('/faq', function () {
+    return view('about.faq');
+});
 
-Route::get('/terms', function () {return view('about.terms');});
+Route::get('/terms', function () {
+    return view('about.terms');
+});
 
-Route::get('/coming-soon', function () {return view('about.coming-soon');});
+Route::get('/coming-soon', function () {
+    return view('about.coming-soon');
+});
 
 
 // |=================LOGGED IN USER==========================|
 
 Auth::routes(['verify' => true]);
 
-Route::middleware(['verified','auth'])->group(function () {
+Route::middleware(['verified', 'auth'])->group(function () {
 
     Route::post('/home', 'UserController@store'); //stores default avatar
-    
+
     //add additional info
     Route::get('register/user-information', 'Auth\ProfileInfoController@showProfile');
     Route::post('register/user-information', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
@@ -49,7 +64,7 @@ Route::middleware(['verified','auth'])->group(function () {
         Route::get('/post/proposal', 'PostController@showProposalForm');
         Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
     });
-    
+
     //============================Roles Middleware==================================
 
     //client only
@@ -57,8 +72,8 @@ Route::middleware(['verified','auth'])->group(function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
-        Route::get('/dashboard', 'ProfileController@clientDashboard');    
-        
+        Route::get('/dashboard', 'ProfileController@clientDashboard');
+
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');
 
@@ -74,7 +89,6 @@ Route::middleware(['verified','auth'])->group(function () {
     Route::get('/settings', 'ProfileController@editProfile');
     Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
     Route::get('/auth', 'ProfileController@auth');
-
 });
 
 // Social Auth
