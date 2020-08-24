@@ -251,55 +251,6 @@
     </div>
     <!-- End Features Section -->
 
-    <!-- Step Section -->
-    <div class="container space-top-2 space-bottom-1">
-        <!-- Title -->
-        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-1 mb-md-9">
-            <span class="d-block small font-weight-bold text-cap mb-2">Hire with confidence</span>
-            <h3>Qualified Freelancers Awaits</h3>
-        </div>
-        <!-- End Title -->
-
-        <!-- Step -->
-        <ul class="step step-md step-centered">
-            <li class="step-item">
-                <div class="step-content-wrapper">
-                    <span class="step-icon step-icon-soft-primary">1</span>
-                    <div class="step-content">
-                        <h4>Tap into an amazing talent network
-                        </h4>
-                        <p>Get unmatched quality from proven independent professionals and specialized agencies.
-                        </p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="step-item">
-                <div class="step-content-wrapper">
-                    <span class="step-icon step-icon-soft-primary">2</span>
-                    <div class="step-content">
-                        <h4>Get a smarter shortlist, instantly</h4>
-                        <p>Our instant matching tech generates a shortlist based on the criteria you select.</p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="step-item">
-                <div class="step-content-wrapper">
-                    <span class="step-icon step-icon-soft-primary">3</span>
-                    <div class="step-content">
-                        <h4>Dynamic Bidding System</h4>
-                        <p>Find any service within minutes and know exactly what you’ll pay. No hourly rates, just a
-                            fixed price.
-                        </p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <!-- End Step -->
-    </div>
-    <!-- End Step Section -->
-
     <section class="container pb-4 pb-md-5 space-2">
         <h3 class="text-center mb-6">{{ __('nepali.Explore the Marketplace') }}</h3>
         <div class="row">
@@ -376,6 +327,88 @@
         </div>
     </section>
 
+    <!-- Features Section -->
+    <div class="overflow-hidden">
+        <div class="container space-2">
+            <div class="row justify-content-lg-between align-items-lg-center">
+                <div class="col-lg-6 mb-9 mb-lg-0">
+                    <!-- Mockups -->
+                    <div class="position-relative max-w-40rem mx-auto">
+                        <div class="device device-iphone-x w-85 mx-auto">
+                            <img class="device-iphone-x-frame" src="/images/svg/components/iphone-x.svg" alt="">
+                            <img class="device-iphone-x-screen" src="/images/banner/screenstep.jfif" alt="">
+                        </div>
+
+                        <div class="position-absolute top-0 right-0 z-index-2 max-w-33rem mr-n11 mt-9">
+                            <img class="img-fluid shadow-lg rounded" src="/images/banner/slackprice.jpg" alt="">
+                        </div>
+                        <div class="position-absolute bottom-0 left-0 z-index-2 max-w-33rem ml-n10 mb-10">
+                            <img class="img-fluid shadow-lg rounded" src="/images/banner/stepwoman.jpg" alt="">
+                        </div>
+
+                        <div class="position-absolute bottom-0 right-0 max-w-50rem w-100 z-index-n1 mx-auto">
+                            <img class="img-fluid" src="/images/svg/components/abstract-shapes-3.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- End Mockups -->
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="mb-5">
+                        <h2>Qualified Freelancers Awaits</h2>
+                        <p>Mobile Friendly within the Comfort of your hand
+                    </div>
+
+                    <!-- Icon Block -->
+                    <ul class="step step-dashed mb-7">
+                        <li class="step-item">
+                            <div class="step-content-wrapper">
+                                <span class="step-icon step-icon-xs step-icon-soft-primary">1</span>
+                                <div class="step-content">
+                                    <h3 class="h4">Tap into an amazing talent network</h3>
+                                    <p>Get unmatched quality from proven
+                                            independent professionals and specialized agencies. Get a smarter shortlist, instantly
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-content-wrapper">
+                                <span class="step-icon step-icon-xs step-icon-soft-primary">2</span>
+                                <div class="step-content">
+                                    <h4>Get a smarter shortlist, instantly</h4>
+                                    <p>Our instant matching tech generates a shortlist based on the criteria you select.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="step-item mb-0">
+                            <div class="step-content-wrapper">
+                                <span class="step-icon step-icon-xs step-icon-soft-primary">2</span>
+                                <div class="step-content">
+                                    <h4>Dynamic Bidding System</h4>
+                                    <p class="mb-0">Find any service within minutes and know exactly what you’ll pay. No
+                                        hourly rates, just a fixed price.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- End Icon Block -->
+
+                    <div class="mt-2">
+                        @guest
+                        <a class="btn btn-primary transition-3d-hover px-4" href="{{ route('register') }}">Join Skillpark</a>
+                        @else
+                        <a class="btn btn-primary transition-3d-hover px-4" href="{{ route('home') }}">Dashboard</a>
+                        @endguest
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Features Section -->
+
+
     <!-- Icon Blocks Section -->
     <div id="aboutSection" class="container">
         <!-- Title -->
@@ -435,7 +468,7 @@
                         </div>
 
                         <div class="col-md-4 text-md-right">
-                            <a class="btn btn-primary" href="#">{{ __('nepali.Learn more') }}</a>
+                            <a class="btn btn-secondary" href="#">{{ __('nepali.Learn more') }}</a>
                         </div>
                     </div>
 
@@ -448,6 +481,86 @@
             </div>
         </div>
         <!-- End CTA Section -->
+
+        <!-- Title -->
+        <div class="w-lg-65 text-center mx-auto space-top-3">
+            <h2 class="h3">{{ __('Happy Customers') }}</h2>
+            <p>{{ __('Skillpark always keeps customers satisfaction in the front.') }}</p>
+        </div>
+        <!-- End Title -->
+        <div class="bg-light rounded mx-3 my-7 mx-md-11">
+            <div class="container space-bottom-lg-0 space-bottom-md-2">
+                <div class="card bg-transparent shadow-none">
+                    <div class="row">
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <div class="auto-init height-is-based-on-content use-loading mode-scroll bg-light"
+                                style="overflow: visible;">
+                                <div style="transform: translate3d(0px, 1.13488rem, 0px);">
+                                    <img class="img-fluid rounded shadow-lg max-w-23rem"
+                                        src="/images/homepage/dipeshbhattarai.jpg" alt="Image Description">
+
+                                    <!-- SVG Shapes -->
+                                    <figure class="max-w-15rem w-100 position-absolute bottom-0 left-0 z-index-n1">
+                                        <div class="mb-n7 ml-n7">
+                                            <img class="img-fluid" src="/images/svg/components/dots-5.svg"
+                                                alt="Image Description">
+                                        </div>
+                                    </figure>
+                                    <!-- End SVG Shapes -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-9">
+                            <!-- Card Body -->
+                            <div class="card-body h-100 rounded p-0 p-md-4">
+                                <!-- SVG Quote -->
+                                <figure class="mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36"
+                                        viewBox="0 0 8 8">
+                                        <path fill="#377dff" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
+                            C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
+                            c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
+                            C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z"></path>
+                                    </svg>
+                                </figure>
+                                <!-- End SVG Quote -->
+
+                                <div class="row">
+                                    <div class="col-lg-8 mb-3 mb-lg-0">
+                                        <div class="pr-lg-5">
+                                            <blockquote class="h3 font-weight-normal mb-4">Awesome. एस्लाई Launch गर्नु
+                                                पर्छ ।</blockquote>
+                                            <div class="media">
+                                                <div class="avatar avatar-xs avatar-circle d-lg-none mr-2">
+                                                    <img class="avatar-img" src="images/homepage/dipeshbhattarai.jpg"
+                                                        alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="text-dark font-weight-bold">Er. Dipesh Bhattarai</span>
+                                                    <span class="font-size-1">— Project Supervisor</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 column-divider-lg">
+                                        <hr class="d-lg-none">
+
+                                        <div class="pl-lg-5">
+                                            <span class="h3 text-primary">A Start</span>
+                                            <p class="font-size-1">Motivations like this encourges the eager to learn
+                                                students for more.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Card Body -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
 

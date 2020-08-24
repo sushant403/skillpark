@@ -18,12 +18,12 @@
                 <li><span class="text-primary font-weight-semibold mr-1">3.</span>Follow the provided link and set the
                     new secure password..</li>
             </ul>
-            <div class="bg-secondary rounded-lg px-3 py-4 p-sm-4">
+            <div class="bg-light rounded-lg px-3 py-4 p-sm-4">
                 <form method="POST" action="{{ route('password.email') }}" class="needs-validation p-2" novalidate>
                     @csrf
 
                     <div class="form-group">
-                        <label class="form-label" for="recovery-email">{{ __('Enter your email address') }}</label>
+                        <label class="form-label" for="recovery-email"><b>{{ __('Enter your email address') }}</b></label>
                         <input class="form-control" type="email" name="email" value="{{ old('email') }}"
                             autocomplete="off" required id="recovery-email">
                         @error('email')

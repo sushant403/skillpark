@@ -506,7 +506,7 @@
                     <!-- End Logo -->
 
                     <!-- Nav Link -->
-                    <ul class="nav nav-sm nav-x-0 flex-column align-items-center">
+                    <ul class="nav nav-sm nav-x-0 flex-column align-items-lg-stretch align-items-center">
                         <li class="nav-item">
                             <a class="nav-link media" href="javascript:;">
                                 <span class="media">
