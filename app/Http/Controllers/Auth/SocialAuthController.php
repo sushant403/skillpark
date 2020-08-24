@@ -35,12 +35,18 @@ class SocialAuthController extends Controller
      */
     public function show()
     {
-        $user = User::find(Auth::user()->id);
-    
+        $user = Auth::user();
+        
+        if ($user->hasAnyRole(['freelancer', 'client'])) {
+            
             if($user->hasRole('freelancer')){
-                return route('freelancer');
+                return redirect()-> route('freelancer');
             }
-                return route('client');
+                return redirect()->route('client');
+        }
+        else{
+            return redirect()-> route('addprofile');
+        } 
     }
 
     /**

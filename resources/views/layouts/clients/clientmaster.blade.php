@@ -362,10 +362,6 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
-    </div>
-    </header>
-    <!-- ========== END HEADER ========== -->
-
     <div class="space-bottom-1 pt-6"></div>
 
     @yield('content')

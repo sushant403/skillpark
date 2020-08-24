@@ -58,7 +58,10 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/home', 'HomeController@freelancer')->name('freelancer'); //user feeds
         Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
 
-        Route::get('/dashboard', 'ProfileController@freelancerDashboard');
+        Route::get('/dashboard', 'ProfileController@freelancerDashboard')->name('fdash');
+
+        Route::get('/project', 'ProfileController@serviceList');
+        Route::get('/project/description', 'ProfileController@serviceSingle');
 
         //bidding proposal
         Route::get('/post/proposal', 'PostController@showProposalForm');
@@ -72,7 +75,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
-        Route::get('/dashboard', 'ProfileController@clientDashboard');
+        Route::get('/dashboard', 'ProfileController@clientDashboard')->name('cdash');
 
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');

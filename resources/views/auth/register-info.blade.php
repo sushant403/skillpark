@@ -1,160 +1,367 @@
 @extends('layouts.registration')
 
+@section('title', 'Complete your Profile - ' . Auth::user()->name)
 @section('content')
 
-<div class="main">
+<main class="pb-7" role="main" id="content">
     <div class="container">
-        <form method="POST" action="{{ route('addprofile') }}" id="signup-form" class="signup-form">
+        <div class="text-center py-7"
+            style="background: url(/images/svg/components/abstract-shapes-19.svg) center no-repeat;">
+            <h3>Complete Your Profile</h3>
+            <p>Answer a few questions and match your skills to the qualifying projects.</p>
+        </div>
+    </div>
+    <div class="col-lg-10 col-sm-12 mx-auto">
+        <!-- Tab Content -->
+        <!-- Step Form -->
+        <form method="POST" action="{{ route('addprofile') }}" class="js-step-form js-validate"
+            data-hs-step-form-options='{
+                      "progressSelector": "#advancedFormStepFormProgress",
+                      "stepsSelector": "#advancedFormStepFormContent",
+                      "isValidate": true
+                    }'>
             @csrf
-            <h3>
-                <span class="title_text">Account Infomation</span>
-            </h3>
-            <fieldset>
-                <div class="fieldset-content" style="height: auto !important">
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" id="email" value="{{ Auth::user()->email }}" disabled />
-                    </div>
-                    <div class="form-group">
-                        <label for="username" class="form-label">Name</label>
-                        <input type="text" name="name" id="username" value="{{ Auth::user()->name }}" />
-                    </div>
-                    <div class="form-group form-password">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" name="password" placeholder="(Leave empty for your previous password)"
-                            id="password" data-indicator="pwindicator" />
-                        <div id="pwindicator">
-                            <div class="bar-strength">
-                                <div class="bar-process">
-                                    <div class="bar"></div>
-                                </div>
-                            </div>
-                            <div class="label"></div>
+            <!-- Step -->
+            <ul id="advancedFormStepFormProgress" class="js-step-progress step step-md step-inline mb-5">
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">1</span>
+                        <div class="step-content">
+                            <span class="step-inline-title">Account</span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="your_avatar" class="form-label">Select avatar</label>
-                        <div class="form-file">
-                            <input type="file" name="your_avatar" id="your_avatar" class="custom-file-input" />
-                            <span id='val'></span>
-                            <span id='button'>Select File</span>
+                </li>
+
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">2</span>
+                        <div class="step-content">
+                            <span class="step-inline-title">Profile</span>
                         </div>
                     </div>
-                </div>
-                <div class="fieldset-footer">
-                    <span>Step 1 of 3</span>
-                </div>
-            </fieldset>
+                </li>
 
-            <h3>
-                <span class="title_text">Personal Information</span>
-            </h3>
-            <fieldset>
-
-                <div class="fieldset-content" style="height: auto !important">
-                    <div class="form-select">
-                        <label for="country" class="form-label">City</label>
-                        <select name="city_id" id="country" data-live-search="true" title="Select Your City" required />
-                        <option value="">Select Your City/District</option>
-                        @foreach ($cities as $city)
-                        <option value="{{ $city->id }}">{{ $city->name }}</option>
-                        @endforeach
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="about_us" class="form-label">Tagline</label>
-                        <input type="text" name="tagline" value="{{ Auth::user()->tagline }}"
-                            placeholder="Title that best defines you.." required />
-                    </div>
-                    <!--  <div class="form-radio">
-                        <label for="gender" class="form-label">Gender</label>
-                        <div class="form-radio-item">
-                            <input type="radio" name="gender" value="male" id="male" checked="checked" />
-                            <label for="male">Male</label>
-
-                            <input type="radio" name="gender" value="female" id="female" />
-                            <label for="female">Female</label>
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">3</span>
+                        <div class="step-content">
+                            <span class="step-inline-title">Role Information</span>
                         </div>
-                    </div> -->
+                    </div>
+                </li>
 
-                    <div class="form-textarea">
-                        <label for="about_us" class="form-label">About (Optional)</label>
-                        <textarea name="about" minlength="50" value="{{ Auth::user()->tagline }}" maxlength="200"
-                            placeholder="Minimum of 50 characters that describes your talents, skills and interests" /></textarea>
+                <li class="step-item">
+                    <div class="step-content-wrapper">
+                        <span class="step-icon step-icon-soft-primary">4</span>
+                        <div class="step-content">
+                            <span class="step-inline-title">Completed</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- End Step -->
+
+            <!-- Content Step Form -->
+            <div id="advancedFormStepFormContent" class="border rounded p-4">
+                <div id="advancedFormSelectStepOne" class="active">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <label for="validationFormUsernameLabel" class="input-label">Email</label>
+                        <div class="js-form-message">
+                            <input type="email" class="form-control" name="email"
+                                placeholder="{{ Auth::user()->email }}" disabled>
+                        </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <label for="validationFormNewPasswordLabel" class="input-label">Location</label>
+
+                        <div class="js-form-message">
+                            <select class="js-custom-select" id="locationLabel" name="city_id" data-hs-select2-options='{
+                                    "customClass": "custom-select",
+                                    "placeholder": "Select Your City/District",
+                                    "searchInputPlaceholder": "Search a City/District"
+                                  }' required data-msg="Please Select your Location">
+                                <option label="empty"></option>
+                                @foreach ($cities as $city)<option value="{{ $city->id }}" data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $city->name }}</span></span>'> {{ $city->name }}</option> @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <label for="validationFormCurrentPasswordLabel" class="input-label pb-2">Display Picture</label>
+
+                        <label class="avatar avatar-xl avatar-circle mr-4" for="avatarUploader">
+                            <img id="avatarImg" class="avatar-img" src="{{ asset(Auth::user()->avatar) }}"
+                                alt="Image Description">
+                        </label>
+                        <div class="btn btn-sm btn-primary file-attachment-btn">Upload Photo
+                            <input type="file" class="js-file-attach file-attachment-btn-label" id="avatarUploader"
+                                data-hs-file-attach-options='{
+                                      "textTarget": "#avatarImg",
+                                      "mode": "image",
+                                      "targetAttr": "src"
+                                   }'>
+                        </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1"
+                            data-hs-step-form-next-options='{
+                                "targetSelector": "#advancedFormSelectStepTwo"
+                              }'>Next</button>
                     </div>
                 </div>
 
-                <div class="fieldset-footer">
-                    <span>Step 2 of 3</span>
+                <div id="advancedFormSelectStepTwo" style="display: none;">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <label for="validationFormFirstNameLabel" class="input-label">Tagline</label>
+
+                        <div class="js-form-message">
+                            <input type="text" class="form-control" value="{{ Auth::user()->tagline }}" name="tagline" id="validationFormFirstNameLabel"
+                                placeholder="A title that best defines you (e.g. Python Developer)"
+                                aria-label="A title that best defines you (e.g. Python Developer)" required
+                                data-msg="A title is required for clients to understand your skill.">
+                        </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <label for="validationFormAboutLabel" class="input-label">About</label>
+
+                        <div class="js-form-message">
+                            <input type="text" maxlength="200" value="{{ Auth::user()->about }}" minlength="50" class="form-control" rows="5" name="about"
+                                id="validationFormAboutLabel"
+                                placeholder="Write something about your skills, passion, interests..."
+                                aria-label="Write something about your skills, passion, interests..." required
+                                data-msg="Describe yourself in at least 50 characters.">
+                        </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <label for="validationFormSkillsLabel" class="input-label">Skills</label>
+                        <div class="js-form-message">
+                            <select id="validationFormSkillsLabel" placeholder="Select at most three skills" required
+                                data-msg="Please select skills that represents You." name="skill"
+                                class="js-custom-select-multiple form-control" multiple data-hs-select2-options='{
+                            "minimumResultsForSearch": "3",
+                            }'>
+                                <option label="empty"></option>
+                                @foreach($skills as $skill)<option value="{{ $skill->id }}">{{ $skill->name }}</option>@endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-sm btn-soft-secondary transition-3d-hover mr-1" href="javascript:;"
+                            data-hs-step-form-prev-options='{
+                           "targetSelector": "#advancedFormSelectStepOne"
+                         }'>Back</a>
+                        <button type="button" class="btn btn-sm btn-primary transition-3d-hover"
+                            data-hs-step-form-next-options='{
+                                "targetSelector": "#advancedFormSelectStepThree"
+                              }'>Next</button>
+                    </div>
                 </div>
 
-            </fieldset>
-
-            <h3>
-                <span class="title_text">Choose Your Profile</span>
-            </h3>
-            <fieldset>
-                <div class="fieldset-content" style="height: auto !important">
-
-                    <div class="plans150 offset-xl-1">
-                        <div class="row justify-content-md-center">
-                            <div class="col-lg-5 col-md-4">
-                                <div class="plan_item">
-                                    <div class="plan_icon1">
-                                        <div class="cfp_icon">
-                                            <img src="/images/svg/cp_icon.svg" alt="">
+                <div id="advancedFormSelectStepThree" style="display: none;">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                        <div class="plans150 offset-xl-1">
+                            <div class="row justify-content-md-center">
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="plan_item">
+                                        <div class="plan_icon1">
+                                            <div class="cfp_icon py-3">
+                                                <img src="/images/svg/cp_icon.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <h4>Freelancer</h4>
+                                        <div class="plan_price1">
+                                            <span><b>Start a Freelancer Profile</b></span>
+                                        </div>
+                                        <ul class="plan_dt1">
+                                            <li>
+                                                <p>- Share your skills, place bids on projects listed.</p>
+                                            </li>
+                                            <li>
+                                                <p>- Freelancers are the future of remote work and working from home.
+                                                    Skillpark provides genuine platform for both working and heiring</p>
+                                            </li>
+                                        </ul>
+                                        <div class="plan_btn">
+                                            <button type="submit" class="btn btn-primary" name="role" value="1">Signup
+                                                as a Freelancer</a>
                                         </div>
                                     </div>
-                                    <h4>Freelancer</h4>
-                                    <div class="plan_price1">
-                                        <span>Start a Freelancer Profile</span>
-                                    </div>
-                                    <ul class="plan_dt1">
-                                        <li>
-                                            <p>1. Share your skills, place bids on projects listed.</p>
-                                        </li>
-                                        <li>
-                                            <p>2. Freelancers are the future of remote work and working from home.
-                                                Skillpark provides genuine platform for both working and heiring</p>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary" type="submit" name="role" value="1">Signup as a
-                                        Freelancer</a>
                                 </div>
-                            </div>
-                            <div class="col-lg-5 col-md-4">
-                                <div class="plan_item">
-                                    <div class="plan_icon1">
-                                        <div class="cfp_icon">
-                                            <img src="/images/svg/fp_icon.svg" alt="">
+                                <div class="col-lg-5 col-md-4">
+                                    <div class="plan_item">
+                                        <div class="plan_icon1">
+                                            <div class="cfp_icon py-3">
+                                                <img src="/images/svg/fp_icon.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <h4>Employer</h4>
+                                        <div class="plan_price1">
+                                            <span><b>Start an Employer Profile</b></span>
+                                        </div>
+                                        <ul class="plan_dt1">
+                                            <li>
+                                                <p>- Post jobs and projects and select freelancers to do the job.</p>
+                                            </li>
+                                            <li>
+                                                <p>- Simplified Process for the employers and freelancers to do heir
+                                                    and do the assigned jobs.</p>
+                                            </li>
+                                        </ul>
+                                        <div class="plan_btn">
+                                            <button type="submit" class="btn btn-primary" name="role" value="2">Signup
+                                                as an Employer</a>
                                         </div>
                                     </div>
-                                    <h4>Employer</h4>
-                                    <div class="plan_price1">
-                                        <span>Start an Employer Profile</span>
-                                    </div>
-                                    <ul class="plan_dt1">
-                                        <li>
-                                            <p>01. Post jobs and projects and select freelancers to do the job.</p>
-                                        </li>
-                                        <li>
-                                            <p>2. Simplified Process for the employers and freelancers to do heir and do
-                                                the assigned jobs.</p>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary" type="submit" name="role" value="2">Signup as an
-                                        Employer</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End Form Group -->
+
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-sm btn-soft-secondary transition-3d-hover mr-1" href="javascript:;"
+                            data-hs-step-form-prev-options='{
+                           "targetSelector": "#advancedFormSelectStepTwo"
+                         }'>Back</a>
+                        <button type="button" class="btn btn-sm btn-primary transition-3d-hover"
+                            data-hs-step-form-next-options='{
+                                "targetSelector": "#advancedFormSelectStepFour"
+                              }'>Finish</button>
+                    </div>
                 </div>
 
-                <div class="fieldset-footer">
-                    <span>Step 3 of 3</span>
+                <div id="advancedFormSelectStepFour" style="display: none;">
+                    You have successfully completed the form! You may now choose role and start exploring the freelancing
+                    world.
+
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-sm btn-soft-secondary transition-3d-hover mr-1" href="javascript:;"
+                            data-hs-step-form-prev-options='{
+                           "targetSelector": "#advancedFormSelectStepThree"
+                         }'>Back</a>
+                    </div>
                 </div>
-            </fieldset>
+            </div>
+            <!-- End Content Step Form -->
         </form>
+        <!-- End Step Form -->
+    </div>
+    </div>
+    <!-- end main content -->
+</main>
+
+{{-- more information modal --}}
+
+<div id="exampleModalTopCover" class="modal fade" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalTopCoverTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-top-cover bg-primary text-center">
+                <figure class="position-absolute right-0 bottom-0 left-0">
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        viewBox="0 0 1920 100.1">
+                        <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z" />
+                    </svg>
+                </figure>
+
+                <div class="modal-close">
+                    <button type="button" class="btn btn-icon btn-sm btn-ghost-light" data-dismiss="modal"
+                        aria-label="Close">
+                        <svg width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="modal-top-cover-avatar">
+                <img class="avatar avatar-lg avatar-circle avatar-border-lg avatar-centered shadow-soft"
+                    src="{{ asset(Auth::user()->avatar) }}" alt="Logo">
+            </div>
+
+            <div class="modal-body text-center">
+                <h3 class="modal-title ">Hello, {{ Auth::user()->name }}</h3>
+
+                <h4 class="modal-title py-3" style="font-size:16px;font-weight:600">The final stop of your freelancing
+                    search
+                    is here.</h4>
+                <p class="modal-desc">We need some information to make <b>skillpark</b> more dynamic and as per your
+                    need.</p>
+                <p class="modal-desc"> You will be able to hire freelancers as per your need.</p>
+                <p class="modal-desc">Or get paid for your skills by the verified employers and businesses.</p>
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="row align-items-md-center space-top-1">
+                        <div class="col-md-6">
+                            <!-- Social Networks -->
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-xs btn-icon btn-soft-secondary" href="#">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- End Social Networks -->
+                        </div>
+
+                        <div class="col-md-6 text-md-right">
+                            <!-- Links -->
+                            <ul class="nav nav-sm justify-content-md-end justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="../pages/privacy">Policy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/terms">Terms &amp; conditions</a>
+                                </li>
+                            </ul>
+                            <!-- End Links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Understood</button>
+            </div>
+        </div>
     </div>
 </div>
+
+
+{{-- moreinformationmodal --}}
 @endsection

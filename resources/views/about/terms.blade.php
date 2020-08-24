@@ -64,7 +64,7 @@
             </div>
             <!-- End Title -->
 
-            <p>Thanks for using our products and services ("Services"). The Services are provided by Pixeel Ltd. ("Skillpark Inc."), located at 153 Williamson Plaza, Maggieberg, MT 09514, England, United Kingdom.
+            <p>Thanks for using our products and services ("Services"). The Services are provided by Pixeel Ltd. ("Skillpark Inc."), located at 447 Balkumari Road, Lalitpur, LP 44700, Nepal.
             <p>By using our Services, you are agreeing to these terms. Please read them carefully.</p>
             <p>Our Services are very diverse, so sometimes additional terms or product requirements (including age requirements) may apply. Additional terms will be available with the relevant Services, and those additional terms become part of your agreement with us if you use those Services.</p>
           </div>

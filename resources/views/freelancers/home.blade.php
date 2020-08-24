@@ -1,6 +1,6 @@
 @extends('layouts.freelancers.freelancermaster')
 
-@section('title',  Auth::user()->name . ' - Home')
+@section('title', Auth::user()->name . ' - Home')
 @section('content')
 
 <main class="bg-light pt-5" role="main" id="content">
@@ -404,6 +404,5 @@
         </div>
     </div>
     <!-- end main content -->
-    </div>
 </main>
 @endsection

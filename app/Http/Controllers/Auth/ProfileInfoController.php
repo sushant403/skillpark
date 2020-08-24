@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\City;
-use App\User;
+use App\Skill;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Providers\RouteServiceProvider;
 
 class ProfileInfoController extends Controller
 {
@@ -22,9 +21,21 @@ class ProfileInfoController extends Controller
     public function showProfile()
     {
         $cities = City::all();
-        return view('auth.register-info', compact('cities')); 
-    }
+        $skills = Skill::all();
 
+        $user = Auth::user();
+        
+        if ($user->hasAnyRole(['freelancer', 'client'])) {
+            
+            if($user->hasRole('freelancer')){
+                return redirect()-> route('freelancer');
+            }
+                return redirect()->route('client');
+        }
+        else{
+            return view('auth.register-info', compact('cities','skills'));
+        } 
+    }
 
     public function addProfile(Request $request)
     {

@@ -28,15 +28,21 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        
-        if(!auth()->check()) {
+
+        if (!auth()->check()) {
             return view('index');
-        }
-        else{
-            if($user->hasRole('freelancer')){
-                return redirect()-> route('freelancer');
-            }
+        } else {
+            $user = Auth::user();
+
+            if ($user->hasAnyRole(['freelancer', 'client'])) {
+
+                if ($user->hasRole('freelancer')) {
+                    return redirect()->route('freelancer');
+                }
                 return redirect()->route('client');
+            } else {
+                return redirect()-> route('addprofile');
+            }
         }
     }
 
