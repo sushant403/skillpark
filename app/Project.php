@@ -13,7 +13,7 @@ class Project extends Model
         return $this->belongsTo(Client::class);
     }
 
-    public function user()
+    public function users()
     {
         return $this->belongsTo(User::class);
     }

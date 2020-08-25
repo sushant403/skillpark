@@ -137,11 +137,11 @@
                         <label for="validationFormAboutLabel" class="input-label">About</label>
 
                         <div class="js-form-message">
-                            <input type="text" maxlength="200" value="{{ Auth::user()->about }}" minlength="50" class="form-control" rows="5" name="about"
+                            <textarea class="form-control" maxlength="200" value="{{ Auth::user()->about }}" minlength="50" class="form-control" rows="5" name="about"
                                 id="validationFormAboutLabel"
                                 placeholder="Write something about your skills, passion, interests..."
                                 aria-label="Write something about your skills, passion, interests..." required
-                                data-msg="Describe yourself in at least 50 characters.">
+                                data-msg="Describe yourself in at least 50 characters."></textarea>
                         </div>
                     </div>
                     <!-- End Form Group -->

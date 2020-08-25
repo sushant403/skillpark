@@ -2,7 +2,6 @@
 
 @section('content')
 
-<link rel="stylesheet" media="screen" href="/css/theme.css">
 <!-- ========== MAIN ========== -->
 <main id="content" role="main">
     <!-- Hero Section -->
@@ -116,7 +115,7 @@
                     <!-- Category Custom Select -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <h4>Categories</h4>
-                        <select class="js-custom-select" id="categoryLabel" name="city_id" data-hs-select2-options='{
+                        <select class="js-custom-select" id="categoryLabel" name="category_id" data-hs-select2-options='{
                                 "customClass": "custom-select",
                                 "placeholder": "Select Category",
                                 "searchInputPlaceholder": "Search a Category"
@@ -162,9 +161,9 @@
                     <!-- Budget Custom Select -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Your Estimated Budget?</label>
-                        <select class="form-control custom-select" placeholder="Select your Budget" name="budget"
-                            data-msg="Please select your budget." required data-msg="Choose your Budget">
-                            <option label="Please Select your Budget" disabled></option>
+                        <select class="form-control custom-select" name="budget"
+                            data-msg="Please select your budget." required>
+                            <option class="text-muted" label="Choose your Budget" selected disabled></option>
                             <option value="Upto 20K">Rs. 5,000 to Rs. 20,000</option>
                             <option value="Upto 50K">Rs. 20,000 to Rs. 50,000</option>
                             <option value="Upto 1Lakh">Rs. 50,000 to Rs. 1,00,000</option>
@@ -180,7 +179,7 @@
                             <span id="customFileExample4">Browse your device and upload documents</span>
                             <small class="d-block text-muted">Maximum file size 5MB</small>
 
-                            <input id="fileAttachmentInput" name="attachments" type="file" multiple
+                            <input id="fileAttachmentInput" type="file" multiple
                                 class="js-file-attach file-attachment-input-label" data-hs-file-attach-options='{
                                                 "textTarget": "#customFileExample4"
                                             }'>

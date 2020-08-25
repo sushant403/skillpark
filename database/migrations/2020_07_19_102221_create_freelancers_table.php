@@ -15,7 +15,7 @@ class CreateFreelancersTable extends Migration
     {
         Schema::create('freelancers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('user_id');
             $table->string('tagline');
             $table->string('portfolio');
             $table->string('skills');
