@@ -8,9 +8,9 @@
     <!-- Hero Section -->
     <div class="position-relative">
         <div class="bg-img-hero" style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-            <div class="container space-top-2 space-top-lg-2 space-bottom-2 position-relative z-index-2">
-                <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-3 mb-md-9">
-                    <h2>Post Job</h2>
+            <div class="container space-top-1 space-bottom-1 position-relative z-index-2">
+                <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-2 mb-md-7">
+                    <h2>Post a Job</h2>
                     <p>We'll help you connect to the most qualifed freelancers.</p>
                 </div>
 
@@ -86,7 +86,7 @@
     <main id="content" role="main">
         <!-- Title -->
         <div class="w-md-80 py-4 py-lg-7 mt-lg-7 space-top-2 w-lg-50 text-center mx-md-auto ">
-            <h2>Provide information about your project/business</h2>
+            <h3>Provide information about your project</h3>
             <p>To find the specific group of talents, narrow down the information and options.</p>
         </div>
         <!-- End Title -->
@@ -115,12 +115,16 @@
 
                     <!-- Category Custom Select -->
                     <div class="js-form-message mb-4 mb-md-6">
-                        <label class="input-label">Choose the related Category</label>
-                        <select class="form-control custom-select" name="category_id" id="category" title="Choose Category" required data-msg="Please select category.">
-                            <option selected disabled>Choose Category</option>
-                            @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
+                        <h4>Categories</h4>
+                        <select class="js-custom-select" id="categoryLabel" name="city_id" data-hs-select2-options='{
+                                "customClass": "custom-select",
+                                "placeholder": "Select Category",
+                                "searchInputPlaceholder": "Search a Category"
+                              }' required data-msg="Categories helps find specific talent group.">
+                            <option label="empty"></option>
+                            @foreach ($categories as $category) <option value="{{ $category->id }}"
+                                data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $category->name }}</span></span>'>
+                                {{ $category->name }}</option> @endforeach
                         </select>
                     </div>
                     <!-- End Category Custom Select -->
@@ -158,17 +162,33 @@
                     <!-- Budget Custom Select -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Your Estimated Budget?</label>
-                        <select class="form-control custom-select" name="budget" data-msg="Please select your budget.">
-                            <option value="Upto 20K" selected>Rs. 5,000 to Rs. 20,000</option>
-                            <option value="Upto 50K" selected>Rs. 20,000 to Rs. 50,000</option>
-                            <option value="Upto 100K">Rs. 50,000 to Rs. 1,00,000</option>
-                            <option value="Upto 200K">Rs. 1,00,000 to Rs. 2,00,000</option>
-                            <option value="200K Plus">Rs. 2,00,000+</option>
+                        <select class="form-control custom-select" placeholder="Select your Budget" name="budget"
+                            data-msg="Please select your budget." required data-msg="Choose your Budget">
+                            <option label="Please Select your Budget" disabled></option>
+                            <option value="Upto 20K">Rs. 5,000 to Rs. 20,000</option>
+                            <option value="Upto 50K">Rs. 20,000 to Rs. 50,000</option>
+                            <option value="Upto 1Lakh">Rs. 50,000 to Rs. 1,00,000</option>
+                            <option value="1Lakh Plus">Rs. 1,00,000+</option>
                         </select>
                     </div>
                     <!-- End Budget Custom Select -->
 
-                    <div class="text-center">
+                    <!-- File Attachment Input -->
+                    <div class="js-form-message mb-4 mb-md-6">
+                        <label class="input-label">Upload Attachments (Optional)</label>
+                        <label class="file-attachment-input" for="fileAttachmentInput">
+                            <span id="customFileExample4">Browse your device and upload documents</span>
+                            <small class="d-block text-muted">Maximum file size 5MB</small>
+
+                            <input id="fileAttachmentInput" name="attachments" type="file" multiple
+                                class="js-file-attach file-attachment-input-label" data-hs-file-attach-options='{
+                                                "textTarget": "#customFileExample4"
+                                            }'>
+                        </label>
+                    </div>
+                    <!-- End File Attachment Input -->
+
+                    <div class="text-center space-top-1">
                         <div class="mb-2">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>

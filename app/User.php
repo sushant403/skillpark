@@ -5,15 +5,14 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Contracts\Auth\Access\Authorizable;
 use Spatie\Permission\Traits\HasRoles;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Traits\HasPermissions;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use HasRoles;
+    use HasPermissions;
 
     /**
      * The attributes that are mass assignable.
@@ -56,7 +55,6 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new Notifications\VerifyEmailNotification);
     }
 
-
     public function getAvatarAttribute($val)
     {
         return is_null($val) ? asset('images/spacer.png') : $val;
@@ -67,13 +65,13 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(City::class);
     }
 
-    public function categories()
+    public function freelancers()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Freelancer::class);
     }
 
-    public function project()
+    public function clients()
     {
-        return $this->hasMany(Project::class);
+        return $this->hasMany(Client::class);
     }
 }

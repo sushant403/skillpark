@@ -127,7 +127,7 @@
     @yield('content')
 
     <!-- ========== FOOTER ========== -->
-    <footer class="border-top text-center">
+    <footer class="border-top text-center pt-4">
         <div class="container">
             <div class="row justify-content-lg-between">
                 <div class="col-lg-3 mb-5">

@@ -263,7 +263,7 @@
                             <img src="/images/uploads/default.png" alt="">
                         </a>
                         <div class="post__head-title">
-                            <h5><a href="#">Bibek Dhungana</a></h5>
+                            <h5><a href="#">Kulman Ghising</a></h5>
                             <p>37 min ago</p>
                         </div>
                     </div>

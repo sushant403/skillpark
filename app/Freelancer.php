@@ -8,9 +8,14 @@ class Freelancer extends Model
 {
     protected $guarded = [];
 
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
     public function skills()
     {
-        return $this->belongsToMany(Skill::class);
+        return $this->hasMany(Skill::class);
     }
 
     public function proposals()

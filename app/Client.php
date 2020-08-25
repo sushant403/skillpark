@@ -8,12 +8,17 @@ class Client extends Model
 {
     protected $guarded = [];
 
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
     public function projects()
     {
         return $this->hasMany(Project::class);
     }
 
-    public function candidates()
+    public function freelancers()
     {
         return $this->belongsToMany(Freelancer::class);
     }

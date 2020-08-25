@@ -384,7 +384,7 @@
                         </li>
                         <li class="step-item mb-0">
                             <div class="step-content-wrapper">
-                                <span class="step-icon step-icon-xs step-icon-soft-primary">2</span>
+                                <span class="step-icon step-icon-xs step-icon-soft-primary">3</span>
                                 <div class="step-content">
                                     <h4>Dynamic Bidding System</h4>
                                     <p class="mb-0">Find any service within minutes and know exactly what you’ll pay. No
