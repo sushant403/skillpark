@@ -3,7 +3,7 @@
 @section('title', Auth::user()->name . ' - My Projects')
 @section('content')
 
-<div class="row space-1">
+<div class="row no-gutters space-1">
     <div class="col-lg-3">
         <!-- Navbar -->
         <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
@@ -29,7 +29,7 @@
                         <!-- List -->
                         <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
                             <li class="nav-item">
-                                <a class="nav-link active" href="Projects">
+                                <a class="nav-link active" href="{{ route('myprojects') }}">
                                     <i class="fas fa-shopping-basket nav-icon"></i>
                                     Your Projects
                                 </a>
@@ -93,104 +93,111 @@
 
                         <ul class="list-unstyled">
 
+                            @foreach($jobs->sortByDesc('created_at') as $key => $job)
+
                             <!-- Card -->
                             <li class="card card-bordered mb-3">
                                 <div class="card-body">
                                     <div class="row">
+                                        <div class="col-6 col-md">
+                                            <small class="text-cap">Project No.</small>
+                                            <small class="text-dark font-weight-bold">{{ $job->id }}</small>
+                                        </div>
                                         <div class="col-6 col-md mb-3 mb-md-0">
-                                            <small class="text-cap">Budget</small>
-                                            <small class="text-dark font-weight-bold">Rs. 5700</small>
+                                            <small class="text-cap">Project Name</small>
+                                            <small class="text-dark font-weight-bold">{{ $job->title ?? '' }}</small>
                                         </div>
                                         <div class="col-6 col-md mb-3 mb-md-0">
                                             <small class="text-cap">Freelancer</small>
-                                            <small class="text-dark font-weight-bold">Sushant Poudel</small>
+                                            <small
+                                                class="text-dark font-weight-bold">{{ $job->candidate->name ?? '(to be choosen)' }}</small>
                                         </div>
-                                        <div class="col-6 col-md">
-                                            <small class="text-cap">Project No.</small>
-                                            <small class="text-dark font-weight-bold">1</small>
+                                        <div class="col-6 col-md mb-3 mb-md-0">
+                                            <small class="text-cap">Budget</small>
+                                            <small class="text-dark font-weight-bold">NPR
+                                                {{ $job->budget ?? '' }}</small>
                                         </div>
                                         <div class="col-6 col-md">
                                             <small class="text-cap">Job Posted Date:</small>
-                                            <small class="text-dark font-weight-bold">14 August, 2020</small>
+                                            <small
+                                                class="text-dark font-weight-bold">{{ $job->created_at ?? '' }}</small>
                                         </div>
                                     </div>
                                     <!-- End Row -->
-
                                     <hr>
-
                                     <div class="row">
                                         <div class="col-md-8">
-
-                                            <div class="row mx-n1">
+                                            {{-- <div class="row mx-n1">
                                                 <div class="col-4 px-1">
-                                                    <img class="img-fluid" src="/images/img/380x360/img2.jpg" alt="">
-                                                </div>
-                                                <div class="col-4 px-1">
-                                                    <img class="img-fluid" src="/images/img/380x360/img7.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <!-- End Row -->
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <a class="btn btn-sm btn-block btn-white mb-2" href="#">
-                                                <i class="fas fa-Posting Jobs-cart fa-sm mr-2"></i> View Project
+                                                    @if($job->attachments)
+                                                    @foreach($job->attachments as $key => $media)
+                                                    <a href="{{ $media->getUrl() }}" target="_blank">
+                                            {{ trans('global.view_file') }}
                                             </a>
-                                            <a class="btn btn-sm btn-block btn-white" href="#">
-                                                <i class="fas fa-truck-loading fa-sm mr-2"></i>Track Proposals (2)
-                                            </a>
-                                            <a class="btn btn-sm btn-block btn-primary" href="#"><i
-                                                    class="fa fa-print fa-sm mr-2"></i>Print Invoice</a>
+                                            @endforeach
+                                            @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
+                                    <!-- End Row -->
                                 </div>
-                                <!-- End List Item -->
-                            </li>
-                            <!-- End End Card -->
-                        </ul>
-
-                        <!-- Pagination -->
-                        <nav class="d-flex justify-content-end mt-5" aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                            </ul>
-                        </nav>
-                        <!-- End Pagination -->
-                    </div>
-
-                    <div class="tab-pane fade" id="open-Projects" role="tabpanel" aria-labelledby="open-Projects-tab">
-                        <!-- Empty State -->
-                        <div class="text-center space-1">
-                            <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
-                                alt="Image Description">
-                            <p class="card-text">No data to show</p>
-                            <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
-                        </div>
-                        <!-- End Empty State -->
-                    </div>
-
-                    <div class="tab-pane fade" id="cenceled-Projects" role="tabpanel"
-                        aria-labelledby="cenceled-Projects-tab">
-                        <!-- Empty State -->
-                        <div class="text-center space-1">
-                            <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
-                                alt="Image Description">
-                            <p class="card-text">No data to show</p>
-                            <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
-                        </div>
-                        <!-- End Empty State -->
+                                <div class="col-md-4">
+                                    <a class="btn btn-sm btn-block btn-white mb-2" href="{{ route('jobs.show', $job->id) }}">
+                                        <i class="fas fa-Posting Jobs-cart fa-sm mr-2"></i> View Project
+                                    </a>
+                                    <a class="btn btn-sm btn-block btn-white" href="#">
+                                        <i class="fas fa-truck-loading fa-sm mr-2"></i>Track Proposals
+                                        ({{ $job->proposals->count() }})
+                                    </a>
+                                    <a class="btn btn-sm btn-block btn-primary" href="#"><i
+                                            class="fa fa-print fa-sm mr-2"></i>Print Invoice</a>
+                                </div>
                     </div>
                 </div>
-                <!-- End Tab Content -->
+                <!-- End List Item -->
+                </li>
+                <!-- End End Card -->
+                @endforeach
+                </ul>
+                {{-- <!-- Pagination -->
+                <nav class="d-flex justify-content-end mt-5" aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+                <!-- End Pagination --> --}}
             </div>
-            <!-- End Body -->
+
+            <div class="tab-pane fade" id="open-Projects" role="tabpanel" aria-labelledby="open-Projects-tab">
+                <!-- Empty State -->
+                <div class="text-center space-1">
+                    <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
+                        alt="Image Description">
+                    <p class="card-text">No data to show</p>
+                    <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
+                </div>
+                <!-- End Empty State -->
+            </div>
+
+            <div class="tab-pane fade" id="cenceled-Projects" role="tabpanel" aria-labelledby="cenceled-Projects-tab">
+                <!-- Empty State -->
+                <div class="text-center space-1">
+                    <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
+                        alt="Image Description">
+                    <p class="card-text">No data to show</p>
+                    <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
+                </div>
+                <!-- End Empty State -->
+            </div>
         </div>
-        <!-- End Card -->
+        <!-- End Tab Content -->
     </div>
+    <!-- End Body -->
+</div>
+<!-- End Card -->
+</div>
 </div>
 
 @endsection

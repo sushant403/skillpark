@@ -1,5 +1,8 @@
 <p align="center"><img src="https://github.com/sushantpoudel98/skillpark/blob/master/public/images/logo/biglogo.png" width="400"></p>
 
+### [Skillpark Changelog](https://github.com/sushantpoudel98/skillpark/blob/master/changelog.md)
+
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.

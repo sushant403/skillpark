@@ -76,7 +76,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
         Route::get('/dashboard', 'ProfileController@clientDashboard')->name('cdash');
-        Route::get('/projects', 'ProfileController@myProjects')->name('myprojects');
+        Route::get('/projects', 'JobsController@index')->name('myprojects');
 
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');
@@ -84,6 +84,9 @@ Route::middleware(['verified', 'auth'])->group(function () {
         //post projects for client
         Route::get('/post/project', 'PostController@showProjectForm');
         Route::post('/post/project', 'PostController@postProject')->name('post-project');
+
+        Route::resource('jobs', 'JobsController');
+        Route::post('jobs/media', 'JobsController@storeMedia')->name('jobs.storeMedia');
     });
 
     Route::get('/task', 'ProfileController@task');

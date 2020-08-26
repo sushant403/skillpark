@@ -3,13 +3,16 @@
 namespace App\Http\Requests;
 
 use App\Job;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreJobRequest extends FormRequest
 {
     public function authorize()
     {
-       // return \Gate::allows('job_create');
+        $user = User::find(Auth::user()->id);
+        return $user-> hasRole('client');
     }
 
     public function rules()
@@ -24,9 +27,8 @@ class StoreJobRequest extends FormRequest
             'budget'        => [
                 'required',
             ],
-            'delivery_date' => [
-                'date_format:' . config('panel.date_format'),
-                'nullable',
+            'delivery_time' => [
+                'required',
             ],
         ];
     }

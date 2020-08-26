@@ -92,7 +92,8 @@
 
         <!-- Project Submission Form Section -->
         <div class="container space-bottom-lg-3">
-            <form method="POST" action="{{ route('post-project') }}" class="js-validate row justify-content-lg-center">
+            <form method="POST" action="{{ route('jobs.store') }}" enctype="multipart/form-data"
+                class="js-validate row justify-content-lg-center">
                 @csrf
                 <div class="col-lg-8">
                     <!-- Input -->
@@ -106,7 +107,7 @@
                     <!-- Input -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Description about your project</label>
-                        <textarea class="form-control" rows="5" minlength="50" name="description"
+                        <textarea class="form-control" rows="5" minlength="10" name="description"
                             placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..."
                             required data-msg="Please describe your project in at least 50 characters"></textarea>
                     </div>
@@ -141,7 +142,6 @@
                     <div class="mb-4 mb-md-6">
                         <label class="input-label">Choose your Delivery Time <span
                                 class="text-muted font-weight-normal ml-1"></span></label>
-
                         <!-- Button Group -->
                         <div class="btn-group btn-group-toggle btn-group-segment d-flex" data-toggle="buttons">
                             <label class="btn flex-fill active">
@@ -161,13 +161,13 @@
                     <!-- Budget Custom Select -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Your Estimated Budget?</label>
-                        <select class="form-control custom-select" name="budget"
-                            data-msg="Please select your budget." required>
+                        <select class="form-control custom-select" name="budget" data-msg="Please select your budget."
+                            required>
                             <option class="text-muted" label="Choose your Budget" selected disabled></option>
-                            <option value="Upto 20K">Rs. 5,000 to Rs. 20,000</option>
-                            <option value="Upto 50K">Rs. 20,000 to Rs. 50,000</option>
-                            <option value="Upto 1Lakh">Rs. 50,000 to Rs. 1,00,000</option>
-                            <option value="1Lakh Plus">Rs. 1,00,000+</option>
+                            <option value="5,000 - 20,000">Rs. 5,000 to Rs. 20,000</option>
+                            <option value="20,000 - 50,000">Rs. 20,000 to Rs. 50,000</option>
+                            <option value="50,000 - 1,00,000">Rs. 50,000 to Rs. 1,00,000</option>
+                            <option value="1 Lakh +">Rs. 1,00,000+</option>
                         </select>
                     </div>
                     <!-- End Budget Custom Select -->
@@ -175,11 +175,11 @@
                     <!-- File Attachment Input -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Upload Attachments (Optional)</label>
-                        <label class="file-attachment-input" for="fileAttachmentInput">
+                        <label class="file-attachment-input" for="attachments-dropzone">
                             <span id="customFileExample4">Browse your device and upload documents</span>
                             <small class="d-block text-muted">Maximum file size 5MB</small>
 
-                            <input id="fileAttachmentInput" type="file" multiple
+                            <input id="attachments-dropzone" type="file" multiple
                                 class="js-file-attach file-attachment-input-label" data-hs-file-attach-options='{
                                                 "textTarget": "#customFileExample4"
                                             }'>
@@ -200,4 +200,43 @@
         <!-- End Project Submission Form Section -->
     </main>
 </main>
+
+<script>
+    var uploadedAttachmentsMap = {}
+Dropzone.options.attachmentsDropzone = {
+    url: '{{ route('jobs.storeMedia') }}',
+    maxFilesize: 2, // MB
+    addRemoveLinks: true,
+    headers: {
+      'X-CSRF-TOKEN': "{{ csrf_token() }}"
+    },
+    success: function (file, response) {
+      $('form').append('<input type="hidden" name="attachments[]" value="' + response.name + '">')
+      uploadedAttachmentsMap[file.name] = response.name
+    },
+    removedfile: function (file) {
+      file.previewElement.remove()
+      var name = ''
+      if (typeof file.file_name !== 'undefined') {
+        name = file.file_name
+      } else {
+        name = uploadedAttachmentsMap[file.name]
+      }
+      $('form').find('input[name="attachments[]"][value="' + name + '"]').remove()
+    },
+    init: function () {
+@if(isset($job) && $job->attachments)
+          var files =
+            {!! json_encode($job->attachments) !!}
+              for (var i in files) {
+              var file = files[i]
+              this.options.addedfile.call(this, file)
+              file.previewElement.classList.add('dz-complete')
+              $('form').append('<input type="hidden" name="attachments[]" value="' + file.file_name + '">')
+            }
+@endif
+    }
+}
+</script>
+
 @endsection

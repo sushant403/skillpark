@@ -2,11 +2,17 @@
 
 namespace App;
 
+use App\User;
+use App\Proposal;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Job extends Model
 {
+    use SoftDeletes, InteractsWithMedia;
 
     public $table = 'jobs';
 
@@ -15,7 +21,6 @@ class Job extends Model
         'created_at',
         'updated_at',
         'deleted_at',
-        'delivery_date',
     ];
 
     protected $fillable = [
@@ -28,7 +33,7 @@ class Job extends Model
         'employer_id',
         'description',
         'candidate_id',
-        'delivery_date',
+        'delivery_time',
     ];
 
     public function employer()
@@ -51,15 +56,15 @@ class Job extends Model
         return $this->getMedia('attachments');
     }
 
-    public function getDeliveryDateAttribute($value)
-    {
-        return $value ? Carbon::parse($value)->format(config('panel.date_format')) : null;
-    }
+    public function getCreatedAtAttribute($date)
+{
+    return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d | h:i A');
+}
 
-    public function setDeliveryDateAttribute($value)
-    {
-        $this->attributes['delivery_date'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
-    }
+public function getUpdatedAtAttribute($date)
+{
+    return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d | h:i A');
+}
 
     public function getHiredAtAttribute($value)
     {

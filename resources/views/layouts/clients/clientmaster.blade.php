@@ -137,7 +137,7 @@
                                                 </span>
                                                 Dashboard
                                             </a>
-                                            <a class="dropdown-item px-0" href="projects">
+                                            <a class="dropdown-item px-0" href="{{ route('myprojects') }}">
                                                 <span class="dropdown-item-icon">
                                                     <i class="fa fa-project-diagram"></i>
                                                 </span>

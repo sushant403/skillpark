@@ -8,7 +8,7 @@ trait MediaUploadingTrait
 {
     public function storeMedia(Request $request)
     {
-        $path = storage_path('uploads');
+        $path = storage_path('tmp/uploads');
 
         if (!file_exists($path)) {
             mkdir($path, 0777, true);

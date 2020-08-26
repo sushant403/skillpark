@@ -17,13 +17,13 @@ class ProposalsController extends Controller
 
         $proposals = Proposal::where('candidate_id', auth()->id())->get();
 
-        return view('admin.proposals.index', compact('proposals'));
+        return view('proposals.index', compact('proposals'));
     }
 
     public function create()
     {
 
-        return view('admin.proposals.create');
+        return view('proposals.create');
     }
 
     public function store(StoreProposalRequest $request)
@@ -35,13 +35,13 @@ class ProposalsController extends Controller
             $proposal->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
 
-        return redirect()->route('admin.proposals.index');
+        return redirect()->route('proposals.index');
     }
 
     public function edit(Proposal $proposal)
     {
 
-        return view('admin.proposals.edit', compact('proposal'));
+        return view('proposals.edit', compact('proposal'));
     }
 
     public function update(UpdateProposalRequest $request, Proposal $proposal)
@@ -64,7 +64,7 @@ class ProposalsController extends Controller
             }
         }
 
-        return redirect()->route('admin.proposals.index');
+        return redirect()->route('proposals.index');
     }
 
     public function show(Proposal $proposal)
@@ -72,7 +72,7 @@ class ProposalsController extends Controller
 
         $proposal->load('job', 'candidate');
 
-        return view('admin.proposals.show', compact('proposal'));
+        return view('proposals.show', compact('proposal'));
     }
 
     public function destroy(Proposal $proposal)

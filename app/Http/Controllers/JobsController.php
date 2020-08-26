@@ -17,22 +17,21 @@ class JobsController extends Controller
 
     public function index()
     {
-
         $user = User::find(Auth::user()->id);
 
-        if ($user->hasRole('freelancer')) {
+        if ($user->hasRole('client')) {
             $jobs = Job::with('proposals')->where('employer_id', auth()->id())->get();
         } else {
             $jobs = Job::whereNull('candidate_id')->get();
         }
 
-        return view('admin.jobs.index', compact('jobs'));
+        return view('clients.myprojects', compact('jobs'));
     }
 
     public function create()
     {
 
-        return view('admin.jobs.create');
+        return route('post-project');
     }
 
     public function store(StoreJobRequest $request)
@@ -45,8 +44,8 @@ class JobsController extends Controller
         foreach ($request->input('attachments', []) as $file) {
             $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
-
-        return redirect()->route('admin.jobs.index');
+        
+        return redirect()->route('myprojects');
     }
 
     public function edit(Job $job)
@@ -62,7 +61,7 @@ class JobsController extends Controller
 
         $job->load('candidate');
 
-        return view('admin.jobs.edit', compact('candidates', 'job'));
+        return view('edit', compact('candidates', 'job'));
     }
 
     public function update(UpdateJobRequest $request, Job $job)
@@ -97,7 +96,7 @@ class JobsController extends Controller
             }
         }
 
-        return redirect()->route('admin.jobs.index');
+        return redirect()->route('index');
     }
 
     public function show(Job $job)
@@ -109,7 +108,7 @@ class JobsController extends Controller
 
         $job->load(['employer', 'candidate', 'proposals']);
 
-        return view('admin.jobs.show', compact('job'));
+        return view('clients.myprojectdetails', compact('job'));
     }
 
     public function destroy(Job $job)
