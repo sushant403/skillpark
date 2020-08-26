@@ -14,14 +14,20 @@ class CreateProposalsTable extends Migration
     public function up()
     {
         Schema::create('proposals', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('job_id')->unsigned();
             $table->foreignId('candidate_id');
-            $table->string('title');
-            $table->longText('description');
-            $table->bigInteger('budget');
-            $table->integer('delivery_days');
-            $table->string('attachments')->nullable();
+            $table->longText('proposal_text');
+            $table->string('budget')->nullable();
+            $table->string('delivery_time')->nullable();
+            $table->datetime('approved_at')->nullable();
+            $table->datetime('rejected_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::table('proposals', function($table) {
+            $table->foreign('job_id')->references('id')->on('jobs');
         });
     }
 

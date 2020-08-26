@@ -14,6 +14,8 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasRoles;
     use HasPermissions;
 
+    public $table = 'users';
+
     /**
      * The attributes that are mass assignable.
      *

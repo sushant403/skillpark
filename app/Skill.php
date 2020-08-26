@@ -8,6 +8,6 @@ class Skill extends Model
 {
     public function freelancers()
     {
-        return $this->belongsToMany(Freelancer::class);
+        return $this->belongsToMany(User::class);
     }
 }

@@ -41,7 +41,7 @@ class HomeController extends Controller
                 }
                 return redirect()->route('client');
             } else {
-                return redirect()-> route('addprofile');
+                return redirect()->route('addprofile');
             }
         }
     }
