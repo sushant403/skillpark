@@ -3,9 +3,9 @@
 @section('content')
 <!-- 404 Page -->
 <div class="container d-flex flex-column justify-content-center pt-5 mt-n6 vh-100" style="flex: 1 0 auto;">
-  <div class="pt-7 pb-5">
+  <div class="pt-3 pb-5">
     <div class="text-center mb-2 pb-4">
-      <h1 class="mb-grid-gutter"><img class="d-inline-block pt-4" width="270" src="/images/svg/404.svg" alt="" /><span
+      <h1 class="mb-grid-gutter"><img class="d-inline-block pt-4" width="380" src="/images/svg/illustrations/419error.jpg" alt="" /><span
           class="sr-only">Error 404</span><span class="d-block pt-3 font-size-xs font-weight-semibold text-danger"
           style="font-size: 14px">Error code: 404</span>
       </h1>

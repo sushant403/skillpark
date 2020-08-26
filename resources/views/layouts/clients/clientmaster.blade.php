@@ -137,6 +137,12 @@
                                                 </span>
                                                 Dashboard
                                             </a>
+                                            <a class="dropdown-item px-0" href="projects">
+                                                <span class="dropdown-item-icon">
+                                                    <i class="fa fa-project-diagram"></i>
+                                                </span>
+                                                My Projects
+                                            </a>
                                             <a class="dropdown-item px-0" href="messages">
                                                 <span class="dropdown-item-icon">
                                                     <i class="fas fa-envelope"></i>

@@ -33,6 +33,11 @@ class ProfileController extends Controller
         return view('clients.dashboard');
     }
 
+    public function myProjects()
+    {
+        return view('clients.myprojects');
+    }
+
     public function editProfile()
     {
         $cities = City::all();

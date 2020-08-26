@@ -74,7 +74,7 @@
                         <img src="/images/logo/biglogo.svg" alt="Logo">
                     </a>
                     <!-- End Logo -->
-
+                    @guest
                     <!-- Secondary Content -->
                     <div class="navbar-nav-wrap-content">
                         <a class="btn btn-sm btn-primary" href="{{ route('register') }}">
@@ -82,6 +82,9 @@
                         </a>
                     </div>
                     <!-- End Secondary Content -->
+                    @else
+                    <div class="d-none"></div>
+                    @endguest
 
                     <!-- Navigation -->
                     <div id="navBar" class="collapse navbar-collapse">
@@ -315,37 +318,7 @@
                                 </li>
                                 <!-- End Docs -->
 
-                                <!-- Search -->
-                                <li class="navbar-nav-item d-sm-none d-md-block">
-                                    <div class="hs-unfold">
-                                        <a class="js-hs-unfold-invoker nav-link" href="javascript:;"
-                                            data-hs-unfold-options='{
-                                                    "target": "#searchClassic",
-                                                    "type": "css-animation",
-                                                    "animationIn": "slideInUp"
-                                                }'>
-                                            <i class="fas fa-search la-lg"></i>&nbsp; {{ __('nepali.Search') }}
-                                        </a>
-
-                                        <div id="searchClassic"
-                                            class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0"
-                                            style="min-width: 400px;">
-                                            <form class="input-group input-group-sm input-group-merge">
-                                                <input type="text" class="form-control"
-                                                    placeholder="{{ __('nepali.Search for Services') }}.."
-                                                    aria-label="{{ __('nepali.Search for Services') }}..">
-                                                <div class="input-group-append">
-                                                    <button type="button" class="btn">
-                                                        <i class="fas fa-search"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- End Search -->
                                 @guest
-
                                 <!-- Account Login -->
                                 <li class="navbar-nav-item">
                                     <div class="hs-unfold">
@@ -711,46 +684,66 @@
     <!-- JS Plugins Init. -->
     <script>
         $(document).on('ready', function () {
-      // initialization of header
-      var header = new HSHeader($('#header')).init();
-    });
-
-      // initialization of mega menu
-      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
-        desktop: {
-          position: 'left'
-        }
-      }).init();
-
-        // initialization of video player
-        $('.js-inline-video-player').each(function () {
-        var videoPlayer = new HSVideoPlayer($(this)).init();
-        });
-
-      // initialization of unfold
-      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-
-      // initialization of form validation
-      $('.js-validate').each(function() {
-        $.HSCore.components.HSValidation.init($(this), {
-          rules: {
-            confirmPassword: {
-              equalTo: '#signupPassword'
+          // initialization of header
+          var header = new HSHeader($('#header')).init();
+    
+          // initialization of mega menu
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
             }
-          }
+          }).init();
+    
+          // initialization of form validation
+          $('.js-validate').each(function() {
+            $.HSCore.components.HSValidation.init($(this), {
+              rules: {
+                confirmPassword: {
+                  equalTo: '#signupPassword'
+                }
+              }
+            });
+          });
+          
+          // initialization of video player
+          $('.js-inline-video-player').each(function () {
+            var videoPlayer = new HSVideoPlayer($(this)).init();
+          });
+        
+          // initialization of show animations
+          $('.js-animation-link').each(function () {
+            var showAnimation = new HSShowAnimation($(this)).init();
+          });
+    
+          $('.cbp').on('initComplete.cbp', function() {
+            // update sticky block
+            cbpStickyFilter.update();
+          });
+    
+          $('.cbp').on('filterComplete.cbp', function() {
+            // update sticky block
+            cbpStickyFilter.update();
+          });
+    
+          $('.cbp').on('pluginResize.cbp', function() {
+            // update sticky block
+            cbpStickyFilter.update();
+          });
+    
+          // animated scroll to cbp container
+          $('#cbpStickyFilter').on('click', '.cbp-filter-item', function (e) {
+            $('html, body').stop().animate({
+              scrollTop: $('#demoExamplesSection').offset().top
+            }, 200);
+          });
+    
+          // initialization of go to
+          $('.js-go-to').each(function () {
+            var goTo = new HSGoTo($(this)).init();
+          });
         });
-      });
-
-      // initialization of show animations
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
     </script>
+
 
 </body>
 

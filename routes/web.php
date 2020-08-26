@@ -76,6 +76,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
         Route::get('/dashboard', 'ProfileController@clientDashboard')->name('cdash');
+        Route::get('/projects', 'ProfileController@myProjects')->name('myprojects');
 
         Route::get('/services', 'ProfileController@serviceList');
         Route::get('/services/description', 'ProfileController@serviceSingle');

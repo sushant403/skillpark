@@ -255,7 +255,7 @@
                                             <p>Start your business on various platforms with just a post.</p>
                                         </div>
                                         <a class="btn btn-sm btn-soft-primary btn-pill transition-3d-hover"
-                                            href="post/project">Post Your Project <i
+                                            href="{{ route('myprojects') }}">View Your Project <i
                                                 class="fas fa-angle-right ml-1"></i></a>
                                     </div>
 
