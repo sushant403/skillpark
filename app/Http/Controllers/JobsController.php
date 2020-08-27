@@ -30,7 +30,6 @@ class JobsController extends Controller
 
     public function create()
     {
-
         return route('post-project');
     }
 
@@ -44,7 +43,7 @@ class JobsController extends Controller
         foreach ($request->input('attachments', []) as $file) {
             $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
-        
+
         return redirect()->route('myprojects');
     }
 

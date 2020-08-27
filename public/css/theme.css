@@ -25695,7 +25695,7 @@ a:hover .text-hover-primary {
     opacity: 0;
   }
   .post__title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #364e65;
     margin-bottom: 15px;
@@ -25705,7 +25705,7 @@ a:hover .text-hover-primary {
     color: #364e65;
   }
   .post__title a:hover {
-    color: #fa7268;
+    color: #1dc8cc;
   }
   .post__options {
     display: -webkit-flex;
@@ -25883,7 +25883,7 @@ a:hover .text-hover-primary {
     flex-direction: row;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: flex-end;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;

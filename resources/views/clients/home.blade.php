@@ -1,13 +1,12 @@
 @extends('layouts.clients.clientmaster')
 
-@section('title', Auth::user()->name . ' - Home')
+@section('title', Auth::user()->name . ' | Home')
 @section('content')
 
 <main class="py-2" role="main" id="content">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
-
                 <!--   header -->
                 <div class="third-menu filter-options py-3">
                     <div class="container">
@@ -313,6 +312,11 @@
                     <div class="view_slider recommended pt-5">
                         <div class="container">
                             <h3>Trending Services of <span class="text-highlight-success" id="date"></span></h3>
+                            <script>
+                                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];;
+                                var date = new Date();
+                                 document.getElementById('date').innerHTML = months[date.getMonth()] ;
+                            </script>
                             <div class="js-slick-carousel slick" data-hs-slick-carousel-options='{
                                 "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-left slick-arrow-centered-y rounded-circle ml-n4\"></span>",
                                 "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-right slick-arrow-centered-y rounded-circle mr-n4\"></span>",

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>@yield('title', 'Skillpark Inc. | Home')</title>
+  <title>@yield('title',Auth::user()->name . ' | Home')</title>
   <!-- SEO Meta Tags-->
   <meta name="description" content="Skillpark Inc.">
   <meta name="keywords"

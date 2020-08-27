@@ -90,12 +90,9 @@
                 <div class="tab-content" id="editUserTabContent">
                     <div class="tab-pane fade show active" id="all-Projects" role="tabpanel"
                         aria-labelledby="all-Projects-tab">
-
                         <ul class="list-unstyled">
 
                             @foreach($jobs->sortByDesc('created_at') as $key => $job)
-
-                            <!-- Card -->
                             <li class="card card-bordered mb-3">
                                 <div class="card-body">
                                     <div class="row">
@@ -123,7 +120,6 @@
                                                 class="text-dark font-weight-bold">{{ $job->created_at ?? '' }}</small>
                                         </div>
                                     </div>
-                                    <!-- End Row -->
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-8">
@@ -141,7 +137,8 @@
                                     <!-- End Row -->
                                 </div>
                                 <div class="col-md-4">
-                                    <a class="btn btn-sm btn-block btn-white mb-2" href="{{ route('jobs.show', $job->id) }}">
+                                    <a class="btn btn-sm btn-block btn-white mb-2"
+                                        href="{{ route('jobs.show', $job->id) }}">
                                         <i class="fas fa-Posting Jobs-cart fa-sm mr-2"></i> View Project
                                     </a>
                                     <a class="btn btn-sm btn-block btn-white" href="#">
@@ -153,9 +150,7 @@
                                 </div>
                     </div>
                 </div>
-                <!-- End List Item -->
                 </li>
-                <!-- End End Card -->
                 @endforeach
                 </ul>
                 {{-- <!-- Pagination -->

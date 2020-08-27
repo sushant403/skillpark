@@ -1,5 +1,6 @@
 @extends('layouts.freelancers.freelancermaster')
 
+@section('title','Dashboard | ' . Auth::user()->name)
 @section('content')
 
 <!-- Body Start -->

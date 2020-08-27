@@ -1,5 +1,6 @@
 @extends('layouts.clients.clientmaster')
 
+@section('title','Dashboard | ' . Auth::user()->name)
 @section('content')
 
 <!-- Body Start -->
@@ -13,7 +14,8 @@
                         <div class="job-urs-dts">
                             <h4 class="py-1">{{ Auth::user()->name }}</h4>
                             <span>{{ Auth::user()->tagline }}</span>
-                            <div class="avialable pt-3">Edit Profile<a href={{ url('settings') }}><i class="far fa-edit"></i></a>
+                            <div class="avialable pt-3">Edit Profile<a href={{ url('settings') }}><i
+                                        class="far fa-edit"></i></a>
                             </div>
                         </div>
                     </div>

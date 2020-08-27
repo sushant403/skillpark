@@ -1,5 +1,7 @@
 @extends('layouts.clients.clientmaster')
 
+@section('title', 'Post Job | ' . Auth::user()->name)
+
 @section('content')
 
 <!-- ========== MAIN ========== -->
@@ -107,7 +109,7 @@
                     <!-- Input -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Description about your project</label>
-                        <textarea class="form-control" rows="5" minlength="10" name="description"
+                        <textarea class="form-control" rows="5" minlength="50" name="description"
                             placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..."
                             required data-msg="Please describe your project in at least 50 characters"></textarea>
                     </div>
@@ -172,20 +174,22 @@
                     </div>
                     <!-- End Budget Custom Select -->
 
-                    <!-- File Attachment Input -->
-                    <div class="js-form-message mb-4 mb-md-6">
-                        <label class="input-label">Upload Attachments (Optional)</label>
-                        <label class="file-attachment-input" for="attachments-dropzone">
-                            <span id="customFileExample4">Browse your device and upload documents</span>
-                            <small class="d-block text-muted">Maximum file size 5MB</small>
+                    <!-- Attachment Custom Select -->
+                    <div class="form-group {{ $errors->has('attachments') ? 'has-error' : '' }}">
+                        <label for="attachments">{{ trans('global.job.fields.attachments') }}</label>
+                        <div class="needsclick dropzone" id="attachments-dropzone">
 
-                            <input id="attachments-dropzone" type="file" multiple
-                                class="js-file-attach file-attachment-input-label" data-hs-file-attach-options='{
-                                                "textTarget": "#customFileExample4"
-                                            }'>
-                        </label>
+                        </div>
+                        @if($errors->has('attachments'))
+                        <p class="help-block">
+                            {{ $errors->first('attachments') }}
+                        </p>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.job.fields.attachments_helper') }}
+                        </p>
                     </div>
-                    <!-- End File Attachment Input -->
+                    <!-- End Attachment Custom Select -->
 
                     <div class="text-center space-top-1">
                         <div class="mb-2">

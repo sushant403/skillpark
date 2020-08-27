@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>@yield('title', 'Skillpark Inc. | Home')</title>
+    <title>@yield('title',Auth::user()->name . ' | Home')</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
 
     <!-- CSS Skillpark Template -->
@@ -541,12 +542,11 @@
     <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
     <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-    <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
     <script src="/vendor/slick-carousel/slick/slick.js"></script>
-    <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
     <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
     <!-- JS Skillpark -->
     <script src="/js/hs.core.js"></script>
@@ -558,73 +558,65 @@
     <!-- JS Plugins Init. -->
     <script>
         $(document).on('ready', function () {
-      // initialization of header
-      var header = new HSHeader($('#header')).init();
-     });
-
-      // initialization of HSMegaMenu component
-      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
-
-      // initialization of unfold
-      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-
-      // initialization of form validation
-      $('.js-validate').each(function() {
-        $.HSCore.components.HSValidation.init($(this), {
-          rules: {
-            confirmPassword: {
-              equalTo: '#signupPassword'
+          // initialization of header
+          var header = new HSHeader($('#header')).init();
+    
+          // initialization of mega menu
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
             }
-          }
+          }).init();
+    
+          // initialization of form validation
+          $('.js-validate').each(function() {
+            $.HSCore.components.HSValidation.init($(this), {
+              rules: {
+                confirmPassword: {
+                  equalTo: '#signupPassword'
+                }
+              }
+            });
+          });
+          
+          // initialization of unfold
+          var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+          // initialization of slick carousel
+            $('.js-slick-carousel').each(function() {
+                var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+            });
+            
+            // initialization of show animations
+            $('.js-animation-link').each(function () {
+                var showAnimation = new HSShowAnimation($(this)).init();
+            });
+
+            // initialization of masked input
+            $('.js-masked-input').each(function () {
+                var mask = $.HSCore.components.HSMask.init($(this));
+            });
+
+            // initialization of file attach
+            $('.js-file-attach').each(function () {
+                var customFile = new HSFileAttach($(this)).init();
+            });
+
+            // initialization of select2
+          $('.js-custom-select').each(function () {
+            var select2 = $.HSCore.components.HSSelect2.init($(this));
+            $('.js-custom-select-multiple').select2({
+            placeholder: 'Select options',
+            width: '100%',
+            maximumSelectionLength: 3,
+            });
+          });
+    
+          // initialization of go to
+          $('.js-go-to').each(function () {
+            var goTo = new HSGoTo($(this)).init();
+          });
         });
-      });
-      
-        $(document).on('ready', function () {
-        // initialization of sticky blocks
-        $('.js-sticky-block').each(function () {
-        var stickyBlock = new HSStickyBlock($(this)).init();
-        });
-        });
-
-      // initialization of slick carousel
-      $('.js-slick-carousel').each(function() {
-        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
-      });
-      
-      // initialization of show animations
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
-      // initialization of masked input
-      $('.js-masked-input').each(function () {
-        var mask = $.HSCore.components.HSMask.init($(this));
-      });
-
-      // initialization of file attach
-      $('.js-file-attach').each(function () {
-        var customFile = new HSFileAttach($(this)).init();
-      });
-
-      // initialization of select2
-      $('.js-custom-select').each(function () {
-        var select2 = $.HSCore.components.HSSelect2.init($(this));
-          $('.js-custom-select-multiple').select2({
-          placeholder: 'Select options',
-          width: '100%',
-         maximumSelectionLength: 3,
-        });
-      });
-
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
-
-      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];;
-        var date = new Date();
-
-        document.getElementById('date').innerHTML = months[date.getMonth()] ;
     </script>
 
 </body>

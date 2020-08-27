@@ -15,6 +15,7 @@ class Create1556514953174JobsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('budget');
+            $table->string('category_id');
             $table->string('delivery_time')->nullable();
             $table->datetime('hired_at')->nullable();
             $table->timestamps();

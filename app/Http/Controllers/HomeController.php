@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Job;
 use App\City;
 use App\User;
 use App\Skill;
@@ -51,7 +52,14 @@ class HomeController extends Controller
         $cities = City::all();
         $categories = Category::all();
         $skills = Skill::all();
-        return view('freelancers.home', compact(['cities', 'categories', 'skills']));
+        $user = User::find(Auth::user()->id);
+
+        if ($user->hasRole('client')) {
+            $jobs = Job::with('proposals')->where('employer_id', auth()->id())->get();
+        } else {
+            $jobs = Job::whereNull('candidate_id')->get();
+        }
+        return view('freelancers.home', compact(['cities', 'categories', 'skills','jobs']));
     }
 
     public function freelancerSearch()

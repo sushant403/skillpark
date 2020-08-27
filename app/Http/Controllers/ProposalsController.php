@@ -14,16 +14,14 @@ class ProposalsController extends Controller
 
     public function index()
     {
-
         $proposals = Proposal::where('candidate_id', auth()->id())->get();
 
-        return view('proposals.index', compact('proposals'));
+        return view('freelancers.myproposals', compact('proposals'));
     }
 
     public function create()
     {
-
-        return view('proposals.create');
+        return view('freelancers.post-proposal');
     }
 
     public function store(StoreProposalRequest $request)
@@ -35,7 +33,7 @@ class ProposalsController extends Controller
             $proposal->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
 
-        return redirect()->route('proposals.index');
+        return redirect()->view('freelancers.myproposals');
     }
 
     public function edit(Proposal $proposal)

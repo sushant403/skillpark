@@ -54,7 +54,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
     //middleware protected roles
 
     //freelancer only
-    Route::group(['middleware' => ['role:freelancer'], 'prefix' => 'fp'], function () {
+    Route::group(['middleware' => ['role:freelancer'], 'prefix' => 'ab'], function () {
         Route::get('/home', 'HomeController@freelancer')->name('freelancer'); //user feeds
         Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
 
@@ -64,14 +64,14 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/project/description', 'ProfileController@serviceSingle');
 
         //bidding proposal
-        Route::get('/post/proposal', 'PostController@showProposalForm');
-        Route::post('/post/proposal', 'PostController@postProposal')->name('post-proposal');
+        Route::resource('proposals', 'ProposalsController');
+        Route::post('proposals/media', 'ProposalsController@storeMedia')->name('proposals.storeMedia');
     });
 
     //============================Roles Middleware==================================
 
     //client only
-    Route::group(['middleware' => ['role:client'], 'prefix' => 'cp'], function () {
+    Route::group(['middleware' => ['role:client'], 'prefix' => 'cd'], function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
