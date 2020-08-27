@@ -21,7 +21,7 @@
                 <!-- Title -->
                 <div class="row justify-content-sm-between align-items-sm-center mb-5">
                     <div class="col-sm mb-3 mb-sm-0">
-                        <h1 class="h2">{{ $job->title ?? 'Title' }}</h1>
+                        <h1 class="h3">{{ $job->title ?? 'Job Title' }}</h1>
                         <p class="mb-0"><i class="fa fa-map-marker-alt mr-1"></i>
                             {{ $job->employer->city->name ?? 'Employer Location'}}</p>
                     </div>
@@ -43,19 +43,13 @@
                 <!-- End Title -->
 
                 <div class="mb-5">
-                    <p>Skillpark Inc. is building an artificial intelligence platform to transform the modern workforce.
-                        Our Ai
-                        platform allows team members to access information and streamline processes. We are integrated
-                        with a who's who of apps including Google Drive, Box, Salesforce, Zenefits, Office 365, Tableau,
-                        DOMO and 40+ others. We support new ideas, collaboration, and the ownership of our product
-                        throughout the organization.</p>
+                    <p>{{ $job->description ?? 'Job Description' }}</p>
                 </div>
 
                 <div class="mb-5">
                     <h3 class="h4">Requirements:</h3>
 
                     <ul>
-                        <li>Energized to join a startup</li>
                         <li>Excited to mentor more junior developers</li>
                         <li>Good at problem selection, problem solving, and course correcting</li>
                         <li>Focused on best practices</li>
@@ -65,12 +59,11 @@
 
                 <div class="mb-5">
                     <p>Demonstrate your initiative, intuition and results from whatever you've been working on in the
-                        past. Tell us what APIs you love. Tell us what makes you tick. Show us what you've been up to
-                        and we will do the same!</p>
+                        past. Show us what you've been up to and we will do the same!</p>
                 </div>
 
                 <div id="applyForJob" class="border-top text-center pt-5 mb-4 mb-md-7">
-                    <h2>Apply for this Job</h2>
+                    <h3>Apply for this Job</h3>
                 </div>
 
                 <!-- Apply Form -->
@@ -100,14 +93,15 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6 mb-3 mb-md-5">
+                        <div class="col-md-12 mb-3 mb-md-5">
                             <!-- Input -->
                             <div class="js-form-message">
-                                <label class="input-label" for="tagLabel">Additional Comment <span
-                                        class="text-muted font-weight-normal ml-1">(Optional)</span></label>
+                                <label class="input-label" for="tagLabel">Statement Of Purpose Title</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="delivery_time" id="tagLabel"
-                                        placeholder="A line of Comment" aria-label="A line of Comment">
+                                        placeholder="(eg. 3 years+ experience in PHP)"
+                                        aria-label="(eg. 3 years+ experience in PHP)" required
+                                        data-msg="First thing Client sees is your SOP.">
                                 </div>
                             </div>
                             <!-- End Input -->
@@ -120,7 +114,7 @@
                                         class="text-muted font-weight-normal ml-1">(Optional)</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="budget" id="budgetLabel"
-                                        placeholder="Budget" aria-label="Budget">
+                                        placeholder="Budget (NPR)" aria-label="Budget">
                                 </div>
                             </div>
                             <!-- End Input -->
@@ -143,7 +137,7 @@
                     <!-- Attachment Custom Select -->
                     <div class="form-group {{ $errors->has('attachments') ? 'has-error' : '' }}">
                         <label for="attachments">{{ trans('global.job.fields.attachments') }}</label>
-                        <div class="needsclick dropzone" id="attachments-dropzone">
+                        <div class="needsclick dropzone border-1 border-dashed" id="attachments-dropzone">
 
                         </div>
                         @if($errors->has('attachments'))

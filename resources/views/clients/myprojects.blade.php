@@ -3,8 +3,8 @@
 @section('title', Auth::user()->name . ' - My Projects')
 @section('content')
 
-<div class="row no-gutters space-1">
-    <div class="col-lg-3">
+<div class="row no-gutters space-lg-1 space-sm-0">
+    <div class="col-lg-2 mx-auto">
         <!-- Navbar -->
         <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
             <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
@@ -50,7 +50,7 @@
         <!-- End Navbar -->
     </div>
 
-    <div class="col-lg-9">
+    <div class="col-lg-9 mx-auto">
         <!-- Card -->
         <div class="card">
             <!-- Header -->
@@ -105,7 +105,7 @@
                                             <small class="text-dark font-weight-bold">{{ $job->title ?? '' }}</small>
                                         </div>
                                         <div class="col-6 col-md mb-3 mb-md-0">
-                                            <small class="text-cap">Freelancer</small>
+                                            <small class="text-cap">Hired Freelancer</small>
                                             <small
                                                 class="text-dark font-weight-bold">{{ $job->candidate->name ?? '(to be choosen)' }}</small>
                                         </div>
@@ -141,7 +141,7 @@
                                         href="{{ route('jobs.show', $job->id) }}">
                                         <i class="fas fa-Posting Jobs-cart fa-sm mr-2"></i> View Project
                                     </a>
-                                    <a class="btn btn-sm btn-block btn-white" href="#">
+                                    <a class="btn btn-sm btn-block btn-white" href="{{ route('jobs.show', $job->id) }}#biddings">
                                         <i class="fas fa-truck-loading fa-sm mr-2"></i>Track Proposals
                                         ({{ $job->proposals->count() }})
                                     </a>

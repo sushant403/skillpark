@@ -73,11 +73,9 @@
                             "searchInputPlaceholder": "Search a Category"
                           }'>
                             <option label="empty"></option>
-                            @foreach ($categories as $category)
-                            <option value="{{ $category->id }}"
+                            @foreach ($categories as $category)<option value="{{ $category->id }}"
                                 data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $category->name }}</span></span>'>
-                                {{ $category->name }}</option>
-                            @endforeach
+                                {{ $category->name }}</option>@endforeach
                         </select>
                     </div>
 
@@ -115,9 +113,7 @@
             </div>
 
             <div class="col-12 col-md-7 col-lg-6 col-xl-6">
-
                 @foreach($jobs->sortByDesc('created_at') as $key => $job)
-                <!-- post -->
                 <div class="post">
                     <div class="post__head">
                         <a href="javascript:;" class="post__head-img">
@@ -142,12 +138,12 @@
                             <a class="post__actions-btn post__actions-btn--red" href="#">
                                 <i class="fa fa-envelope fa-sm"></i>
                             </a>
-                            <a href=" {{ route('proposals.create') }}?job_id={{ $job->id }}"
+                            <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}#applyForJob"
                                 class="post__actions-btn post__actions-btn--blue"><span>Bid now</span></a>
                         </div>
                     </div>
 
-                    <h3 class="post__title">{{ $job->title ?? '' }}</h3>
+                    <h3 class="post__title"><a href="{{ route('proposals.create') }}?job_id={{ $job->id }}">{{ $job->title ?? '' }}</a></h3>
 
                     <div class="post__options">
                         <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
@@ -157,10 +153,18 @@
                         <p>{{ $job->description ?? '' }}</p>
                     </div>
 
-                    <div class="post__tags">
-                        <a href="#">HTML</a>
-                        <a href="#">CSS</a>
-                        <a href="#">JS</a>
+                    <div class="row w-100">
+                        <div class="col-5">
+                            <div class="post__tags">
+                                <a href="#">HTML</a>
+                                <a href="#">CSS</a>
+                                <a href="#">JS</a>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <p class="float-right" style="font-size: 14px;"></u><b class="mr-1">Expected
+                                    Delivery:</b></u> {{ $job->delivery_time }}</p>
+                        </div>
                     </div>
 
                     <div class="post__stats">
@@ -179,7 +183,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- end post -->
                 @endforeach
 
                 <!-- view more -->

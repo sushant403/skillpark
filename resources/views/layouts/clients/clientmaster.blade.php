@@ -80,7 +80,7 @@
                                     <form class="js-validate d-flex align-items-center">
                                         <label class="sr-only" for="signupSrEmail">Search for apps</label>
                                         <div class="d-inline-block w-75 mr-2">
-                                            <input type="email" class="form-control" name="email" id="signupSrEmail"
+                                            <input type="text" class="form-control" id="signupSrEmail"
                                                 placeholder="Search for apps" aria-label="Search for apps">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
@@ -332,16 +332,16 @@
                                 <!-- End Categories -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="saved-jobs" class="nav-link"><i
+                                    <a href="{{ route('myprojects') }}" class="nav-link"><i
                                             class="fa fa-bookmark font-size-1 mr-1"></i> My Projects</a>
                                 </li>
 
                                 <!-- Search Form -->
                                 <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
                                     <form class="d-flex align-items-center">
-                                        <label class="sr-only" for="signupSEmail">Search for apps</label>
+                                        <label class="sr-only" for="signupS">Search for apps</label>
                                         <div class="d-inline-block w-85 mr-2">
-                                            <input type="text" class="form-control" name="search" id="signupSEmail"
+                                            <input type="text" class="form-control" name="search" id="signupS"
                                                 placeholder=" Search for Jobs " aria-label=" Search for Jobs ">
                                         </div>
                                         <button type="submit" class="btn btn-primary">

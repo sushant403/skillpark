@@ -209,7 +209,7 @@
 <script>
     var uploadedAttachmentsMap = {}
 Dropzone.options.attachmentsDropzone = {
-    url: '{{ route('admin.proposals.storeMedia') }}',
+    url: '{{ route('jobs.storeMedia') }}',
     maxFilesize: 2, // MB
     addRemoveLinks: true,
     headers: {

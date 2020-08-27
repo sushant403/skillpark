@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Job;
+use App\Proposal;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\StoreProposalRequest;
 use App\Http\Requests\UpdateProposalRequest;
-use App\Proposal;
+use App\Http\Controllers\Traits\MediaUploadingTrait;
 
 class ProposalsController extends Controller
 {
@@ -31,7 +32,7 @@ class ProposalsController extends Controller
         foreach ($request->input('attachments', []) as $file) {
             $proposal->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
-        return view('freelancers.myproposals');
+        return redirect()->route('proposals.index');
     }
 
     public function edit(Proposal $proposal)
@@ -64,7 +65,7 @@ class ProposalsController extends Controller
     {
         $proposal->load('job', 'candidate');
 
-        return view('proposals.show', compact('proposal'));
+        return redirect()->route('proposals.show', compact('proposal'));
     }
 
     public function destroy(Proposal $proposal)

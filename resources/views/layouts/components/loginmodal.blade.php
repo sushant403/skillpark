@@ -26,8 +26,8 @@
                     <div id="login">
                         <!-- Title -->
                         <div class="text-center mb-5 mt-2">
-                            <h3 class="mb-2">Welcome Back</h3>
-                            <p>Login to stay updated on your freelancing
+                            <h3 class="mb-2">Sign In to Skillpark</h3>
+                            <p>Stay updated on your freelancing
                                 world.</p>
                         </div>
                         <!-- End Title -->

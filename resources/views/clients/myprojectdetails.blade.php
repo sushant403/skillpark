@@ -1,200 +1,189 @@
 @extends('layouts.clients.clientmaster')
 
-@section('title', Auth::user()->name . ' - My Projects')
+@section('title',  $job->title . ' | ' . Auth::user()->name)
 @section('content')
 
-<div class="row no-gutters space-1">
-    <div class="col-lg-3">
-        <!-- Navbar -->
-        <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
-            <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="bg-light">
+
+    <!-- Content Section -->
+    <div class="container space-1 space-top-lg-1 ">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
                 <!-- Card -->
-                <div class="card mb-5">
+                <div class="card mb-3 mb-lg-5">
+                    <!-- Header -->
+                    <div class="card-header">
+                        <h5 class="card-header-title">{{ $job->title }}<a class="btn btn-sm btn-ghost-secondary"
+                                href="{{ route('jobs.index') }}">
+                                <i class="fa fa-angle-left mr-1"></i>
+                                Back to Projects List
+                            </a></h5>
+
+                        <a class="btn btn-sm btn-ghost-secondary" href="#">
+                            <i class="fas fa-file-download mr-1"></i>
+                            Download .PDF
+                        </a>
+                    </div>
+                    <!-- End Header -->
+
+                    <!-- Body -->
                     <div class="card-body">
-                        <!-- Avatar -->
-                        <div class="d-none d-lg-block text-center mb-5">
-                            <div class="avatar avatar-xxl avatar-circle mb-3">
-                                <img class="avatar-img" src="{{ asset(Auth::user()->avatar) }}" alt="Image Description">
-                                <img class="avatar-status avatar-lg-status"
-                                    src="/images/svg/illustrations/top-vendor.svg" alt="Image Description"
-                                    data-toggle="tooltip" data-placement="top" title="Verified user">
+                        <div class="row">
+                            <div class="col-md-8 mb-4 mb-md-0">
+                                <div class="mb-4">
+                                    <small class="text-cap">Delivery: {{ $job->delivery_time }}</small>
+                                    <h5><i class="fa fa-user-check mr-1"></i>Hired Freelancer: <a class="btn btn-sm btn-ghost-secondary pl-1"
+                                            href="#">{{ $job->candidate->name ?? '(to be choosen)' }}</a></h5>
+                                </div>
+
+                                <div>
+                                    <small class="text-cap">Total Budget</small>
+                                    <h4 class="text-primary">NPR {{ $job->budget }}</h4>
+                                </div>
+                                <div class="mt-4">
+                                    <p>{{ $job->description }}</p>
+                                </div>
                             </div>
 
-                            <h4 class="card-title">{{ Auth::user()->name }}</h4>
-                            <p class="card-text font-size-1">{{ Auth::user()->email }}</p>
+                            <div class="col-md-4 text-md-right">
+                                <a class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#">Cancel Project</a>
+                                <a class="btn btn-sm btn-primary transition-3d-hover mb-0 mb-md-2" href="">Update</a>
+                            </div>
                         </div>
-                        <!-- End Avatar -->
-                        <h6 class="text-cap small">Job Posts</h6>
-
-                        <!-- List -->
-                        <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="projects">
-                                    <i class="fas fa-shopping-basket nav-icon"></i>
-                                    Your Projects
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/faq">
-                                    <i class="fas fa-heart nav-icon"></i>
-                                    FAQ
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- End List -->
                     </div>
+                    <!-- End Body -->
                 </div>
                 <!-- End Card -->
-            </div>
-        </div>
-        <!-- End Navbar -->
-    </div>
 
-    <div class="col-lg-9">
-        <div class="card">
+                <!-- Card -->
+                <div class="card mb-3 mb-lg-5">
+                    <div class="card-header" id="biddings">
+                        <h5 class="card-header-title">Proposal Biddings</h5>
+                    </div>
 
-            <div class="content">
-                <div class="row no-gutters">
-                    <div class="col-lg-12">
+                    <!-- Body -->
+                    <div class="card-body">
+                        <!-- List Group -->
+                        <ul class="list-group mb-5">
+                            <!-- List Item -->
+                            @foreach($job->proposals->sortByDesc('created_at') as $key => $proposal)
+                            <li class="list-group-item">
+                                <div class="mb-2">
+                                    <h5>{{ $proposal->candidate->name ?? '' }} <span
+                                            class="badge badge-primary ml-1">Verified</span></h5>
+                                </div>
+                                <div class="media">
+                                    <img class="avatar avatar-sm mr-3"
+                                        src="{{ asset($proposal->candidate->avatar ?? '') }} " alt="">
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                {{ trans('global.show') }} {{ trans('global.job.title') }}
-                            </div>
-                            <div class="panel-body">
-
-                                <table class="table table-bordered table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.employer') }}
-                                            </th>
-                                            <td>
-                                                {{ $job->employer->name ?? '' }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.candidate') }}
-                                            </th>
-                                            <td>
-                                                {{ $job->candidate->name ?? '' }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.title') }}
-                                            </th>
-                                            <td>
-                                                {{ $job->title }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.description') }}
-                                            </th>
-                                            <td>
-                                                {!! $job->description !!}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.budget') }}
-                                            </th>
-                                            <td>
-                                                {{ $job->budget }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.attachments') }}
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.job.fields.delivery_date') }}
-                                            </th>
-                                            <td>
-                                                {{ $job->delivery_date }}
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                {{ trans('global.proposal.title') }}
-                            </div>
-                            <div class="panel-body">
-
-                                <table class=" table table-bordered table-striped table-hover datatable">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                {{ trans('global.proposal.fields.candidate') }}
-                                            </th>
-                                            <th>
-                                                {{ trans('global.proposal.fields.proposal_text') }}
-                                            </th>
-                                            <th>
-                                                {{ trans('global.proposal.fields.budget') }}
-                                            </th>
-                                            <th>
-                                                {{ trans('global.proposal.fields.delivery_time') }}
-                                            </th>
-                                            <th>
-                                                {{ trans('global.proposal.fields.attachments') }}
-                                            </th>
-                                            <th>
-                                                &nbsp;
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($job->proposals as $key => $proposal)
-                                        <tr data-entry-id="{{ $proposal->id }}">
-                                            <td>
-                                                {{ $proposal->candidate->name ?? '' }}
-                                            </td>
-                                            <td>
-                                                {{ $proposal->proposal_text ?? '' }}
-                                            </td>
-                                            <td>
-                                                {{ $proposal->budget ?? '' }}
-                                            </td>
-                                            <td>
-                                                {{ $proposal->delivery_time ?? '' }}
-                                            </td>
-                                            <td>
-                                                @can('job_create')
-                                                <form action="{{ route("admin.jobs.update", [$job->id]) }}"
-                                                    method="POST">
+                                    <div class="media-body">
+                                        <div class="row">
+                                            <div class="col-sm mb-3 mb-sm-0">
+                                                <span
+                                                    class="d-block text-dark">{{ $proposal->delivery_time ?? $job->delivery_time}}</span>
+                                                <small class="d-block text-muted">Bidded at:
+                                                    {{ $proposal->created_at ?? '' }}</small>
+                                                <div class="mt-4">
+                                                    <p>{{ $proposal->proposal_text }}</p>
+                                                </div>
+                                            </div>
+                                            @if($job->candidate_id == NULL)
+                                            <div class="col-sm-auto">
+                                                <form action="{{ route("jobs.update", [$job->id]) }}" method="POST">
                                                     @csrf
                                                     @method('PUT')
                                                     <input type="hidden" name="candidate_id"
                                                         value="{{ $proposal->candidate_id }}" />
-                                                    <input type="submit" class="btn btn-xs btn-primary"
-                                                        value="{{ trans('global.job.hire_this_candidate') }}" />
+                                                    
+                                                    <button type="submit" class="btn btn-xs btn-white mr-2 my-2"
+                                                         ><i class="fa fa-user-alt mr-1"></i>Hire Freelancer
+                                                    </button>
                                                 </form>
-                                                @endcan
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                                                <button type="button" class="btn btn-xs btn-white">
+                                                    <i class="fas fa-trash-alt mr-1"></i> Delete
+                                                </button>
+                                            </div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                        <!-- End List Group -->
                     </div>
+                    <!-- End Body -->
                 </div>
+                <!-- End Card -->
+
+                <!-- Card -->
+                <div class="card">
+                    <!-- Header -->
+                    <div class="card-header">
+                        <h5 class="card-header-title">Project History</h5>
+                    </div>
+                    <!-- End Header -->
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Updated</th>
+                                    <th>Invoice</th>
+                                    <th style="width: 5%;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">#3682303</a></td>
+                                    <td><span class="badge badge-soft-warning">Pending</span></td>
+                                    <td>NPR</td>
+                                    <td>22/04/2020</td>
+                                    <td><a class="btn btn-xs btn-white" href="../pages/invoice.html"><i
+                                                class="fas fa-file-download mr-1"></i> PDF</a></td>
+                                    <td><a class="btn btn-xs btn-white" href="javascript:;" data-toggle="modal"
+                                            data-target="#invoiceReceiptModal"><i class="fas fa-eye mr-1"></i> Quick
+                                            view</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">#2333234</a></td>
+                                    <td><span class="badge badge-soft-success">Successful</span></td>
+                                    <td>NPR</td>
+                                    <td>22/04/2019</td>
+                                    <td><a class="btn btn-xs btn-white" href="../pages/invoice.html"><i
+                                                class="fas fa-file-download mr-1"></i> PDF</a></td>
+                                    <td><a class="btn btn-xs btn-white" href="javascript:;" data-toggle="modal"
+                                            data-target="#invoiceReceiptModal"><i class="fas fa-eye mr-1"></i> Quick
+                                            view</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">#9834283</a></td>
+                                    <td><span class="badge badge-soft-success">Successful</span></td>
+                                    <td>NPR</td>
+                                    <td>22/04/2018</td>
+                                    <td><a class="btn btn-xs btn-white" href="../pages/invoice.html"><i
+                                                class="fas fa-file-download mr-1"></i> PDF</a></td>
+                                    <td><a class="btn btn-xs btn-white" href="javascript:;" data-toggle="modal"
+                                            data-target="#invoiceReceiptModal"><i class="fas fa-eye mr-1"></i> Quick
+                                            view</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- End Table -->
+                </div>
+                <!-- End Card -->
             </div>
         </div>
-        <!-- End Body -->
+        <!-- End Row -->
     </div>
-    <!-- End Card -->
-</div>
-</div>
+    <!-- End Content Section -->
+</main>
+<!-- ========== END MAIN ========== -->
 
 @endsection
