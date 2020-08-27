@@ -1,15 +1,25 @@
-- ## Commit 57th:
-     ### Major Controller, Model and Database Changes:
 
-    1. Database Proposal and Job new Column _(user_id & references)_.
+- ## Commit 61th:
+     ### Dynamic `My Projects` and `My Proposals` Pages:
 
-    2. Media Traits for Attachments Upload and eloquent tags. _(spatie-media-library)_.
+    1. Freelancers can see only their _proposals_ and all **projects**.
 
-    3. Controllers linked with **'Requests' and 'Traits'**.
+    2. Clients can see only their _projects_ and all **propoals**.
 
-    4. **Job and Proposal**'s modifed _Model and Controller_.
+    3. Controllers Logic Designed for Authorization and Permissions.
 
-    5. Unnecessary Clutters Deleted.
+<hr>
+
+- ## Commit 60th:
+     ### Proposal Bidding by Freelancers and Counts:
+
+    1. Proposals can be posted by **Freelancers**.
+
+    2. Made Freelancer's Home Page Dynamic with _Recent Projects_.
+
+    3. `Proposals` counts on **Projects** works.
+
+    4. Many Design and Frontend Fixes.
 
 <hr>
 
@@ -28,13 +38,15 @@
 
 <hr>
 
-- ## Commit 60th:
-     ### Proposal Bidding by Freelancers and Counts:
+- ## Commit 57th:
+     ### Major Controller, Model and Database Changes:
 
-    1. Proposals can be posted by **Freelancers**.
+    1. Database Proposal and Job new Column _(user_id & references)_.
 
-    2. Made Freelancer's Home Page Dynamic with _Recent Projects_.
+    2. Media Traits for Attachments Upload and eloquent tags. _(spatie-media-library)_.
 
-    3. `Proposals` counts on **Projects** works.
+    3. Controllers linked with **'Requests' and 'Traits'**.
 
-    4. Many Design and Frontend Fixes.
+    4. **Job and Proposal**'s modifed _Model and Controller_.
+
+    5. Unnecessary Clutters Deleted.

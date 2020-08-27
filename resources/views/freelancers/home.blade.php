@@ -11,7 +11,7 @@
                     <!-- Filters -->
                     <div class="border-bottom pb-4 mb-4 pt-4">
                         @csrf
-                        <h4>Budget</h4>
+                        <h5>Budget</h5>
                         <!-- radioes -->
                         <div
                             class="form-group d-flex align-items-center justify-content-between font-size-1 text-lh-lg text-body mb-1">
@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="border-bottom pb-4 mb-4">
-                        <h4>Categories</h4>
+                        <h5>Categories</h5>
                         <select class="js-custom-select" id="categoryLabel" name="city_id" data-hs-select2-options='{
                             "customClass": "custom-select",
                             "placeholder": "Select Category",
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="border-bottom pb-4 mb-4">
-                        <h4>Skills Required</h4>
+                        <h5>Skills Required</h5>
                         <select class="js-custom-select-multiple" multiple data-hs-select2-options='{
                                 "minimumResultsForSearch": "3",
                                 }'>
@@ -93,7 +93,7 @@
                     </div>
 
                     <div class="border-bottom pb-4 mb-4">
-                        <h4>Location</h4>
+                        <h5>Location</h5>
                         <select class="js-custom-select" id="locationLabel" name="city_id" data-hs-select2-options='{
                             "customClass": "custom-select",
                             "placeholder": "Select City/District",
@@ -150,7 +150,7 @@
                     <h3 class="post__title">{{ $job->title ?? '' }}</h3>
 
                     <div class="post__options">
-                        <p>NPR ({{ $job->budget ?? '' }})</p>
+                        <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
                     </div>
 
                     <div class="post__description">
@@ -166,7 +166,8 @@
                     <div class="post__stats">
                         <div>
                             <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button"
-                                aria-expanded="false" aria-controls="collapse1"><i class="fas fa-user-friends mr-2 fa-sm"></i>
+                                aria-expanded="false" aria-controls="collapse1"><i
+                                    class="fas fa-user-friends mr-2 fa-sm"></i>
                                 Bidding Count<span
                                     class="badge badge-light ml-2 font-size-1">{{ $job->proposals->count() }}</span></a>
                         </div>
@@ -210,7 +211,7 @@
                                 </div>
 
                                 <a class="btn btn-sm btn-block btn-primary transition-3d-hover"
-                                    href="{{ route("proposals.index") }}">My Bidding</a>
+                                    href="{{ route("proposals.index") }}">My Biddings</a>
                             </div>
 
                             <div class="mb-md-3">

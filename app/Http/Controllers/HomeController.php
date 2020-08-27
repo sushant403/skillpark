@@ -67,6 +67,8 @@ class HomeController extends Controller
         return redirect()->route('freelancer');
     }
 
+    //=======client=========
+    
     public function client()
     {
         $cities = City::all();

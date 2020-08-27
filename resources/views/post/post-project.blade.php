@@ -109,7 +109,7 @@
                     <!-- Input -->
                     <div class="js-form-message mb-4 mb-md-6">
                         <label class="input-label">Description about your project</label>
-                        <textarea class="form-control" rows="5" minlength="50" name="description"
+                        <textarea class="form-control" rows="5" minlength="50" maxlength="250" name="description"
                             placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..."
                             required data-msg="Please describe your project in at least 50 characters"></textarea>
                     </div>
@@ -205,10 +205,11 @@
     </main>
 </main>
 
+@section('script')
 <script>
     var uploadedAttachmentsMap = {}
 Dropzone.options.attachmentsDropzone = {
-    url: '{{ route('jobs.storeMedia') }}',
+    url: '{{ route('admin.proposals.storeMedia') }}',
     maxFilesize: 2, // MB
     addRemoveLinks: true,
     headers: {
@@ -229,9 +230,9 @@ Dropzone.options.attachmentsDropzone = {
       $('form').find('input[name="attachments[]"][value="' + name + '"]').remove()
     },
     init: function () {
-@if(isset($job) && $job->attachments)
+@if(isset($proposal) && $proposal->attachments)
           var files =
-            {!! json_encode($job->attachments) !!}
+            {!! json_encode($proposal->attachments) !!}
               for (var i in files) {
               var file = files[i]
               this.options.addedfile.call(this, file)
@@ -242,5 +243,6 @@ Dropzone.options.attachmentsDropzone = {
     }
 }
 </script>
+@stop
 
 @endsection

@@ -21,24 +21,21 @@ class ProposalsController extends Controller
 
     public function create()
     {
-        return view('freelancers.post-proposal');
+        return view('post.post-proposal');
     }
 
     public function store(StoreProposalRequest $request)
     {
-
         $proposal = Proposal::create($request->all() + ['candidate_id' => auth()->id()]);
 
         foreach ($request->input('attachments', []) as $file) {
             $proposal->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
-
-        return redirect()->view('freelancers.myproposals');
+        return view('freelancers.myproposals');
     }
 
     public function edit(Proposal $proposal)
     {
-
         return view('proposals.edit', compact('proposal'));
     }
 
@@ -53,7 +50,6 @@ class ProposalsController extends Controller
                 }
             }
         }
-
         $media = $proposal->attachments->pluck('file_name')->toArray();
 
         foreach ($request->input('attachments', []) as $file) {
@@ -61,13 +57,11 @@ class ProposalsController extends Controller
                 $proposal->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
             }
         }
-
         return redirect()->route('proposals.index');
     }
 
     public function show(Proposal $proposal)
     {
-
         $proposal->load('job', 'candidate');
 
         return view('proposals.show', compact('proposal'));
@@ -75,7 +69,6 @@ class ProposalsController extends Controller
 
     public function destroy(Proposal $proposal)
     {
-
         $proposal->delete();
 
         return back();

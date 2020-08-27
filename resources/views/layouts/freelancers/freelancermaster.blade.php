@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
   <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
   <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
 
   <!-- CSS Skillpark Template -->
@@ -157,7 +158,8 @@
                    }'>
                   <span class="position-relative">
                     <span class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
-                    <img class="u-sidebar--account__toggle-img" src="{{ asset(Auth::user()->avatar) }}" width="35" alt="">
+                    <img class="u-sidebar--account__toggle-img" src="{{ asset(Auth::user()->avatar) }}" width="35"
+                      alt="">
                   </span>
                 </a>
 
@@ -186,6 +188,12 @@
                           <i class="fa fa-dashcube"></i>
                         </span>
                         Dashboard
+                      </a>
+                      <a class="dropdown-item px-0" href="{{ route("proposals.index") }}">
+                        <span class="dropdown-item-icon">
+                          <i class="fa fa-project-diagram"></i>
+                        </span>
+                        My Biddings
                       </a>
                       <a class="dropdown-item px-0" href="messages">
                         <span class="dropdown-item-icon">
@@ -360,7 +368,8 @@
                 <!-- End Categories -->
 
                 <li class="navbar-nav-item">
-                  <a href="saved-jobs" class="nav-link px-0 px-md-3"><i class="fa fa-bookmark font-size-1 mr-1"></i> Saved Jobs</a>
+                  <a href="saved-jobs" class="nav-link px-0 px-md-3"><i class="fa fa-bookmark font-size-1 mr-1"></i>
+                    Saved Jobs</a>
                 </li>
 
                 <!-- Search Form -->
@@ -571,6 +580,7 @@
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
   <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
   <!-- JS Skillpark -->
   <script src="/js/hs.core.js"></script>
@@ -639,6 +649,7 @@
         var goTo = new HSGoTo($(this)).init();
       });
   </script>
+  @yield('script')
 
 </body>
 

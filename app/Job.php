@@ -26,7 +26,7 @@ class Job extends Model
     protected $fillable = [
         'title',
         'budget',
-        // 'category_id',
+        'category_id',
         'hired_at',
         'created_at',
         'updated_at',
