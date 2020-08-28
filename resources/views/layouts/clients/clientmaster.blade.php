@@ -137,7 +137,7 @@
                                         <div class="card-body py-3">
                                             <a class="dropdown-item px-0" href="dashboard">
                                                 <span class="dropdown-item-icon">
-                                                    <i class="fa fa-dashcube-alt"></i>
+                                                    <i class="fa fa-dashcube"></i>
                                                 </span>
                                                 Dashboard
                                             </a>

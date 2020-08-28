@@ -29,6 +29,40 @@
           <a class="navbar-brand" href="/" aria-label="Skillpark">
             <img src="/images/logo/biglogo.svg" alt="Logo">
           </a>
+          <!-- Button -->
+          <div class="hs-unfold ml-auto">
+            <a class="js-hs-unfold-invoker btn btn-sm btn-primary dropdown-toggle" href="javascript:;"
+              data-hs-unfold-options='{
+                "target": "#getUpdatesDropdown",
+                "type": "css-animation"
+               }'>
+              Get Updates
+            </a>
+
+            <div id="getUpdatesDropdown" class="hs-unfold-content dropdown-menu dropdown-menu-right"
+              style="min-width: 250px !important;">
+              <a class="dropdown-item text-wrap" href="#">
+                <div class="media">
+                  <i class="fas fa-envelope-open-text text-primary font-size-2 mt-2 mr-3"></i>
+                  <div class="media-body">
+                    <span class="font-weight-bold">Email</span>
+                    <small class="d-block text-body">Message delivered right into your inbox.</small>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-wrap" href="#">
+                <div class="media">
+                  <i class="fab fa-slack text-primary font-size-2 mt-2 mr-3"></i>
+                  <div class="media-body">
+                    <span class="font-weight-bold">Slack</span>
+                    <small class="d-block text-body">Posted to a live #channel of your choice.</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- End Button -->
         </nav>
       </div>
     </div>
@@ -40,17 +74,18 @@
     <!-- Hero Section -->
     <div class="d-lg-flex">
       <div
-        class="container d-lg-flex align-items-lg-center vh-lg-100 space-bottom-1 space-top-3 space-bottom-lg-3 space-lg-0">
+        class="container d-lg-flex align-items-lg-center vh-lg-100 space-bottom-1 space-top-3 space-bottom-lg-2 space-lg-0">
         <div class="row justify-content-lg-between align-items-lg-center w-100 mt-lg-9">
           <div class="col-lg-6 mb-5 mb-lg-0">
-            <img class="img-fluid" src="/images/svg/illustrations/relaxing-man.svg" alt="SVG Illustration">
+            <img class="img-fluid" src="/images/svg/illustrations/maintenance-mode.svg" alt="SVG Illustration">
           </div>
 
           <div class="col-lg-5">
             <!-- Title -->
             <div class="mb-4">
-              <h1>We're coming soon.</h1>
-              <p>Our website is under construction. We'll be here soon with our new site, subscribe to be notified.</p>
+              <h2>We're just tuning up a few things.</h2>
+              <p>We apologize for the inconvenience but Skillpark Inc. is currently undergoing planned maintenance. Stay
+                tuned!</p>
             </div>
             <!-- End Title -->
 
@@ -143,6 +178,7 @@
   <!-- JS Implementing Plugins -->
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+  <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
 
   <!-- JS Skillpark -->
   <script src="/js/hs.core.js"></script>
@@ -156,6 +192,9 @@
       $('.js-validate').each(function () {
         var validation = $.HSCore.components.HSValidation.init($(this));
       });
+
+      // initialization of unfold
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
 
       // initialization of countdowns
       $('.js-countdown').each(function () {

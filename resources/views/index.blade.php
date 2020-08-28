@@ -15,7 +15,7 @@
                     <div class="mb-5">
                         <h2 class="display-6 mb-3">
                             {{ __('nepali.Seek the perfect freelancer talents for your business!') }}</h2>
-                        <p class="lead">{{ __('nepali.Hire expert freelancers for any job, any time') }}</p>
+                        <p class="lead">{{ __('nepali.Hire experts for any job, any where, any time') }}</p>
                     </div>
                     <!-- End Info -->
 

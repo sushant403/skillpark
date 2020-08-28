@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Skillpark Inc. | Hire Expert Freelancers Any Time</title>
+    <title>@yield('title', 'Page Error - Skillpark Inc.')</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"

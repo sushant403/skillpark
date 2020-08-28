@@ -37,7 +37,7 @@ return [
 
     'Search'=> 'Search',
     'Search for Services'=> 'Search for Services',
-    'Hire expert freelancers for any job, any time'=> 'Hire expert freelancers for any job, any time',
+    'Hire experts for any job, any where, any time'=> 'Hire experts for any job, any where, any time',
     'Seek the perfect freelancer talents for your business!'=> 'Seek the perfect freelancer talents for your business!',
     'Searching the Best Job'=> 'Search',
     'Explore the Marketplace'=> 'Explore the Marketplace',

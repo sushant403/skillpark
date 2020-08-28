@@ -10,7 +10,7 @@
 <div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover"
     style="top: 0; right: 0; background-image: url(/images/homepage/login.jpg);"></div>
 <!-- Actual content-->
-<section class="container d-flex align-items-center pb-3 pb-md-4" style="flex: 1 0 auto;">
+<section class="container pt-lg-0 pt-5 d-flex align-items-center pb-3 pb-md-4" style="flex: 1 0 auto;">
     <div class="w-100 pt-0">
         <div class="row">
             <div class="col-lg-4 col-md-6 offset-lg-1">
@@ -32,7 +32,7 @@
                             <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
                                         class="fa fa-user fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" type="text" name="name"
-                                value="{{ old('name') }}" placeholder="Full Name" tabindex="2" required data-msg="Please enter a valid name. (Eg. Sushant Poudel)">
+                                value="{{ old('name') }}" placeholder="Full Name" tabindex="2" required data-msg="Please enter a valid name. (e.g. Sushant Poudel)">
                         </div>
 
                         @error('email')

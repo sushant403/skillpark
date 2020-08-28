@@ -100,7 +100,7 @@
                                 <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{
                                 "desktop": {
                                   "position": "right",
-                                  "maxWidth": "900px"
+                                  "maxWidth": "800px"
                                 }
                               }'>
                                     <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
@@ -118,8 +118,6 @@
                                                             <div class="media align-items-center">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">About</span>
-                                                                    <span class="navbar-promo-text">Ideas and Motive
-                                                                    </span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -133,8 +131,6 @@
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">Freelancer
                                                                         Marketplace</span>
-                                                                    <span class="navbar-promo-text">Platform for
-                                                                        Freelancers</span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -145,12 +141,10 @@
                                                 <div class="navbar-promo-card-deck">
                                                     <!-- Promo Item -->
                                                     <div class="navbar-promo-card navbar-promo-item">
-                                                        <a class="navbar-promo-link" href="{{ url('about') }}">
+                                                        <a class="navbar-promo-link" href="{{ url('coming-soon') }}">
                                                             <div class="media align-items-center">
                                                                 <div class="media-body">
                                                                     <span class="navbar-promo-title">How It Works</span>
-                                                                    <span class="navbar-promo-text">Process Protocal
-                                                                    </span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -159,12 +153,10 @@
 
                                                     <!-- Promo Item -->
                                                     <div class="navbar-promo-card navbar-promo-item">
-                                                        <a class="navbar-promo-link" href="javascript:;">
+                                                        <a class="navbar-promo-link" href="{{ route('post-project') }}">
                                                             <div class="media align-items-center">
                                                                 <div class="media-body">
-                                                                    <span class="navbar-promo-title">Post Project</span>
-                                                                    <span class="navbar-promo-text">Hiring Made
-                                                                        Easy</span>
+                                                                    <span class="navbar-promo-title">Post a Job</span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -207,8 +199,8 @@
                                             <div class="col-lg-4 navbar-promo d-none d-lg-block">
                                                 <a class="d-block navbar-promo-inner" href="register">
                                                     <div class="position-relative">
-                                                        <img class="img-fluid rounded" src="/images/svg/banner.svg"
-                                                            alt="">
+                                                        <img class="img-fluid rounded" width="200"
+                                                            src="/images/svg/banner.svg" alt="">
                                                     </div>
                                                 </a>
                                             </div>
@@ -329,7 +321,7 @@
                                 <li class="navbar-nav-item">
                                     <div class="hs-unfold">
                                         <a class="js-hs-unfold-invoker nav-link" href="javascript:;" data-toggle="modal"
-                                            data-target="#loginModal"><i class="fa fa-user"></i> &nbsp; Login</a>
+                                            data-target="#loginModal">Sign In</a>
                                     </div>
                                 </li>
                                 <!-- End Account Login -->

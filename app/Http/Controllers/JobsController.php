@@ -52,7 +52,7 @@ class JobsController extends Controller
             $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
 
-        return redirect()->route('myprojects');
+        return redirect()->route('jobs.index');
     }
 
     public function edit(Job $job)
@@ -68,7 +68,7 @@ class JobsController extends Controller
 
         $job->load('candidate');
 
-        return view('edit', compact('candidates', 'job'));
+        return redirect()->route('jobs.index', compact('candidates', 'job'));
     }
 
     public function update(UpdateJobRequest $request, Job $job)
@@ -103,7 +103,7 @@ class JobsController extends Controller
             }
         }
 
-        return redirect()->route('index');
+        return redirect()->route('jobs.index');
     }
 
     public function show(Job $job)

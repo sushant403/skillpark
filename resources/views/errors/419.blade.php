@@ -1,5 +1,6 @@
 @extends('layouts.errormaster')
 
+@section('title', 'Page Expired - Skillpark Inc.')
 @section('content')
 <!-- 419 Page -->
 <div class="container d-flex flex-column justify-content-center pt-5 mt-n6 vh-100" style="flex: 1 0 auto;">

@@ -42,7 +42,7 @@ return [
 
     'Search'=> 'खाेज',
     'Search for Services'=> 'सेवाहरूकाे लागि यहाँ खोज्नुहोस',
-    'Hire expert freelancers for any job, any time'=> 'विज्ञहरू हाएर गरी कुनै पनि काम, कुनै पनि समयमा गर्नुहाेस ।',
+    'Hire experts for any job, any where, any time'=> 'विज्ञहरू हाएर गरी कुनै पनि काम, कुनै पनि समयमा गर्नुहाेस ।',
     'Seek the perfect freelancer talents for your business!'=> 'आफ्नाे  विजनेसकाे लागी सवाेक्रष्ट याेग्यता भएका विज्ञहरू खाेज्रनुहाेस ।',
     'Searching the Best Job'=> 'उत्तम काम खोजी गर्दै',
     'Explore the Marketplace'=> 'बजार अन्वेषण गर्नुहोस्',

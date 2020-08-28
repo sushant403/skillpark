@@ -10,13 +10,13 @@
 <div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover"
     style="top: 0; right: 0; background-image: url(/images/homepage/login.jpg);"></div>
 <!-- Actual content-->
-<section class="container d-flex align-items-center pb-3 pb-md-4" style="flex: 1 0 auto;">
+<section class="container pt-5 pt-lg-0 d-flex align-items-center pb-3 pb-md-4" style="flex: 1 0 auto;">
     <div class="w-100 pt-0">
         <div class="row">
             <div class="col-lg-4 col-md-6 offset-lg-1">
                 <!-- Sign in view-->
                 <div class="cs-view show" id="signin-view">
-                    <h2 class="h4">Welcome Back</h2>
+                    <h2 class="h4">Sign In to Skillpark</h2>
                     <p class="font-size-ms text-muted mb-4">Don't miss your next opportunity. Sign in to stay updated on
                         your freelancing world.</p>
                     <form class="js-validate" method="POST" action="{{ route('login') }}" novalidate>
