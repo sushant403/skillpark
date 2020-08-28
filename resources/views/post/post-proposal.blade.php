@@ -3,67 +3,30 @@
 @section('title','Post a Proposal | ' . Auth::user()->name)
 @section('content')
 
-<!-- ========== MAIN ========== -->
-<main id="content" role="main" class="bg-light">
-    <!-- Career Detail Section -->
-    <div class="container space-top-1 space-top-lg-1 space-bottom-2 space-bottom-lg-3">
-        <div class="w-lg-80 mx-auto">
-            <!-- Jobs Link -->
-            <div class="mb-4">
-                <a class="font-weight-bold" href="{{ route('home') }}">
-                    <i class="fas fa-angle-left fa-sm mr-1"></i>
-                    Back to Job Listings
-                </a>
-            </div>
-            <!-- End Jobs Link -->
-
-            <div class="card space-bottom-2 p-4 p-md-7">
-                <!-- Title -->
-                <div class="row justify-content-sm-between align-items-sm-center mb-5">
-                    <div class="col-sm mb-3 mb-sm-0">
-                        <h1 class="h3">{{ $job->title ?? 'Job Title' }}</h1>
-                        <p class="mb-0"><i class="fa fa-map-marker-alt mr-1"></i>
-                            {{ $job->employer->city->name ?? 'Employer Location'}}</p>
-                    </div>
-
-                    <div class="col-sm-auto text-sm-right">
-                        <a class="js-go-to position-static btn btn-primary transition-3d-hover" href="javascript:;"
-                            data-hs-go-to-options='{
-                                                    "targetSelector": "#applyForJob",
-                                                    "compensationSelector": "#logoAndNav",
-                                                    "offsetTop": 0,
-                                                    "position": null,
-                                                    "animationIn": false,
-                                                    "animationOut": false
-                                                    }'>
-                            Apply Now
-                        </a>
-                    </div>
-                </div>
-                <!-- End Title -->
-
-                <div class="mb-5">
-                    <p>{{ $job->description ?? 'Job Description' }}</p>
-                </div>
-
-                <div class="mb-5">
-                    <h3 class="h4">Requirements:</h3>
-
-                    <ul>
-                        <li>Excited to mentor more junior developers</li>
-                        <li>Good at problem selection, problem solving, and course correcting</li>
-                        <li>Focused on best practices</li>
-                        <li>Highly pragmatic and collaborative</li>
+<!-- main content -->
+<main class="main main--breadcrumb">
+    <!-- breadcrumb -->
+    <div class="breadcrumb mb-n1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="breadcrumb__wrap mb-n1">
+                        <li class="breadcrumb__item"><a class="font-weight-bold" href="{{ route('freelancer') }}">Find
+                                Jobs</a></li>
+                        <i class="mx-3 fa fa-angle-left"></i>
+                        <li class="breadcrumb__item"><a class="font-weight-bold" href="javascript:history.back(-1)">Back
+                                to Details</a></li>
                     </ul>
                 </div>
-
-                <div class="mb-5">
-                    <p>Demonstrate your initiative, intuition and results from whatever you've been working on in the
-                        past. Show us what you've been up to and we will do the same!</p>
-                </div>
-
-                <div id="applyForJob" class="border-top text-center pt-5 mb-4 mb-md-7">
-                    <h3>Apply for this Job</h3>
+            </div>
+        </div>
+    </div>
+    <!-- end breadcrumb -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+                <div id="applyForJob" class="border-top text-center pt-5 mb-4">
+                    <h4>Post Your Proposal</h4>
                 </div>
 
                 <!-- Apply Form -->
@@ -160,11 +123,40 @@
                 </form>
                 <!-- End Apply Form -->
             </div>
+
+            <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                <!-- sidebox -->
+                <div class="sidebox">
+                    <h4 class="sidebox__title">Job summary</h4>
+                    <ul class="sidebox__list">
+                        <li><span>Budget:</span> <span>NPR {{ $job->budget ?? 'N/A' }}</span></li>
+                        <li><span>Employment status:</span> <span>Freelancer</span></li>
+                        <li><span>Experience:</span> <span>2 to 3 year(s)</span></li>
+                        <li><span>Location:</span> <span>{{ $job->employer->city_id ?? 'N/A' }}</span></li>
+                        <li><span>Company:</span> <span>{{ $job->employer->company ?? 'N/A'}}</span></li>
+                        <li><span>Published:</span> <span>{{ $job->created_at ?? 'N/A' }}</span></li>
+                    </ul>
+                </div>
+                <!-- end sidebox -->
+
+                <!-- share -->
+                <div class="sidebox">
+                    <div class="sidebox__share">
+                        <span>Share:</span>
+                        <ul class="mb-n1">
+                            <li class="facebook"><a href="#"><i class="fa fa-facebook fa-sm"></i></a></li>
+                            <li class="instagram"><a href="#"><i class="fa fa-instagram fa-sm"></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fa fa-twitter fa-sm"></i></a></li>
+                            <li class="vk"><a href="#"><i class="fa fa-linkedin fa-sm"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end share -->
+            </div>
         </div>
     </div>
-    <!-- End Bidding Detail Section -->
 </main>
-<!-- ========== END MAIN ========== -->
+<!-- end main content -->
 
 @section('script')
 <script>

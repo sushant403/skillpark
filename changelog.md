@@ -1,5 +1,18 @@
 
-- ## Commit 61th:
+- ## Commit 66th:
+     ### Job Details Page and Proposal Submit Optimizations:
+
+    1. `Category` linked with jobs.
+
+    2. **Profile** Controller and Model rendered.
+
+    3. Routing for Job Details and Proposals Fixed.
+
+    4. Many __Frontend__ Fixes.
+
+<hr>
+
+- ## Commit 61st:
      ### Dynamic `My Projects` and `My Proposals` Pages:
 
     1. Freelancers can see only their _proposals_ and all **projects**.

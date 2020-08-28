@@ -29,7 +29,19 @@ class JobsController extends Controller
         return view('clients.myprojects', compact('jobs'));
     }
 
-    public function showProjectForm(){
+    public function details($id)
+    {
+        $job = Job::find($id);
+        $category = Job::with('category');
+        $Data = [
+	        'job' => $job,
+	        'category' => $category,
+        ];
+        return view('jobs.job-details')->with($Data);
+    }
+
+    public function showProjectForm()
+    {
 
         $categories = Category::all();
 
@@ -43,7 +55,6 @@ class JobsController extends Controller
 
     public function store(StoreJobRequest $request)
     {
-
         $data = $request->all();
         $data['employer_id'] = auth()->id();
         $job = Job::create($data);
@@ -57,7 +68,6 @@ class JobsController extends Controller
 
     public function edit(Job $job)
     {
-
         if ($job->employer_id != auth()->id()) {
             abort(404);
         }
@@ -73,7 +83,6 @@ class JobsController extends Controller
 
     public function update(UpdateJobRequest $request, Job $job)
     {
-
         if ($job->employer_id != auth()->id()) {
             abort(404);
         }
@@ -108,7 +117,6 @@ class JobsController extends Controller
 
     public function show(Job $job)
     {
-
         if ($job->employer_id != auth()->id()) {
             abort(404);
         }
@@ -120,7 +128,6 @@ class JobsController extends Controller
 
     public function destroy(Job $job)
     {
-
         if ($job->employer_id != auth()->id()) {
             abort(404);
         }

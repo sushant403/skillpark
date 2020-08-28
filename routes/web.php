@@ -60,8 +60,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
 
         Route::get('/dashboard', 'ProfileController@freelancerDashboard')->name('fdash');
 
-        Route::get('/project', 'ProfileController@serviceList');
-        Route::get('/project/description', 'ProfileController@serviceSingle');
+        Route::get('/jobs/{id}', 'JobsController@details')->name('jobs.details');
 
         //bidding proposal
         Route::resource('proposals', 'ProposalsController');
@@ -78,18 +77,12 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/dashboard', 'ProfileController@clientDashboard')->name('cdash');
         Route::get('/projects', 'JobsController@index')->name('myprojects');
 
-        Route::get('/services', 'ProfileController@serviceList');
-        Route::get('/services/description', 'ProfileController@serviceSingle');
-
         //post projects for client
         Route::get('/post/project', 'JobsController@showProjectForm')->name('post-project');
 
         Route::resource('jobs', 'JobsController');
         Route::post('jobs/media', 'JobsController@storeMedia')->name('jobs.storeMedia');
     });
-
-    Route::get('/task', 'ProfileController@task');
-    Route::get('/user-details', 'ProfileController@userDetails');
 
     //user-accounts routes
     Route::get('/settings', 'ProfileController@editProfile');

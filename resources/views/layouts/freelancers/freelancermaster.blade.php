@@ -409,6 +409,8 @@
   <div class="space-bottom-2 pt-5"></div>
 
   @yield('content')
+  
+@extends('layouts.components.spinner')
 
   <!-- ========== FOOTER ========== -->
   <footer class="border-top text-center">

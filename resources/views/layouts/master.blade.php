@@ -318,7 +318,7 @@
 
                                 @guest
                                 <!-- Account Login -->
-                                <li class="navbar-nav-item">
+                                <li class="navbar-nav-item pr-2 font-weight-bold">
                                     <div class="hs-unfold">
                                         <a class="js-hs-unfold-invoker nav-link" href="javascript:;" data-toggle="modal"
                                             data-target="#loginModal">Sign In</a>

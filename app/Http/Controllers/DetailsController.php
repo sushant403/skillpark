@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\City;
 use Illuminate\Http\Request;
 
-class SearchController extends Controller
+class DetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,7 +22,6 @@ class SearchController extends Controller
         $cities = City::all();
         return view('clients.home', compact('cities')); 
     }
-
 
     public function searchAction(Request $request)
     {

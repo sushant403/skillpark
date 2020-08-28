@@ -52,6 +52,11 @@ class Job extends Model implements HasMedia
         return $this->hasMany(Proposal::class, 'job_id');
     }
 
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function getattachmentsAttribute()
     {
         return $this->getMedia('attachments');

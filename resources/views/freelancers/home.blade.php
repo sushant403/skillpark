@@ -135,43 +135,37 @@
                             <a class="post__actions-btn post__actions-btn--green" href="javascript:;">
                                 <i class="fa fa-bookmark fa-sm"></i>
                             </a>
-                            <a class="post__actions-btn post__actions-btn--red" href="javascript:;">
-                                <i class="fa fa-envelope fa-sm"></i>
+                            <a class="post__actions-btn post__actions-btn--blue" href="javascript:;">
+                                <i class="fa fa-thumbs-down fa-sm"></i>
                             </a>
-                            <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}"
-                                class="post__actions-btn post__actions-btn--blue"><span>Bid now</span></a>
                         </div>
                     </div>
 
-                    <h3 class="post__title"><a
-                            href="{{ route('proposals.create') }}?job_id={{ $job->id }}">{{ $job->title ?? '' }}</a>
+                    <a href="{{ route('jobs.details', $job->id) }}">
+                    <h3 class="post__title">{{ $job->title ?? '' }}
                     </h3>
 
                     <div class="post__options">
                         <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
                     </div>
-
                     <div class="post__description">
                         <p>{{ $job->description ?? '' }}</p>
                     </div>
+                    </a>
 
-                    <small class="text-cap my-1 color-black font-weight-medium">Attached File(s)</small>
-                    <div class="row mx-n1 mb-5 d-flex">
-                        @if($job->attachments)
-                        @foreach($job->attachments as $key => $media)
-                        <a class="link-underline mr-4" href="{{ $media->getUrl() }}" target="_blank">
-                            Attachment
+                    <div class="mb-5 w-100">
+                        <a class="btn btn-sm btn-ghost-secondary float-right border "
+                            href="{{ route('jobs.details', $job->id) }}">
+                            View Job Details
                         </a>
-                        @endforeach
-                        @endif
                     </div>
 
                     <div class="row w-100">
                         <div class="col-5">
                             <div class="post__tags">
-                                <a href="#">HTML</a>
-                                <a href="#">CSS</a>
-                                <a href="#">JS</a>
+                                <a href="#">#HTML</a>
+                                <a href="#">#CSS</a>
+                                <a href="#">#JS</a>
                             </div>
                         </div>
                         <div class="col-7">
@@ -180,7 +174,7 @@
                         </div>
                     </div>
 
-                    <div class="post__stats">
+                    <div class="post__stats justify-content-end">
                         <div>
                             <div>
                                 <i class="fas fa-user-friends mr-2 fa-sm"></i>
