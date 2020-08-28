@@ -25,9 +25,6 @@
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Fontawesome kit's code here -->
-    <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
-
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
@@ -41,8 +38,7 @@
 
 <body>
     <!-- ========== HEADER ========== -->
-    <header id="header" class="header header-bg-transparent header-show-hide"
-        data-hs-header-options='{
+    <header id="header" class="header header-bg-transparent header-show-hide" data-hs-header-options='{
    "fixMoment": 600,
    "fixEffect": "slide"
  }'>
@@ -81,7 +77,8 @@
                             <ul class="navbar-nav">
                                 @guest
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('login') }}" class="nav-link"><i class="fa fa-user"></i>&nbsp; {{ __('nepali.Login') }}</a>
+                                    <a href="{{ route('login') }}" class="nav-link"><i class="fa fa-user"></i>&nbsp;
+                                        {{ __('nepali.Login') }}</a>
                                 </li>
 
                                 <li class="navbar-nav-last-item">
@@ -117,7 +114,6 @@
     <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS Implementing Plugins -->
-    <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
 
     <!-- JS Skillpark -->
@@ -126,9 +122,6 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        $(document).on('ready', function () {
-      // initialization of header
-      var header = new HSHeader($('#header')).init();
 
       // initialization of form validation
       $('.js-validate').each(function() {
@@ -140,7 +133,6 @@
           }
         });
       });
-    });
     </script>
 
 </body>

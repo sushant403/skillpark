@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Job extends Model
+class Job extends Model implements HasMedia
 {
     use SoftDeletes, InteractsWithMedia;
 

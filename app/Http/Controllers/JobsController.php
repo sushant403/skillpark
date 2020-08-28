@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\User;
+use App\Category;
 use App\Proposal;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,13 @@ class JobsController extends Controller
         }
 
         return view('clients.myprojects', compact('jobs'));
+    }
+
+    public function showProjectForm(){
+
+        $categories = Category::all();
+
+        return view('post.post-project', compact('categories'));
     }
 
     public function create()

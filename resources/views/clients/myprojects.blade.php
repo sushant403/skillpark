@@ -123,37 +123,38 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-8">
-                                            {{-- <div class="row mx-n1">
-                                                <div class="col-4 px-1">
-                                                    @if($job->attachments)
-                                                    @foreach($job->attachments as $key => $media)
-                                                    <a href="{{ $media->getUrl() }}" target="_blank">
-                                            {{ trans('global.view_file') }}
-                                            </a>
-                                            @endforeach
-                                            @endif
+                                            <small class="text-cap mb-4">Associated File(s)</small>
+                                            <div class="row mx-n1 d-flex">
+                                                @if($job->attachments)
+                                                @foreach($job->attachments as $key => $media)
+                                                <a class="link-underline mr-4" href="{{ $media->getUrl() }}"
+                                                    target="_blank">
+                                                    Attachment
+                                                </a>
+                                                @endforeach
+                                                @endif
+                                            </div>
+                                            <!-- End Row -->
                                         </div>
-                                    </div> --}}
-                                    <!-- End Row -->
+                                        <div class="col-md-4">
+                                            <a class="btn btn-sm btn-block btn-white mb-2"
+                                                href="{{ route('jobs.show', $job->id) }}">
+                                                <i class="fas fa-Posting Jobs-cart fa-sm mr-2"></i> View Project
+                                            </a>
+                                            <a class="btn btn-sm btn-block btn-white"
+                                                href="{{ route('jobs.show', $job->id) }}#biddings">
+                                                <i class="fas fa-truck-loading fa-sm mr-2"></i>Track Proposals
+                                                ({{ $job->proposals->count() }})
+                                            </a>
+                                            <a class="btn btn-sm btn-block btn-primary" href="#"><i
+                                                    class="fa fa-print fa-sm mr-2"></i>Print Invoice</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <a class="btn btn-sm btn-block btn-white mb-2"
-                                        href="{{ route('jobs.show', $job->id) }}">
-                                        <i class="fas fa-Posting Jobs-cart fa-sm mr-2"></i> View Project
-                                    </a>
-                                    <a class="btn btn-sm btn-block btn-white" href="{{ route('jobs.show', $job->id) }}#biddings">
-                                        <i class="fas fa-truck-loading fa-sm mr-2"></i>Track Proposals
-                                        ({{ $job->proposals->count() }})
-                                    </a>
-                                    <a class="btn btn-sm btn-block btn-primary" href="#"><i
-                                            class="fa fa-print fa-sm mr-2"></i>Print Invoice</a>
-                                </div>
-                    </div>
-                </div>
-                </li>
-                @endforeach
-                </ul>
-                {{-- <!-- Pagination -->
+                            </li>
+                            @endforeach
+                        </ul>
+                        {{-- <!-- Pagination -->
                 <nav class="d-flex justify-content-end mt-5" aria-label="Page navigation">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="#">Prev</a></li>
@@ -163,36 +164,37 @@
                     </ul>
                 </nav>
                 <!-- End Pagination --> --}}
-            </div>
+                    </div>
 
-            <div class="tab-pane fade" id="open-Projects" role="tabpanel" aria-labelledby="open-Projects-tab">
-                <!-- Empty State -->
-                <div class="text-center space-1">
-                    <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
-                        alt="Image Description">
-                    <p class="card-text">No data to show</p>
-                    <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
-                </div>
-                <!-- End Empty State -->
-            </div>
+                    <div class="tab-pane fade" id="open-Projects" role="tabpanel" aria-labelledby="open-Projects-tab">
+                        <!-- Empty State -->
+                        <div class="text-center space-1">
+                            <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
+                                alt="Image Description">
+                            <p class="card-text">No data to show</p>
+                            <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
+                        </div>
+                        <!-- End Empty State -->
+                    </div>
 
-            <div class="tab-pane fade" id="cenceled-Projects" role="tabpanel" aria-labelledby="cenceled-Projects-tab">
-                <!-- Empty State -->
-                <div class="text-center space-1">
-                    <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
-                        alt="Image Description">
-                    <p class="card-text">No data to show</p>
-                    <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
+                    <div class="tab-pane fade" id="cenceled-Projects" role="tabpanel"
+                        aria-labelledby="cenceled-Projects-tab">
+                        <!-- Empty State -->
+                        <div class="text-center space-1">
+                            <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
+                                alt="Image Description">
+                            <p class="card-text">No data to show</p>
+                            <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
+                        </div>
+                        <!-- End Empty State -->
+                    </div>
                 </div>
-                <!-- End Empty State -->
+                <!-- End Tab Content -->
             </div>
+            <!-- End Body -->
         </div>
-        <!-- End Tab Content -->
+        <!-- End Card -->
     </div>
-    <!-- End Body -->
-</div>
-<!-- End Card -->
-</div>
 </div>
 
 @endsection

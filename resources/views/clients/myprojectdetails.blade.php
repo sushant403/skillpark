@@ -1,6 +1,6 @@
 @extends('layouts.clients.clientmaster')
 
-@section('title',  $job->title . ' | ' . Auth::user()->name)
+@section('title', $job->title . ' | ' . Auth::user()->name)
 @section('content')
 
 <!-- ========== MAIN ========== -->
@@ -33,7 +33,8 @@
                             <div class="col-md-8 mb-4 mb-md-0">
                                 <div class="mb-4">
                                     <small class="text-cap">Delivery: {{ $job->delivery_time }}</small>
-                                    <h5><i class="fa fa-user-check mr-1"></i>Hired Freelancer: <a class="btn btn-sm btn-ghost-secondary pl-1"
+                                    <h5><i class="fa fa-user-check mr-1"></i>Hired Freelancer: <a
+                                            class="btn btn-sm btn-ghost-secondary pl-1"
                                             href="#">{{ $job->candidate->name ?? '(to be choosen)' }}</a></h5>
                                 </div>
 
@@ -44,7 +45,19 @@
                                 <div class="mt-4">
                                     <p>{{ $job->description }}</p>
                                 </div>
-                            </div>
+                                
+                                    <small class="text-cap mb-2 mt-5"><u>Associated File(s)</u></small>
+                                    <div class="row mx-n1 d-flex">
+                                        @if($job->attachments)
+                                        @foreach($job->attachments as $key => $media)
+                                        <a class="link-underline mr-4" href="{{ $media->getUrl() }}" target="_blank">
+                                            Attachment
+                                        </a>
+                                        @endforeach
+                                        @endif
+                                    </div>
+                                    <!-- End Row -->
+                                </div>
 
                             <div class="col-md-4 text-md-right">
                                 <a class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#">Cancel Project</a>
@@ -95,9 +108,9 @@
                                                     @method('PUT')
                                                     <input type="hidden" name="candidate_id"
                                                         value="{{ $proposal->candidate_id }}" />
-                                                    
-                                                    <button type="submit" class="btn btn-xs btn-white mr-2 my-2"
-                                                         ><i class="fa fa-user-alt mr-1"></i>Hire Freelancer
+
+                                                    <button type="submit" class="btn btn-xs btn-white mr-2 my-2"><i
+                                                            class="fa fa-user-alt mr-1"></i>Hire Freelancer
                                                     </button>
                                                 </form>
                                                 <button type="button" class="btn btn-xs btn-white">
@@ -110,6 +123,7 @@
                                 </div>
                             </li>
                             @endforeach
+                            <span class="mt-4 center text-muted text-center font-italic">(This is the end)</span>
                         </ul>
                         <!-- End List Group -->
                     </div>

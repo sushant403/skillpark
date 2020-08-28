@@ -22,19 +22,18 @@
   <meta name="msapplication-TileColor" content="#1dc8cc">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Fontawesome kit's code here -->
-  <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
-
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
+  <!-- Fontawesome kit's code here -->
+  <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
+
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-  <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
   <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+  <link rel="stylesheet" href="/vendor/fancybox/dist/jquery.fancybox.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
-
 
   <!-- CSS Skillpark Template -->
   <link rel="stylesheet" href="/css/style.css">
@@ -110,10 +109,14 @@
       <div id="logoAndNav" class="container ">
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
-          <div class="navbar-nav-wrap">
+          <div class="navbar-nav-wrap justify-content-between">
             <!-- Logo -->
-            <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('freelancer') }}" aria-label="Skillpark">
+            <a class="navbar-brand d-none d-md-flex navbar-nav-wrap-brand" href="{{ route('freelancer') }}"
+              aria-label="Skillpark">
               <img src="/images/logo/biglogo.svg" alt="Logo">
+            </a>
+            <a class="d-md-none d-sm-flex" href="{{ route('freelancer') }}" aria-label="Skillpark">
+              <img src="/images/logo/logo.svg" style="width:40px" alt="Logo">
             </a>
             <!-- End Logo -->
 
@@ -570,16 +573,16 @@
   <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- JS Implementing Plugins -->
+  <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
   <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
   <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
-  <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
   <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+  <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
   <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
   <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-  <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-  <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
   <!-- JS Skillpark -->
@@ -587,6 +590,7 @@
   <script src="/js/hs.validation.js"></script>
   <script src="/js/hs.mask.js"></script>
   <script src="/js/hs.select2.js"></script>
+  <script src="/js/hs.fancybox.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
@@ -607,6 +611,11 @@
 
       // initialization of HSMegaMenu component
       var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
+
+      // initialization of fancybox
+    $('.js-fancybox').each(function () {
+      var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+    });
 
       // initialization of unfold
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();

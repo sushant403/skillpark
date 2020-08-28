@@ -82,8 +82,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/services/description', 'ProfileController@serviceSingle');
 
         //post projects for client
-        Route::get('/post/project', 'PostController@showProjectForm');
-        Route::post('/post/project', 'PostController@postProject')->name('post-project');
+        Route::get('/post/project', 'JobsController@showProjectForm')->name('post-project');
 
         Route::resource('jobs', 'JobsController');
         Route::post('jobs/media', 'JobsController@storeMedia')->name('jobs.storeMedia');

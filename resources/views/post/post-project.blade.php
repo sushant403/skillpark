@@ -177,7 +177,7 @@
                     <!-- Attachment Custom Select -->
                     <div class="form-group {{ $errors->has('attachments') ? 'has-error' : '' }}">
                         <label for="attachments">{{ trans('global.job.fields.attachments') }}</label>
-                        <div class="needsclick dropzone" id="attachments-dropzone">
+                        <div class="needsclick dropzone border-1 border-dashed" id="attachments-dropzone">
 
                         </div>
                         @if($errors->has('attachments'))

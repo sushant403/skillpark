@@ -29,8 +29,6 @@
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-    <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
 
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/theme.css">
@@ -70,14 +68,22 @@
                     <!-- End Responsive Toggle Button -->
 
                     <!-- Logo -->
-                    <a class="navbar-brand" href="/" aria-label="Skillpark">
+                    <a class="navbar-brand d-none d-md-flex" href="/" aria-label="Skillpark">
                         <img src="/images/logo/biglogo.svg" alt="Logo">
+                    </a>
+                    <a class="navbar-brand w-auto d-md-none d-sm-flex" href="/" aria-label="Skillpark">
+                        <img src="/images/logo/logo.svg" style="width:40px" alt="Logo">
                     </a>
                     <!-- End Logo -->
                     @guest
                     <!-- Secondary Content -->
-                    <div class="navbar-nav-wrap-content">
+                    <div class="navbar-nav-wrap-content d-none d-md-flex">
                         <a class="btn btn-sm btn-primary" href="{{ route('register') }}">
+                            {{ __('nepali.Join') }}
+                        </a>
+                    </div>
+                    <div class="navbar-nav-wrap-content d-md-none d-sm-flex">
+                        <a class="btn btn-md btn-ghost-secondary font-weight-bolder" href="{{ route('register') }}">
                             {{ __('nepali.Join') }}
                         </a>
                     </div>
@@ -578,7 +584,7 @@
             <div class="row align-items-md-center mb-7">
                 <div class="col-md-6 col-sm-7 mb-4 mb-md-0 mx-auto">
                     <!-- Nav Link -->
-                    <ul class="nav nav-sm nav-x-sm align-items-center">
+                    <ul class="nav nav-sm nav-x-sm justify-content-center">
                         <li class="nav-item">
                             <a class="nav-link" href="policy">Privacy &amp; Policy</a>
                         </li>
@@ -670,7 +676,6 @@
     <!-- JS Implementing Plugins -->
     <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
     <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-    <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
     <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
     <script src="/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
     <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
@@ -713,28 +718,6 @@
           // initialization of show animations
           $('.js-animation-link').each(function () {
             var showAnimation = new HSShowAnimation($(this)).init();
-          });
-    
-          $('.cbp').on('initComplete.cbp', function() {
-            // update sticky block
-            cbpStickyFilter.update();
-          });
-    
-          $('.cbp').on('filterComplete.cbp', function() {
-            // update sticky block
-            cbpStickyFilter.update();
-          });
-    
-          $('.cbp').on('pluginResize.cbp', function() {
-            // update sticky block
-            cbpStickyFilter.update();
-          });
-    
-          // animated scroll to cbp container
-          $('#cbpStickyFilter').on('click', '.cbp-filter-item', function (e) {
-            $('html, body').stop().animate({
-              scrollTop: $('#demoExamplesSection').offset().top
-            }, 200);
           });
     
           // initialization of go to

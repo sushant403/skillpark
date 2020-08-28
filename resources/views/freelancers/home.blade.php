@@ -6,7 +6,7 @@
 <main class="bg-light pt-5" role="main" id="content">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-5 col-lg-3 col-xl-3 pb-sm-7 bg-white">
+            <div class="col-12 col-md-5 col-lg-3 col-xl-3 mb-7 bg-white">
                 <form enctype="multipart/form-data" method="POST" action="{{ route('freelancer') }}">
                     <!-- Filters -->
                     <div class="border-bottom pb-4 mb-4 pt-4">
@@ -128,22 +128,24 @@
                     <div class="post__wrap">
                         <div class="post__company">
                             <i class="fa fa-briefcase fa-sm"></i>
-                            <span>{{ $job->category_id->name ?? 'General' }}</span>
+                            <span>{{ $job->category->name ?? 'General' }}</span>
                         </div>
 
                         <div class="post__actions">
-                            <a class="post__actions-btn post__actions-btn--green" href="#">
+                            <a class="post__actions-btn post__actions-btn--green" href="javascript:;">
                                 <i class="fa fa-bookmark fa-sm"></i>
                             </a>
-                            <a class="post__actions-btn post__actions-btn--red" href="#">
+                            <a class="post__actions-btn post__actions-btn--red" href="javascript:;">
                                 <i class="fa fa-envelope fa-sm"></i>
                             </a>
-                            <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}#applyForJob"
+                            <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}"
                                 class="post__actions-btn post__actions-btn--blue"><span>Bid now</span></a>
                         </div>
                     </div>
 
-                    <h3 class="post__title"><a href="{{ route('proposals.create') }}?job_id={{ $job->id }}">{{ $job->title ?? '' }}</a></h3>
+                    <h3 class="post__title"><a
+                            href="{{ route('proposals.create') }}?job_id={{ $job->id }}">{{ $job->title ?? '' }}</a>
+                    </h3>
 
                     <div class="post__options">
                         <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
@@ -151,6 +153,17 @@
 
                     <div class="post__description">
                         <p>{{ $job->description ?? '' }}</p>
+                    </div>
+
+                    <small class="text-cap my-1 color-black font-weight-medium">Attached File(s)</small>
+                    <div class="row mx-n1 mb-5 d-flex">
+                        @if($job->attachments)
+                        @foreach($job->attachments as $key => $media)
+                        <a class="link-underline mr-4" href="{{ $media->getUrl() }}" target="_blank">
+                            Attachment
+                        </a>
+                        @endforeach
+                        @endif
                     </div>
 
                     <div class="row w-100">
@@ -169,11 +182,14 @@
 
                     <div class="post__stats">
                         <div>
+                            <div>
+                                <i class="fas fa-user-friends mr-2 fa-sm"></i>
+                                Bidding Count&nbsp;<span
+                                    class="badge badge-light mr-5 font-size-1">{{ $job->proposals->count() }}</span>
+                            </div>
                             <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button"
-                                aria-expanded="false" aria-controls="collapse1"><i
-                                    class="fas fa-user-friends mr-2 fa-sm"></i>
-                                Bidding Count<span
-                                    class="badge badge-light ml-2 font-size-1">{{ $job->proposals->count() }}</span></a>
+                                aria-expanded="false" aria-controls="collapse1"><i class="fas fa-comment fa-sm"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="collapse post__collapse" id="collapse3">

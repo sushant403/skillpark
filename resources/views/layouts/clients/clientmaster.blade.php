@@ -22,18 +22,18 @@
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Fontawesome kit's code here -->
-    <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
-
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
+    <!-- Fontawesome kit's code here -->
+    <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
+
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
     <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
 
@@ -54,11 +54,14 @@
             <div id="logoAndNav" class="container ">
                 <!-- Nav -->
                 <nav class="js-mega-menu navbar navbar-expand-lg">
-                    <div class="navbar-nav-wrap">
+                    <div class="navbar-nav-wrap justify-content-between">
                         <!-- Logo -->
-                        <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('client') }}"
+                        <a class="navbar-brand d-none d-md-flex navbar-nav-wrap-brand" href="{{ route('client') }}"
                             aria-label="Skillpark">
                             <img src="/images/logo/biglogo.svg" alt="Logo">
+                        </a>
+                        <a class="d-md-none d-sm-flex" href="{{ route('client') }}" aria-label="Skillpark">
+                            <img src="/images/logo/logo.svg" style="width:40px" alt="Logo">
                         </a>
                         <!-- End Logo -->
 
@@ -134,7 +137,7 @@
                                         <div class="card-body py-3">
                                             <a class="dropdown-item px-0" href="dashboard">
                                                 <span class="dropdown-item-icon">
-                                                    <i class="fa fa-dashcube"></i>
+                                                    <i class="fa fa-dashcube-alt"></i>
                                                 </span>
                                                 Dashboard
                                             </a>
@@ -166,7 +169,7 @@
                                                 Help
                                             </a>
                                             <a class="dropdown-item px-0" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out-alt"></i>&nbsp; Logout</a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                 style="display: none;">
                                                 @csrf
@@ -618,7 +621,7 @@
           });
         });
     </script>
-@yield('script')
+    @yield('script')
 </body>
 
 </html>
