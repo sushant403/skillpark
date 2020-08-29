@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\User;
+use App\Skill;
 use App\Category;
 use App\Proposal;
 use App\Http\Controllers\Controller;
@@ -34,8 +35,8 @@ class JobsController extends Controller
         $job = Job::find($id);
         $category = Job::with('category');
         $Data = [
-	        'job' => $job,
-	        'category' => $category,
+            'job' => $job,
+            'category' => $category,
         ];
         return view('jobs.job-details')->with($Data);
     }
@@ -44,8 +45,9 @@ class JobsController extends Controller
     {
 
         $categories = Category::all();
+        $skills = Skill::all();
 
-        return view('post.post-project', compact('categories'));
+        return view('post.post-project', compact(['categories', 'skills']));
     }
 
     public function create()
@@ -57,6 +59,10 @@ class JobsController extends Controller
     {
         $data = $request->all();
         $data['employer_id'] = auth()->id();
+
+        $required_skill = $data['required_skill'];
+        $data['required_skill'] = implode(',', $required_skill);
+
         $job = Job::create($data);
 
         foreach ($request->input('attachments', []) as $file) {
@@ -134,6 +140,6 @@ class JobsController extends Controller
 
         $job->delete();
 
-        return back();
+        return redirect()->route('jobs.index');
     }
 }

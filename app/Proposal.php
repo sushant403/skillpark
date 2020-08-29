@@ -33,7 +33,8 @@ class Proposal extends Model implements HasMedia
         'rejected_at',
         'candidate_id',
         'proposal_text',
-        'delivery_time',
+        'comment',
+        'url',
     ];
 
     public function job()

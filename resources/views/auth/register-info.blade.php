@@ -85,7 +85,9 @@
                                     "searchInputPlaceholder": "Search a City/District"
                                   }' required data-msg="Please Select your Location">
                                 <option label="empty"></option>
-                                @foreach ($cities as $city)<option value="{{ $city->id }}" data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $city->name }}</span></span>'> {{ $city->name }}</option> @endforeach
+                                @foreach ($cities as $city)<option value="{{ $city->id }}"
+                                    data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $city->name }}</span></span>'>
+                                    {{ $city->name }}</option> @endforeach
                             </select>
                         </div>
                     </div>
@@ -124,7 +126,8 @@
                         <label for="validationFormFirstNameLabel" class="input-label">Tagline</label>
 
                         <div class="js-form-message">
-                            <input type="text" class="form-control" value="{{ Auth::user()->tagline }}" name="tagline" id="validationFormFirstNameLabel"
+                            <input type="text" class="form-control" value="{{ Auth::user()->tagline }}" name="tagline"
+                                id="validationFormFirstNameLabel"
                                 placeholder="A title that best defines you (e.g. Python Developer)"
                                 aria-label="A title that best defines you (e.g. Python Developer)" required
                                 data-msg="A title is required for clients to understand your skill.">
@@ -137,8 +140,8 @@
                         <label for="validationFormAboutLabel" class="input-label">About</label>
 
                         <div class="js-form-message">
-                            <textarea class="form-control" maxlength="200" value="{{ Auth::user()->about }}" minlength="50" class="form-control" rows="5" name="about"
-                                id="validationFormAboutLabel"
+                            <textarea class="form-control" maxlength="200" value="{{ Auth::user()->about }}"
+                                minlength="50" class="form-control" rows="5" name="about" id="validationFormAboutLabel"
                                 placeholder="Write something about your skills, passion, interests..."
                                 aria-label="Write something about your skills, passion, interests..." required
                                 data-msg="Describe yourself in at least 50 characters."></textarea>
@@ -151,12 +154,13 @@
                         <label for="validationFormSkillsLabel" class="input-label">Skills</label>
                         <div class="js-form-message">
                             <select id="validationFormSkillsLabel" placeholder="Select at most three skills" required
-                                data-msg="Please select skills that represents You." name="skill"
+                                data-msg="Please select at least one skill that represents you." name="skill"
                                 class="js-custom-select-multiple form-control" multiple data-hs-select2-options='{
                             "minimumResultsForSearch": "3",
                             }'>
                                 <option label="empty"></option>
-                                @foreach($skills as $skill)<option value="{{ $skill->id }}">{{ $skill->name }}</option>@endforeach
+                                @foreach($skills as $skill)<option value="{{ $skill->id }}">{{ $skill->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -249,7 +253,8 @@
                 </div>
 
                 <div id="advancedFormSelectStepFour" style="display: none;">
-                    You have successfully completed the form! You may now choose role and start exploring the freelancing
+                    You have successfully completed the form! You may now choose role and start exploring the
+                    freelancing
                     world.
 
                     <div class="d-flex justify-content-end">

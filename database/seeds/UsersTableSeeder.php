@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
                                'password' => bcrypt('password'),
                                'about' => 'This is a Freelancer. This role can perform tasks like post proposals, view projects, place bids, message clients, view own proposal.',
                                'city_id' => 140,
+                               'tagline' => 'I am a Test Freelancer.',
                                'created_at' => now(),
                                'updated_at' => now() ]); 
         $user->assignRole('freelancer');
@@ -31,6 +32,7 @@ class UsersTableSeeder extends Seeder
                                'password' => bcrypt('password'),
                                'about' => 'This is a Client. This role can perform tasks like post projects, view freelancers, message freelancers, view proposals.',
                                'city_id' => 188,
+                               'tagline' => 'I am a Test Employer/Client.',
                                'created_at' => now(),
                                'updated_at' => now() ]); 
         $user->assignRole('client');
@@ -42,6 +44,7 @@ class UsersTableSeeder extends Seeder
                                'password' => bcrypt('alphaadmin'),
                                'about' => 'This is an Admin. This role can perform tasks like view all users, modify codes and make websites dynamic.',
                                'city_id' => 71,
+                               'tagline' => 'I am the Boss.',
                                'created_at' => now(),
                                'updated_at' => now() ]); 
         $user->assignRole('admin');

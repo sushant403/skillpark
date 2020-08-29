@@ -17,7 +17,7 @@
 
   <!-- Favicon and Touch Icons-->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" color="#5bbad5" href="/favicon.svg">
   <meta name="msapplication-TileColor" content="#1dc8cc">
   <meta name="theme-color" content="#ffffff">
@@ -38,13 +38,13 @@
   <!-- CSS Skillpark Template -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/theme.css">
-  
+
   @include('layouts.components.spinner')
 </head>
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" style="font-size: 0.9rem"
+  <header id="header" style="font-size: 0.85rem"
     class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide"
     data-hs-header-options='{
    "fixMoment": 700,
@@ -52,62 +52,6 @@
  }'>
 
     <div class="header-section">
-      <!-- Topbar -->
-      <div class="container header-hide-content py-2">
-        <div class="d-flex align-items-center">
-          <!-- Language -->
-          <div class="hs-unfold">
-            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
-              href="javascript:;" data-hs-unfold-options='{
-       "target": "#languageDropdown",
-       "type": "css-animation",
-       "event": "click",
-       "hideOnScroll": "true"
-      }'>
-              <img class="dropdown-item-icon mr-2" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
-              <span class="d-none d-sm-inline-block">English</span>
-            </a>
-
-            <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
-              <a class="dropdown-item" href="/lang/en">English</a>
-              <a class="dropdown-item" href="/lang/ne">नेपाली</a>
-            </div>
-          </div>
-          <!-- End Language -->
-
-          <div class="ml-auto">
-            <!-- Jump To -->
-            <div class="hs-unfold d-sm-none mr-2">
-              <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
-                href="javascript:;" data-hs-unfold-options='{
-         "target": "#jumpToDropdown",
-         "type": "css-animation",
-         "event": "hover",
-         "hideOnScroll": "true"
-        }'>
-                Jump to
-              </a>
-
-              <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                <a class="dropdown-item" href="home">Find Jobs</a>
-                <a class="dropdown-item" href="faq">Help</a>
-                <a class="dropdown-item" href="report">Report</a>
-              </div>
-            </div>
-            <!-- End Jump To -->
-
-            <!-- Links -->
-            <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-              <a class="nav-link" href="home">Find Jobs</a>
-              <a class="nav-link" href="faq">Help</a>
-              <a class="nav-link" href="report">Report</a>
-            </div>
-            <!-- End Links -->
-          </div>
-        </div>
-      </div>
-      <!-- End Topbar -->
-
       <div id="logoAndNav" class="container ">
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
@@ -259,10 +203,15 @@
             <div id="navBar" class="navbar-nav-wrap-navbar collapse navbar-collapse">
               <ul class="navbar-nav">
                 <!-- Catgories -->
+
+                <li class="navbar-nav-item active">
+                  <a href="{{ route('proposals.index') }}" class="nav-link px-0 px-md-3">
+                    Find Jobs</a>
+                </li>
+
                 <li class="hs-has-sub-menu navbar-nav-item">
                   <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-haspopup="true"
                     aria-expanded="false" aria-labelledby="coursesSubMenu">
-                    <i class="fa fa-th font-size-1 mr-1"></i>
                     Categories
                   </a>
 
@@ -372,11 +321,6 @@
                 </li>
                 <!-- End Categories -->
 
-                <li class="navbar-nav-item">
-                  <a href="saved-jobs" class="nav-link px-0 px-md-3"><i class="fa fa-bookmark font-size-1 mr-1"></i>
-                    Saved Jobs</a>
-                </li>
-
                 <!-- Search Form -->
                 <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
                   <form class="d-flex align-items-center">
@@ -404,13 +348,7 @@
   </header>
   <!-- ========== END HEADER ========== -->
 
-  </div>
-  </header>
-  <!-- ========== END HEADER ========== -->
-
-  <div class="space-bottom-2 pt-5"></div>
-
-
+  <div class="space-1 pt-5"></div>
   @yield('content')
 
 
@@ -468,7 +406,7 @@
               <a class="nav-link" href="#">
                 <span class="media align-items-center">
                   <span class="media-body">
-                    <i class="fas fa-user-circle mr-2"></i>Your Account</span>
+                    <i class="fas fa-user-circle mr-2"></i>Account</span>
                 </span>
               </a>
             </li>
@@ -480,7 +418,7 @@
                     "type": "css-animation",
                     "animationIn": "slideInDown"
                    }'>
-                  <img class="dropdown-item-icon" src="/vendor/flag-icon-css/flags/4x3/us.svg" alt="English">
+                  <i class="fa fa-globe mr-2"></i>
                   <span>English</span>
                 </a>
 
@@ -499,8 +437,7 @@
                             नेपाली
                           </a>
                           <a class="nav-link active " href="/lang/en">
-                            <img class="max-w-3rem mr-1" src="/vendor/flag-icon-css/flags/4x3/us.svg"
-                              alt="United States Flag">
+                            <i class="fa fa-globe"></i>
                             English
                           </a>
                           <!-- End Nav Link -->
@@ -581,9 +518,7 @@
   <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
   <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
   <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-  <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
   <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
-  <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
@@ -594,6 +529,7 @@
   <script src="/js/hs.validation.js"></script>
   <script src="/js/hs.mask.js"></script>
   <script src="/js/hs.select2.js"></script>
+  <script src="/js/snackbar.js"></script>
   <script src="/js/hs.fancybox.js"></script>
 
   <!-- JS Plugins Init. -->
@@ -613,8 +549,8 @@
       });
     });
 
-      // initialization of HSMegaMenu component
-      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
+    // initialization of HSMegaMenu component
+    var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
 
       // initialization of fancybox
     $('.js-fancybox').each(function () {
@@ -642,11 +578,6 @@
      });
     });
 
-      // initialization of show animations
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
       // initialization of masked input
       $('.js-masked-input').each(function () {
         var mask = $.HSCore.components.HSMask.init($(this));
@@ -657,10 +588,16 @@
         var customFile = new HSFileAttach($(this)).init();
       });
 
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
+      // Snackbar for "place a bid" button
+    $('#snackbar-place-bid').click(function() { 
+	    Snackbar.show({
+        text: 'Added to Saved Jobs!',
+        pos: 'bottom-right',
+        showAction: true,
+        actionText: 'DISMISS',
+        actionTextColor: '#1dc8cc',
+	   }); 
+    }); 
   </script>
   @yield('script')
 

@@ -17,47 +17,41 @@ class SkillsSeeder extends Seeder
 
         DB::table('skills')->insert([
             [
-                'name' => 'Customer Service',
-            ],           
-            [
-                'name' => 'Virtual Assistant'
+                'name' => 'Sales Consultant',
             ],
             [
-                'name' => 'E-Commerce'
-            ],           
-            [
-                'name' => 'UX Design'
+                'name' => 'HR Consulting'
             ],
             [
-                'name' => 'Business Analysis'
+                'name' => 'Android Developer'
             ],
             [
-                'name' => 'Digital Marketing',
-            ],           
-            [
-                'name' => 'Analytical Reasoning'
+                'name' => 'Java Developer'
             ],
             [
-                'name' => 'Video Production',
-            ],           
-            [
-                'name' => 'Graphic Design'
+                'name' => 'Laravel and PHP'
             ],
             [
-                'name' => 'Digital Marketing',
-            ],           
-            [
-                'name' => 'Content Writing'
+                'name' => 'Django and Python',
             ],
             [
-                'name' => 'Account'
+                'name' => 'Graphic Designer'
+            ],
+            [
+                'name' => 'React.JS',
+            ],
+            [
+                'name' => 'Logo Designer'
+            ],
+            [
+                'name' => 'GitLab'
             ],
             [
                 'name' => 'Photographer',
-            ],           
-            [
-                'name' => 'Content Writing'
             ],
-            ]);  
+            [
+                'name' => 'Content Writer'
+            ],
+        ]);
     }
 }

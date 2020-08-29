@@ -1,5 +1,20 @@
 
-- ## Commit 66th:
+- ### Commit 68th:
+     ### _Jobs_ and _Proposal_ Changes :
+
+    1. `Both` linked with required **Skills** and **Category**.
+
+    2. Freelancer can be hired and that _job_ gets hidden from display.
+
+    3. `Database` columns modified and seedings improved.
+
+    4. Freelancer Job Feed Page Dynamic Improvement.
+
+    5. Unnecessary `JS` clutters deleted `Codes` cleaned.
+
+<hr>
+
+- ### Commit 66th:
      ### Job Details Page and Proposal Submit Optimizations:
 
     1. `Category` linked with jobs.
@@ -8,11 +23,11 @@
 
     3. Routing for Job Details and Proposals Fixed.
 
-    4. Many __Frontend__ Fixes.
+    4. Many _Frontend_ Fixes.
 
 <hr>
 
-- ## Commit 61st:
+- ### Commit 61st:
      ### Dynamic `My Projects` and `My Proposals` Pages:
 
     1. Freelancers can see only their _proposals_ and all **projects**.
@@ -23,7 +38,7 @@
 
 <hr>
 
-- ## Commit 60th:
+- ### Commit 60th:
      ### Proposal Bidding by Freelancers and Counts:
 
     1. Proposals can be posted by **Freelancers**.
@@ -36,7 +51,7 @@
 
 <hr>
 
-- ## Commit 59th:
+- ### Commit 59th:
      ### New Project Post and Eloquent Views Added:
 
     1. Jobs can be posted by **Client**.

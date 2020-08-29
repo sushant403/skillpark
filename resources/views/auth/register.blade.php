@@ -29,10 +29,11 @@
                         </span>
                         @enderror
                         <div class="js-form-message input-group-overlay form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
-                                        class="fa fa-user fa-sm"></i></span></div>
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"
+                                    style="height: 46px"><i class="fa fa-user fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" type="text" name="name"
-                                value="{{ old('name') }}" placeholder="Full Name" tabindex="2" required data-msg="Please enter a valid name. (e.g. Sushant Poudel)">
+                                value="{{ old('name') }}" placeholder="Full Name" tabindex="2" required
+                                data-msg="Please enter a valid name. (e.g. Sushant Poudel)">
                         </div>
 
                         @error('email')
@@ -41,10 +42,11 @@
                         </span>
                         @enderror
                         <div class="js-form-message input-group-overlay form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
-                                        class="fa fa-envelope fa-sm"></i></span></div>
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"
+                                    style="height: 46px"><i class="fa fa-envelope fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" type="email" name="email"
-                                value="{{ old('email') }}" placeholder="Email Address" tabindex="2" required data-msg="Please enter a valid email address.">
+                                value="{{ old('email') }}" placeholder="Email Address" tabindex="2" required
+                                data-msg="Please enter a valid email address.">
                         </div>
 
                         @error('password')
@@ -53,10 +55,11 @@
                         </span>
                         @enderror
                         <div class="js-form-message input-group-overlay cs-password-toggle form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
-                                        class="fa fa-lock fa-sm"></i></span></div>
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"
+                                    style="height: 46px"><i class="fa fa-lock fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" name="password" type="password"
-                                placeholder="Password" minlength="8" required data-msg="Password is required and should be at least 8 characters">
+                                placeholder="Password" minlength="8" required
+                                data-msg="Password is required and should be at least 8 characters">
                             <label class="cs-password-toggle-btn">
                                 <input class="custom-control-input" type="checkbox"><span class="sr-only">Show
                                     password</span>

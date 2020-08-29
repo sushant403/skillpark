@@ -3,113 +3,221 @@
 @section('title', Auth::user()->name . ' - Home')
 @section('content')
 
-<main class="bg-light pt-5" role="main" id="content">
+<main class="bg-light" role="main" id="content">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-5 col-lg-3 col-xl-3 mb-7 bg-white">
-                <form enctype="multipart/form-data" method="POST" action="{{ route('freelancer') }}">
-                    <!-- Filters -->
-                    <div class="border-bottom pb-4 mb-4 pt-4">
-                        @csrf
-                        <h5>Budget</h5>
-                        <!-- radioes -->
-                        <div
-                            class="form-group d-flex align-items-center justify-content-between font-size-1 text-lh-lg text-body mb-1">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" name="budget" id="5k">
-                                <label class="custom-control-label" for="5k">Rs. 5000 - Rs. 10,000</label>
-                            </div>
-                        </div>
-                        <div
-                            class="form-group d-flex align-items-center justify-content-between font-size-1 text-lh-lg text-body mb-1">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" name="budget" id="10k">
-                                <label class="custom-control-label" for="10k">Rs. 10,000 - Rs. 20,000</label>
-                            </div>
-                        </div>
-                        <div
-                            class="form-group d-flex align-items-center justify-content-between font-size-1 text-lh-lg text-body mb-1">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" name="budget" id="20k">
-                                <label class="custom-control-label" for="20k">Rs. 20,000 - Rs. 50,000</label>
-                            </div>
-                        </div>
-                        <!-- End radioes -->
-
-                        <!-- View More - Collapse -->
-                        <div class="collapse" id="collapseBrand">
-                            <div
-                                class="form-group d-flex align-items-center justify-content-between font-size-1 text-lh-lg text-body mb-1">
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" name="budget" id="50k">
-                                    <label class="custom-control-label" for="50k">Rs. 50,000 - Rs. 1 Lakh</label>
-                                </div>
-                            </div>
-                            <div
-                                class="form-group d-flex align-items-center justify-content-between font-size-1 text-lh-lg text-body mb-1">
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" name="budget" id="1l">
-                                    <label class="custom-control-label" for="1l">Rs. 1 Lakh +</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End View More - Collapse -->
-
-                        <!-- Link -->
-                        <a class="link link-collapse small font-size-1" data-toggle="collapse" href="#collapseBrand"
-                            role="button" aria-expanded="false" aria-controls="collapseBrand">
-                            <span class="link-collapse-default">View more</span>
-                            <span class="link-collapse-active">View less</span>
-                            <span class="link-icon ml-1">+</span>
+        <!-- Sorting -->
+        <div class="row text-center text-md-left mb-5 py-2 bg-white mx-auto">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+                <span class="font-size-1 ml-1 font-weight-bold">100+ Jobs Found</span>
+            </div>
+            <div class="col-lg-6 align-self-lg-end align-self-sm-center text-lg-right">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <!-- Select -->
+                        <select class="js-custom-select" data-hs-select2-options='{
+                            "minimumResultsForSearch": "Infinity",
+                            "customClass": "btn btn-xs btn-white dropdown-toggle",
+                            "dropdownAutoWidth": false,
+                            "width": "auto"
+                          }'>
+                            <option value="mostRecent" selected>Sort by</option>
+                            <option value="newest">Newest first</option>
+                            <option value="budgetHighLow">Budget (high - low)</option>
+                            <option value="budgetLowHigh">Budget (low - high)</option>
+                            <option value="relevance">Relevance</option>
+                        </select>
+                        <!-- End Select -->
+                    </li>
+                    <li class="list-inline-item">
+                        <!-- Select -->
+                        <select class="js-custom-select" data-hs-select2-options='{
+                            "minimumResultsForSearch": "Infinity",
+                            "customClass": "btn btn-xs btn-white dropdown-toggle",
+                            "dropdownAutoWidth": false,
+                            "width": "auto"
+                          }'>
+                            <option value="alphabeticalOrderSelect1" selected>A-to-Z</option>
+                            <option value="alphabeticalOrderSelect2">Z-to-A</option>
+                        </select>
+                        <!-- End Select -->
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-xs btn-soft-secondary active" href="{{ route('proposals.index') }}">
+                            <i class="fas fa-th-large"></i>
                         </a>
-                        <!-- End Link -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sorting -->
+        <div class="row">
+            <div class="col-12 col-md-5 col-lg-3 col-xl-3 mb-3 bg-white">
+                <div class="navbar-expand-lg navbar-expand-lg-collapse-block py-3">
+                    <!-- Responsive Toggle Button -->
+                    <button type="button" class="navbar-toggler btn btn-block border py-3"
+                        aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNavExample2"
+                        data-toggle="collapse" data-target="#sidebarNavExample2">
+                        <span class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">View all categories</span>
+                            <span class="navbar-toggler-default">
+                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+                                </svg>
+                            </span>
+                            <span class="navbar-toggler-toggled">
+                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                    <!-- End Responsive Toggle Button -->
+
+                    <div id="sidebarNavExample2" class="collapse navbar-collapse">
+                        <div class="mt-5 mt-lg-0">
+                            <h2 class="h4"><a class="text-inherit" href="#">Artificial Intelligence</a></h2>
+
+                            <!-- Nav Link -->
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                AI Product Manager
+                                <span class="badge bg-soft-secondary badge-pill">30+</span>
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                AI Programming with Python
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Deep Learning
+                            </a>
+                            <!-- End Nav Link -->
+
+                            <!-- View More - Collapse -->
+                            <div class="collapse" id="collapseSectionOne">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
+                                    href="#">
+                                    Machine Learning
+                                </a>
+                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
+                                    href="#">
+                                    Natural Language Processing
+                                </a>
+                            </div>
+                            <!-- End View More - Collapse -->
+
+                            <!-- Link -->
+                            <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse"
+                                href="#collapseSectionOne" role="button" aria-expanded="false"
+                                aria-controls="collapseSectionOne">
+                                <span class="link-collapse-default">View more</span>
+                                <span class="link-collapse-active">View less</span>
+                                <span class="link-icon ml-1">+</span>
+                            </a>
+                            <!-- End Link -->
+                        </div>
+
+                        <div class="mt-5">
+                            <h3 class="h4"><a class="text-inherit" href="#">Programming and Development</a></h3>
+
+                            <!-- Nav Link -->
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                AI Programming with Python
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Android Developer
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Blockchain
+                                <span class="badge bg-soft-secondary badge-pill">4</span>
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                C++
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Front End Web Developer
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Java Developer
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                iOS
+                                <span class="badge badge-success badge-pill ml-1">New</span>
+                            </a>
+                            <!-- End Nav Link -->
+
+                            <!-- View More - Collapse -->
+                            <div class="collapse" id="collapseSectionTwo">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
+                                    href="#">
+                                    Java Developer
+                                </a>
+                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
+                                    href="#">
+                                    React
+                                </a>
+                            </div>
+                            <!-- End View More - Collapse -->
+
+                            <!-- Link -->
+                            <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse"
+                                href="#collapseSectionTwo" role="button" aria-expanded="false"
+                                aria-controls="collapseSectionTwo">
+                                <span class="link-collapse-default">View more</span>
+                                <span class="link-collapse-active">View less</span>
+                                <span class="link-icon ml-1">+</span>
+                            </a>
+                            <!-- End Link -->
+                        </div>
+
+                        <div class="mt-5">
+                            <h3 class="h4"><a class="text-inherit" href="#">Business</a></h3>
+
+                            <!-- Nav Link -->
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Business Analytics
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Digital Marketing
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Marketing Analytics
+                            </a>
+                            <!-- End Nav Link -->
+
+                            <!-- View More - Collapse -->
+                            <div class="collapse" id="collapseSectionThree">
+                                <a class="nav-link" href="#">
+                                    Predictive Analytics for Business
+                                </a>
+                            </div>
+                            <!-- End View More - Collapse -->
+
+                            <!-- Link -->
+                            <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse"
+                                href="#collapseSectionThree" role="button" aria-expanded="false"
+                                aria-controls="collapseSectionThree">
+                                <span class="link-collapse-default">View more</span>
+                                <span class="link-collapse-active">View less</span>
+                                <span class="link-icon ml-1">+</span>
+                            </a>
+                            <!-- End Link -->
+                        </div>
+
+                        <div class="mt-5">
+                            <h3 class="h4"><a class="text-inherit" href="#">Career <span
+                                        class="badge badge-success badge-pill ml-1">New</span></a></h3>
+
+                            <!-- Nav Link -->
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Applying to Jobs
+                            </a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                Interviewing
+                            </a>
+                            <!-- End Nav Link -->
+                        </div>
                     </div>
-
-                    <div class="border-bottom pb-4 mb-4">
-                        <h5>Categories</h5>
-                        <select class="js-custom-select" id="categoryLabel" name="city_id" data-hs-select2-options='{
-                            "customClass": "custom-select",
-                            "placeholder": "Select Category",
-                            "searchInputPlaceholder": "Search a Category"
-                          }'>
-                            <option label="empty"></option>
-                            @foreach ($categories as $category)<option value="{{ $category->id }}"
-                                data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $category->name }}</span></span>'>
-                                {{ $category->name }}</option>@endforeach
-                        </select>
-                    </div>
-
-                    <div class="border-bottom pb-4 mb-4">
-                        <h5>Skills Required</h5>
-                        <select class="js-custom-select-multiple" multiple data-hs-select2-options='{
-                                "minimumResultsForSearch": "3",
-                                }'>
-                            @foreach ($skills as $skill)
-                            <option value="{{ $skill->id }}">{{ $skill->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="border-bottom pb-4 mb-4">
-                        <h5>Location</h5>
-                        <select class="js-custom-select" id="locationLabel" name="city_id" data-hs-select2-options='{
-                            "customClass": "custom-select",
-                            "placeholder": "Select City/District",
-                            "searchInputPlaceholder": "Search a City/District"
-                          }'>
-                            <option label="empty"></option>
-                            @foreach ($cities as $city)
-                            <option value="{{ $city->id }}"
-                                data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $city->name }}</span></span>'>
-                                {{ $city->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-sm btn-block btn-primary transition-3d-hover">Apply</button>
-                    <!-- End Filters -->
-
-                </form>
+                </div>
             </div>
 
             <div class="col-12 col-md-7 col-lg-6 col-xl-6">
@@ -132,9 +240,9 @@
                         </div>
 
                         <div class="post__actions">
-                            <a class="post__actions-btn post__actions-btn--green" href="javascript:;">
+                            <button id="snackbar-place-bid" class="post__actions-btn post__actions-btn--green border-0">
                                 <i class="fa fa-bookmark fa-sm"></i>
-                            </a>
+                            </button>
                             <a class="post__actions-btn post__actions-btn--blue" href="javascript:;">
                                 <i class="fa fa-thumbs-down fa-sm"></i>
                             </a>
@@ -142,15 +250,15 @@
                     </div>
 
                     <a href="{{ route('jobs.details', $job->id) }}">
-                    <h3 class="post__title">{{ $job->title ?? '' }}
-                    </h3>
+                        <h3 class="post__title">{{ $job->title ?? '' }}
+                        </h3>
 
-                    <div class="post__options">
-                        <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
-                    </div>
-                    <div class="post__description">
-                        <p>{{ $job->description ?? '' }}</p>
-                    </div>
+                        <div class="post__options">
+                            <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
+                        </div>
+                        <div class="post__description">
+                            <p>{{ $job->description ?? '' }}</p>
+                        </div>
                     </a>
 
                     <div class="mb-5 w-100">
@@ -176,10 +284,9 @@
 
                     <div class="post__stats justify-content-end">
                         <div>
-                            <div>
+                            <div class="mr-3">
                                 <i class="fas fa-user-friends mr-2 fa-sm"></i>
-                                Bidding Count&nbsp;<span
-                                    class="badge badge-light mr-5 font-size-1">{{ $job->proposals->count() }}</span>
+                                Bidding Count: {{ $job->proposals->count() }}
                             </div>
                             <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button"
                                 aria-expanded="false" aria-controls="collapse1"><i class="fas fa-comment fa-sm"></i>
@@ -211,18 +318,46 @@
                  "breakpoint": "lg",
                  "startPoint": "#stickyBlockStartPoint",
                  "endPoint": "#stickyBlockEndPoint",
-                 "stickyOffsetTop": 80,
+                 "stickyOffsetTop": 70,
                  "stickyOffsetBottom": 20
                }'>
                     <div class="mb-7">
 
                         <!-- App Info -->
                         <div class="mr-lg-2">
-                            <div class="mb-3">
-                                <div class="text-center mx-auto mb-3">
-                                    <img class="img-fluid" src="/images/svg/work.svg" alt="" width="130">
+                            <div class="mb-2">
+                                <div class="mb-3">
+                                    <h5>Trending Jobs</h5>
                                 </div>
+                                <!-- Blog -->
+                                <article class="mb-5">
+                                    <div class="media align-items-center text-inherit">
+                                        <div class="avatar avatar-lg mr-3">
+                                            <img class="avatar-img" src="/images/banner/service1.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Portfolio Freelancer Website - NPR 5000 - 20,000</a></h4>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- End Blog -->
 
+                                <!-- Blog -->
+                                <article class="mb-5">
+                                    <div class="media align-items-center text-inherit">
+                                        <div class="avatar avatar-lg mr-3">
+                                            <img class="avatar-img" src="/images/banner/service3.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Business Consultant - Within 7 Days</a></h4>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- End Blog -->
+                            </div>
+                            <div class="mb-3">
                                 <a class="btn btn-sm btn-block btn-primary transition-3d-hover"
                                     href="{{ route("proposals.index") }}">My Biddings</a>
                             </div>

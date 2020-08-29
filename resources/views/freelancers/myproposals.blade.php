@@ -4,7 +4,7 @@
 @section('content')
 
 <!-- ========== MAIN CONTENT ========== -->
-<main id="content" role="main">
+<main id="content" class="mt-3" role="main">
     <!-- Cart Section -->
     <div class="container space-lg-1 space-md-3">
         <div class="row">

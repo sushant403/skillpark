@@ -61,7 +61,7 @@
                             <div class="js-form-message">
                                 <label class="input-label" for="tagLabel">Statement Of Purpose Title</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="delivery_time" id="tagLabel"
+                                    <input type="text" class="form-control" name="comment" id="tagLabel"
                                         placeholder="(eg. 3 years+ experience in PHP)"
                                         aria-label="(eg. 3 years+ experience in PHP)" required
                                         data-msg="First thing Client sees is your SOP.">
@@ -89,7 +89,7 @@
                                 <label class="input-label" for="urlLabel">URL <span
                                         class="text-muted font-weight-normal ml-1">(Optional)</span></label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="URL" id="urlLabel"
+                                    <input type="text" class="form-control" name="url" id="urlLabel"
                                         placeholder="Linkedin" aria-label="Linkedin">
                                 </div>
                             </div>

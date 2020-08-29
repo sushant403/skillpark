@@ -19,7 +19,8 @@ class CreateProposalsTable extends Migration
             $table->foreignId('candidate_id');
             $table->longText('proposal_text');
             $table->string('budget')->nullable();
-            $table->string('delivery_time')->nullable();
+            $table->string('comment')->nullable();
+            $table->string('url')->nullable();
             $table->datetime('approved_at')->nullable();
             $table->datetime('rejected_at')->nullable();
             $table->timestamps();

@@ -61,7 +61,14 @@
                             </div>
 
                             <div class="col-md-4 text-md-right">
-                                <a class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#">Cancel Project</a>
+                                <form action="{{ route('jobs.destroy', $job->id) }}" method="POST"
+                                    onsubmit="return confirm('Are you sure to delete the Job?');"
+                                    style="display: inline-block;">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="submit" class="btn btn-sm btn-white mr-1 mb-0 mb-md-2"
+                                        value="Delete Job">
+                                </form>
                                 <a class="btn btn-sm btn-primary transition-3d-hover mb-0 mb-md-2" href="">Update</a>
                             </div>
                         </div>

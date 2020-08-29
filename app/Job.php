@@ -35,6 +35,8 @@ class Job extends Model implements HasMedia
         'description',
         'candidate_id',
         'delivery_time',
+        'required_skill',
+        'company',
     ];
 
     public function employer()
