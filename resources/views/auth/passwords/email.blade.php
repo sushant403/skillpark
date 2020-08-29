@@ -32,7 +32,7 @@
                         </span>
                         @enderror
                     </div>
-                    <button class="btn btn-primary" type="submit">{{ __('Request Verification Link') }}</button>
+                    <button class="btn btn-primary" onclick="this.disabled=true;this.form.submit();" type="submit">{{ __('Request Verification Link') }}</button>
                 </form>
             </div>
         </div>

@@ -1,6 +1,6 @@
 @extends('layouts.clients.clientmaster')
 
-@section('title', $job->title . ' | ' . Auth::user()->name)
+@section('title', $job->title . ' | My Projects - ' . Auth::user()->name)
 @section('content')
 
 <!-- ========== MAIN ========== -->
@@ -45,19 +45,20 @@
                                 <div class="mt-4">
                                     <p>{{ $job->description }}</p>
                                 </div>
-                                
-                                    <small class="text-cap mb-2 mt-5"><u>Associated File(s)</u></small>
-                                    <div class="row mx-n1 d-flex">
-                                        @if($job->attachments)
-                                        @foreach($job->attachments as $key => $media)
-                                        <a class="link-underline mr-4" href="{{ $media->getUrl() }}" target="_blank">
-                                            Attachment
-                                        </a>
-                                        @endforeach
-                                        @endif
-                                    </div>
-                                    <!-- End Row -->
+
+                                <small class="text-cap my-2 mt-4 font-weight-bold">Associated File(s)</small>
+                                <div class="row mx-n1 mb-5 d-flex attachment-container">
+                                    @if($job->attachments)
+                                    @foreach($job->attachments as $key => $media)
+                                    <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}"
+                                        target="_blank">
+                                        <span>Attachment</span></a>
+                                    </a>
+                                    @endforeach
+                                    @endif
                                 </div>
+                                <!-- End Row -->
+                            </div>
 
                             <div class="col-md-4 text-md-right">
                                 <a class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#">Cancel Project</a>
@@ -100,6 +101,20 @@
                                                 <div class="mt-4">
                                                     <p>{{ $proposal->proposal_text }}</p>
                                                 </div>
+
+                                                <small class="text-cap my-2 mt-5 font-weight-bold">Associated
+                                                    File(s)</small>
+                                                <div class="row mx-n1 d-flex attachment-container">
+                                                    @if($proposal->attachments)
+                                                    @foreach($proposal->attachments as $key => $media)
+                                                    <a class="attachment-box ripple-effect"
+                                                        href="{{ $media->getUrl() }}" target="_blank">
+                                                        <span>Attachment</span></a>
+                                                    </a>
+                                                    @endforeach
+                                                    @endif
+                                                </div>
+
                                             </div>
                                             @if($job->candidate_id == NULL)
                                             <div class="col-sm-auto">

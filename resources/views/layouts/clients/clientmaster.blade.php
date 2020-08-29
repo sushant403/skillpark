@@ -40,6 +40,8 @@
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/theme.css">
+
+    @include('layouts.components.spinner')
 </head>
 
 <body>

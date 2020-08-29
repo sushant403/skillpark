@@ -250,7 +250,7 @@
                                 <!-- End Pages -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="" class="nav-link">{{ __('nepali.Enterprise') }}</a>
+                                    <a href="{{ url('coming-soon') }}" class="nav-link">{{ __('nepali.Enterprise') }}</a>
                                 </li>
 
 
@@ -335,7 +335,7 @@
                     "target": "#accountDropdown",
                     "type": "css-animation",
                     "event": "click",
-                    "duration": 50,
+                    "duration": 30,
                     "delay": 0,
                     "hideOnScroll": "true"
                    }'>

@@ -28,10 +28,11 @@
                         </span>
                         @enderror
                         <div class="js-form-message input-group-overlay form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
-                                        class="fa fa-envelope fa-sm"></i></span></div>
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"
+                                    style="height: 46px"><i class="fa fa-envelope fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" type="email" name="email"
-                                value="{{ old('email') }}" placeholder="Email" tabindex="2" required data-msg="Please enter a valid email address.">
+                                value="{{ old('email') }}" placeholder="Email" tabindex="2" required
+                                data-msg="Please enter a valid email address.">
                         </div>
                         @error('password')
                         <span class="feedback" style="color:red;font-size:13px" role="alert">
@@ -39,10 +40,11 @@
                         </span>
                         @enderror
                         <div class="js-form-message input-group-overlay cs-password-toggle form-group">
-                            <div class="input-group-prepend-overlay"><span class="input-group-text" style="height: 46px"><i
-                                        class="fa fa-lock fa-sm"></i></span></div>
+                            <div class="input-group-prepend-overlay"><span class="input-group-text"
+                                    style="height: 46px"><i class="fa fa-lock fa-sm"></i></span></div>
                             <input class="form-control prepended-form-control" name="password" type="password"
-                                placeholder="Password" minlength="8" required data-msg="Password is Invalid. Please Try Again.">
+                                placeholder="Password" minlength="8" required
+                                data-msg="Password is Invalid. Please Try Again.">
                             <label class="cs-password-toggle-btn">
                                 <input class="custom-control-input" type="checkbox"><span class="sr-only">Show
                                     password</span>
@@ -56,7 +58,7 @@
                             </div><a class="nav-link-style font-size-ms" href="{{ route('password.update') }}">Forgot
                                 password?</a>
                         </div>
-                        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+                        <button class="btn btn-primary btn-block" type="submit">Sign In</button>
                         <p class="font-size-sm pt-3 mb-0">Don't have an account? <a href='{{ route('register') }}'
                                 class='font-weight-medium'>Sign up</a></p>
                     </form>
@@ -76,5 +78,4 @@
         </div>
     </div>
 </section>
-
 @endsection
