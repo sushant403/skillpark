@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-    <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
@@ -545,7 +544,6 @@
     <!-- JS Implementing Plugins -->
     <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
     <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
-    <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
     <script src="/vendor/slick-carousel/slick/slick.js"></script>
     <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
@@ -556,7 +554,6 @@
     <!-- JS Skillpark -->
     <script src="/js/hs.core.js"></script>
     <script src="/js/hs.validation.js"></script>
-    <script src="/js/hs.mask.js"></script>
     <script src="/js/hs.slick-carousel.js"></script>
     <script src="/js/hs.select2.js"></script>
 
@@ -591,16 +588,6 @@
             $('.js-slick-carousel').each(function() {
                 var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
             });
-            
-            // initialization of show animations
-            $('.js-animation-link').each(function () {
-                var showAnimation = new HSShowAnimation($(this)).init();
-            });
-
-            // initialization of masked input
-            $('.js-masked-input').each(function () {
-                var mask = $.HSCore.components.HSMask.init($(this));
-            });
 
             // initialization of file attach
             $('.js-file-attach').each(function () {
@@ -615,11 +602,6 @@
             width: '100%',
             maximumSelectionLength: 3,
             });
-          });
-    
-          // initialization of go to
-          $('.js-go-to').each(function () {
-            var goTo = new HSGoTo($(this)).init();
           });
         });
     </script>

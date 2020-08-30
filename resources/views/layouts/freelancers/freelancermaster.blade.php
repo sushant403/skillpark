@@ -32,7 +32,6 @@
   <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
   <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-  <link rel="stylesheet" href="/vendor/fancybox/dist/jquery.fancybox.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
   <!-- CSS Skillpark Template -->
@@ -521,16 +520,13 @@
   <script src="/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
   <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
   <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-  <script src="/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
   <!-- JS Skillpark -->
   <script src="/js/hs.core.js"></script>
   <script src="/js/hs.validation.js"></script>
-  <script src="/js/hs.mask.js"></script>
   <script src="/js/hs.select2.js"></script>
   <script src="/js/snackbar.js"></script>
-  <script src="/js/hs.fancybox.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
@@ -552,11 +548,6 @@
     // initialization of HSMegaMenu component
     var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
 
-      // initialization of fancybox
-    $('.js-fancybox').each(function () {
-      var fancybox = $.HSCore.components.HSFancyBox.init($(this));
-    });
-
       // initialization of unfold
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
 
@@ -577,11 +568,6 @@
       var stickyBlock = new HSStickyBlock($(this)).init();
      });
     });
-
-      // initialization of masked input
-      $('.js-masked-input').each(function () {
-        var mask = $.HSCore.components.HSMask.init($(this));
-      });
 
       // initialization of file attach
       $('.js-file-attach').each(function () {

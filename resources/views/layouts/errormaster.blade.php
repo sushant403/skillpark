@@ -20,17 +20,11 @@
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Fontawesome kit's code here -->
-    <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
-
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-    <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
 
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/theme.css">
@@ -235,7 +229,6 @@
     <!-- JS Implementing Plugins -->
     <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-    <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
 
     <!-- JS Skillpark -->
     <script src="/js/hs.core.js"></script>
@@ -246,13 +239,6 @@
       // initialization of header
       var header = new HSHeader($('#header')).init();
     });
-
-      // initialization of mega menu
-      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
-        desktop: {
-          position: 'left'
-        }
-      }).init();
 
       // initialization of unfold
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();

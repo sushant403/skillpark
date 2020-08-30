@@ -20,9 +20,7 @@
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Fontawesome kit's code here -->
     <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
-
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
@@ -250,7 +248,8 @@
                                 <!-- End Pages -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="{{ url('coming-soon') }}" class="nav-link">{{ __('nepali.Enterprise') }}</a>
+                                    <a href="{{ url('coming-soon') }}"
+                                        class="nav-link">{{ __('nepali.Enterprise') }}</a>
                                 </li>
 
 
