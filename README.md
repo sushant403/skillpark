@@ -1,27 +1,27 @@
-<center>
-<img width="220" src="https://github.com/sushantpoudel98/skillpark/blob/master/public/images/logo/biglogo.png"> <br><br>
-<p>
+<p align="center">
+<img width="230" src="https://github.com/sushantpoudel98/skillpark/blob/master/public/images/logo/biglogo.png">
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/version-0.4.4-blue" />
-
-  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
-  </a>
   
   <a href="https://github.com/sushantpoudel98/skillpark/blob/master/changelog.md">
     <img src="https://img.shields.io/badge/changelog-skillpark-brightgreen" alt="skillpark-changelog">
   </a>
 
-  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/planning-ideas">
+  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/planning-ideas.md">
     <img alt="License: MIT" src="https://img.shields.io/badge/plans-ideas-blue" target="_blank" />
   </a>
 
   <a href="https://twitter.com/sushant_pdll">
     <img alt="Twitter: Sushant Poudel" src="https://img.shields.io/twitter/follow/sushant_pdll?label=Sushant%20Poudel&style=social" target="_blank" />
   </a>
+  
+  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
+  </a>
 </p>
-</center>
 
-> A Freelancers Marketplace Platform with HRs and Clients.<br /> `Skillpark Inc.` is the future of hiring process in Nepal. Inspired from (`fiverr, upwork, git`) websites and ideas.
+> A Freelancers Marketplace Platform with HRs and Clients.<br /> `Skillpark Inc.` is the future of hiring process in Nepal. Inspired from (`fiverr, upwork, toptal`) websites and ideas.
 
 ## ✨ Status
 
@@ -30,8 +30,6 @@
 <p align="center">
   <img align="center" src="https://github.com/sushantpoudel98/skillpark/blob/master/public/markdown/homepage.png" alt="homepage"/>
 </p>
-
-<br>
 Example of `package.json` with good meta data:
 
 ```json
@@ -56,7 +54,7 @@ Example of `package.json` with good meta data:
 }
 ```
 
-## 🚀 Usage
+##  Usage
 
 ```sh
 Social API Logins (Facebook, Twitter, Github, Google)
@@ -80,11 +78,6 @@ You can find [Changelog here](https://github.com/sushantpoudel98/skillpark/blob/
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/sushantpoudel98/skillpark/graphs/contributors"><br><img src="https://img.shields.io/badge/contributors-3-blue" /></a>
-
-## Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/skillpark/contribute)]
-
 
 ### Organizations
 
