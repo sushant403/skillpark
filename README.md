@@ -23,14 +23,14 @@
 
 > A Freelancers Marketplace Platform with HRs and Clients.<br /> `Skillpark Inc.` is the future of hiring process in Nepal. Inspired from (`fiverr, upwork, toptal`) websites and ideas.
 
-## ✨ Status
+##  Status
 
-`Skillpark Inc.` will be available to public soon. To view the current status and changes, `changelog.md` contain the ideas:
+`Skillpark Inc.` will be available to public soon. To view the current status and changes, `changelog.md` contains the plans:
 
 <p align="center">
   <img align="center" src="https://github.com/sushantpoudel98/skillpark/blob/master/public/markdown/homepage.png" alt="homepage"/>
 </p>
-Example of `package.json` with good meta data:
+Summary `info.json` with basic website information:
 
 ```json
 {
@@ -85,7 +85,7 @@ Support this project with your organization. Your logo will show up here with a 
 <a href="https://opencollective.com/skillpark/organization/0/website"><img src="https://opencollective.com/readme-md-generator/organization/0/avatar.svg"></a>
 
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues and feature requests are welcome.<br />
 Feel free to check [issues page](https://github.com/sushantpoudel98/skillpark/issues) if you want to contribute.<br />
@@ -93,13 +93,13 @@ Feel free to check [issues page](https://github.com/sushantpoudel98/skillpark/is
 
 ## Author
 
-👤 **Skillpark Inc.**
+ **Skillpark Inc.**
 
 - Twitter: [@sushant_pdll](https://twitter.com/sushant_pdll)
 - Github: [@sushantpoudel98](https://github.com/sushantpoudel98)
 
 
-## 📝 License
+## License
 
 Copyright © 2020 [Skillpark Inc.](https://github.com/kefranabg).<br />
 This project is [MIT](https://github.com/sushantpoudel98/skillpark/blob/master/LICENSE) licensed.

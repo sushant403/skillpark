@@ -236,7 +236,7 @@
                     <div class="post__wrap">
                         <div class="post__company">
                             <i class="fa fa-briefcase fa-sm"></i>
-                            <span>{{ $job->category->name ?? 'General' }}</span>
+                            <span>{{ $job->topic->name ?? 'General' }}</span>
                         </div>
 
                         <div class="post__actions">
@@ -269,14 +269,14 @@
                     </div>
 
                     <div class="row w-100">
-                        <div class="col-5">
+                        <div class="col-md-12 col-sm-12">
                             <div class="post__tags">
-                                <a href="#">#HTML</a>
-                                <a href="#">#CSS</a>
-                                <a href="#">#JS</a>
+                                @foreach($job->categories as $id => $categories)
+                                <a href="#">#{{ $categories->name }}</a>
+                                @endforeach
                             </div>
                         </div>
-                        <div class="col-7">
+                        <div class="col-md-12 col-sm-12">
                             <p class="float-right" style="font-size: 14px;"></u><b class="mr-1">Expected
                                     Delivery:</b></u> {{ $job->delivery_time }}</p>
                         </div>
@@ -333,11 +333,11 @@
                                 <article class="mb-5">
                                     <div class="media align-items-center text-inherit">
                                         <div class="avatar avatar-lg mr-3">
-                                            <img class="avatar-img" src="/images/banner/service1.jpg"
-                                                alt="">
+                                            <img class="avatar-img" src="/images/banner/service1.jpg" alt="">
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Portfolio Freelancer Website - NPR 5000 - 20,000</a></h4>
+                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Portfolio Freelancer
+                                                    Website - NPR 5000 - 20,000</a></h4>
                                         </div>
                                     </div>
                                 </article>
@@ -347,11 +347,11 @@
                                 <article class="mb-5">
                                     <div class="media align-items-center text-inherit">
                                         <div class="avatar avatar-lg mr-3">
-                                            <img class="avatar-img" src="/images/banner/service3.jpg"
-                                                alt="">
+                                            <img class="avatar-img" src="/images/banner/service3.jpg" alt="">
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Business Consultant - Within 7 Days</a></h4>
+                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Business Consultant -
+                                                    Within 7 Days</a></h4>
                                         </div>
                                     </div>
                                 </article>

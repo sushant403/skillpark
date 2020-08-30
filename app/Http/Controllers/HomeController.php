@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Job;
 use App\City;
 use App\User;
-use App\Skill;
+use App\Topic;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
 
@@ -51,7 +51,7 @@ class HomeController extends Controller
     {
         $cities = City::all();
         $categories = Category::all();
-        $skills = Skill::all();
+        $topics = Topic::all();
         $user = User::find(Auth::user()->id);
 
         if ($user->hasRole('client')) {
@@ -59,7 +59,7 @@ class HomeController extends Controller
         } else {
             $jobs = Job::whereNull('candidate_id')->get();
         }
-        return view('freelancers.home', compact(['cities', 'categories', 'skills','jobs']));
+        return view('freelancers.home', compact(['cities', 'categories', 'topics','jobs']));
     }
 
     public function freelancerSearch()
@@ -73,8 +73,8 @@ class HomeController extends Controller
     {
         $cities = City::all();
         $categories = Category::all();
-        $skills = Skill::all();
-        return view('clients.home', compact(['cities', 'categories', 'skills']));
+        $topics = Topic::all();
+        return view('clients.home', compact(['cities', 'categories', 'topics']));
     }
 
     public function clientSearch()

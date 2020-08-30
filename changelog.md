@@ -1,3 +1,17 @@
+- ### Commit 71st:
+     ### Database Modified for Search Functionality :
+
+    1. New Controllers created for Search Method.
+
+    2. Search with `Category` and `Job` name implemented .
+
+    3. `Database` columns modified and seedings improved.
+
+    4. _Skill_ attributes name changed to `Topic`.
+
+    5. Dynamicity of index page redesigned.
+
+<hr>
 
 - ### Commit 68th:
      ### _Jobs_ and _Proposal_ Changes :

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Create1556514953174JobsTable extends Migration
+class CreateJobsTable extends Migration
 {
     public function up()
     {
@@ -15,9 +15,8 @@ class Create1556514953174JobsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('budget');
-            $table->string('category_id');
             $table->string('company')->nullable();
-            $table->string('required_skill')->nullable();
+            $table->string('topic')->nullable();
             $table->string('delivery_time')->nullable();
             $table->datetime('hired_at')->nullable();
             $table->timestamps();

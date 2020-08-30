@@ -25859,6 +25859,10 @@ a:hover .text-hover-primary {
     position: relative;
     padding-left: 11px;
   }
+  .post__tags a:hover{
+    color: #1bb7bb
+  }
+
   .post__stats {
     width: 100%;
     border-top: 1px solid rgba(133,153,171,0.2);
@@ -28211,7 +28215,7 @@ a.attachment-box:hover i {
 .snackbar-container {
 	transition: all 500ms ease;
 	transition-property: top, right, bottom, left, opacity;
-	font-size: 16px;
+	font-size: 14px;
 	min-height: 14px;
 	background-color: #142140;
 	position: fixed;
@@ -28220,7 +28224,7 @@ a.attachment-box:hover i {
 	align-items: center;
 	color: #fff;
 	line-height: 22px;
-	padding: 18px 24px;
+	padding: 14px 20px;
 	bottom: -100px;
 	top: -100px;
 	opacity: 0;
@@ -28242,7 +28246,7 @@ a.attachment-box:hover i {
     min-width: min-content;
     cursor: pointer;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 @media (min-width: 640px) {

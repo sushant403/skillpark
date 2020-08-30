@@ -82,7 +82,7 @@
                   </ul>
                </div>
                <div class="skills">
-                  <h3>Skills</h3>
+                  <h3>topics</h3>
                   <ul>
                      <li class=""><a href="#">voice talent</a></li>
                      <li class=""><a href="#">voice acting</a></li>

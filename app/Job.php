@@ -35,7 +35,7 @@ class Job extends Model implements HasMedia
         'description',
         'candidate_id',
         'delivery_time',
-        'required_skill',
+        'topic',
         'company',
     ];
 
@@ -56,7 +56,7 @@ class Job extends Model implements HasMedia
 
     public function categories()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Category::class);
     }
 
     public function getattachmentsAttribute()

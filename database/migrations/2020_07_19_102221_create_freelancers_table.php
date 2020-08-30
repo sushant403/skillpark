@@ -18,7 +18,7 @@ class CreateFreelancersTable extends Migration
             $table->foreignId('user_id');
             $table->string('tagline');
             $table->string('portfolio');
-            $table->string('skills');
+            $table->string('topics');
             $table->timestamps();
         });
     }

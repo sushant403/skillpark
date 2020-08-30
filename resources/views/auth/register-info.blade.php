@@ -154,12 +154,12 @@
                         <label for="validationFormSkillsLabel" class="input-label">Skills</label>
                         <div class="js-form-message">
                             <select id="validationFormSkillsLabel" placeholder="Select at most three skills" required
-                                data-msg="Please select at least one skill that represents you." name="skill"
+                                data-msg="Please select a skill that represents you." name="topic"
                                 class="js-custom-select-multiple form-control" multiple data-hs-select2-options='{
                             "minimumResultsForSearch": "3",
                             }'>
                                 <option label="empty"></option>
-                                @foreach($skills as $skill)<option value="{{ $skill->id }}">{{ $skill->name }}</option>
+                                @foreach($topics as $topic)<option value="{{ $topic->id }}">{{ $topic->name }}</option>
                                 @endforeach
                             </select>
                         </div>

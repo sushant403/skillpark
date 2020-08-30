@@ -41,15 +41,14 @@
 
                         <!-- Category Custom Select -->
                         <div class="js-form-message mb-4 mb-md-6">
-                            <h4>Categories</h4>
-                            <select class="js-custom-select" id="categoryLabel" name="category_id"
-                                data-hs-select2-options='{
+                            <h4>Topic</h4>
+                            <select class="js-custom-select" id="categoryLabel" name="topic" data-hs-select2-options='{
                                 "customClass": "custom-select",
                                 "placeholder": "Select Category",
                                 "searchInputPlaceholder": "Search a Category"
-                              }' required data-msg="Categories helps find specific talent group.">
+                              }' required data-msg="Topic helps find specific talent group.">
                                 <option label="empty"></option>
-                                @foreach ($categories as $category) <option value="{{ $category->id }}"
+                                @foreach ($topics as $category) <option value="{{ $category->id }}"
                                     data-option-template='<span class="d-flex align-items-center"><span class="text-truncate">{{ $category->name }}</span></span>'>
                                     {{ $category->name }}</option> @endforeach
                             </select>
@@ -57,14 +56,14 @@
                         <!-- End Category Custom Select -->
 
                         <div class="js-form-message mb-4 mb-md-6">
-                            <h5>Skills Required</h5>
-                            <select name="required_skill[]" class="js-custom-select-multiple" multiple
+                            <h5>Related Category</h5>
+                            <select name="categories[]" class="js-custom-select-multiple" multiple="multiple"
                                 data-hs-select2-options='{
                                 "minimumResultsForSearch": "3",
                                 "searchInputPlaceholder": "Search a Category"
-                                }' required data-msg="Select at least one required skill.">
-                                @foreach ($skills as $skill)
-                                <option value="{{ $skill->id }}">{{ $skill->name }}</option>
+                                }' required data-msg="Select at least one category.">
+                                @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>

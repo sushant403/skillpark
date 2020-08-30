@@ -89,14 +89,12 @@
                         <p>{{ $job->description }}</p>
                     </div>
 
-                    <small class="text-cap my-2 font-weight-bold">Skills Required</small>
-                    <div class="post__tags">
+                    <small class="text-cap my-2 font-weight-bold">Related Category</small>
+                    <div class="mb-3">
+                        @foreach($job->categories as $id => $categories)
                         <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                href="#">Featured</a></span>
-                        <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                href="#">Flutter</a></span>
-                        <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                href="#">Django</a></span>
+                                href="#">{{ $categories->name }}</a></span>
+                        @endforeach
                     </div>
 
                     <small class="text-cap my-2 font-weight-bold">Associated File(s)</small>
@@ -152,9 +150,9 @@
                     <ul class="sidebox__list">
                         <li><span>Budget:</span> <span>NPR {{ $job->budget }}</span></li>
                         <li><span>Employment status:</span> <span>Freelancer</span></li>
-                        <li><span>Experience:</span> <span>2 to 3 year(s)</span></li>
+                        <li><span>Topic:</span> <span>{{ $job ->topic }}</span></li>
                         <li><span>Location:</span> <span>{{ $job->employer->city_id }}</span></li>
-                        <li><span>Company:</span> <span>{{ $job->employer->company ?? 'N/A'}}</span></li>
+                        <li><span>Company:</span> <span>{{ $job->company ?? 'N/A'}}</span></li>
                         <li><span>Published:</span> <span>{{ $job->created_at }}</span></li>
                     </ul>
                 </div>

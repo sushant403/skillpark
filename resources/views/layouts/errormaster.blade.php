@@ -87,7 +87,7 @@
                                             <a id="navLinkPagesAccount"
                                                 class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
                                                 href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                                aria-controls="navSubmenuPagesAccount">Trending Skills </a>
+                                                aria-controls="navSubmenuPagesAccount">Trending topics </a>
 
                                             <div id="navSubmenuPagesAccount" class="hs-sub-menu dropdown-menu"
                                                 aria-labelledby="navLinkPagesAccount" style="min-width: 230px;">

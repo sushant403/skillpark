@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\City;
-use App\Skill;
+use App\Topic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +21,7 @@ class ProfileInfoController extends Controller
     public function showProfile()
     {
         $cities = City::all();
-        $skills = Skill::all();
+        $topics = Topic::all();
 
         $user = Auth::user();
         
@@ -33,7 +33,7 @@ class ProfileInfoController extends Controller
                 return redirect()->route('client');
         }
         else{
-            return view('auth.register-info', compact('cities','skills'));
+            return view('auth.register-info', compact('cities','topics'));
         } 
     }
 

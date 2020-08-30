@@ -111,7 +111,7 @@
           <div class="col-sm-9">
             <!-- Quill -->
             <div class="form-group">
-              <textarea class="form-control" placeholder="Short Description about yourself about skills and passion.."
+              <textarea class="form-control" placeholder="Short Description about yourself about topics and passion.."
                 rows="5">{{ Auth::user()->about }}</textarea>
             </div>
             <!-- End Quill -->

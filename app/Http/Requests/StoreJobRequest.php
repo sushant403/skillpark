@@ -30,6 +30,12 @@ class StoreJobRequest extends FormRequest
             'delivery_time' => [
                 'required',
             ],
+            'categories.*' => [
+                'integer',
+            ],
+            'categories'   => [
+                'array',
+            ],
         ];
     }
 }

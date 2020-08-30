@@ -18,6 +18,12 @@ class UpdateJobRequest extends FormRequest
     public function rules()
     {
         return [
+            'categories.*' => [
+                'integer',
+            ],
+            'categories'   => [
+                'array',
+            ],
         ];
     }
 }

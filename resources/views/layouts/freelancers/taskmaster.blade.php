@@ -155,7 +155,7 @@
                                             <a id="navLinkPagesAccount"
                                                 class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
                                                 href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                                aria-controls="navSubmenuPagesAccount">Trending Skills <span
+                                                aria-controls="navSubmenuPagesAccount">Trending topics <span
                                                     class="badge badge-success badge-pill ml-2">New</span></a>
 
                                             <div id="navSubmenuPagesAccount" class="hs-sub-menu dropdown-menu"

@@ -1,6 +1,6 @@
 <?php
 
-use App\Skill;
+use App\Topic;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -13,14 +13,14 @@ class SkillsSeeder extends Seeder
      */
     public function run()
     {
-        Skill::truncate();
+        Topic::truncate();
 
-        DB::table('skills')->insert([
+        DB::table('topics')->insert([
             [
                 'name' => 'Sales Consultant',
             ],
             [
-                'name' => 'HR Consulting'
+                'name' => 'HR Consultant'
             ],
             [
                 'name' => 'Android Developer'
@@ -35,22 +35,22 @@ class SkillsSeeder extends Seeder
                 'name' => 'Django and Python',
             ],
             [
-                'name' => 'Graphic Designer'
+                'name' => 'Graphic Design'
             ],
             [
                 'name' => 'React.JS',
             ],
             [
-                'name' => 'Logo Designer'
+                'name' => 'Logo Designe'
             ],
             [
                 'name' => 'GitLab'
             ],
             [
-                'name' => 'Photographer',
+                'name' => 'Photography',
             ],
             [
-                'name' => 'Content Writer'
+                'name' => 'Content Writing'
             ],
         ]);
     }

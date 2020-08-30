@@ -364,7 +364,7 @@
                     <h5>Freelancer</h5>
                     <ul class="nav nav-sm nav-x-0 flex-column">
                         <li class="nav-item"><a class="nav-link" href="">Trending Jobs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Popular Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Popular topics</a></li>
                         <li class="nav-item"><a class="nav-link" href="">Careers</a></li>
                         <li class="nav-item"><a class="nav-link" href="">Location</a></li>
                     </ul>

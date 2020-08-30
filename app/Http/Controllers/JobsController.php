@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use App\User;
-use App\Skill;
+use App\Topic;
 use App\Category;
 use App\Proposal;
 use App\Http\Controllers\Controller;
@@ -41,18 +41,12 @@ class JobsController extends Controller
         return view('jobs.job-details')->with($Data);
     }
 
-    public function showProjectForm()
-    {
-
-        $categories = Category::all();
-        $skills = Skill::all();
-
-        return view('post.post-project', compact(['categories', 'skills']));
-    }
-
     public function create()
     {
-        return route('post-project');
+        $topics = Topic::all();
+        $categories = Category::all();
+
+        return view('post.post-project', compact(['categories', 'topics']));
     }
 
     public function store(StoreJobRequest $request)
@@ -60,10 +54,8 @@ class JobsController extends Controller
         $data = $request->all();
         $data['employer_id'] = auth()->id();
 
-        $required_skill = $data['required_skill'];
-        $data['required_skill'] = implode(',', $required_skill);
-
         $job = Job::create($data);
+        $job->categories()->sync($request->input('categories', []));
 
         foreach ($request->input('attachments', []) as $file) {
             $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
