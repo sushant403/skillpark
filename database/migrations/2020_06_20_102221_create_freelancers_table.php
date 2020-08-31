@@ -15,11 +15,15 @@ class CreateFreelancersTable extends Migration
     {
         Schema::create('freelancers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->integer('user_id')->unsigned();
             $table->string('tagline');
             $table->string('portfolio');
             $table->string('topics');
             $table->timestamps();
+        });
+
+        Schema::table('freelancers', function ($table) {
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

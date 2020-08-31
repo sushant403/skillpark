@@ -28,7 +28,7 @@ class JobsController extends Controller
         }
         $jobs = Job::with('categories')
         ->orderByDesc('created_at')
-        ->paginate(7);
+        ->paginate(5);
 
         return view('clients.myprojects', compact('jobs'));
     }

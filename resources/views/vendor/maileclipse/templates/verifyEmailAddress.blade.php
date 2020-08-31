@@ -259,7 +259,7 @@
         <td
           style="background: url('http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg') repeat-x #ffffff; height: 10px;"
           align="left" valign="top" width="100%">
-          <center><img class="force-width-gmail" src="https://skillpark.herokuapp.com/images/logo/logo.svg" />
+          <center><img class="force-width-gmail" src="https://skillpark.herokuapp.com/images/logo/biglogo.svg" />
             <table style="background-color: transparent; height: 42px; width: 100%;" width="100%" cellspacing="0"
               cellpadding="0" bgcolor="#ffffff">
               <tbody>
@@ -277,7 +277,7 @@
                           <tr style="height: 37px;">
                             <td class="pull-left mobile-header-padding-left"
                               style="vertical-align: middle; height: 37px; width: 290px;"><a><img
-                                  src="https://skillpark.herokuapp.com/images/logo/logo.svg" alt="logo" width="120"
+                                  src="https://skillpark.herokuapp.com/images/logo/biglogo.svg" alt="logo" width="120"
                                   height="33" /></a></td>
                             <td class="pull-right mobile-header-padding-right"
                               style="color: #4d4d4d; height: 37px; width: 290px;"><a><img

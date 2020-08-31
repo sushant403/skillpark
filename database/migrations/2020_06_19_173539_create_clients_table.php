@@ -15,10 +15,14 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->integer('user_id')->unsigned();
             $table->string('company')->nullable();
             $table->string('hire_manager')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('clients', function ($table) {
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

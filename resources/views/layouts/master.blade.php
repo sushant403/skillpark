@@ -15,7 +15,7 @@
 
     <!-- Favicon and Touch Icons-->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" color="#5bbad5" href="/favicon.svg">
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
@@ -229,13 +229,10 @@
                                                 aria-labelledby="navLinkPagesAccount" style="min-width: 230px;">
                                                 <a class="dropdown-item" href="">Full Stack
                                                     Developer</a>
-                                                <a class="dropdown-item" href="">IT
-                                                    &amp; Security</a>
                                                 <a class="dropdown-item" href="">C#</a>
                                                 <a class="dropdown-item" href="">Django</a>
                                                 <a class="dropdown-item" href="">Laravel</a>
                                                 <a class="dropdown-item" href="">PHP</a>
-                                                <a class="dropdown-item" href="">FrontEnd Developer</a>
                                             </div>
                                             <!-- Account -->
                                             <a class="dropdown-item" href="">Freelancers</a>

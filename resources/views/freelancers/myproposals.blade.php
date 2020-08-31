@@ -79,6 +79,7 @@
                     </div>
                 </div>
                 @endforeach
+                <div class="mx-auto" style="width:max-content"> {{ $proposals->appends(request()->query())->links() }} </div>
 
                 <div class="d-sm-flex justify-content-end">
                     <a class="font-weight-bold" href="{{ route('home') }}">

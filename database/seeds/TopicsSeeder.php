@@ -4,7 +4,7 @@ use App\Topic;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class SkillsSeeder extends Seeder
+class TopicsSeeder extends Seeder
 {
     /**
      * Run the database seeds.

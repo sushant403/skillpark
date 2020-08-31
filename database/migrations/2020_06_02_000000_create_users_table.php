@@ -14,14 +14,14 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name')->default('Skillpark User');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->longText('about')->nullable();
             $table->string('tagline')->nullable();
-            $table->foreignId('city_id')->nullable();
+            $table->integer('city_id')->unsigned()->nullable();
 
             $table->string('avatar')->default('default.png');
             $table->string('provider', 20)->nullable();
@@ -30,6 +30,10 @@ class CreateUsersTable extends Migration
 
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('users', function ($table) {
+            $table->foreign('city_id')->references('id')->on('cities');
         });
     }
 

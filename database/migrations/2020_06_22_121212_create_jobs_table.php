@@ -10,17 +10,23 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreignId('employer_id');
-            $table->foreignId('candidate_id')->nullable();
+            $table->integer('employer_id')->unsigned();
+            $table->integer('candidate_id')->unsigned()->nullable();
             $table->string('title');
             $table->longText('description');
             $table->string('budget');
             $table->string('company')->nullable();
-            $table->string('topic')->nullable();
+            $table->integer('topic')->unsigned();
             $table->string('delivery_time')->nullable();
             $table->datetime('hired_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
+        });
+
+        Schema::table('jobs', function ($table) {
+            $table->foreign('employer_id')->references('id')->on('users');
+            $table->foreign('candidate_id')->references('id')->on('users');
+            $table->foreign('topic')->references('id')->on('topics');
         });
     }
 

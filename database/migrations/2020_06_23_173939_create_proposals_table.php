@@ -16,7 +16,7 @@ class CreateProposalsTable extends Migration
         Schema::create('proposals', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('job_id')->unsigned();
-            $table->foreignId('candidate_id');
+            $table->integer('candidate_id')->unsigned();
             $table->longText('proposal_text');
             $table->string('budget')->nullable();
             $table->string('comment')->nullable();
@@ -27,8 +27,9 @@ class CreateProposalsTable extends Migration
             $table->softDeletes();
         });
 
-        Schema::table('proposals', function($table) {
+        Schema::table('proposals', function ($table) {
             $table->foreign('job_id')->references('id')->on('jobs');
+            $table->foreign('candidate_id')->references('id')->on('users');
         });
     }
 

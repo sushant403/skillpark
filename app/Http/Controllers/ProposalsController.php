@@ -15,6 +15,8 @@ class ProposalsController extends Controller
     public function index()
     {
         $proposals = Proposal::where('candidate_id', auth()->id())->get();
+        $proposals = Proposal::orderByDesc('created_at')
+        ->paginate(5);
 
         return view('freelancers.myproposals', compact('proposals'));
     }

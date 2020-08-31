@@ -12,10 +12,9 @@ class CreateCategoryJobPivotTable extends Migration
 
             $table->integer('job_id')->unsigned();
             $table->integer('category_id')->unsigned();
-
         });
 
-        Schema::table('category_job', function($table) {
+        Schema::table('category_job', function ($table) {
             $table->foreign('job_id')->references('id')->on('jobs');
             $table->foreign('category_id')->references('id')->on('categories');
         });

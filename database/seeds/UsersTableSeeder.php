@@ -12,7 +12,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
 
         $user = User::create([ 'name' => 'Freelancer User',
                                'email' => 'freelancer@skillpark.com.np',
@@ -33,6 +32,18 @@ class UsersTableSeeder extends Seeder
                                'about' => 'This is a Client. This role can perform tasks like post projects, view freelancers, message freelancers, view proposals.',
                                'city_id' => 188,
                                'tagline' => 'I am a Test Employer/Client.',
+                               'created_at' => now(),
+                               'updated_at' => now() ]); 
+        $user->assignRole('client');
+
+
+        $user = User::create([ 'name' => 'Divesh Thapa',
+                               'email' => 'diveshthapa@skillpark.com.np',
+                               'email_verified_at' => now(),
+                               'password' => bcrypt('password'),
+                               'about' => 'I am the Owner of Chhetri Industries. This role can perform tasks like post projects, view freelancers, message freelancers, view proposals bidded for my projects.',
+                               'city_id' => 9,
+                               'tagline' => 'Owner of Chhetri Industries.',
                                'created_at' => now(),
                                'updated_at' => now() ]); 
         $user->assignRole('client');

@@ -3,7 +3,7 @@
 
     1. New _Search_ `Controllers` designed and added.
 
-    2. Landing [Index](https://skillpark.herokuapp.com.np) page made dynamic.
+    2. Landing [Index](https://skillpark.herokuapp.com) page made dynamic.
 
     3. `Database`s Relation and `Model`s Eloquent Extended.
 
