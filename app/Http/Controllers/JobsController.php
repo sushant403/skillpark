@@ -26,6 +26,9 @@ class JobsController extends Controller
         } else {
             $jobs = Job::whereNull('candidate_id')->get();
         }
+        $jobs = Job::with('categories')
+        ->orderByDesc('created_at')
+        ->paginate(7);
 
         return view('clients.myprojects', compact('jobs'));
     }
@@ -61,7 +64,7 @@ class JobsController extends Controller
             $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
 
-        return redirect()->route('jobs.index');
+        return redirect()->route('jobs.index')->with('success', 'Your Project has been posted successfully!');
     }
 
     public function edit(Job $job)

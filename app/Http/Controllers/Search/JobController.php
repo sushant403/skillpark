@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Search;
 use App\Job;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class JobController extends Controller
 {
@@ -15,12 +16,11 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = Job::with('company')
-            ->paginate(7);
+        $jobs = Job::paginate(7);
 
         $banner = 'Jobs';
 
-        return view('jobs.index', compact(['jobs', 'banner']));
+        return view('services.service-list', compact(['jobs', 'banner']));
     }
 
     /**
@@ -52,9 +52,18 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
-        $job->load('company');
+        $job->load('categories');
 
-        return view('jobs.show', compact('job'));
+        if (!auth()->check()) {
+            return view('services.service-single', compact('job'));
+        } else {
+            $user = Auth::user();
+
+            if ($user->hasRole('freelancer')) {
+                return view('jobs.job-details', compact('job'));
+            }
+            abort(404);
+        }
     }
 
     /**

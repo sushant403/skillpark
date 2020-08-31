@@ -318,26 +318,21 @@
                                  document.getElementById('date').innerHTML = months[date.getMonth()] ;
                             </script>
                             <div class="js-slick-carousel slick" data-hs-slick-carousel-options='{
-                                "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-left slick-arrow-centered-y rounded-circle ml-n4\"></span>",
-                                "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-right slick-arrow-centered-y rounded-circle mr-n4\"></span>",
+                                "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-left  rounded-circle ml-n4\"></span>",
+                                "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-right  rounded-circle mr-n4\"></span>",
                                             "slidesToShow": 4,
-                                            "slidesToScroll": 3,
                                             "autoplay": true,
                                             "autoplaySpeed": 4000,
                                             "infinite": true,
                                             "responsive": [{
                                                 "breakpoint": 992,
                                                 "settings": {
-                                                    "slidesToShow": 2,
-                                                    "slidesToScroll": 1,
-                                                    "arrows": false
+                                                    "slidesToShow": 2
                                                 }
                                                 }, {
                                                 "breakpoint": 768,
                                                 "settings": {
-                                                "slidesToShow": 1,
-                                                "slidesToScroll": 1,
-                                                "arrows": false
+                                                    "slidesToShow": 1
                                                 }
                                             }]
                                             }'>

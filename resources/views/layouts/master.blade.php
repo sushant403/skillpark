@@ -20,13 +20,13 @@
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
 
-    <script src="https://kit.fontawesome.com/29847b83db.js" crossorigin="anonymous"></script>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
 
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/theme.css">
@@ -342,7 +342,8 @@
                                                 <span
                                                     class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
                                                 <img class="u-sidebar--account__toggle-img"
-                                                    src="{{ Auth::user()->avatar }}" width="35" alt="Profile">
+                                                    src="{{ asset(Auth::user()->avatar) ?? '/images/uploads/avatar.png' }}"
+                                                    width="35" alt="Profile">
                                             </span>
                                         </a>
 
@@ -637,8 +638,7 @@
                                         नेपाली
                                     </a>
                                     <a class="nav-link active " href="/lang/en">
-                                        <img class="max-w-3rem mr-1" src="/vendor/flag-icon-css/flags/4x3/us.svg"
-                                            alt="United States Flag">
+                                        <i class="fa fa-globe"></i>&nbsp;
                                         English
                                     </a>
                                     <!-- End Nav Link -->
@@ -670,12 +670,13 @@
     <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
     <script src="/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
     <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
-    <script src="/vendor/appear.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/vendor/slick-carousel/slick/slick.js"></script>
 
     <!-- JS Skillpark -->
     <script src="/js/hs.core.js"></script>
     <script src="/js/hs.validation.js"></script>
+    <script src="/js/hs.slick-carousel.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
@@ -689,6 +690,11 @@
               position: 'left'
             }
           }).init();
+
+          // initialization of slick carousel
+          $('.js-slick-carousel').each(function() {
+                var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+            });
     
           // initialization of form validation
           $('.js-validate').each(function() {
@@ -709,11 +715,6 @@
           // initialization of show animations
           $('.js-animation-link').each(function () {
             var showAnimation = new HSShowAnimation($(this)).init();
-          });
-    
-          // initialization of go to
-          $('.js-go-to').each(function () {
-            var goTo = new HSGoTo($(this)).init();
           });
         });
     </script>

@@ -154,16 +154,7 @@
                             </li>
                             @endforeach
                         </ul>
-                        {{-- <!-- Pagination -->
-                <nav class="d-flex justify-content-end mt-5" aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                </nav>
-                <!-- End Pagination --> --}}
+                       <div class="mx-auto" style="width:max-content"> {{ $jobs->appends(request()->query())->links() }} </div>
                     </div>
 
                     <div class="tab-pane fade" id="open-Projects" role="tabpanel" aria-labelledby="open-Projects-tab">

@@ -348,6 +348,8 @@
   <!-- ========== END HEADER ========== -->
 
   <div class="space-1 pt-5"></div>
+  
+  @include('layouts.components.message')
   @yield('content')
 
 

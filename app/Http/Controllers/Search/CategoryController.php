@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Search;
 
 use App\Job;
 use App\Category;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -47,15 +48,13 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $jobs = Job::with('company')
-            ->whereHas('categories', function($query) use($category) {
+        $jobs = Job::whereHas('categories', function($query) use($category) {
                 $query->whereId($category->id);
             })
             ->paginate(7);
-
-        $banner = 'Category: '.$category->name;
+        $banner = $category->name;
     
-        return view('jobs.index', compact(['jobs', 'banner']));
+        return view('services.service-list', compact(['jobs', 'banner']));
     }
 
     /**

@@ -1,14 +1,15 @@
-@if (session()->has('success'))
-<div class="alert alert-success alert-dismissible">
+@if(session()->has('success'))
+<div class="alert alert-success alert-dismissible position-fixed w-auto z-index-9999 right-0">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-  <h4><i class="icon fa fa-check"></i> Alert!</h4>
-    <strong>Success </strong>{{session()->get('success')}}.
+  <h4 style="color: white"><i class="fa fa-check mr-2"></i>Success!</h4>
+    <strong>{{session()->get('success')}}</strong>
 </div>
 @endif
-@if (session()->has('warning'))
-<div class="alert alert-warning alert-dismissible">
+
+@if(session()->has('error'))
+<div class="alert alert-warning alert-dismissible position-fixed w-auto z-index-9999 right-0">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-  <h4><i class="icon fa fa-check"></i> Alert!</h4>
-    <strong>Warning </strong>{{session()->get('warning')}}.
+  <h4 style="color: white"><i class="icon fa fa-check"></i> Error!</h4>
+    <strong>{{session()->get('error')}}</strong>
 </div>
 @endif

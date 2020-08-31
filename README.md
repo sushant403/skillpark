@@ -39,7 +39,7 @@ Summary `info.json` with basic website information:
   "description": "Freelancer Marketplace with HRs and Clients.",
   "author": "Skillpark Inc.",
   "license": "MIT",
-  "homepage": "https://github.com/sushantpoudel98/skillpark#readme",
+  "homepage": "https://skillpark.herokuapp.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sushantpoudel98/skillpark.git"
@@ -67,7 +67,7 @@ Post Jobs, Search Services by Categories, Receive Biddings, Hire Freelancer, Con
 Features for Freelancers
 
 ```sh
-Dynamic homepage with latest jobs, Apply and Send Proposals, Search Jobs, Contact.
+Dynamic homepage with latest jobs, Apply and Send Proposals, Search Jobs, Message.
 ```
 
 View our `ideas` template (`-p`) : [Plans and Ideas here](https://github.com/sushantpoudel98/skillpark/blob/master/planning-ideas.md).
@@ -76,8 +76,11 @@ You can find [Changelog here](https://github.com/sushantpoudel98/skillpark/blob/
 
 ## Code Contributors
 
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+This project exists because of the following people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/sushantpoudel98/skillpark/graphs/contributors"><br><img src="https://img.shields.io/badge/contributors-3-blue" /></a>
+[@dbasechhetri](https://github.com/dbasechhetri) ,
+[@sushantpoudel98](https://github.com/sushantpoudel98) ,
+[@nitikabhatta](https://github.com/nitikabhatta)
 
 ### Organizations
 

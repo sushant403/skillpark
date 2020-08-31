@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main" class="overflow-hidden">
     <!-- Hero Section -->
@@ -20,7 +19,7 @@
                     <!-- End Info -->
 
                     <!-- Form -->
-                    <form class="mb-3">
+                    <form action="{{ route('search') }}" class="mb-3">
                         <div class="form-row">
                             <div class="col-sm col-md-6 col-lg-9 mb-2">
                                 <div class="js-form-message">
@@ -38,47 +37,44 @@
                                 <button type="submit"
                                     class="btn btn-primary btn-block">{{ __('nepali.Search') }}</button>
                             </div>
-                        </div>
                     </form>
-                    <!-- End Form -->
-                    <div class="col-lg-6">
-                        <!-- Tags -->
-                        <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
-                            <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted"
-                                style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
-                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                                href="javascript:;">Flutter</a>
-                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                                href="javascript:;">Laravel</a>
-                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                                href="javascript:;">Django</a>
-                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                                href="javascript:;">Translation</a>
-                        </div>
-                        <!-- End Tags -->
-                    </div>
                 </div>
-                <!-- SVG Shape -->
-                <figure class="col-lg-6 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
-                    style="margin-top: 4.45rem;">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
-
-                        <defs>
-                            <path id="mainHeroSVG1"
-                                d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z" />
-                        </defs>
-                        <clipPath id="mainHeroSVG2">
-                            <use xlink:href="#mainHeroSVG1" />
-                        </clipPath>
-                        <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
-                            <image width="700" height="700" xlink:href="/images/homepage/banner.jpg"
-                                transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
-                        </g>
-                    </svg>
-                </figure>
-                <!-- End SVG Shape -->
+                </form>
+                <!-- End Form -->
+                <div class="col-lg-12">
+                    <!-- Tags -->
+                    <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
+                        <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted"
+                            style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
+                        @foreach($searchByCategory as $id=>$searchByCategory)
+                        <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                            href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
+                        @endforeach
+                    </div>
+                    <!-- End Tags -->
+                </div>
             </div>
+            <!-- SVG Shape -->
+            <figure class="col-lg-6 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
+                style="margin-top: 4.45rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
+
+                    <defs>
+                        <path id="mainHeroSVG1"
+                            d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z" />
+                    </defs>
+                    <clipPath id="mainHeroSVG2">
+                        <use xlink:href="#mainHeroSVG1" />
+                    </clipPath>
+                    <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
+                        <image width="700" height="700" xlink:href="/images/homepage/banner.jpg"
+                            transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
+                    </g>
+                </svg>
+            </figure>
+            <!-- End SVG Shape -->
         </div>
+    </div>
     </div>
     <!-- End Hero Section -->
 
@@ -327,6 +323,101 @@
         </div>
     </section>
 
+    <!-- Featured Topics Section -->
+    <div class="container space-sm-2 space-bottom-lg-3">
+        <!-- Title -->
+        <div class="w-md-80 text-center mx-md-auto mb-9">
+            <h2>Recent Jobs and Services</h2>
+            <p>Discover your perfect requirement.</p>
+        </div>
+        <!-- End Title -->
+
+        <!-- Featured Topics Carousel -->
+        <div class="row mb-5">
+            @foreach($jobs as $job)
+            <article class="col-md-6 col-lg-4 mb-5">
+                <!-- Article -->
+                <div class="card border h-100">
+                    <div class="card-img-top position-relative">
+                        <img class="card-img-top" src="/images/svg/components/graphics-1.svg" alt="">
+
+                        <div class="position-absolute top-0 left-0 mt-3 ml-3">
+                            <small
+                                class="btn btn-xs btn-success btn-pill text-uppercase shadow-soft mb-3">Verified</small>
+                        </div>
+
+                        <div class="position-absolute bottom-0 left-0 mb-3 ml-4">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <ul class="list-inline mt-n1 mb-0 mr-2">
+                                    <li class="list-inline-item mx-0"><img src="/images/svg/illustrations/star.svg"
+                                            alt="Review rating" width="14"></li>
+                                    <li class="list-inline-item mx-0"><img src="/images/svg/illustrations/star.svg"
+                                            alt="Review rating" width="14"></li>
+                                    <li class="list-inline-item mx-0"><img src="/images/svg/illustrations/star.svg"
+                                            alt="Review rating" width="14"></li>
+                                    <li class="list-inline-item mx-0"><img src="/images/svg/illustrations/star.svg"
+                                            alt="Review rating" width="14"></li>
+                                    <li class="list-inline-item mx-0"><img src="/images/svg/illustrations/star.svg"
+                                            alt="Review rating" width="14"></li>
+                                </ul>
+                                <span class="d-inline-block">
+                                    <small class="font-weight-bold text-white mr-1">4.91</small>
+                                    <small class="text-white-70">(1.5k+ reviews)</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <small
+                            class="d-block small font-weight-bold text-cap mb-2">{{ $job->category->name ?? 'General Category'}}</small>
+
+                        <div class="mb-3">
+                            <h3>
+                                <a class="text-inherit" href="{{ route('job.show', $job->id) }}">{{ $job->title }}</a>
+                            </h3>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-group">
+                                <a class="avatar avatar-xs avatar-circle" href="javascript:;">
+                                    <img class="avatar-img"
+                                        src="{{ asset($job->employer->avatar) ?? '/images/uploads/default/png' }}"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center ml-auto">
+                                <div class="small text-muted">
+                                    <i class="fa fa-book-reader d-block d-sm-inline-block mb-1 mb-sm-0 mr-1"></i>
+                                    {{ $job->company }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer border-0 pt-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mr-2">
+                                <span class="d-block h5 text-lh-sm mb-0">NPR {{ $job->budget }}</span>
+                            </div>
+                            <a class="btn btn-sm btn-primary transition-3d-hover"
+                                href="{{ route('job.show', $job->id) }}">See
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Article -->
+            </article>
+            @endforeach
+        </div>
+        <!-- End Featured Topics Carousel -->
+
+        <div class="text-center">
+            <a class="font-weight-bold" href="">Browse Services <i class="fa fa-angle-right fa-sm ml-1"></i></a>
+        </div>
+    </div>
+    <!-- End Featured Topics Section -->
+
     <!-- Features Section -->
     <div class="overflow-hidden">
         <div class="container space-2">
@@ -367,7 +458,8 @@
                                 <div class="step-content">
                                     <h3 class="h4">Tap into an amazing talent network</h3>
                                     <p>Get unmatched quality from proven
-                                            independent professionals and specialized agencies. Get a smarter shortlist, instantly
+                                        independent professionals and specialized agencies. Get a smarter shortlist,
+                                        instantly
                                     </p>
                                 </div>
                             </div>
@@ -397,7 +489,8 @@
 
                     <div class="mt-2">
                         @guest
-                        <a class="btn btn-primary transition-3d-hover px-4" href="{{ route('register') }}">Join Skillpark</a>
+                        <a class="btn btn-primary transition-3d-hover px-4" href="{{ route('register') }}">Join
+                            Skillpark</a>
                         @else
                         <a class="btn btn-primary transition-3d-hover px-4" href="{{ route('home') }}">Dashboard</a>
                         @endguest
@@ -474,7 +567,7 @@
 
                     <!-- SVG Component -->
                     <figure class="w-35 position-absolute top-0 left-0 mt-n11 ml-n11">
-                        <img class="img-fluid" src="/images/svg/components/half-circle-2.svg" alt="Image Description">
+                        <img class="img-fluid" src="/images/svg/components/half-circle-2.svg" alt="">
                     </figure>
                     <!-- End SVG Component -->
                 </div>
@@ -497,13 +590,12 @@
                                 style="overflow: visible;">
                                 <div style="transform: translate3d(0px, 1.13488rem, 0px);">
                                     <img class="img-fluid rounded shadow-lg max-w-23rem"
-                                        src="/images/homepage/dipeshbhattarai.jpg" alt="Image Description">
+                                        src="/images/homepage/dipeshbhattarai.jpg" alt="">
 
                                     <!-- SVG Shapes -->
                                     <figure class="max-w-15rem w-100 position-absolute bottom-0 left-0 z-index-n1">
                                         <div class="mb-n7 ml-n7">
-                                            <img class="img-fluid" src="/images/svg/components/dots-5.svg"
-                                                alt="Image Description">
+                                            <img class="img-fluid" src="/images/svg/components/dots-5.svg" alt="">
                                         </div>
                                     </figure>
                                     <!-- End SVG Shapes -->

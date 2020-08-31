@@ -3,10 +3,10 @@
 @section('title', Auth::user()->name . ' - Home')
 @section('content')
 
-<main class="bg-light" role="main" id="content">
+<main class="bg-light space-bottom-1" role="main" id="content">
     <div class="container">
         <!-- Sorting -->
-        <div class="row text-center text-md-left mb-5 py-2 bg-white mx-auto">
+        <div class="row text-center text-md-left mb-5 py-1 bg-white mx-auto">
             <div class="col-lg-6 mb-3 mb-lg-0">
                 <span class="font-size-1 ml-1 font-weight-bold">100+ Jobs Found</span>
             </div>
@@ -51,176 +51,152 @@
         </div>
         <!-- End Sorting -->
         <div class="row">
-            <div class="col-12 col-md-5 col-lg-3 col-xl-3 mb-3 bg-white">
-                <div class="navbar-expand-lg navbar-expand-lg-collapse-block py-3">
-                    <!-- Responsive Toggle Button -->
-                    <button type="button" class="navbar-toggler btn btn-block border py-3"
-                        aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNavExample2"
-                        data-toggle="collapse" data-target="#sidebarNavExample2">
-                        <span class="d-flex justify-content-between align-items-center">
-                            <span class="h5 mb-0">View all categories</span>
-                            <span class="navbar-toggler-default">
-                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="currentColor"
-                                        d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
-                                </svg>
-                            </span>
-                            <span class="navbar-toggler-toggled">
-                                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="currentColor"
-                                        d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
-                                </svg>
-                            </span>
-                        </span>
-                    </button>
-                    <!-- End Responsive Toggle Button -->
-
-                    <div id="sidebarNavExample2" class="collapse navbar-collapse">
-                        <div class="mt-5 mt-lg-0">
-                            <h2 class="h4"><a class="text-inherit" href="#">Artificial Intelligence</a></h2>
-
-                            <!-- Nav Link -->
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                AI Product Manager
-                                <span class="badge bg-soft-secondary badge-pill">30+</span>
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                AI Programming with Python
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Deep Learning
-                            </a>
-                            <!-- End Nav Link -->
-
-                            <!-- View More - Collapse -->
-                            <div class="collapse" id="collapseSectionOne">
-                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                    href="#">
-                                    Machine Learning
-                                </a>
-                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                    href="#">
-                                    Natural Language Processing
-                                </a>
+            <div class="col-12 col-md-12 col-lg-3 col-xl-3">
+                <!-- Breadcrumb Section -->
+                <div class="bg-navy d-lg-none d-sm-block mb-5"
+                    style="background-image: url(/images/svg/components/abstract-shapes-20.svg);">
+                    <div class="container space-1 space-top-lg-2 space-bottom-lg-3">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <!-- Breadcrumb -->
+                                <ol class="breadcrumb breadcrumb-light breadcrumb-no-gutter mb-0">
+                                    <li class="breadcrumb-item">Account</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Menu</li>
+                                </ol>
+                                <!-- End Breadcrumb -->
                             </div>
-                            <!-- End View More - Collapse -->
-
-                            <!-- Link -->
-                            <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse"
-                                href="#collapseSectionOne" role="button" aria-expanded="false"
-                                aria-controls="collapseSectionOne">
-                                <span class="link-collapse-default">View more</span>
-                                <span class="link-collapse-active">View less</span>
-                                <span class="link-icon ml-1">+</span>
-                            </a>
-                            <!-- End Link -->
-                        </div>
-
-                        <div class="mt-5">
-                            <h3 class="h4"><a class="text-inherit" href="#">Programming and Development</a></h3>
-
-                            <!-- Nav Link -->
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                AI Programming with Python
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Android Developer
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Blockchain
-                                <span class="badge bg-soft-secondary badge-pill">4</span>
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                C++
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Front End Web Developer
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Java Developer
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                iOS
-                                <span class="badge badge-success badge-pill ml-1">New</span>
-                            </a>
-                            <!-- End Nav Link -->
-
-                            <!-- View More - Collapse -->
-                            <div class="collapse" id="collapseSectionTwo">
-                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                    href="#">
-                                    Java Developer
-                                </a>
-                                <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                    href="#">
-                                    React
-                                </a>
+                            <div class="col-auto">
+                                <!-- Responsive Toggle Button -->
+                                <button type="button" class="navbar-toggler btn btn-icon btn-sm rounde-circle d-lg-none"
+                                    aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav"
+                                    data-toggle="collapse" data-target="#sidebarNav">
+                                    <span class="navbar-toggler-default">
+                                        <svg width="14" height="14" viewBox="0 0 18 18"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor"
+                                                d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+                                        </svg>
+                                    </span>
+                                    <span class="navbar-toggler-toggled">
+                                        <svg width="14" height="14" viewBox="0 0 18 18"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor"
+                                                d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <!-- End Responsive Toggle Button -->
                             </div>
-                            <!-- End View More - Collapse -->
-
-                            <!-- Link -->
-                            <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse"
-                                href="#collapseSectionTwo" role="button" aria-expanded="false"
-                                aria-controls="collapseSectionTwo">
-                                <span class="link-collapse-default">View more</span>
-                                <span class="link-collapse-active">View less</span>
-                                <span class="link-icon ml-1">+</span>
-                            </a>
-                            <!-- End Link -->
-                        </div>
-
-                        <div class="mt-5">
-                            <h3 class="h4"><a class="text-inherit" href="#">Business</a></h3>
-
-                            <!-- Nav Link -->
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Business Analytics
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Digital Marketing
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Marketing Analytics
-                            </a>
-                            <!-- End Nav Link -->
-
-                            <!-- View More - Collapse -->
-                            <div class="collapse" id="collapseSectionThree">
-                                <a class="nav-link" href="#">
-                                    Predictive Analytics for Business
-                                </a>
-                            </div>
-                            <!-- End View More - Collapse -->
-
-                            <!-- Link -->
-                            <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse"
-                                href="#collapseSectionThree" role="button" aria-expanded="false"
-                                aria-controls="collapseSectionThree">
-                                <span class="link-collapse-default">View more</span>
-                                <span class="link-collapse-active">View less</span>
-                                <span class="link-icon ml-1">+</span>
-                            </a>
-                            <!-- End Link -->
-                        </div>
-
-                        <div class="mt-5">
-                            <h3 class="h4"><a class="text-inherit" href="#">Career <span
-                                        class="badge badge-success badge-pill ml-1">New</span></a></h3>
-
-                            <!-- Nav Link -->
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Applying to Jobs
-                            </a>
-                            <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
-                                Interviewing
-                            </a>
-                            <!-- End Nav Link -->
                         </div>
                     </div>
                 </div>
+                <!-- End Breadcrumb Section -->
+                <!-- Content Section -->
+                <!-- Navbar -->
+                <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+                    <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
+                        <!-- Card -->
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h6 class="text-cap small">Explore</h6>
+                                <!-- List -->
+                                <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+
+                                    <li class="nav-item mb-2">
+                                        <a class="{{ Request::is('ab/home') ? 'nav-link-active' : 'nav-link' }}"
+                                            href={{ route('home') }}>
+                                            <i class="fas fa-home nav-icon"></i>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('ab/explore') ? 'nav-link-active' : 'nav-link' }}"
+                                            href={{ url('coming-soon') }}>
+                                            <i class="fas fa-hashtag nav-icon"></i>
+                                            Explore
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('ab/messages') ? 'nav-link-active' : 'nav-link' }}"
+                                            href="ab/messages">
+                                            <i class="fas fa-envelope nav-icon"></i>
+                                            Messages
+                                            <span class="badge badge-soft-navy badge-pill nav-link-badge">3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- End List -->
+
+                                <h6 class="text-cap small">Account</h6>
+
+                                <!-- List -->
+                                <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('settings') ? 'nav-link-active' : 'nav-link' }}"
+                                            href={{ url('settings') }}>
+                                            <i class="fas fa-id-card nav-icon"></i>
+                                            Personal info
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('auth') ? 'nav-link-active' : 'nav-link' }}"
+                                            href={{ url('auth') }}>
+                                            <i class="fas fa-shield-alt nav-icon"></i>
+                                            Login &amp; security
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('notification') ? 'nav-link-active' : 'nav-link' }}"
+                                            href="notification">
+                                            <i class="fas fa-bell nav-icon"></i>
+                                            Notifications
+                                            <span class="badge badge-soft-navy badge-pill nav-link-badge">1</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('preference') ? 'nav-link-active' : 'nav-link' }}"
+                                            href="preference">
+                                            <i class="fas fa-sliders-h nav-icon"></i>
+                                            Preferences
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- End List -->
+
+                                <h6 class="text-cap small">Privacy</h6>
+
+                                <!-- List -->
+                                <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('terms') ? 'nav-link-active' : 'nav-link' }}"
+                                            href="terms">
+                                            <i class="fas fa-book-open nav-icon"></i>
+                                            Terms &amp; Conditions
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                             document.getElementById('logout').submit();">
+                                            <i class="fas fa-sign-out-alt nav-icon"></i>
+                                            Logout
+                                        </a>
+                                        <form id="logout" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                </ul>
+                                <!-- End List -->
+                            </div>
+                        </div>
+                        <!-- End Card -->
+                    </div>
+                </div>
+                <!-- End Navbar -->
             </div>
 
-            <div class="col-12 col-md-7 col-lg-6 col-xl-6">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+
                 @foreach($jobs->sortByDesc('created_at') as $key => $job)
                 <div class="post">
                     <div class="post__head">
@@ -301,27 +277,25 @@
                     </div>
                 </div>
                 @endforeach
+                <div class="mx-auto mt-4" style="width:max-content"> {{ $jobs->appends(request()->query())->links() }}
+                </div>
 
-                <!-- view more -->
-                <button class="btn btn-primary mb-5" type="button"><span>Load more</span></button>
-                <!-- end view more -->
                 <!-- Sticky Block End Point -->
                 <div id="stickyBlockEndPoint"></div>
             </div>
 
-            <div class="d-none d-xl-block col-lg-3 col-xl-3">
+            <div class="col-12 col-md-4 col-lg-3 col-xl-3">
                 <!-- Sticky Block Start Point -->
                 <div id="stickyBlockStartPoint"></div>
 
                 <div class="js-sticky-block" data-hs-sticky-block-options='{
-                 "parentSelector": "#stickyBlockStartPoint",
-                 "breakpoint": "lg",
-                 "startPoint": "#stickyBlockStartPoint",
-                 "endPoint": "#stickyBlockEndPoint",
-                 "stickyOffsetTop": 70,
-                 "stickyOffsetBottom": 20
-               }'>
-                    <div class="mb-7">
+                            "parentSelector": "#stickyBlockStartPoint",
+                            "breakpoint": "lg",
+                            "startPoint": "#stickyBlockStartPoint",
+                            "endPoint": "#stickyBlockEndPoint",
+                            "stickyOffsetTop": 70,
+                            "stickyOffsetBottom": 30
+                        }'>
 
                         <!-- App Info -->
                         <div class="mr-lg-2">

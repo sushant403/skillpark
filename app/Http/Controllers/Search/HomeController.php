@@ -6,7 +6,6 @@ use App\Job;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use phpDocumentor\Reflection\Location;
 
 class HomeController extends Controller
 {
@@ -17,29 +16,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $searchLocations = Location::pluck('name', 'id');
+
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
-            ->take(5)
+            ->take(4)
             ->pluck('name', 'id');
-        $jobs = Job::with('company')
-            ->orderBy('id', 'desc')
-            ->take(7)
+        $jobs = Job::orderBy('id', 'desc')
+            ->take(3)
             ->get();
 
-        return view('index', compact(['searchLocations', 'searchCategories', 'searchByCategory', 'jobs']));
+        return view('index', compact(['searchCategories', 'searchByCategory', 'jobs']));
     }
 
     public function search(Request $request)
     {
-        $jobs = Job::with('company')
+        $jobs = Job::with('categories')
             ->searchResults()
             ->paginate(7);
 
         $banner = 'Search results';
 
-        return view('jobs.index', compact(['jobs', 'banner']));
+        return view('services.service-list', compact(['jobs', 'banner']));
     }
 
     /**

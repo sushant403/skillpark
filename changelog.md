@@ -1,3 +1,20 @@
+- ### Commit 73rd:
+     ### Search Function and Pagination `Model` Changes :
+
+    1. New _Search_ `Controllers` designed and added.
+
+    2. Landing [Index](https://skillpark.herokuapp.com.np) page made dynamic.
+
+    3. `Database`s Relation and `Model`s Eloquent Extended.
+
+    4. `Search` and _Page Number_ Features Added.
+
+    5. Frontend _Modifications_ and Design Fixes.
+
+    6. Home **Feed** Page Minor Changes.
+
+<hr>
+
 - ### Commit 71st:
      ### Database Modified for Search Functionality :
 
@@ -80,7 +97,7 @@
 
 <hr>
 
-- ## Commit 57th:
+- ### Commit 57th:
      ### Major Controller, Model and Database Changes:
 
     1. Database Proposal and Job new Column _(user_id & references)_.

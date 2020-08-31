@@ -1,9 +1,17 @@
-#Planning Phase II:
+#planning Phase III:
 ---
 
-1. Version-2 
+#### (_to be discussed soon..._)
+
+<br>
+<hr>
+
+#Planning Phase II: (Completed)
+---
+
+1. Version-Two 
         (add bootstrap layout),
-        betterment of website
+        dynamicity and improvement of overall webapp.
 
 2. Search Functionality<br>
              From Index Page.<br>
@@ -14,7 +22,7 @@
 
 4. **Eloquent** relationship and extended database.
 
-5. **Contact** Pages and `FPT`.
+5. **Contact** Pages and `FileTransferProtocol(FTP)`.
 
 6. **Freelancers** and **Clients** individual Profile Page.
 
@@ -22,9 +30,8 @@
 
 <br>
 <hr>
-<br>
 
-#Planning Phase I :
+#Planning Phase I : (Completed)
 ---
     FrontEnd Part (<HTML>, CSS{}, JavaScript())
 

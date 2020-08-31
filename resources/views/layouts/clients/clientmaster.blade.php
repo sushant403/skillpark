@@ -211,7 +211,6 @@
                                 <li class="hs-has-sub-menu navbar-nav-item">
                                     <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false" aria-labelledby="coursesSubMenu">
-                                        <i class="fa fa-th font-size-1 mr-1"></i>
                                         Categories
                                     </a>
 
@@ -294,36 +293,6 @@
                                         </div>
                                         <!-- IT & Software -->
 
-                                        <!-- Design -->
-                                        <div class="hs-has-sub-menu">
-                                            <a id="navLinkDesignServices"
-                                                class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                                href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                                aria-controls="navSubmenuDesignServices">
-                                                <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                    <i class="fa fa-pencil-ruler font-size-1 mr-1"></i>
-                                                </span>
-                                                Design
-                                            </a>
-
-                                            <div id="navSubmenuDesignServices" class="hs-sub-menu dropdown-menu"
-                                                aria-labelledby="navLinkDesignServices" style="min-width: 270px;">
-                                                <a class="dropdown-item" href="#">All Design</a>
-                                                <a class="dropdown-item" href="#">Web design</a>
-                                                <a class="dropdown-item" href="#">Graphic design</a>
-                                                <a class="dropdown-item" href="#">Design tools</a>
-                                                <a class="dropdown-item" href="#">User experience</a>
-                                                <a class="dropdown-item" href="#">Game design</a>
-                                                <a class="dropdown-item" href="#">Design thinking</a>
-                                                <a class="dropdown-item" href="#">3D & animation</a>
-                                                <a class="dropdown-item" href="#">Fashion</a>
-                                                <a class="dropdown-item" href="#">Architectural design</a>
-                                                <a class="dropdown-item" href="#">Interior design</a>
-                                                <a class="dropdown-item" href="#">Other</a>
-                                            </div>
-                                        </div>
-                                        <!-- Design -->
-
                                         <div class="dropdown-divider my-3"></div>
 
                                         <div class="px-4">
@@ -336,8 +305,7 @@
                                 <!-- End Categories -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('myprojects') }}" class="nav-link"><i
-                                            class="fa fa-bookmark font-size-1 mr-1"></i> My Projects</a>
+                                    <a href="{{ route('myprojects') }}" class="nav-link"> My Jobs</a>
                                 </li>
 
                                 <!-- Search Form -->
@@ -374,7 +342,8 @@
     <!-- ========== END HEADER ========== -->
 
     <div class="space-bottom-1 pt-6"></div>
-
+    
+    @include('layouts.components.message')
     @yield('content')
 
     <!-- ========== FOOTER ========== -->

@@ -10,6 +10,12 @@ Route::get('lang/{locale}', function ($locale) {
 
 Route::get('/', 'HomeController@index')->name('home');
 
+//===============SEARCH===============//
+Route::get('search', 'Search\HomeController@search')->name('search');
+Route::resource('job', 'Search\JobController')->only(['index', 'show']);
+Route::get('category/{category}', 'Search\CategoryController@show')->name('categories.show');
+//===============END-SEARCH===============//
+
 Route::get('/about', function () {
     return view('about.about');
 });

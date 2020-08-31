@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Job;
 use App\Proposal;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProposalRequest;
@@ -32,7 +31,7 @@ class ProposalsController extends Controller
         foreach ($request->input('attachments', []) as $file) {
             $proposal->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
         }
-        return redirect()->route('proposals.index');
+        return redirect()->route('proposals.index')->with('success', 'Your Proposal has been submitted successfully!');
     }
 
     public function edit(Proposal $proposal)

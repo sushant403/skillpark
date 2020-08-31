@@ -59,6 +59,27 @@ class Job extends Model implements HasMedia
         return $this->belongsToMany(Category::class);
     }
 
+    public function topics()
+    {
+        return $this->belongsToMany(Topic::class);
+    }
+
+    public function scopeSearchResults($query)
+    {
+        return $query->when(!empty(request()->input('category', 0)), function($query) {
+            $query->whereHas('categories', function($query) {
+                $query->whereId(request()->input('category'));
+            });
+        })
+        ->when(!empty(request()->input('search', '')), function($query) {
+            $query->where(function($query) {
+                $search = request()->input('search');
+                $query->where('title', 'LIKE', "%$search%")
+                    ->orWhere('description', 'LIKE', "%$search%");
+                    });
+        });
+    }
+
     public function getattachmentsAttribute()
     {
         return $this->getMedia('attachments');

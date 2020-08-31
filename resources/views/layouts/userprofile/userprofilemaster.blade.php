@@ -30,7 +30,6 @@
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="/vendor/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="/vendor/select2/dist/css/select2.min.css">
 
 
@@ -52,8 +51,7 @@
                 <nav class="js-mega-menu navbar navbar-expand-lg">
                     <div class="navbar-nav-wrap">
                         <!-- Logo -->
-                        <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('client') }}"
-                            aria-label="Skillpark">
+                        <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('home') }}" aria-label="Skillpark">
                             <img src="/images/logo/biglogo.svg" alt="Logo">
                         </a>
                         <!-- End Logo -->
@@ -417,9 +415,7 @@
 
     <!-- JS Implementing Plugins -->
     <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
-    <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-    <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
     <script src="/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
     <script src="/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
@@ -452,11 +448,6 @@
         });
       });
 
-      // initialization of show animations
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
       // initialization of masked input
       $('.js-masked-input').each(function () {
         var mask = $.HSCore.components.HSMask.init($(this));
@@ -472,10 +463,6 @@
         var select2 = $.HSCore.components.HSSelect2.init($(this));
       });
 
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
     </script>
 
 </body>
