@@ -28,14 +28,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
         $searchCategories = Category::pluck('name', 'id');
         $searchByCategory = Category::withCount('jobs')
             ->orderBy('jobs_count', 'desc')
             ->take(4)
             ->pluck('name', 'id');
         $jobs = Job::orderBy('id', 'desc')
-            ->take(3)
+            ->take(4)
             ->get();
 
         if (!auth()->check()) {
@@ -58,7 +57,6 @@ class HomeController extends Controller
     public function freelancer()
     {
         $cities = City::all();
-        $categories = Category::all();
         $topics = Topic::all();
         $user = User::find(Auth::user()->id);
 
@@ -70,9 +68,14 @@ class HomeController extends Controller
 
         $jobs = Job::with('categories')
             ->orderByDesc('created_at')
-            ->paginate(7);
+            ->simplePaginate(7);
 
-        return view('freelancers.home', compact(['cities', 'categories', 'topics', 'jobs']));
+        $searchByCategory = Category::withCount('jobs')
+            ->orderBy('jobs_count', 'desc')
+            ->take(7)
+            ->pluck('name', 'id');
+
+        return view('freelancers.home', compact(['cities', 'topics', 'jobs', 'searchByCategory']));
     }
 
     public function freelancerSearch()

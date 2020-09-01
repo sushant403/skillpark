@@ -15,6 +15,7 @@ class CreateJobsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('budget');
+            $table->string('thumbnail')->nullable();
             $table->string('company')->nullable();
             $table->integer('topic')->unsigned();
             $table->string('delivery_time')->nullable();

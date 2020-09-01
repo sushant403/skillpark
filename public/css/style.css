@@ -1,9 +1,4 @@
 
-.container-fluid {
-    max-width: 1400px;
-    padding: 0 32px;
-}
-
 ul,
 ul li {
     list-style: none;
@@ -74,12 +69,6 @@ a {
     color: #ffffff;
     background-color: #d3ac2b;
     border-color: #d3ac2b;
-}
-
-.form-control,
-.btn,
-.custom-select {
-    font-size: 13px;
 }
 
 /* Extra CSS */
@@ -704,11 +693,6 @@ header .banner-img {
 /* End Header CSS */
 
 /* Start Home Page CSS */
-
-header {
-    background: none;
-    border-bottom: 1px solid #e4e5e7;
-}
 
 .home-banner {
     position: relative

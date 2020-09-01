@@ -22,16 +22,20 @@
             <div class="col-lg-3 right">
                 <ul class="d-flex align-items-center justify-content-end">
                     <li>
-                        <button>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            Save
-                        </button>
+                        <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
+                            <button>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                Save
+                            </button>
+                        </a>
                     </li>
                     <li class="ml-2">
-                        <button>
-                            <i class="fa fa-share-alt" aria-hidden="true"></i>
-                            Share
-                        </button>
+                        <a href="javascript:;">
+                            <button>
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                Share
+                            </button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -45,22 +49,16 @@
                 <h2>{{ $job->title }}</h2>
                 <div class="slider mt-2">
                     <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
-                        <a href="/images/svg/discussion-scene.svg">
-                            <img class="img-fluid" width="450" src="/images/svg/discussion-scene.svg" />
+                        <a href="javascript:;">
+                            <img class="img-fluid" width="450"
+                                src="{{ $job->thumbnail ?? '/images/svg/discussion-scene.svg' }}" />
                         </a>
                     </div>
                 </div>
                 <div id="description" class="description">
-                    <h3>About This Gig</h3>
-                    <p>I have 7+ years of experience in Mobile App & Web Wireframing & Mobile app UI</p>
-                    <p>I will create a Clickable Mobile App Wireframe in the Marvel app. Marvel is the best platform to
-                        create Mobile App Interactive Wireframes
-                    </p>
-                    <p>We specialize in UX Design, UI Design, Usability Testing, Wireframing, and Prototyping. In our
-                        work
-                        we try to transform highly complex concepts into simple, approachable applications. I believe
-                        that
-                        it is important to create things that look and feel great.
+                    <h3>About This Service</h3>
+                    <p>{{ $job->title }}</p>
+                    <p>{{ $job->description }}
                     </p>
                     <p>It'll help you to demonstrate your idea to your developers or Investors. Why don't we do
                         something
@@ -69,7 +67,7 @@
                 </div>
                 <ul class="metadata">
                     <li class="metadata-attribute">
-                        <p>Main Type</p>
+                        <p>Tagged Topics</p>
                         <ul>
                             <li>Websites</li>
                             <li>Mobile Apps</li>
@@ -88,19 +86,19 @@
                 <div class="profile-card">
                     <div class="user-profile-image d-flex">
                         <label class="profile-pict" for="profile_image">
-                            <img src="" class="profile-pict-img img-fluid" alt="">
+                            <img src="{{ asset($job->employer->avatar) ?? '/images/spacer.png' }}"
+                                class="profile-pict-img img-fluid" alt="">
                         </label>
                         <div class="right">
                             <div class="profile-name">
                                 <span class="user-status">
-                                    <a href="#" class="seller-link"></a>
+                                    <a href="#" class="seller-link">{{ $job->employer->name }}</a>
                                 </span>
-                                <div class="seller-level"></div>
                             </div>
                             <div class="user-info">
                                 <span class="user-info-rating d-flex align-items-center">
                                     <div class="star-rating-s15-wrapper">
-                                        <i class="fa fa-map-marker"></i> Kathmandu
+                                        <i class="fa fa-map-marker"></i> {{ $job->employer->location ?? 'Nepal' }}
                                     </div>
                                 </span>
                                 <a href="#">Contact Me</a>
@@ -109,8 +107,8 @@
                     </div>
                     <div class="stats-desc">
                         <ul class="user-stats">
-                            <li>From<strong>Kathmandu</strong></li>
-                            <li>Member since<strong></strong></li>
+                            <li>From<strong>{{ $job->employer->location ?? 'Nepal' }}</strong></li>
+                            <li>Member since<strong>{{ $job->employer->created_at ?? 'Nepal' }}</strong></li>
                         </ul>
                         <article class="seller-desc">
                             <div class="inner">- Wireframes for mobile apps &amp; Website <br />
@@ -150,14 +148,7 @@
                                     squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
                                     quinoa
                                     nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                                    squid
-                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                                    craft
-                                    beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                                    butcher
-                                    vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                    nesciunt
-                                    you probably haven't heard of them accusamus labore sustainable VHS.
+                                    squid.
                                 </div>
                             </div>
                         </div>
@@ -178,14 +169,7 @@
                                     squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
                                     quinoa
                                     nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                                    squid
-                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                                    craft
-                                    beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                                    butcher
-                                    vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                    nesciunt
-                                    you probably haven't heard of them accusamus labore sustainable VHS.
+                                    squid.
                                 </div>
                             </div>
                         </div>
@@ -194,18 +178,11 @@
                 <div class="tags">
                     <h3>Related tags</h3>
                     <ul class="d-flex">
+                        @foreach($job->categories as $id => $categories)
                         <li>
-                            <a href="#">Mobile Ui</a>
+                            <a href="{{ route('categories.show', $id) }}">{{ $categories->name }}</a>
                         </li>
-                        <li>
-                            <a href="#">UI/UX</a>
-                        </li>
-                        <li>
-                            <a href="#">Prototype</a>
-                        </li>
-                        <li>
-                            <a href="#">Wireframes</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -214,16 +191,15 @@
                     <div class="tab-content">
                         <div id="basic" class="tab-pane fade show active">
                             <div class="header">
-                                <h3><b class="title">10 Screens</b><span class="price">Rs. 8,029</span></h3>
-                                <p>I will design rough sketches for upto 5 Screens of your website/Mobile app.
+                                <h3><b class="title">Service</b><span class="price text-muted">NPR
+                                        {{ $job->budget }}</span></h3>
+                                <p>{{ $job->title }}. {{ Str::limit($job->description, 60) }}
                                 </p>
                             </div>
                             <article>
                                 <div class="d-flex">
-                                    <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 Days
-                                        Delivery</b>
-                                    <b class="delivery ml-3"><i class="fa fa-refresh" aria-hidden="true"></i> 1
-                                        Revision</b>
+                                    <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i>Delivery:
+                                        {{ $job->delivery_time }}</b>
                                 </div>
                                 <ul class="features">
                                     <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Source
@@ -237,12 +213,11 @@
                                             aria-hidden="true"></i>Interactive
                                         Mockup
                                     </li>
-                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>10
-                                        Pages
-                                    </li>
                                 </ul>
                             </article>
-                            <button>Continue {{ $job->budget }}</button>
+                            <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
+                            <button>Continue</button>
+                            </a>
                         </div>
                     </div>
                     <div class="contact-seller-wrapper">

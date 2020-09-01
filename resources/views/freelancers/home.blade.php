@@ -1,6 +1,6 @@
 @extends('layouts.freelancers.freelancermaster')
 
-@section('title', Auth::user()->name . ' - Home')
+@section('title','Home - ' . Auth::user()->name)
 @section('content')
 
 <main class="bg-light space-bottom-1" role="main" id="content">
@@ -200,9 +200,6 @@
                 @foreach($jobs->sortByDesc('created_at') as $key => $job)
                 <div class="post">
                     <div class="post__head">
-                        <a href="javascript:;" class="post__head-img">
-                            <img src="{{ asset($job->employer->avatar ?? '/images/uploads/default.png') }}" alt="">
-                        </a>
                         <div class="post__head-title">
                             <h5><a href="javascript:;">{{ $job->employer->name ?? '' }}</a></h5>
                             <p>Posted at {{ $job->created_at ?? '' }}</p>
@@ -233,47 +230,26 @@
                             <p><i class="far fa-money-bill-alt mr-1"></i> NPR {{ $job->budget ?? '' }}</p>
                         </div>
                         <div class="post__description">
-                            <p>{{ $job->description ?? '' }}</p>
+                            <p>{{ Str::limit($job->description, 170) }}</p>
                         </div>
                     </a>
 
-                    <div class="mb-5 w-100">
+                    <div class="row w-100">
+                        <div class="post__tags">
+                            @foreach($job->categories as $id => $categories)
+                            <a href="{{ route('categories.show', $id) }}">#{{ $categories->name }}</a>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div class="w-100">
+                        <p class="float-left" style="font-size: 14px;"></u><b class="mr-1">Expected
+                                Delivery:</b></u> {{ $job->delivery_time }}</p>
+
                         <a class="btn btn-sm btn-ghost-secondary float-right border "
                             href="{{ route('jobs.details', $job->id) }}">
                             View Job Details
                         </a>
-                    </div>
-
-                    <div class="row w-100">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="post__tags">
-                                @foreach($job->categories as $id => $categories)
-                                <a href="#">#{{ $categories->name }}</a>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12">
-                            <p class="float-right" style="font-size: 14px;"></u><b class="mr-1">Expected
-                                    Delivery:</b></u> {{ $job->delivery_time }}</p>
-                        </div>
-                    </div>
-
-                    <div class="post__stats justify-content-end">
-                        <div>
-                            <div class="mr-3">
-                                <i class="fas fa-user-friends mr-2 fa-sm"></i>
-                                Bidding Count: {{ $job->proposals->count() }}
-                            </div>
-                            <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button"
-                                aria-expanded="false" aria-controls="collapse1"><i class="fas fa-comment fa-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="collapse post__collapse" id="collapse3">
-                        <form action="#" class="post__form">
-                            <input type="text" placeholder="Type your comment...">
-                            <button class=" border-0" type="button"><i class="fas fa-paper-plane fa-sm"></i></button>
-                        </form>
                     </div>
                 </div>
                 @endforeach
@@ -297,88 +273,76 @@
                             "stickyOffsetBottom": 30
                         }'>
 
-                        <!-- App Info -->
-                        <div class="mr-lg-2">
-                            <div class="mb-2">
-                                <div class="mb-3">
-                                    <h5>Trending Jobs</h5>
-                                </div>
-                                <!-- Blog -->
-                                <article class="mb-5">
-                                    <div class="media align-items-center text-inherit">
-                                        <div class="avatar avatar-lg mr-3">
-                                            <img class="avatar-img" src="/images/banner/service1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Portfolio Freelancer
-                                                    Website - NPR 5000 - 20,000</a></h4>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- End Blog -->
-
-                                <!-- Blog -->
-                                <article class="mb-5">
-                                    <div class="media align-items-center text-inherit">
-                                        <div class="avatar avatar-lg mr-3">
-                                            <img class="avatar-img" src="/images/banner/service3.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="h6 mb-0"><a class="text-inherit" href="#">Business Consultant -
-                                                    Within 7 Days</a></h4>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- End Blog -->
-                            </div>
+                    <!-- App Info -->
+                    <div class="mr-lg-2">
+                        <div class="mb-2">
                             <div class="mb-3">
-                                <a class="btn btn-sm btn-block btn-primary transition-3d-hover"
-                                    href="{{ route("proposals.index") }}">My Biddings</a>
+                                <h5>Trending Jobs</h5>
                             </div>
+                            <!-- Blog -->
+                            <article class="mb-5">
+                                <div class="media align-items-center text-inherit">
+                                    <div class="avatar avatar-lg mr-3">
+                                        <img class="avatar-img" src="/images/banner/service1.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="h6 mb-0"><a class="text-inherit" href="#">Portfolio Freelancer
+                                                Website - NPR 5000 - 20,000</a></h4>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- End Blog -->
 
-                            <div class="mb-md-3">
-                                <h3 class="h5">Categories</h3>
-
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Featured</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Flutter</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Django</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">C++</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Laravel</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Logo Design</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Analysis</a></span>
-                                <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                        href="#">Admin</a></span>
-                            </div>
-
-                            <div class="d-none d-md-block mb-3">
-                                <h3 class="h5">Quick links</h3>
-
-                                <ul class="list-unstyled font-size-1">
-                                    <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i>
-                                            Support</a></li>
-                                    <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i> Privacy
-                                            Policy</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="d-none d-md-block">
-                                <a class="small text-body" href="#"><i class="far fa-flag mr-1"></i> Report abuse</a>
-                            </div>
+                            <!-- Blog -->
+                            <article class="mb-5">
+                                <div class="media align-items-center text-inherit">
+                                    <div class="avatar avatar-lg mr-3">
+                                        <img class="avatar-img" src="/images/banner/service3.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="h6 mb-0"><a class="text-inherit" href="#">Business Consultant -
+                                                Within 7 Days</a></h4>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- End Blog -->
                         </div>
-                        <!-- End App Info -->
+                        <div class="mb-3">
+                            <a class="btn btn-sm btn-block btn-primary transition-3d-hover"
+                                href="{{ route("proposals.index") }}">My Biddings</a>
+                        </div>
 
+                        <div class="mb-md-3">
+                            <h3 class="h5">Categories</h3>
+
+                            @foreach($searchByCategory as $id=>$searchByCategory)
+                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                                href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
+                            @endforeach
+                        </div>
+
+                        <div class="d-none d-md-block mb-3">
+                            <h3 class="h5">Quick links</h3>
+
+                            <ul class="list-unstyled font-size-1">
+                                <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i>
+                                        Support</a></li>
+                                <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i> Privacy
+                                        Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-block">
+                            <a class="small text-body" href="#"><i class="far fa-flag mr-1"></i> Report abuse</a>
+                        </div>
                     </div>
+                    <!-- End App Info -->
+
                 </div>
             </div>
-
         </div>
+
+    </div>
     </div>
     <!-- end main content -->
 </main>
