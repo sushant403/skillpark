@@ -22,13 +22,13 @@ class JobsController extends Controller
         $user = User::find(Auth::user()->id);
 
         if ($user->hasRole('client')) {
-            $jobs = Job::with('proposals')->where('employer_id', auth()->id())->get();
+            $jobs = Job::with('proposals')
+                ->where('employer_id', auth()->id())
+                ->orderByDesc('created_at')
+                ->paginate(5);;
         } else {
             $jobs = Job::whereNull('candidate_id')->get();
         }
-        $jobs = Job::with('categories')
-        ->orderByDesc('created_at')
-        ->paginate(5);
 
         return view('clients.myprojects', compact('jobs'));
     }

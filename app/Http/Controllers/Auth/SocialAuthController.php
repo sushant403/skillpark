@@ -35,18 +35,7 @@ class SocialAuthController extends Controller
      */
     public function show()
     {
-        $user = Auth::user();
-        
-        if ($user->hasAnyRole(['freelancer', 'client'])) {
-            
-            if($user->hasRole('freelancer')){
-                return redirect()-> route('freelancer');
-            }
-                return redirect()->route('client');
-        }
-        else{
-            return redirect()-> route('addprofile');
-        } 
+        return redirect()->route('login');
     }
 
     /**
@@ -97,11 +86,16 @@ class SocialAuthController extends Controller
     protected function sendSuccessResponse()
     {
         $user = User::find(Auth::user()->id);
-    
-            if($user->hasRole('freelancer')){
-                return redirect()-> route('freelancer');
+
+        if ($user->hasAnyRole(['freelancer', 'client'])) {
+
+            if ($user->hasRole('freelancer')) {
+                return redirect()->route('freelancer');
             }
-                return redirect()-> route('client');
+            return redirect()->route('client');
+        } else {
+            return redirect()->route('addprofile');
+        }
     }
 
     /**
