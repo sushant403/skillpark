@@ -63,8 +63,6 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/home', 'HomeController@freelancer')->name('freelancer'); //user feeds
         Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
 
-        Route::get('/dashboard', 'ProfileController@freelancerDashboard')->name('fdash');
-
         Route::get('/jobs/{id}', 'JobsController@details')->name('jobs.details');
 
         //bidding proposal
@@ -79,7 +77,6 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
-        Route::get('/dashboard', 'ProfileController@clientDashboard')->name('cdash');
         Route::get('/projects', 'JobsController@index')->name('myprojects');
 
         //post projects for client
@@ -90,6 +87,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
     });
 
     //user-accounts routes
+    Route::get('/dashboard', 'ProfileController@freelancerDashboard')->name('dashboard');
     Route::get('/settings', 'ProfileController@editProfile');
     Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
     Route::get('/auth', 'ProfileController@auth');

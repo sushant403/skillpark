@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\City;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -23,15 +25,21 @@ class ProfileController extends Controller
         $this->middleware('verified');
     }
 
-    public function freelancerDashboard()
+    public function dashboard()
     {
-        return view('freelancers.dashboard');
+        $user = User::find(Auth::user()->id);
+
+        if ($user->hasAnyRole(['freelancer', 'client'])) {
+
+            if ($user->hasRole('freelancer')) {
+                return view('freelancers.dashboard');
+            }
+            return view('clients.dashboard');
+        } else {
+            return abort(404);
+        }
     }
 
-    public function clientDashboard()
-    {
-        return view('clients.dashboard');
-    }
 
     public function myProjects()
     {

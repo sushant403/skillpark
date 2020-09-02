@@ -115,7 +115,7 @@
                                 <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{
                                 "desktop": {
                                   "position": "right",
-                                  "maxWidth": "500px"
+                                  "maxWidth": "700px"
                                 }
                               }'>
                                     <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
@@ -209,16 +209,16 @@
                                                     <!-- End Promo Item -->
                                                 </div>
                                             </div>
-                                           <!-- Promo -->
-                                           <div class="col-lg-4 navbar-promo d-none d-lg-block">
-                                            <a class="d-block navbar-promo-inner" href="register">
-                                                <div class="position-relative">
-                                                    <img class="img-fluid rounded" width="200"
-                                                        src="/images/svg/banner.svg" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- End Promo -->
+                                            <!-- Promo -->
+                                            <div class="col-lg-4 navbar-promo d-none d-lg-block">
+                                                <a class="d-block navbar-promo-inner" href="register">
+                                                    <div class="position-relative">
+                                                        <img class="img-fluid rounded" width="200"
+                                                            src="/images/svg/banner.svg" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- End Promo -->
                                         </div>
                                     </div>
                                     <!-- End About - Mega Menu -->

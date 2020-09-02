@@ -14,11 +14,12 @@
                 <div class="card mb-3 mb-lg-5">
                     <!-- Header -->
                     <div class="card-header">
-                        <h5 class="card-header-title">{{ $job->title }}<a class="btn btn-sm btn-ghost-secondary"
-                                href="{{ route('jobs.index') }}">
-                                <i class="fa fa-angle-left mr-1"></i>
-                                Back to Projects List
-                            </a></h5>
+                        <a class="btn btn-sm btn-ghost-secondary" href="{{ route('jobs.index') }}">
+                            <i class="fa fa-angle-left mr-1"></i>
+                            Projects List
+                        </a>
+                        <h5 class="card-header-title">{{ $job->title }}
+                        </h5>
 
                         <a class="btn btn-sm btn-ghost-secondary" href="#">
                             <i class="fas fa-file-download mr-1"></i>
@@ -102,7 +103,7 @@
                                         <div class="row">
                                             <div class="col-sm mb-3 mb-sm-0">
                                                 <span
-                                                    class="d-block text-dark">{{ $proposal->delivery_time ?? $job->delivery_time}}</span>
+                                                    class="d-block text-dark">{{ $proposal->comment ?? 'No Comments'}}</span>
                                                 <small class="d-block text-muted">Bidded at:
                                                     {{ $proposal->created_at ?? '' }}</small>
                                                 <div class="mt-4">
@@ -135,9 +136,6 @@
                                                             class="fa fa-user-alt mr-1"></i>Hire Freelancer
                                                     </button>
                                                 </form>
-                                                <button type="button" class="btn btn-xs btn-white">
-                                                    <i class="fas fa-trash-alt mr-1"></i> Delete
-                                                </button>
                                             </div>
                                             @endif
                                         </div>

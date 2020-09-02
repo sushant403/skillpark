@@ -14,9 +14,9 @@
                         <!-- Avatar -->
                         <div class="d-none d-lg-block text-center mb-5">
                             <div class="avatar avatar-xxl avatar-circle mb-3">
-                                <img class="avatar-img" src="{{ asset(Auth::user()->avatar) }}" alt="Image Description">
+                                <img class="avatar-img" src="{{ asset(Auth::user()->avatar) }}" alt="">
                                 <img class="avatar-status avatar-lg-status"
-                                    src="/images/svg/illustrations/top-vendor.svg" alt="Image Description"
+                                    src="/images/svg/illustrations/top-vendor.svg" alt=""
                                     data-toggle="tooltip" data-placement="top" title="Verified user">
                             </div>
 
@@ -161,7 +161,7 @@
                         <!-- Empty State -->
                         <div class="text-center space-1">
                             <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
-                                alt="Image Description">
+                                alt="">
                             <p class="card-text">No data to show</p>
                             <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
                         </div>
@@ -173,7 +173,7 @@
                         <!-- Empty State -->
                         <div class="text-center space-1">
                             <img class="avatar avatar-xl mb-3" src="/images/svg/components/empty-state-no-data.svg"
-                                alt="Image Description">
+                                alt="">
                             <p class="card-text">No data to show</p>
                             <a class="btn btn-sm btn-white" href="#">Start Posting Jobs</a>
                         </div>

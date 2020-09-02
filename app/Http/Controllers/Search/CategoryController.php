@@ -48,13 +48,13 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $jobs = Job::whereHas('categories', function($query) use($category) {
-                $query->whereId($category->id);
-            })
+        $jobs = Job::whereHas('categories', function ($query) use ($category) {
+            $query->whereId($category->id);
+        })
             ->paginate(8);
         $banner = $category->name;
-        $servicecount = (count($jobs));
-    
+        $servicecount = $jobs->total();
+
         return view('services.service-list', compact(['jobs', 'banner', 'servicecount']));
     }
 

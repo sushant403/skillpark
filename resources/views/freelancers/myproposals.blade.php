@@ -47,7 +47,7 @@
 
                                     <div class="text-body font-size-1 mb-1 mt-3">
                                         <span><b><u>Job Description:</u></b></span><br>
-                                        <span>{{ $proposal->job->description ?? '' }}</span>
+                                        <span>{{ Str::limit($proposal->job->description, 150) }}</span>
                                     </div>
                                 </div>
 

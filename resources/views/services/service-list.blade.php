@@ -58,7 +58,7 @@
                </div>
             </div>
             @endforeach
-            {{ $jobs->appends(request()->query())->links() }}
+            <div class="mx-auto" style="width:max-content"> {{ $jobs->appends(request()->query())->links() }} </div>
          </div>
       </div>
       @include('layouts.divisions.recentjobs')
