@@ -114,7 +114,7 @@
                                 <!-- About -->
                                 <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{
                                 "desktop": {
-                                  "position": "center",
+                                  "position": "right",
                                   "maxWidth": "500px"
                                 }
                               }'>
@@ -125,7 +125,7 @@
                                     <!-- About - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
                                         <div class="row no-gutters">
-                                            <div class="col-lg-12">
+                                            <div class="col-lg-8">
                                                 <div class="navbar-promo-card-deck">
                                                     <!-- Promo Item -->
                                                     <div class="navbar-promo-card navbar-promo-item">
@@ -209,6 +209,16 @@
                                                     <!-- End Promo Item -->
                                                 </div>
                                             </div>
+                                           <!-- Promo -->
+                                           <div class="col-lg-4 navbar-promo d-none d-lg-block">
+                                            <a class="d-block navbar-promo-inner" href="register">
+                                                <div class="position-relative">
+                                                    <img class="img-fluid rounded" width="200"
+                                                        src="/images/svg/banner.svg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- End Promo -->
                                         </div>
                                     </div>
                                     <!-- End About - Mega Menu -->

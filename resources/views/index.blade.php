@@ -9,7 +9,7 @@
         style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
         <div class="container space-top-3 space-bottom-1 space-bottom-lg-5">
             <div class="row justify-content-lg-between align-items-lg-center pt-md-5">
-                <div class="col-lg-6 ml-7 pt-2">
+                <div class="col-lg-6 ml-0 ml-lg-7 pt-2">
                     <!-- Info -->
                     <div class="mb-5">
                         <h2 class="display-6 mb-3">
@@ -321,7 +321,7 @@
         </div>
     </section>
 
-        @include('layouts.divisions.recentjobs')
+    @include('layouts.divisions.recentjobs')
 
     <!-- Features Section -->
     <div class="overflow-hidden">

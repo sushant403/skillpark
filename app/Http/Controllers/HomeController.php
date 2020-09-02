@@ -67,12 +67,7 @@ class HomeController extends Controller
             ->orderByDesc('created_at')
             ->simplePaginate(7);
 
-        $searchByCategory = Category::withCount('jobs')
-            ->orderBy('jobs_count', 'desc')
-            ->take(7)
-            ->pluck('name', 'id');
-
-        return view('freelancers.home', compact(['cities', 'topics', 'jobs', 'searchByCategory']));
+        return view('freelancers.home', compact(['cities', 'topics', 'jobs']));
     }
 
     public function freelancerSearch()

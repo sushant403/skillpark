@@ -24,7 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('layouts.master', 'App\Http\View\Composers\JandCComposer');
-        View::composer(['index', 'services.service-list'], 'App\Http\View\Composers\JandCComposer');
+        View::composer(
+
+            ['index', 'services.service-list', 'layouts.master', 'freelancers.home'],
+
+            'App\Http\View\Composers\JandCComposer'
+        );
     }
 }

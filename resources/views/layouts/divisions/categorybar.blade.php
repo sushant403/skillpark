@@ -1,6 +1,6 @@
 <!-- CategoriesBar -->
-<div class="container header-show-content">
-    <div class="d-flex border-top">
+<div class="container header-hide-content">
+    <div class="d-none d-md-flex border-top">
         <ul class="nav nav-classic w-100">
             @foreach($allCategories as $id=>$allCategory)
             <li class="nav-item">

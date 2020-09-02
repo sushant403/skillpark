@@ -312,14 +312,7 @@
                                 href="{{ route("proposals.index") }}">My Biddings</a>
                         </div>
 
-                        <div class="mb-md-3">
-                            <h3 class="h5">Categories</h3>
-
-                            @foreach($searchByCategory as $id=>$searchByCategory)
-                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                                href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
-                            @endforeach
-                        </div>
+                        @include('layouts.divisions.topcategory')
 
                         <div class="d-none d-md-block mb-3">
                             <h3 class="h5">Quick links</h3>

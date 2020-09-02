@@ -16,7 +16,11 @@ class JandCComposer
      */
     public function compose(View $view)
     {
-        $view->with('topJobs', Category::withCount('jobs')->whereHas('jobs')->orderBy('jobs_count', 'desc')->get());
+        $view->with('topJobs', Category::withCount('jobs')
+            ->whereHas('jobs')
+            ->orderBy('jobs_count', 'desc')
+            ->take(7)
+            ->pluck('name', 'id'));
 
         $view->with('allCategories',  Category::orderBy('created_at', 'desc')
             ->take(9)
