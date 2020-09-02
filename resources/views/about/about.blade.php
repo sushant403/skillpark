@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
+@section('title', 'About | Skillpark Inc.')
 @section('content')
 
-
 <!-- Body Start -->
-<main class="browse-section space-3">
+<main class="browse-section space-2">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

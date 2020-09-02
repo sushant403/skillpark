@@ -7,14 +7,14 @@
     <!-- Hero Section -->
     <div class="position-relative bg-img-hero"
         style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-bottom-3 vh-sm-95 vh-lg-100">
+        <div class="container space-top-3 space-bottom-1 space-bottom-lg-5">
             <div class="row justify-content-lg-between align-items-lg-center pt-md-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 ml-7 pt-2">
                     <!-- Info -->
                     <div class="mb-5">
                         <h2 class="display-6 mb-3">
                             {{ __('nepali.Seek the perfect freelancer talents for your business!') }}</h2>
-                        <p class="lead">{{ __('nepali.Hire experts for any job, any where, any time') }}</p>
+                        {{-- <p class="lead">{{ __('nepali.Hire experts for any job, any where, any time') }}</p> --}}
                     </div>
                     <!-- End Info -->
 
@@ -41,18 +41,16 @@
                 </div>
                 </form>
                 <!-- End Form -->
-                <div class="col-lg-12">
-                    <!-- Tags -->
-                    <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
-                        <span class="d-block mr-sm-3 mb-2 mb-sm-1 text-muted"
-                            style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
-                        @foreach($searchByCategory as $id=>$searchByCategory)
-                        <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                            href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
-                        @endforeach
-                    </div>
-                    <!-- End Tags -->
+                <!-- Tags -->
+                <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
+                    <span class="d-block mr-1 mb-2 mb-sm-1 text-muted"
+                        style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
+                    @foreach($searchByCategory as $id=>$searchByCategory)
+                    <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                        href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
+                    @endforeach
                 </div>
+                <!-- End Tags -->
             </div>
             <!-- SVG Shape -->
             <figure class="col-lg-6 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
@@ -323,17 +321,8 @@
         </div>
     </section>
 
-    <!-- Featured Topics Section -->
-    <div class="container space-sm-2 space-bottom-lg-2">
-        <!-- Title -->
-        <div class="w-md-80 text-center mx-md-auto mb-9">
-            <h3>Trending Jobs and Services of <span class="text-highlight-success" id="date"></span></h3>
-            <p>Discover your perfect requirement.</p>
-        </div>
-        <!-- End Title -->
-
         @include('layouts.divisions.recentjobs')
-       
+
     <!-- Features Section -->
     <div class="overflow-hidden">
         <div class="container space-2">
@@ -385,7 +374,8 @@
                                 <span class="step-icon step-icon-xs step-icon-soft-primary">2</span>
                                 <div class="step-content">
                                     <h4>Get a smarter shortlist, instantly</h4>
-                                    <p>Our instant matching tech generates a shortlist based on the criteria you select.
+                                    <p>Our instant matching tech generates a shortlist based on the criteria you
+                                        select.
                                     </p>
                                 </div>
                             </div>
@@ -395,7 +385,8 @@
                                 <span class="step-icon step-icon-xs step-icon-soft-primary">3</span>
                                 <div class="step-content">
                                     <h4>Dynamic Bidding System</h4>
-                                    <p class="mb-0">Find any service within minutes and know exactly what you’ll pay. No
+                                    <p class="mb-0">Find any service within minutes and know exactly what you’ll
+                                        pay. No
                                         hourly rates, just a fixed price.</p>
                                 </div>
                             </div>
@@ -473,7 +464,8 @@
                 <div class="card overflow-hidden p-5">
                     <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
                         <div class="col-md-8 col-lg-5 offset-lg-3 mb-3 mb-md-0">
-                            <h3 class="h4 text-grey mb-0">{{ __('nepali.Revolutionizing the way Company hires!') }}</h3>
+                            <h3 class="h4 text-grey mb-0">{{ __('nepali.Revolutionizing the way Company hires!') }}
+                            </h3>
                         </div>
 
                         <div class="col-md-4 text-md-right">
@@ -537,7 +529,8 @@
                                 <div class="row">
                                     <div class="col-lg-8 mb-3 mb-lg-0">
                                         <div class="pr-lg-5">
-                                            <blockquote class="h3 font-weight-normal mb-4">Awesome. एस्लाई Launch गर्नु
+                                            <blockquote class="h3 font-weight-normal mb-4">Awesome. एस्लाई Launch
+                                                गर्नु
                                                 पर्छ ।</blockquote>
                                             <div class="media">
                                                 <div class="avatar avatar-xs avatar-circle d-lg-none mr-2">
@@ -545,7 +538,8 @@
                                                         alt="">
                                                 </div>
                                                 <div class="media-body">
-                                                    <span class="text-dark font-weight-bold">Er. Dipesh Bhattarai</span>
+                                                    <span class="text-dark font-weight-bold">Er. Dipesh
+                                                        Bhattarai</span>
                                                     <span class="font-size-1">— Project Supervisor</span>
                                                 </div>
                                             </div>
@@ -557,7 +551,8 @@
 
                                         <div class="pl-lg-5">
                                             <span class="h3 text-primary">A Start</span>
-                                            <p class="font-size-1">Motivations like this encourges the eager to learn
+                                            <p class="font-size-1">Motivations like this encourges the eager to
+                                                learn
                                                 students for more.</p>
                                         </div>
                                     </div>

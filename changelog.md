@@ -1,3 +1,24 @@
+- ### Commit 77th:
+     ### Search Function and Pagination `Model` Changes :
+
+    1. `{View/Composer}` file added for universal function declaration.
+
+    2. **Controllers** and **Models** optimizations.
+
+    3. `AppServiceProvider` _boot_ function modifications.
+
+    4. Dynamic _Category_ bar added.
+
+    5. Faker (Random Seeding) called for Database.
+
+    6. Database renamed _(date)_ and modified for Eloquent relations.
+    
+    7. `ClientAPI` package removed from Composer and autoloads.
+
+    8. Frontend Designs and Responsive Fixes.
+
+<hr>
+
 - ### Commit 73rd:
      ### Search Function and Pagination `Model` Changes :
 

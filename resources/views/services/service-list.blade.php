@@ -1,16 +1,17 @@
 @extends('layouts.master')
 
-@section('title','Services in ' . $banner . ' - Skillpark Inc. | Hire Expert Freelancers Any Time')
+@section('title','Services in ' . $banner . ' - Skillpark Inc.')
 @section('content')
+
 <link rel="stylesheet" href="/css/style.css">
-<section class="py-5 mt-7 p-list-two">
+<section class="mt-4 p-list-two">
    <div class="container">
       <div class="row">
          <div class="col-12 view_slider recommended">
             <div class="row">
                <div class="col-12">
                   <div class="sorting-div d-flex align-items-center justify-content-between">
-                     <p class="mb-2">100+ Services available</p>
+                     <p class="mb-2">{{ $servicecount }} Services available</p>
                   </div>
                   <h3>Services In {{ $banner }}</h3>
                </div>
@@ -46,8 +47,8 @@
                            </div>
                         </div>
                         <div class="footer">
-                           <a href="javascript:;" data-toggle="modal"
-                           data-target="#loginModal"><i class="fa fa-heart" aria-hidden="true"></i>
+                           <a href="javascript:;" data-toggle="modal" data-target="#loginModal"><i class="fa fa-heart"
+                                 aria-hidden="true"></i>
                               <div class="price">
                                  Budget At <span style="font-size:13px">NPR {{ $job->budget }}</span>
                            </a>
@@ -60,6 +61,7 @@
             {{ $jobs->appends(request()->query())->links() }}
          </div>
       </div>
+      @include('layouts.divisions.recentjobs')
    </div>
    </div>
 </section>

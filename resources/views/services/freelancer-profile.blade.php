@@ -2,10 +2,6 @@
 
 @section('content')
 
-<script>
-   document.title = 'Profile - Random User';
-</script>
-
 <link href="/css/mover.css" rel="stylesheet">
 <div class="main-page second py-5">
    <div class="container">

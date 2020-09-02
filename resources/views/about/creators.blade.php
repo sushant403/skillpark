@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
+@section('title', 'Creators | Skillpark Inc.')
 @section('content')
 
 <link rel="stylesheet" href="/css/teamstyle.css">
-
 
 <body background="images/team/teambg.jpg">
     <!-- partial:index.partial.html -->

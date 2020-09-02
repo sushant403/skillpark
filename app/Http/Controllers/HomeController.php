@@ -33,12 +33,9 @@ class HomeController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->take(4)
             ->pluck('name', 'id');
-        $jobs = Job::orderBy('id', 'desc')
-            ->take(4)
-            ->get();
 
         if (!auth()->check()) {
-            return view('index', compact(['searchCategories', 'searchByCategory', 'jobs']));
+            return view('index', compact(['searchCategories', 'searchByCategory']));
         } else {
             $user = Auth::user();
 

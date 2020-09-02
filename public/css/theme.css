@@ -648,7 +648,7 @@ pre code {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1160px;
+        max-width: 1260px;
     }
 }
 
@@ -694,7 +694,7 @@ pre code {
     .container-md,
     .container-lg,
     .container-xl {
-        max-width: 1260px;
+        max-width: 1300px;
     }
 }
 
@@ -14447,7 +14447,7 @@ button:focus {
 }
 
 .header-bg-transparent:not(.js-header-fix-moment) .header-section {
-    /* background-color: transparent; */
+    background-color: transparent;
 }
 
 .header-bg-transparent .navbar-brand-collapsed,
@@ -21007,7 +21007,7 @@ label.btn {
     border-width: 0 0 0.1875rem 0;
     border-style: solid;
     border-color: transparent;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1.3rem;
     margin-bottom: -0.125rem;
     border-radius: 0;
     transition: 0.3s;

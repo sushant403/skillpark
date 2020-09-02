@@ -29,10 +29,10 @@ class TopicsSeeder extends Seeder
                 'name' => 'Java Developer'
             ],
             [
-                'name' => 'Laravel and PHP'
+                'name' => 'Laravel & PHP'
             ],
             [
-                'name' => 'Django and Python',
+                'name' => 'Django & Python',
             ],
             [
                 'name' => 'Graphic Design'

@@ -53,8 +53,9 @@ class CategoryController extends Controller
             })
             ->paginate(8);
         $banner = $category->name;
+        $servicecount = (count($jobs));
     
-        return view('services.service-list', compact(['jobs', 'banner']));
+        return view('services.service-list', compact(['jobs', 'banner', 'servicecount']));
     }
 
     /**

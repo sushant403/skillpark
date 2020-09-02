@@ -21,7 +21,7 @@ return [
     'Setting'   => 'सेटिङ्ग',
     'Laravel'=> 'लाराभेल',
     'Welcome'=> 'स्वागत छ',
-    'Login' => 'Login',
+    'Login' => 'Sign In',
     'Register'=> 'दर्ता',
     'Docs'=> 'कागजात',
     'Laracasts'=> 'लाराकाष्ट',

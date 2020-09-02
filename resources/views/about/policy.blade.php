@@ -1,11 +1,12 @@
 @extends('layouts.master')
 
+@section('title', 'Privacy Policy | Skillpark Inc.')
 @section('content')
 
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="bg-light">
   <!-- Privacy Section -->
-  <div class="container space-top-3 space-bottom-2 space-bottom-lg-3 overflow-hidden">
+  <div class="container space-top-1 space-bottom-2 space-bottom-lg-3 overflow-hidden">
     <div class="w-lg-80 mx-lg-auto">
       <div class="card">
         <!-- Hero -->

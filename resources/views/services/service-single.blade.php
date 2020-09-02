@@ -3,18 +3,13 @@
 @section('content')
 
 <link rel="stylesheet" href="/css/style.css">
-@guest
-<div class="space-top-1 mt-6"></div>
-@else
-<div class=""></div>
-@endguest
 <div class="third-menu ">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-between">
             <div class="col-lg-9 left">
                 <ul>
                     <li class="nav-overview selected"><a href="#overview">Overview</a></li>
-                    <li class="nav-description"><a href="#description">Description</a></li>
+                    <li class="nav-description seleced"><a href="#description">Description</a></li>
                     <li class="nav-aboutSeller"><a href="#aboutSeller">About The Seller</a></li>
                     <li class="nav-recommendations"><a href="#recommendations">Recommendations</a></li>
                 </ul>
@@ -216,7 +211,7 @@
                                 </ul>
                             </article>
                             <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
-                            <button>Continue</button>
+                                <button>Continue</button>
                             </a>
                         </div>
                     </div>

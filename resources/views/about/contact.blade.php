@@ -1,8 +1,9 @@
  @extends('layouts.master')
 
+ @section('title', 'Contact Us | Skillpark Inc.')
  @section('content')
  <!-- Contact Us -->
- <section class="py-5">
+ <section class="py-4">
      <div class="container">
          <div class="row" style="padding-top: 30px;">
              <div class="col-lg-4 col-md-4">

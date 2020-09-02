@@ -1,11 +1,12 @@
 @extends('layouts.master')
 
+@section('title', 'Frequently Asked Questions | Skillpark Inc.')
 @section('content')
 <!-- ========== MAIN ========== -->
 <main id="content" role="main">
     <!-- Hero Section -->
     <div class="bg-img-hero" style="background-image: url(/images/svg/components/abstract-shapes-12.svg);">
-        <div class="container space-top-3 space-bottom-2 position-relative z-index-2">
+        <div class="container space-top-1 space-bottom-2 position-relative z-index-2">
             <div class="w-md-80 w-lg-60 text-center mx-md-auto">
                 <h1>FAQ</h1>
                 <p>Search our FAQ for answers to anything you might ask.</p>

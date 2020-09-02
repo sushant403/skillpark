@@ -16,13 +16,13 @@ class CategoriesSeeder extends Seeder
 
         DB::table('categories')->insert([
             [
-                'name' => 'Video and Animation',
+                'name' => 'Video & Animation',
             ],           
             [
-                'name' => 'Graphics and Design'
+                'name' => 'Graphics & Design'
             ],
             [
-                'name' => 'Music and Audio'
+                'name' => 'Music & Audio'
             ],
             [
                 'name' => 'Game',

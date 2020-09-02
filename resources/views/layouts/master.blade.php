@@ -36,7 +36,7 @@
 <body>
     <!-- ========== HEADER ========== -->
     <header id="header"
-        class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide "
+        class="{{ Request::is('/') ? 'header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide' : 'header' }}"
         data-hs-header-options='{
    "fixMoment": 500,
    "fixEffect": "slide"
@@ -70,9 +70,25 @@
                         <img src="/images/logo/biglogo.svg" alt="Logo">
                     </a>
                     <a class="navbar-brand w-auto d-md-none d-sm-flex" href="/" aria-label="Skillpark">
-                        <img src="/images/logo/logo.svg" style="width:40px" alt="Logo">
+                        <img src="/images/logo/biglogo.svg" alt="Logo">
                     </a>
                     <!-- End Logo -->
+                    @if(!Request::is('/'))
+                    <!-- Search Form -->
+                    <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 ml-5">
+                        <form action="{{ route('search') }}" class="d-flex align-items-center">
+                            <label class="sr-only" for="signupSEmail">Search for apps</label>
+                            <div class="d-inline-block w-100 mr-2">
+                                <input type="text" required class="form-control" name="search" id="signupSEmail"
+                                    placeholder="Search for Jobs " aria-label="Search for Jobs ">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <span class="fas fa-search"></span>
+                            </button>
+                        </form>
+                    </li>
+                    <!-- End Search Form -->
+                    @endif
                     @guest
                     <!-- Secondary Content -->
                     <div class="navbar-nav-wrap-content d-none d-md-flex">
@@ -94,11 +110,12 @@
                     <div id="navBar" class="collapse navbar-collapse">
                         <div class="navbar-body header-sticky-top-inner">
                             <ul class="navbar-nav">
+
                                 <!-- About -->
                                 <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{
                                 "desktop": {
-                                  "position": "right",
-                                  "maxWidth": "800px"
+                                  "position": "center",
+                                  "maxWidth": "500px"
                                 }
                               }'>
                                     <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
@@ -108,7 +125,7 @@
                                     <!-- About - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
                                         <div class="row no-gutters">
-                                            <div class="col-lg-8">
+                                            <div class="col-lg-12">
                                                 <div class="navbar-promo-card-deck">
                                                     <!-- Promo Item -->
                                                     <div class="navbar-promo-card navbar-promo-item">
@@ -192,17 +209,6 @@
                                                     <!-- End Promo Item -->
                                                 </div>
                                             </div>
-
-                                            <!-- Promo -->
-                                            <div class="col-lg-4 navbar-promo d-none d-lg-block">
-                                                <a class="d-block navbar-promo-inner" href="register">
-                                                    <div class="position-relative">
-                                                        <img class="img-fluid rounded" width="200"
-                                                            src="/images/svg/banner.svg" alt="">
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- End Promo -->
                                         </div>
                                     </div>
                                     <!-- End About - Mega Menu -->
@@ -218,29 +224,13 @@
                                     <!-- Pages - Submenu -->
                                     <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
                                         aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
-                                        <!-- Account -->
-                                        <div class="hs-has-sub-menu">
-                                            <a id="navLinkPagesAccount"
-                                                class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                                href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                                aria-controls="navSubmenuPagesAccount">Trending topics </a>
-
-                                            <div id="navSubmenuPagesAccount" class="hs-sub-menu dropdown-menu"
-                                                aria-labelledby="navLinkPagesAccount" style="min-width: 230px;">
-                                                <a class="dropdown-item" href="">Full Stack
-                                                    Developer</a>
-                                                <a class="dropdown-item" href="">C#</a>
-                                                <a class="dropdown-item" href="">Django</a>
-                                                <a class="dropdown-item" href="">Laravel</a>
-                                                <a class="dropdown-item" href="">PHP</a>
-                                            </div>
-                                            <!-- Account -->
-                                            <a class="dropdown-item" href="">Freelancers</a>
-                                            <a class="dropdown-item" href="">Companies</a>
-                                            <a class="dropdown-item" href="">Popular Jobs</a>
-                                            <a class="dropdown-item" href="">Featured</a>
-                                        </div>
-                                        <!-- End Pages - Submenu -->
+                                        <a class="dropdown-item" href="">Trending Services</a>
+                                        <a class="dropdown-item" href="">Freelancers</a>
+                                        <a class="dropdown-item" href="">Clients</a>
+                                        <a class="dropdown-item" href="">Popular Jobs</a>
+                                        <a class="dropdown-item" href="">Featured</a>
+                                    </div>
+                                    <!-- End Pages - Submenu -->
                                 </li>
                                 <!-- End Pages -->
 
@@ -317,7 +307,7 @@
                                 <li class="navbar-nav-item pr-2 font-weight-bold">
                                     <div class="hs-unfold">
                                         <a class="js-hs-unfold-invoker nav-link" href="javascript:;" data-toggle="modal"
-                                            data-target="#loginModal">Sign In</a>
+                                            data-target="#loginModal">{{ __('nepali.Login') }}</a>
                                     </div>
                                 </li>
                                 <!-- End Account Login -->
@@ -328,13 +318,13 @@
                                     <div class="hs-unfold">
                                         <a class="js-hs-unfold-invoker dropdown-toggle px-3 u-sidebar--account__toggle-bg"
                                             style="padding: 0.6rem" href="javascript:;" data-hs-unfold-options='{
-                    "target": "#accountDropdown",
-                    "type": "css-animation",
-                    "event": "click",
-                    "duration": 30,
-                    "delay": 0,
-                    "hideOnScroll": "true"
-                   }'>
+                                                    "target": "#accountDropdown",
+                                                    "type": "css-animation",
+                                                    "event": "click",
+                                                    "duration": 30,
+                                                    "delay": 0,
+                                                    "hideOnScroll": "true"
+                                                }'>
                                             <span class="position-relative">
                                                 <span
                                                     class="u-sidebar--account__toggle-text">{{ Auth::user()->name }}</span>
@@ -404,7 +394,8 @@
                                                         Help
                                                     </a>
                                                     <a class="dropdown-item px-0" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+                                                        document.getElementById('logout-form').submit();"><i
+                                                            class="fa fa-sign-out"></i>&nbsp; Logout</a>
                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                         style="display: none;">
                                                         @csrf
@@ -419,6 +410,7 @@
                                 <!-- End Account Login -->
                                 @endguest
                                 <!-- End Button -->
+
                             </ul>
                         </div>
                     </div>
@@ -426,6 +418,7 @@
                 </nav>
                 <!-- End Nav -->
             </div>
+            @include('layouts.divisions.categorybar')
         </div>
     </header>
     <!-- ========== END HEADER ========== -->
@@ -457,7 +450,7 @@
     @endguest
 
     <footer class="container text-center text-lg-left">
-        <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
+        <div class="space-top-2 space-bottom-1">
             <div class="row justify-content-lg-between">
                 <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
                     <!-- Logo -->
@@ -616,30 +609,12 @@
 
                         <!-- Language -->
                         <li class="list-inline-item">
-                            <div class="hs-unfold">
-                                <a class="js-hs-unfold-invoker dropdown-toggle btn btn-xs btn-soft-secondary"
-                                    href="javascript:;" data-hs-unfold-options='{
-                                                        "target": "#footerLanguage",
-                                                        "type": "css-animation",
-                                                        "animationIn": "slideInDown"
-                                                        }'>
-                                    <i class="fa fa-globe"></i>&nbsp;
-                                    <span> English</span>
-                                </a>
-
-                                <div id="footerLanguage"
-                                    class="hs-unfold-content dropdown-menu dropdown-unfold dropdown-menu-bottom mb-2">
-                                    <!-- Nav Link -->
-                                    <a class="nav-link" href="/lang/ne">
-                                        <img class="max-w-3rem mr-1" src="/images/svg/np.svg" alt="Nepal Flag">
-                                        नेपाली
-                                    </a>
-                                    <a class="nav-link active " href="/lang/en">
-                                        <i class="fa fa-globe"></i>&nbsp;
-                                        English
-                                    </a>
-                                    <!-- End Nav Link -->
-                                </div>
+                            <div class="form-group">
+                                <select class="form-control btn btn-xs btn-soft" onchange="location = this.value;">
+                                    <option value="" selected> Choose Language </option>
+                                    <option value="/lang/en"> English </option>
+                                    <option value="/lang/ne">Nepali</option>
+                                </select>
                             </div>
                         </li>
                         <!-- End Language -->

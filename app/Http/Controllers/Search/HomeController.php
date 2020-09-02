@@ -22,6 +22,7 @@ class HomeController extends Controller
             ->orderBy('jobs_count', 'desc')
             ->take(4)
             ->pluck('name', 'id');
+        
         $jobs = Job::orderBy('id', 'desc')
             ->take(3)
             ->get();
@@ -33,11 +34,12 @@ class HomeController extends Controller
     {
         $jobs = Job::with('categories')
             ->searchResults()
-            ->paginate(7);
+            ->paginate(8);
 
         $banner = 'Search results';
+        $servicecount = (count($jobs));
 
-        return view('services.service-list', compact(['jobs', 'banner']));
+        return view('services.service-list', compact(['jobs', 'banner', 'servicecount']));
     }
 
     /**

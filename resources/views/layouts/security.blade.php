@@ -75,24 +75,16 @@
                     <div id="navBar" class="collapse navbar-collapse">
                         <div class="navbar-body header-sticky-top-inner">
                             <ul class="navbar-nav">
-                                @guest
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('login') }}" class="nav-link"><i class="fa fa-user"></i>&nbsp;
+                                    <a href="{{ route('login') }}" class="nav-link">
                                         {{ __('nepali.Login') }}</a>
                                 </li>
 
-                                <li class="navbar-nav-last-item">
+                                <li class="navbar-nav">
                                     <a class="btn btn-sm btn-primary" href="{{ route('register') }}">
                                         {{ __('nepali.Join') }}
                                     </a>
                                 </li>
-                                @else
-                                <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary" href="{{ url('home') }}">
-                                        {{ __('nepali.Dashboard') }}
-                                    </a>
-                                </li>
-                                @endguest
                                 <!-- End Button -->
                             </ul>
                         </div>
