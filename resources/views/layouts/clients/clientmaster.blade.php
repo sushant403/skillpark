@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>@yield('title',Auth::user()->name . ' | Home')</title>
+    <title>@yield('title','Home - ' . Auth::user()->name)</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Skillpark Inc.">
     <meta name="keywords"
@@ -17,7 +17,7 @@
 
     <!-- Favicon and Touch Icons-->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" color="#5bbad5" href="/favicon.svg">
     <meta name="msapplication-TileColor" content="#1dc8cc">
     <meta name="theme-color" content="#ffffff">
@@ -209,7 +209,7 @@
                             <ul class="navbar-nav">
                                 <!-- Catgories -->
                                 <li class="hs-has-sub-menu navbar-nav-item">
-                                    <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                    <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link font-weight-bolder" href="javascript:;"
                                         aria-haspopup="true" aria-expanded="false" aria-labelledby="coursesSubMenu">
                                         Categories
                                     </a>
@@ -242,32 +242,6 @@
                                             </div>
                                         </div>
                                         <!-- End Development -->
-
-                                        <!-- Business -->
-                                        <div class="hs-has-sub-menu">
-                                            <a id="navLinkCoursesBusiness"
-                                                class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                                href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                                aria-controls="navSubmenuCoursesBusiness">
-                                                <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                    <i class="fa fa-chart-bar font-size-1 mr-1"></i>
-                                                </span>
-                                                Business
-                                            </a>
-
-                                            <div id="navSubmenuCoursesBusiness" class="hs-sub-menu dropdown-menu"
-                                                aria-labelledby="navLinkCoursesBusiness" style="min-width: 270px;">
-                                                <a class="dropdown-item" href="#">All Business</a>
-                                                <a class="dropdown-item" href="#">Finance</a>
-                                                <a class="dropdown-item" href="#">Communications</a>
-                                                <a class="dropdown-item" href="#">Management</a>
-                                                <a class="dropdown-item" href="#">Strategy</a>
-                                                <a class="dropdown-item" href="#">Project management</a>
-                                                <a class="dropdown-item" href="#">Data & Analytics</a>
-                                                <a class="dropdown-item" href="#">Other</a>
-                                            </div>
-                                        </div>
-                                        <!-- Business -->
 
                                         <!-- IT & Software -->
                                         <div class="hs-has-sub-menu">
@@ -305,7 +279,11 @@
                                 <!-- End Categories -->
 
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('myprojects') }}" class="nav-link"> My Jobs</a>
+                                    <a href="{{ route('myprojects') }}" class="nav-link font-weight-bolder"> My Jobs</a>
+                                </li>
+
+                                <li class="navbar-nav-item">
+                                    <a href="{{ route('myprojects') }}" class="nav-link font-weight-bolder"> Messages</a>
                                 </li>
 
                                 <!-- Search Form -->

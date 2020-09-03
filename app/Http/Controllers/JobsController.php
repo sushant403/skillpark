@@ -25,7 +25,7 @@ class JobsController extends Controller
             $jobs = Job::with('proposals')
                 ->where('employer_id', auth()->id())
                 ->orderByDesc('created_at')
-                ->paginate(5);;
+                ->paginate(10);
         } else {
             $jobs = Job::whereNull('candidate_id')->get();
         }

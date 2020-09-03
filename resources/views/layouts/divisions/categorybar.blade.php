@@ -1,7 +1,7 @@
 <!-- CategoriesBar -->
 <div class="container header-hide-content">
     <div class="d-none d-md-flex border-top">
-        <ul class="nav nav-classic w-100">
+        <ul class="nav nav-classic align-content-between mx-auto">
             @foreach($allCategories as $id=>$allCategory)
             <li class="nav-item">
                 <a class="{{ Request::is( route('categories.show', $id) ) ? 'nav-link-active' : 'nav-link' }}"

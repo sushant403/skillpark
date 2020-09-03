@@ -143,7 +143,7 @@
                                 </div>
                             </li>
                             @endforeach
-                            <span class="mt-4 center text-muted text-center font-italic">(This is the end)</span>
+                            <span class="mt-4 center text-muted text-center font-italic">(End)</span>
                         </ul>
                         <!-- End List Group -->
                     </div>

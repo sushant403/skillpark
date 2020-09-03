@@ -1,6 +1,5 @@
 <?php
 
-use App\Category;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,43 +16,56 @@ class CategoriesSeeder extends Seeder
         DB::table('categories')->insert([
             [
                 'name' => 'Video & Animation',
-            ],           
-            [
-                'name' => 'Graphics & Design'
+                'slug' => 'video-animation'
             ],
             [
-                'name' => 'Music & Audio'
+                'name' => 'Graphics & Design',
+                'slug' => 'graphics-design'
+            ],
+            [
+                'name' => 'Music & Audio',
+                'slug' => 'music-audio'
             ],
             [
                 'name' => 'Game',
-            ],  
+                'slug' => 'game',
+            ],
             [
                 'name' => 'Business',
+                'slug' => 'business',
             ],
             [
                 'name' => 'Lifestyle',
+                'slug' => 'lifestyle',
             ],
             [
-                'name' => 'Artificial Intelligence',
-            ],        
-            [
-                'name' => 'UX Design'
+                'name' => 'Wordpress',
+                'slug' => 'wordpress',
             ],
             [
-                'name' => 'E-Commerce'
-            ],         
+                'name' => 'UX Design',
+                'slug' => 'ux-design',
+            ],
             [
-                'name' => 'Cloud Computing'
+                'name' => 'E-Commerce',
+                'slug' => 'e-commerce',
+            ],
+            [
+                'name' => 'Cloud Computing',
+                'slug' => 'cloud-computing',
             ],
             [
                 'name' => 'Digital Marketing',
-            ],           
-            [
-                'name' => 'Content Writing'
+                'slug' => 'digital-marketing',
             ],
             [
-                'name' => 'Translation'
+                'name' => 'Content Writing',
+                'slug' => 'content-writing',
             ],
-        ]);  
+            [
+                'name' => 'Translation',
+                'slug' => 'translation',
+            ],
+        ]);
     }
 }

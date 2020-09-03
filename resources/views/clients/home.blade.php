@@ -1,6 +1,6 @@
 @extends('layouts.clients.clientmaster')
 
-@section('title', Auth::user()->name . ' | Home')
+@section('title', 'Home - ' . Auth::user()->name . ' | Skillpark Inc.')
 @section('content')
 
 <main class="py-2" role="main" id="content">

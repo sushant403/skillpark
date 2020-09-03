@@ -4,187 +4,224 @@
 
 @section('content')
 
-<!-- main content -->
-<main class="main main--breadcrumb">
-    <!-- breadcrumb -->
-    <div class="breadcrumb mb-n1">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="breadcrumb__wrap mb-n1">
-                        <li class="breadcrumb__item"><a class="font-weight-bold" href="{{ route('freelancer') }}">Back
-                                to Finding Jobs</a></li>
-                        <i class="mx-3 fa fa-angle-left"></i>
-                        <li class="breadcrumb__item breadcrumb__item--active">{{ $job->title }}</li>
-                    </ul>
-                </div>
+<link rel="stylesheet" href="/css/style.css">
+<div class="third-menu space-top-n1">
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-lg-9 left">
+                <ul>
+                    <li class="nav-overview selected"><a
+                            href="#overview">Overview</a></li>
+                    <li class="nav-overview"><a href="#description">Description</a></li>
+                    <li class="nav-aboutSeller"><a href="#aboutSeller">About The Seller</a></li>
+                    <li class="nav-recommendations"><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 right">
+                <ul class="d-flex align-items-center justify-content-end">
+                    <li>
+                        <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
+                            <button>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                Save
+                            </button>
+                        </a>
+                    </li>
+                    <li class="ml-2">
+                        <a href="javascript:;">
+                            <button>
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                Share
+                            </button>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <!-- end breadcrumb -->
+</div>
+<div class="main-page py-5">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-7 col-lg-8 col-xl-9">
-                <!-- post -->
-                <div class="post">
-                    <div class="post__head">
-                        <a href="#" class="post__head-img">
-                            <img src="{{ asset($job->employer->avatar) ?? '/images/uploads/defailt.jpg' }}" alt="">
+            <div id="overview" class="col-lg-8 left">
+                <h2>{{ $job->title }}</h2>
+                <div class="slider mt-2">
+                    <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
+                        <a href="javascript:;">
+                            <img class="img-fluid" width="450" src="/images/svg/discussion-scene.svg" />
                         </a>
-                        <div class="post__head-title">
-                            <h5><a href="#">{{ $job->employer->name }}</a></h5>
-                            <p>Job Posted: {{ $job->created_at }}</p>
-                        </div>
-
-                        <div class="post__dropdown">
-                            <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu1"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="icon ion-md-more"></i>
-                            </a>
-
-                            <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"
-                                aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Report</a></li>
-                            </ul>
-                        </div>
                     </div>
-
-                    <div class="post__wrap">
-                        <div class="post__company">
-                            <i class="fa fa-briefcase"></i>
-                            <span>{{ $job->company ?? 'N/A Company' }}</span>
-                        </div>
-
-                        <div class="post__location">
-                            <i class="fa fa-map-marker-alt"></i>
-                            <span>{{ $job->employer->city_id }}</span>
-                        </div>
-
-                        <div class="post__actions">
-                            <a class="post__actions-btn post__actions-btn--green" href="#">
-                                <i class="fa fa-bookmark fa-sm"></i>
+                </div>
+                <div id="description" class="description">
+                    <h3>About This Job</h3>
+                    <p>{{ $job->title }}</p>
+                    <p>{{ $job->description }}
+                    </p>
+                </div>
+                @if($job->attachments)
+                <ul class="metadata">
+                    <li class="metadata-attribute">
+                        <h4>Attachments</h4>
+                        <ul>
+                            @foreach($job->attachments as $key => $media)
+                            <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}" target="_blank">
+                                <span>Attachment</span></a>
                             </a>
-                            <a class="post__actions-btn post__actions-btn--red" href="#">
-                                <i class="fa fa-envelope fa-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h2 class="post__title my-2">{{ $job->title }}</h2>
-
-                    <div class="row col-12 no-gutters px-0">
-                        <div class="col-6">
-                            <div class="post__options mb-5">
-                                <span>{{ $job->category->name ?? 'General Category'}}</span>
-                                <p>NPR {{ $job->budget }}</p>
+                            @endforeach
+                        </ul>
+                    </li>
+                </ul>
+                @endif
+                <h3 id="aboutSeller">About The Seller</h3>
+                <div class="profile-card">
+                    <div class="user-profile-image d-flex">
+                        <label class="profile-pict" for="profile_image">
+                            <img src="{{ asset($job->employer->avatar) ?? '/images/spacer.png' }}"
+                                class="profile-pict-img img-fluid" alt="">
+                        </label>
+                        <div class="right">
+                            <div class="profile-name">
+                                <span class="user-status">
+                                    <a href="#" class="seller-link">{{ $job->employer->name }}</a>
+                                </span>
+                            </div>
+                            <div class="user-info">
+                                <span class="user-info-rating d-flex align-items-center">
+                                    <div class="star-rating-s15-wrapper">
+                                        <i class="fa fa-map-marker"></i> {{ $job->employer->location ?? 'Nepal' }}
+                                    </div>
+                                </span>
+                                <a href="#">Contact Me</a>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <small class="text-cap mb-3 font-weight-bold float-right">(Expected Delivery): <span
-                                    class="text-dark">{{ $job->delivery_time }}</span></small>
+                    </div>
+                    <div class="stats-desc">
+                        <ul class="user-stats">
+                            <li>From<strong>{{ $job->employer->location ?? 'Nepal' }}</strong></li>
+                            <li>Member since<strong>{{ $job->employer->created_at ?? 'Nepal' }}</strong></li>
+                        </ul>
+                        <article class="seller-desc">
+                            <div class="inner">- Wireframes for mobile apps &amp; Website <br />
+                                - Flowcharts for the whole system <br />
+                                - Mobile app prototypes, interactive UI designs <br />
+                                - UI for social media postings <br />
+                                - Design an app to achieve a business objective (web or mobile). <br />
+                                - Design or re-design a website to grow revenue, close more sales and generate more
+                                leads.
+                                <br />
+                                - Optimize their existing website with a conversion rate audit and strategy. <br />
+                                - Design a high converting landing page. <br />
+                                <span>Excellent communication and availability.
+                                    Reach me any time during our project on Whatsapp, Skype, Text or any other
+                                    messenger.</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="faq" class="faq">
+                    <h3>FAQ</h3>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Some Custom Skillpark User Question
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad
+                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                                    quinoa
+                                    nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
+                                    squid.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Some Custom Skillpark User Question
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad
+                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                                    quinoa
+                                    nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
+                                    squid.
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="post__description">
-                        <p>{{ $job->description }}</p>
-                    </div>
-
-                    <small class="text-cap my-2 font-weight-bold">Related Category</small>
-                    <div class="mb-3">
+                </div>
+                <div class="tags">
+                    <h3>Related tags</h3>
+                    <ul class="d-flex">
                         @foreach($job->categories as $id => $categories)
-                        <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary"
-                                href="#">{{ $categories->name }}</a></span>
+                        <li>
+                            <a href="{{ route('categories.show', $id) }}">{{ $categories->name }}</a>
+                        </li>
                         @endforeach
-                    </div>
-
-                    <small class="text-cap my-2 font-weight-bold">Associated File(s)</small>
-                    <div class="row mx-n1 mb-5 d-flex attachment-container">
-                        @if($job->attachments)
-                        @foreach($job->attachments as $key => $media)
-                        <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}" target="_blank">
-                            <span>Attachment</span></a>
-                        </a>
-                        @endforeach
-                        @endif
-                    </div>
-
-                    <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}" class="post__apply"><span>Apply
-                            now</span></a>
-
-                    <div class="post__stats">
-                        <div>
-                            <a class="post__likes" href="#"><i class="fa fa-thumbs-up"></i> <span>15</span></a>
-                            <a class="post__comments" data-toggle="collapse" href="#collapse1" role="button"
-                                aria-expanded="false" aria-controls="collapse1"><i class="fas fa-comment border-0"></i>
-                                <span>0</span></a>
-                        </div>
-
-                        <div class="post__views">
-                            <i class="fa fa-user-friends"></i> <span>Bidding Count:
-                                {{ $job->proposals->count() }}</span>
-                        </div>
-                    </div>
-
-                    <div class="collapse post__collapse" id="collapse1">
-                        <form action="#" class="post__form">
-                            <input type="text" placeholder="Type your comment...">
-                            <button type="button"><i class="fas fa-paper-plane fa-sm border-0"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <!-- end post -->
-
-                <h3 class="main__title space-1">Similar Jobs</h3>
-
-                <div class="row">
-                    <div class="col-12 col-xl-6">
-                        To be Continued...
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-                <!-- sidebox -->
-                <div class="sidebox">
-                    <h4 class="sidebox__title">Job summary</h4>
-                    <ul class="sidebox__list">
-                        <li><span>Budget:</span> <span>NPR {{ $job->budget }}</span></li>
-                        <li><span>Employment status:</span> <span>Freelancer</span></li>
-                        <li><span>Topic:</span> <span>{{ $job ->topic }}</span></li>
-                        <li><span>Location:</span> <span>{{ $job->employer->city_id }}</span></li>
-                        <li><span>Company:</span> <span>{{ $job->company ?? 'N/A'}}</span></li>
-                        <li><span>Published:</span> <span>{{ $job->created_at }}</span></li>
                     </ul>
                 </div>
-                <!-- end sidebox -->
-
-                <!-- apply btn -->
-                <div class="sidebox">
-                    <div class="sidebox__apply">
-                        <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}"><button
-                                class="post__apply mb-0 w-100 border-0" type="button"><span>Apply
-                                    now</span></button></a>
+            </div>
+            <div class="col-lg-4 right">
+                <div class="sticky">
+                    <div class="tab-content">
+                        <div id="basic" class="tab-pane fade show active">
+                            <div class="header">
+                                <h3><b class="title">Send Proposal</b><span class="price text-muted">NPR
+                                        {{ $job->budget }}</span></h3>
+                                <p>{{ $job->title }}. {{ Str::limit($job->description, 60) }}
+                                </p>
+                            </div>
+                            <article>
+                                <div class="d-flex">
+                                    <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i>Delivery Time:
+                                        {{ $job->delivery_time }}</b>
+                                </div>
+                                <ul class="features">
+                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Source
+                                        File
+                                    </li>
+                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Verified
+                                    </li>
+                                    <li class="feature included"><i class="fa fa-check"
+                                            aria-hidden="true"></i>Interactive
+                                        Mockup
+                                    </li>
+                                </ul>
+                            </article>
+                            <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}">
+                                <button>Continue</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-seller-wrapper">
+                        <a class="fit-button" href="#">Contact Seller</a>
                     </div>
                 </div>
-                <!-- end apply btn -->
-
-                <!-- share -->
-                <div class="sidebox">
-                    <div class="sidebox__share">
-                        <span>Share this Job:</span>
-                        <ul class="mb-n1">
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook fa-sm"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram fa-sm"></i></a></li>
-                            <li class="twitter"><a href="#"><i class="fa fa-twitter fa-sm"></i></a></li>
-                            <li class="vk"><a href="#"><i class="fa fa-linkedin fa-sm"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end share -->
             </div>
         </div>
     </div>
-</main>
-<!-- end main content -->
+    <div class="container mt-5">
+        <div id="recommendations" class="view_slider recommended">
+            <h3>People Who Viewed This Job Also Viewed</h3>
+
+
+        </div>
+    </div>
+</div>
 
 @endsection

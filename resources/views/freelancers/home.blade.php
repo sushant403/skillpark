@@ -8,45 +8,7 @@
         <!-- Sorting -->
         <div class="row text-center text-md-left mb-5 py-1 bg-white mx-auto">
             <div class="col-lg-6 mb-3 mb-lg-0">
-                <span class="font-size-1 ml-1 font-weight-bold">100+ Jobs Found</span>
-            </div>
-            <div class="col-lg-6 align-self-lg-end align-self-sm-center text-lg-right">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <!-- Select -->
-                        <select class="js-custom-select" data-hs-select2-options='{
-                            "minimumResultsForSearch": "Infinity",
-                            "customClass": "btn btn-xs btn-white dropdown-toggle",
-                            "dropdownAutoWidth": false,
-                            "width": "auto"
-                          }'>
-                            <option value="mostRecent" selected>Sort by</option>
-                            <option value="newest">Newest first</option>
-                            <option value="budgetHighLow">Budget (high - low)</option>
-                            <option value="budgetLowHigh">Budget (low - high)</option>
-                            <option value="relevance">Relevance</option>
-                        </select>
-                        <!-- End Select -->
-                    </li>
-                    <li class="list-inline-item">
-                        <!-- Select -->
-                        <select class="js-custom-select" data-hs-select2-options='{
-                            "minimumResultsForSearch": "Infinity",
-                            "customClass": "btn btn-xs btn-white dropdown-toggle",
-                            "dropdownAutoWidth": false,
-                            "width": "auto"
-                          }'>
-                            <option value="alphabeticalOrderSelect1" selected>A-to-Z</option>
-                            <option value="alphabeticalOrderSelect2">Z-to-A</option>
-                        </select>
-                        <!-- End Select -->
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-xs btn-soft-secondary active" href="{{ route('proposals.index') }}">
-                            <i class="fas fa-th-large"></i>
-                        </a>
-                    </li>
-                </ul>
+                <span class="font-size-1 ml-1 font-weight-bold">Showing {{ count($jobs)}} out of 200+ Jobs</span>
             </div>
         </div>
         <!-- End Sorting -->
@@ -196,7 +158,31 @@
             </div>
 
             <div class="col-12 col-md-8 col-lg-6 col-xl-6">
-
+                <div class="row bg-light no-gutters">
+                    <h3 class=" font-weight-bolder">Find Jobs</h3>
+                    <div class="col-lg-10 mb-3 align-self-lg-end align-self-sm-center text-lg-right">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <!-- Select -->
+                                <select class="js-custom-select" data-hs-select2-options='{
+                            "minimumResultsForSearch": "Infinity",
+                            "customClass": "btn btn-xs btn-white dropdown-toggle",
+                            "dropdownAutoWidth": false,
+                            "width": "140px"
+                          }'>
+                                    <option value="newest">Newest</option>
+                                    <option value="budgetHighLow">Oldest</option>
+                                </select>
+                                <!-- End Select -->
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-xs btn-soft-primary active" href="{{ route('proposals.index') }}">
+                                    <i class="fas fa-th-large"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 @foreach($jobs->sortByDesc('created_at') as $key => $job)
                 <div class="post">
                     <div class="post__head">

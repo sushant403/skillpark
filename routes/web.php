@@ -77,7 +77,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
         Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
-        Route::get('/projects', 'JobsController@index')->name('myprojects');
+        Route::get('/my-jobs', 'JobsController@index')->name('myprojects');
 
         //post projects for client
         Route::get('/post/project', 'JobsController@create')->name('post-project');

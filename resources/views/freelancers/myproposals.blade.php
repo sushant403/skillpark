@@ -19,7 +19,7 @@
                 @foreach($proposals->sortByDesc('created_at') as $key => $proposal)
                 <div class="border-bottom pb-5 mb-5">
                     <div class="media">
-                        <div class="max-w-15rem w-100 mr-3">
+                        <div class="max-w-7rem w-100 mr-2">
                             <img class="img-fluid"
                                 src="{{ asset($proposal->job->employer->avatar ?? '/images/upload/default.jpg') }}"
                                 alt="">
@@ -38,17 +38,22 @@
                                             class="far fa-money-bill-alt mr-1 mt-2"></i> NPR
                                         {{ $proposal->job->budget ?? '' }}</span>
 
-                                    {{-- @foreach($proposal->attachments as $key => $media) --}}
-                                    {{-- <a href="{{ $media->getUrl() }}" target="_blank"> --}}
-                                    {{-- @endforeach --}}
-                                    <span class="d-block mb-1" style="color: #333"><i
-                                            class="fa fa-file-alt mr-1 mt-2"></i>
-                                        View File</span></a>
-
                                     <div class="text-body font-size-1 mb-1 mt-3">
                                         <span><b><u>Job Description:</u></b></span><br>
                                         <span>{{ Str::limit($proposal->job->description, 150) }}</span>
                                     </div>
+
+                                    @if($proposal->job->attachments)
+                                    <div class="text-body font-size-1 mb-1 mt-3">
+                                        <span><b>Attachments:</b></span><br>
+                                        @foreach($proposal->job->attachments as $key => $media)
+                                        <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}"
+                                            target="_blank">
+                                            <span>Attachment</span></a>
+                                        </a>
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
 
                                 <div class="col-md-3">
@@ -79,7 +84,8 @@
                     </div>
                 </div>
                 @endforeach
-                <div class="mx-auto" style="width:max-content"> {{ $proposals->appends(request()->query())->links() }} </div>
+                <div class="mx-auto" style="width:max-content"> {{ $proposals->appends(request()->query())->links() }}
+                </div>
 
                 <div class="d-sm-flex justify-content-end">
                     <a class="font-weight-bold" href="{{ route('home') }}">
@@ -103,7 +109,7 @@
                             <div class="media align-items-center mb-3">
                                 <span class="d-block font-size-1 mr-3">Proposals Total Applied</span>
                                 <div class="media-body text-right">
-                                    <span class="text-dark font-weight-bold">{{ $proposals->count() }}</span>
+                                    <span class="text-dark font-weight-bold">{{ $proposals->total() }}</span>
                                 </div>
                             </div>
 

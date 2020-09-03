@@ -700,6 +700,13 @@
           });
         });
     </script>
+    @if (count($errors) > 0)
+    <script>
+        $( document ).ready(function() {
+            $('#loginModal').modal('show');
+        });
+    </script>
+    @endif
 
 
 </body>

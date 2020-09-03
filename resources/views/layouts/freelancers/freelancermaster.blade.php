@@ -44,7 +44,7 @@
 <body>
   <!-- ========== HEADER ========== -->
   <header id="header" style="font-size: 0.85rem"
-    class="header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide"
+    class="{{ Request::is('*.jobs.*') ? 'header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide' : 'header left-aligned-navbar' }}"
     data-hs-header-options='{
    "fixMoment": 700,
    "fixEffect": "slide"
@@ -147,7 +147,7 @@
                         <span class="dropdown-item-icon">
                           <i class="fas fa-envelope"></i>
                         </span>
-                        Messages
+                        Notifications
                       </a>
                       <a class="dropdown-item px-0" href={{ url('settings') }}>
                         <span class="dropdown-item-icon">
@@ -203,12 +203,17 @@
               <ul class="navbar-nav">
                 <!-- Catgories -->
 
-                <li class="navbar-nav-item active">
+                <li class="navbar-nav-item font-weight-bolder">
                   <a href="{{ route('proposals.index') }}" class="nav-link px-0 px-md-3">
                     Find Jobs</a>
                 </li>
 
-                <li class="hs-has-sub-menu navbar-nav-item">
+                <li class="navbar-nav-item font-weight-bolder">
+                  <a href="{{ route('proposals.index') }}" class="nav-link px-0 px-md-3">
+                    Messages</a>
+                </li>
+
+                <li class="hs-has-sub-menu navbar-nav-item font-weight-bolder">
                   <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;" aria-haspopup="true"
                     aria-expanded="false" aria-labelledby="coursesSubMenu">
                     Categories
@@ -239,30 +244,6 @@
                       </div>
                     </div>
                     <!-- End Development -->
-
-                    <!-- Business -->
-                    <div class="hs-has-sub-menu">
-                      <a id="navLinkCoursesBusiness" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="navSubmenuCoursesBusiness">
-                        <span class="min-w-4rem text-center opacity-lg mr-1">
-                          <i class="fa fa-chart-bar font-size-1 mr-1"></i>
-                        </span>
-                        Business
-                      </a>
-
-                      <div id="navSubmenuCoursesBusiness" class="hs-sub-menu dropdown-menu"
-                        aria-labelledby="navLinkCoursesBusiness" style="min-width: 270px;">
-                        <a class="dropdown-item" href="#">All Business</a>
-                        <a class="dropdown-item" href="#">Finance</a>
-                        <a class="dropdown-item" href="#">Communications</a>
-                        <a class="dropdown-item" href="#">Management</a>
-                        <a class="dropdown-item" href="#">Strategy</a>
-                        <a class="dropdown-item" href="#">Project management</a>
-                        <a class="dropdown-item" href="#">Data & Analytics</a>
-                      </div>
-                    </div>
-                    <!-- Business -->
 
                     <!-- IT & Software -->
                     <div class="hs-has-sub-menu">
@@ -322,10 +303,10 @@
 
                 <!-- Search Form -->
                 <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
-                  <form class="d-flex align-items-center">
+                  <form action="{{ route('search') }}" class="d-flex align-items-center">
                     <label class="sr-only" for="signupSEmail">Search for apps</label>
                     <div class="d-inline-block w-65 mr-2">
-                      <input type="text" class="form-control" name="search" id="signupSEmail"
+                      <input required type="text" class="form-control" name="search" id="signupSEmail"
                         placeholder="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole"
                         aria-label="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole">
                     </div>
@@ -347,8 +328,8 @@
   </header>
   <!-- ========== END HEADER ========== -->
 
-  <div class="space-1 pt-5"></div>
-  
+  <div class="{{ Request::is('*.jobs.*') ? 'space-1 pt-5' : '' }}"></div>
+
   @include('layouts.components.message')
   @yield('content')
 

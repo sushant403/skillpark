@@ -65,7 +65,7 @@ class HomeController extends Controller
 
         $jobs = Job::with('categories')
             ->orderByDesc('created_at')
-            ->simplePaginate(7);
+            ->simplePaginate(10);
 
         return view('freelancers.home', compact(['cities', 'topics', 'jobs']));
     }

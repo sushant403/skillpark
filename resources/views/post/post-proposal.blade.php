@@ -5,26 +5,20 @@
 
 <!-- main content -->
 <main class="main main--breadcrumb">
-    <!-- breadcrumb -->
-    <div class="breadcrumb mb-n1">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="breadcrumb__wrap mb-n1">
-                        <li class="breadcrumb__item"><a class="font-weight-bold" href="{{ route('freelancer') }}">Find
-                                Jobs</a></li>
-                        <i class="mx-3 fa fa-angle-left"></i>
-                        <li class="breadcrumb__item"><a class="font-weight-bold" href="javascript:history.back(-1)">Back
-                                to Details</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end breadcrumb -->
-    <div class="container">
+
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+            <div class="col-12 col-md-7 col-lg-8 col-xl-9 mx-auto">
+                <div class="bg-primary rounded p-2">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-light mb-0">
+                            <li class="breadcrumb-item"><a class="breadcrumb-link"
+                                    href="{{ route('freelancer') }}">Home</a></li>
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Back to Details</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
                 <div id="applyForJob" class="border-top text-center pt-5 mb-4">
                     <h4>Post Your Proposal</h4>
                 </div>
@@ -122,36 +116,6 @@
                         and <a href="policy"> Privacy Policy </a></p>
                 </form>
                 <!-- End Apply Form -->
-            </div>
-
-            <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-                <!-- sidebox -->
-                <div class="sidebox">
-                    <h4 class="sidebox__title">Job summary</h4>
-                    <ul class="sidebox__list">
-                        <li><span>Budget:</span> <span>NPR {{ $job->budget ?? 'N/A' }}</span></li>
-                        <li><span>Employment status:</span> <span>Freelancer</span></li>
-                        <li><span>Experience:</span> <span>2 to 3 year(s)</span></li>
-                        <li><span>Location:</span> <span>{{ $job->employer->city_id ?? 'N/A' }}</span></li>
-                        <li><span>Company:</span> <span>{{ $job->employer->company ?? 'N/A'}}</span></li>
-                        <li><span>Published:</span> <span>{{ $job->created_at ?? 'N/A' }}</span></li>
-                    </ul>
-                </div>
-                <!-- end sidebox -->
-
-                <!-- share -->
-                <div class="sidebox">
-                    <div class="sidebox__share">
-                        <span>Share:</span>
-                        <ul class="mb-n1">
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook fa-sm"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram fa-sm"></i></a></li>
-                            <li class="twitter"><a href="#"><i class="fa fa-twitter fa-sm"></i></a></li>
-                            <li class="vk"><a href="#"><i class="fa fa-linkedin fa-sm"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end share -->
             </div>
         </div>
     </div>
