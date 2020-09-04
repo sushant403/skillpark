@@ -27,7 +27,6 @@ class CreateJobsTable extends Migration
         Schema::table('jobs', function ($table) {
             $table->foreign('employer_id')->references('id')->on('users');
             $table->foreign('candidate_id')->references('id')->on('users');
-            $table->foreign('topic')->references('id')->on('topics');
         });
     }
 

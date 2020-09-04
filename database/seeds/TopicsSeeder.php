@@ -13,7 +13,6 @@ class TopicsSeeder extends Seeder
      */
     public function run()
     {
-        Topic::truncate();
 
         DB::table('topics')->insert([
             [

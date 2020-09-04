@@ -8,7 +8,7 @@
     <!-- Cart Section -->
     <div class="container space-lg-1 space-md-3">
         <div class="row">
-            <div class="col-lg-8 mb-7 mb-lg-0">
+            <div class="col-lg-9 mb-7 mb-lg-0">
                 <!-- Title -->
                 <div class="d-flex justify-content-between align-items-end border-bottom pb-3 mb-7">
                     <h1 class="h3 mb-0">My Proposal Biddings</h1>
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="pl-lg-4">
                     <!-- Order Summary -->
                     <div class="card shadow-soft p-4 mb-4">
@@ -107,9 +107,9 @@
 
                         <div class="border-bottom pb-4 mb-4">
                             <div class="media align-items-center mb-3">
-                                <span class="d-block font-size-1 mr-3">Proposals Total Applied</span>
+                                <span class="d-block font-size-1 mr-3">Total Proposals Applied</span>
                                 <div class="media-body text-right">
-                                    <span class="text-dark font-weight-bold">{{ $proposals->total() }}</span>
+                                    <span class="text-dark font-weight-bolder">{{ $proposals->total() }}</span>
                                 </div>
                             </div>
 
@@ -122,7 +122,7 @@
                                         <label class="custom-control-label ml-1" for="deliveryRadio1">
                                             <span class="d-block font-size-1 font-weight-bold mb-1">Excel - Standard
                                                 Office</span>
-                                            <span class="d-block text-muted">Excel File is Generated.</span>
+                                            <span class="d-block text-muted">Excel file will be generated.</span>
                                         </label>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                         </figure>
                         <div class="media-body text-body small">
                             <span class="font-weight-bold mr-1">Need Help?</span>
-                            <a class="link-underline" href="#">Chat now</a>
+                            <a class="link-underline" href="{{ url('coming-soon') }}">Chat now</a>
                         </div>
                     </div>
                     <!-- End Help Link -->

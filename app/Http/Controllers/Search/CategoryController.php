@@ -51,7 +51,7 @@ class CategoryController extends Controller
         $jobs = Job::whereHas('categories', function ($query) use ($category) {
             $query->whereId($category->id);
         })
-            ->paginate(8);
+            ->paginate(12);
         $banner = $category->name;
         $servicecount = $jobs->total();
 

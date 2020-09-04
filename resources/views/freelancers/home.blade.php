@@ -4,14 +4,14 @@
 @section('content')
 
 <main class="bg-light space-bottom-1" role="main" id="content">
-    <div class="container">
-        <!-- Sorting -->
-        <div class="row text-center text-md-left mb-5 py-1 bg-white mx-auto">
-            <div class="col-lg-6 mb-3 mb-lg-0">
-                <span class="font-size-1 ml-1 font-weight-bold">Showing {{ count($jobs)}} out of 200+ Jobs</span>
-            </div>
+    <!-- Sorting -->
+    <div class="row text-center text-md-left mb-5 py-1 bg-white mx-auto">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <span class="font-size-1 ml-6 font-weight-bold">{{ $countJobs }} Jobs Available</span>
         </div>
-        <!-- End Sorting -->
+    </div>
+    <!-- End Sorting -->
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-3 col-xl-3">
                 <!-- Breadcrumb Section -->
@@ -72,14 +72,14 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="{{ Request::is('ab/explore') ? 'nav-link-active' : 'nav-link' }}"
+                                        <a class="{{ Request::is('explore') ? 'nav-link-active' : 'nav-link' }}"
                                             href={{ url('coming-soon') }}>
                                             <i class="fas fa-hashtag nav-icon"></i>
                                             Explore
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="{{ Request::is('ab/messages') ? 'nav-link-active' : 'nav-link' }}"
+                                        <a class="{{ Request::is('messages') ? 'nav-link-active' : 'nav-link' }}"
                                             href="ab/messages">
                                             <i class="fas fa-envelope nav-icon"></i>
                                             Messages
@@ -93,20 +93,6 @@
 
                                 <!-- List -->
                                 <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
-                                    <li class="nav-item">
-                                        <a class="{{ Request::is('settings') ? 'nav-link-active' : 'nav-link' }}"
-                                            href={{ url('settings') }}>
-                                            <i class="fas fa-id-card nav-icon"></i>
-                                            Personal info
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="{{ Request::is('auth') ? 'nav-link-active' : 'nav-link' }}"
-                                            href={{ url('auth') }}>
-                                            <i class="fas fa-shield-alt nav-icon"></i>
-                                            Login &amp; security
-                                        </a>
-                                    </li>
                                     <li class="nav-item">
                                         <a class="{{ Request::is('notification') ? 'nav-link-active' : 'nav-link' }}"
                                             href="notification">
@@ -122,6 +108,13 @@
                                             Preferences
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="{{ Request::is('settings') ? 'nav-link-active' : 'nav-link' }}"
+                                            href={{ url('settings') }}>
+                                            <i class="fas fa-id-card nav-icon"></i>
+                                            Personal info
+                                        </a>
+                                    </li>
                                 </ul>
                                 <!-- End List -->
 
@@ -131,7 +124,7 @@
                                 <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
                                     <li class="nav-item">
                                         <a class="{{ Request::is('terms') ? 'nav-link-active' : 'nav-link' }}"
-                                            href="terms">
+                                            href="{{ url('terms') }}" target="_blank">
                                             <i class="fas fa-book-open nav-icon"></i>
                                             Terms &amp; Conditions
                                         </a>
@@ -160,18 +153,19 @@
             <div class="col-12 col-md-8 col-lg-6 col-xl-6">
                 <div class="row bg-light no-gutters">
                     <h3 class=" font-weight-bolder">Find Jobs</h3>
-                    <div class="col-lg-10 mb-3 align-self-lg-end align-self-sm-center text-lg-right">
+                    <div class="col-lg-10 align-self-lg-end align-self-sm-center text-lg-right">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item">
                                 <!-- Select -->
-                                <select class="js-custom-select" data-hs-select2-options='{
-                            "minimumResultsForSearch": "Infinity",
-                            "customClass": "btn btn-xs btn-white dropdown-toggle",
-                            "dropdownAutoWidth": false,
-                            "width": "140px"
-                          }'>
-                                    <option value="newest">Newest</option>
-                                    <option value="budgetHighLow">Oldest</option>
+                                <select class="form-control btn-soft btn btn-xs dropdown-toggle"
+                                    onchange="location = this.value;">
+                                    <option value="" class="text-muted" selected>Sort By Date</option>
+                                    <option
+                                        value="{{ route('freelancer', ['jobs'=> request()->jobs, 'sort' => 'newest']) }}">
+                                        Newest</option>
+                                    <option
+                                        value="{{ route('freelancer', ['jobs'=> request()->jobs, 'sort' => 'oldest']) }}">
+                                        Oldest</option>
                                 </select>
                                 <!-- End Select -->
                             </li>
@@ -265,33 +259,25 @@
                             <div class="mb-3">
                                 <h5>Trending Jobs</h5>
                             </div>
-                            <!-- Blog -->
+                            @foreach($trendingJobs as $trendingJob)
                             <article class="mb-5">
                                 <div class="media align-items-center text-inherit">
                                     <div class="avatar avatar-lg mr-3">
-                                        <img class="avatar-img" src="/images/banner/service1.jpg" alt="">
+                                        <a href="{{ route('job.show', $trendingJob->id) }}">
+                                            <img class="avatar-img"
+                                                src="{{ asset($trendingJob->thumbnail) ?? '/images/banner/service1.jpg' }}"
+                                                alt="">
+                                        </a>
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="h6 mb-0"><a class="text-inherit" href="#">Portfolio Freelancer
-                                                Website - NPR 5000 - 20,000</a></h4>
+                                        <h4 class="h6 mb-0"><a class="text-inherit"
+                                                href="{{ route('job.show', $trendingJob->id) }}">{{ $trendingJob->title }} -
+                                                <span class="text-muted">{{ $trendingJob->employer->name }} -
+                                                    {{ $trendingJob->delivery_time }}</span></a></h4>
                                     </div>
                                 </div>
                             </article>
-                            <!-- End Blog -->
-
-                            <!-- Blog -->
-                            <article class="mb-5">
-                                <div class="media align-items-center text-inherit">
-                                    <div class="avatar avatar-lg mr-3">
-                                        <img class="avatar-img" src="/images/banner/service3.jpg" alt="">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="h6 mb-0"><a class="text-inherit" href="#">Business Consultant -
-                                                Within 7 Days</a></h4>
-                                    </div>
-                                </div>
-                            </article>
-                            <!-- End Blog -->
+                            @endforeach
                         </div>
                         <div class="mb-3">
                             <a class="btn btn-sm btn-block btn-primary transition-3d-hover"
@@ -306,7 +292,8 @@
                             <ul class="list-unstyled font-size-1">
                                 <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i>
                                         Support</a></li>
-                                <li><a class="text-body" href="#"><i class="fas fa-angle-right mr-1"></i> Privacy
+                                <li><a class="text-body" href="{{ url('policy') }}"><i
+                                            class="fas fa-angle-right mr-1"></i> Privacy
                                         Policy</a></li>
                             </ul>
                         </div>
@@ -321,7 +308,6 @@
             </div>
         </div>
 
-    </div>
     </div>
     <!-- end main content -->
 </main>

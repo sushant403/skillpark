@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('title','Services in ' . $banner . ' - Skillpark Inc.')
+@section('extra-css') @include('layouts.components.spinner') @endsection
 @section('content')
 
 <link rel="stylesheet" href="/css/style.css">
@@ -11,16 +12,16 @@
             <div class="row">
                <div class="col-12">
                   <div class="sorting-div d-flex align-items-center justify-content-between">
-                     <p class="mb-2">{{ $servicecount }} Services available</p>
+                     <h3 class="pb-2">Jobs In {{ $banner }}</h3>
                   </div>
-                  <h3>Services In {{ $banner }}</h3>
+                  <p class="mb-3">{{ $servicecount }} Jobs available</p>
                </div>
             </div>
             <div class="row">
                @foreach($jobs as $job)
-               <div class="col-md-3">
+               <div class="col-lg-3 col-md-4 col-sm-6">
                   <a href="{{ route('job.show', $job->id) }}">
-                     <img class="img-fluid" src="/images/banner/service.jpg" />
+                     <img class="img-fluid" src="{{ asset($job->thumbnail) ?? '/images/banner/service.svg' }}" />
                   </a>
                   <div class="inner-slider">
                      <div class="inner-wrapper">
@@ -62,7 +63,6 @@
          </div>
       </div>
       @include('layouts.divisions.recentjobs')
-   </div>
    </div>
 </section>
 

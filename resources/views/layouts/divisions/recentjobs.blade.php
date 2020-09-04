@@ -19,7 +19,8 @@
             <!-- Article -->
             <div class="card border h-100">
                 <div class="card-img-top position-relative">
-                    <img class="card-img-top" src="/images/svg/components/graphics-1.svg" alt="">
+                    <img class="card-img-top" src={{ asset($job->thumbnail) ?? '/images/svg/components/graphics-1.svg' }}
+                        alt="">
 
                     <div class="position-absolute top-0 left-0 mt-3 ml-3">
                         <small class="btn btn-xs btn-success btn-pill text-uppercase shadow-soft mb-3">Verified</small>

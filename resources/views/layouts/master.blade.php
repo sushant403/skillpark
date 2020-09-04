@@ -30,7 +30,7 @@
 
     <!-- CSS Skillpark Template -->
     <link rel="stylesheet" href="/css/theme.css">
-
+    @yield('extra-css')
 </head>
 
 <body>
@@ -118,9 +118,8 @@
                                   "maxWidth": "700px"
                                 }
                               }'>
-                                    <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle pr-2"
-                                        href="javascript:;" aria-haspopup="true"
-                                        aria-expanded="false">{{ __('nepali.Solutions') }}</a>
+                                    <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                        aria-haspopup="true" aria-expanded="false">{{ __('nepali.Solutions') }}</a>
 
                                     <!-- About - Mega Menu -->
                                     <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">

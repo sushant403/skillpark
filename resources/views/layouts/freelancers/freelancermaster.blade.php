@@ -44,7 +44,7 @@
 <body>
   <!-- ========== HEADER ========== -->
   <header id="header" style="font-size: 0.85rem"
-    class="{{ Request::is('*.jobs.*') ? 'header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide' : 'header left-aligned-navbar' }}"
+    class="{{ Request::is(['*.jobs.*', 'ab*']) ? 'header left-aligned-navbar header-box-shadow-on-scroll header-abs-top header-show-hide' : 'header left-aligned-navbar' }}"
     data-hs-header-options='{
    "fixMoment": 700,
    "fixEffect": "slide"
@@ -139,7 +139,7 @@
                       </a>
                       <a class="dropdown-item px-0" href="{{ route("proposals.index") }}">
                         <span class="dropdown-item-icon">
-                          <i class="fa fa-project-diagram"></i>
+                          <i class="fas fa-th-large"></i>
                         </span>
                         My Biddings
                       </a>
@@ -204,12 +204,12 @@
                 <!-- Catgories -->
 
                 <li class="navbar-nav-item font-weight-bolder">
-                  <a href="{{ route('proposals.index') }}" class="nav-link px-0 px-md-3">
+                  <a href="{{ route('freelancer') }}" class="nav-link px-0 px-md-3">
                     Find Jobs</a>
                 </li>
 
                 <li class="navbar-nav-item font-weight-bolder">
-                  <a href="{{ route('proposals.index') }}" class="nav-link px-0 px-md-3">
+                  <a href="{{ url('coming-soon') }}" class="nav-link px-0 px-md-3">
                     Messages</a>
                 </li>
 
@@ -328,7 +328,7 @@
   </header>
   <!-- ========== END HEADER ========== -->
 
-  <div class="{{ Request::is('*.jobs.*') ? 'space-1 pt-5' : '' }}"></div>
+  <div class="{{ Request::is(['*.jobs.*', 'ab*']) ? 'space-1 pt-5' : '' }}"></div>
 
   @include('layouts.components.message')
   @yield('content')

@@ -34,7 +34,7 @@ class HomeController extends Controller
     {
         $jobs = Job::with('categories')
             ->searchResults()
-            ->paginate(8);
+            ->paginate(12);
 
         $banner = 'Search results';
         $servicecount = $jobs->total();

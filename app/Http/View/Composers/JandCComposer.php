@@ -29,5 +29,8 @@ class JandCComposer
         $view->with('recentJobs', Job::orderBy('id', 'desc')
             ->take(4)
             ->get());
+
+        $view->with('trendingJobs', Job::all()->random(50)
+            ->take(2));
     }
 }

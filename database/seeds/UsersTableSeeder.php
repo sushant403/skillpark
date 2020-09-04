@@ -1,6 +1,7 @@
 <?php
 
 use App\User;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -82,5 +83,22 @@ class UsersTableSeeder extends Seeder
             'updated_at' => now()
         ]);
         $user->assignRole('client');
+
+
+        //Ninty-Five (Random Fake Users)
+        $faker = Factory::create();
+
+        foreach (range(6, 101) as $id) {
+            $user = new User;
+            $user->name = $faker->name($gender = 'male' | 'female');
+            $user->email = $faker->unique()->email;
+            $user->email_verified_at = now();
+            $user->password = bcrypt('skillpark');
+            $user->about = $faker->paragraph($nbSentences = 5, $variableNbSentences = true);
+            $user->city_id = rand(1, 259);
+            $user->avatar = $faker->imageUrl($width = 540, $height = 480, 'cats');
+            $user->tagline = $faker->sentence($nbWords = 4, $variableNbWords = true);
+            $user->save();
+        }
     }
 }

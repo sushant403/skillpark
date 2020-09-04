@@ -16,7 +16,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = Job::paginate(7);
+        $jobs = Job::paginate(10);
 
         $banner = 'Jobs';
 

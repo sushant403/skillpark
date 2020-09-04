@@ -13,7 +13,6 @@ class CitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        City::truncate();
 
         DB::table('cities')->insert([
             [

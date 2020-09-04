@@ -57,7 +57,7 @@
                         <ul class="list-unstyled">
 
                             @foreach($jobs->sortByDesc('created_at') as $key => $job)
-                            <li class="card card-bordered mb-3">
+                            <li class="card card-bordered border-darken-1 mb-3">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-6 col-md">

@@ -26,7 +26,12 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer(
 
-            ['index', 'services.service-list', 'layouts.master', 'freelancers.home'],
+            [
+                'index',
+                'services.service-list',
+                'layouts.master',
+                'freelancers.home',
+            ],
 
             'App\Http\View\Composers\JandCComposer'
         );

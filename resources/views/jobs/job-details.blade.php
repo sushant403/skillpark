@@ -10,8 +10,7 @@
         <div class="row d-flex align-items-center justify-content-between">
             <div class="col-lg-9 left">
                 <ul>
-                    <li class="nav-overview selected"><a
-                            href="#overview">Overview</a></li>
+                    <li class="nav-overview selected"><a href="#overview">Overview</a></li>
                     <li class="nav-overview"><a href="#description">Description</a></li>
                     <li class="nav-aboutSeller"><a href="#aboutSeller">About The Seller</a></li>
                     <li class="nav-recommendations"><a href="#recommendations">Recommendations</a></li>
@@ -22,10 +21,13 @@
                     <li>
                         <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
                             <button>
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                Save
+                                <i class="fas fa-th-large mr-2" aria-hidden="true"></i>
+                                Proposal Biddings
                             </button>
                         </a>
+                    </li>
+                    <li>
+                        <span class="collect-count font-weight-bolder">{{ $job->proposals->count() }}</span>
                     </li>
                     <li class="ml-2">
                         <a href="javascript:;">
@@ -47,9 +49,8 @@
                 <h2>{{ $job->title }}</h2>
                 <div class="slider mt-2">
                     <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
-                        <a href="javascript:;">
-                            <img class="img-fluid" width="450" src="/images/svg/discussion-scene.svg" />
-                        </a>
+                        <img class="img-fluid" width="500"
+                            src="{{ asset($job->thumbnail) ?? '/images/svg/discussion-scene.svg'}}" />
                     </div>
                 </div>
                 <div id="description" class="description">
@@ -59,20 +60,22 @@
                     </p>
                 </div>
                 @if($job->attachments)
-                <ul class="metadata">
+                <ul class="border-bottom py-4 mt-3 mb-7">
                     <li class="metadata-attribute">
-                        <h4>Attachments</h4>
-                        <ul>
+                        <u><small class="text-cap font-weight-bold">Associated File(s)</small></u>
+                        <div class="row mx-n1 d-flex attachment-container">
+                            @if($job->attachments)
                             @foreach($job->attachments as $key => $media)
                             <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}" target="_blank">
                                 <span>Attachment</span></a>
                             </a>
                             @endforeach
-                        </ul>
+                            @endif
+                        </div>
                     </li>
                 </ul>
                 @endif
-                <h3 id="aboutSeller">About The Seller</h3>
+                <h3 id="aboutSeller">About The Client</h3>
                 <div class="profile-card">
                     <div class="user-profile-image d-flex">
                         <label class="profile-pict" for="profile_image">
@@ -101,20 +104,8 @@
                             <li>Member since<strong>{{ $job->employer->created_at ?? 'Nepal' }}</strong></li>
                         </ul>
                         <article class="seller-desc">
-                            <div class="inner">- Wireframes for mobile apps &amp; Website <br />
-                                - Flowcharts for the whole system <br />
-                                - Mobile app prototypes, interactive UI designs <br />
-                                - UI for social media postings <br />
-                                - Design an app to achieve a business objective (web or mobile). <br />
-                                - Design or re-design a website to grow revenue, close more sales and generate more
-                                leads.
-                                <br />
-                                - Optimize their existing website with a conversion rate audit and strategy. <br />
-                                - Design a high converting landing page. <br />
-                                <span>Excellent communication and availability.
-                                    Reach me any time during our project on Whatsapp, Skype, Text or any other
-                                    messenger.</span>
-                            </div>
+                            <h4 class="font-weight-bolder mb-3 mt-2">{{ $job->employer->tagline }}</h4>
+                            <div class="inner">{{ $job->employer->about }}</div>
                         </article>
                     </div>
                 </div>
@@ -196,6 +187,7 @@
                                         File
                                     </li>
                                     <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Verified
+                                        Client
                                     </li>
                                     <li class="feature included"><i class="fa fa-check"
                                             aria-hidden="true"></i>Interactive
@@ -208,7 +200,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="contact-seller-wrapper">
+                    <div class="contact-seller-wrapper mt-1">
                         <a class="fit-button" href="#">Contact Seller</a>
                     </div>
                 </div>

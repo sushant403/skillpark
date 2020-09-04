@@ -37,7 +37,7 @@ class HomeController extends Controller
         if (!auth()->check()) {
             return view('index', compact(['searchCategories', 'searchByCategory']));
         } else {
-            $user = Auth::user();
+            $user = User::find(Auth::user()->id);
 
             if ($user->hasAnyRole(['freelancer', 'client'])) {
 
@@ -53,26 +53,22 @@ class HomeController extends Controller
 
     public function freelancer()
     {
-        $cities = City::all();
-        $topics = Topic::all();
-        $user = User::find(Auth::user()->id);
+        $pagination = 10;
+        $jobs = Job::whereNull('candidate_id')->get();
+        $countJobs = count($jobs);
 
-        if ($user->hasRole('client')) {
-            $jobs = Job::with('proposals')->where('employer_id', auth()->id())->get();
+        if (request()->sort == 'oldest') {
+            $jobs = Job::with('categories')->orderBy('created_at')->simplePaginate($pagination);
+        } elseif (request()->sort == 'newest') {
+            $jobs = Job::with('categories')->orderBy('created_at', 'desc')->simplePaginate($pagination);
         } else {
-            $jobs = Job::whereNull('candidate_id')->get();
+            $jobs = Job::with('categories')->simplePaginate($pagination);
         }
 
-        $jobs = Job::with('categories')
-            ->orderByDesc('created_at')
-            ->simplePaginate(10);
-
-        return view('freelancers.home', compact(['cities', 'topics', 'jobs']));
-    }
-
-    public function freelancerSearch()
-    {
-        return redirect()->route('freelancer');
+        return view('freelancers.home')->with([
+            'jobs' => $jobs,
+            'countJobs' => $countJobs
+        ]);
     }
 
     //=======client=========
@@ -83,10 +79,5 @@ class HomeController extends Controller
         $categories = Category::all();
         $topics = Topic::all();
         return view('clients.home', compact(['cities', 'categories', 'topics']));
-    }
-
-    public function clientSearch()
-    {
-        return redirect()->route('client');
     }
 }

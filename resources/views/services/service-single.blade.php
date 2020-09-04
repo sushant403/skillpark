@@ -45,8 +45,8 @@
                 <div class="slider mt-2">
                     <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
                         <a href="javascript:;">
-                            <img class="img-fluid" width="450"
-                                src="/images/svg/discussion-scene.svg" />
+                            <img class="img-fluid" width="640"
+                                src="{{ asset($job->thumbnail) ?? '/images/svg/discussion-scene.svg' }}" />
                         </a>
                     </div>
                 </div>

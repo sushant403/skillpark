@@ -1,5 +1,22 @@
+- ### Commit 81th:
+     ### fakeData Seeders rendered & Improved Dynamic Environment :
+
+    1. `Codes` cleaned and optimized. **Models** Changes.
+
+    2. **Controller** modifications for dynamic data display.
+
+    3. Posting _Project_ and Bidding pages optimizations.
+
+    4. Composer `Stripe`_(Payment Gateway Service)_ package added.
+
+    5. Environment created for dynamic URLs and randomizations.
+
+    6. Many _Frontend_ Responsive fixes for _mobile_ devices.
+
+<hr>
+
 - ### Commit 77th:
-     ### Search Function and Pagination `Model` Changes :
+     ### Views and Database `Model` Modifications :
 
     1. `{View/Composer}` file added for universal function declaration.
 
