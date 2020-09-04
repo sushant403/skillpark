@@ -1,12 +1,29 @@
-#planning Phase III:
+#Planning Phase III:
 ---
 
-#### (_to be discussed soon..._)
+1. Migrate to Fresh _Laravel Application_ with clean `composer`.
+
+2. Package Install:
+    - Pusher (Real Time Chat)
+    - Stripe (Payment Gateway)
+
+3. Implement **Payment Checkout** Environment.
+
+4. Build Chat Interface with `vue.js` , `websocket` & `spa` _(single page application)_.
+
+5. Increase the `PWA` _(Progressive Web App)_ and **Dynamicity** of the webpages.
+
+6. Establish more _diverse_ **Polymorphic** Database and **Eloquent** `Models`.
+
+7. _Frontend_ Modifcations and following __Pages__ addition:
+    - Payment/Transaction **Success** Page
+    - Notification Page
+    - Few _Static_ Pages!
 
 <br>
 <hr>
 
-#Planning Phase II: (Completed)
+#Planning Phase II: _(Completed)_
 ---
 
 1. Version-Two 
@@ -31,7 +48,7 @@
 <br>
 <hr>
 
-#Planning Phase I : (Completed)
+#Planning Phase I : _(Completed)_
 ---
     FrontEnd Part (<HTML>, CSS{}, JavaScript())
 
