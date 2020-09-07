@@ -1,3 +1,19 @@
+- ### Commit 84th:
+     ### Codes Migrated to Fresh Laravel App [L/F - V.7.24]. Unnecessary Clutters Removed :
+
+    1. Following Packages are removed from the application:
+        - Spatie/cookie-consent
+        - Maileclipse
+        - Others _(refer composer.json)_
+    
+    2. JavaScript Clutters Removed.
+    
+    3. Environment Initialized for **Payment Gateway** and **Websocket Messaging**.
+    
+    4. Few Frontend Fixes with **Controllers** and **Routes**.
+
+<hr>
+
 - ### Commit 81th:
      ### fakeData Seeders rendered & Improved Dynamic Environment :
 
