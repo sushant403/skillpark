@@ -20,11 +20,11 @@ class JandCComposer
             ->whereHas('jobs')
             ->orderBy('jobs_count', 'desc')
             ->take(7)
-            ->pluck('name', 'id'));
+            ->pluck('name', 'id', 'slug'));
 
         $view->with('allCategories',  Category::orderBy('created_at', 'desc')
             ->take(9)
-            ->pluck('name', 'id'));
+            ->pluck('name', 'id', 'slug'));
 
         $view->with('recentJobs', Job::orderBy('id', 'desc')
             ->take(4)

@@ -98,6 +98,8 @@ class UsersTableSeeder extends Seeder
             $user->city_id = rand(1, 259);
             $user->avatar = $faker->imageUrl($width = 540, $height = 480, 'cats');
             $user->tagline = $faker->sentence($nbWords = 4, $variableNbWords = true);
+            $user->created_at = $faker->unique()->dateTimeBetween($startDate = '-3 years', $endDate = '-1 years');
+            $user->updated_at = $faker->unique()->dateTimeBetween($startDate = '-3 years', $endDate = '-1 years');
             $user->save();
         }
     }

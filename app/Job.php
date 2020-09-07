@@ -61,7 +61,7 @@ class Job extends Model implements HasMedia
 
     public function topics()
     {
-        return $this->belongsToMany(Topic::class);
+        return $this->belongsTo(Topic::class);
     }
 
     public function scopeSearchResults($query)

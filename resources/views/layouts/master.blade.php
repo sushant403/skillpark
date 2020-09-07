@@ -38,7 +38,7 @@
     <header id="header"
         class="{{ Request::is('/') ? 'header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide' : 'header' }}"
         data-hs-header-options='{
-   "fixMoment": 500,
+   "fixMoment": 0,
    "fixEffect": "slide"
  }'>
         <div class="header-section">
@@ -427,7 +427,9 @@
                 </nav>
                 <!-- End Nav -->
             </div>
+            {{-- @if(!Request::is('/')) --}}
             @include('layouts.divisions.categorybar')
+            {{-- @endif --}}
         </div>
     </header>
     <!-- ========== END HEADER ========== -->

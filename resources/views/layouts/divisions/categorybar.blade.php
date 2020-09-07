@@ -4,7 +4,7 @@
         <ul class="nav nav-fill border-bottom mx-auto">
             @foreach($allCategories as $id=>$allCategory)
             <li class="nav-item">
-                <a class="{{ Request::is( route('categories.show', $id) ) ? 'nav-link-active' : 'nav-link' }}"
+                <a class="nav-link"
                     href="{{ route('categories.show', $id) }}">{{ $allCategory }}</a>@if(!$loop->last)@endif
             </li>
             @endforeach
