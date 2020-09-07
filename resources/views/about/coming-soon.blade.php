@@ -181,9 +181,9 @@
   <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
 
   <!-- JS Skillpark -->
-  <script src="/js/hs.core.js"></script>
-  <script src="/js/hs.validation.js"></script>
-  <script src="/js/hs.countdown.js"></script>
+  <script src="/js/core.js"></script>
+  <script src="/js/validation.js"></script>
+  <script src="/js/countdown.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>

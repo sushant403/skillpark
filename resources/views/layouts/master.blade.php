@@ -657,9 +657,9 @@
     <script src="/vendor/slick-carousel/slick/slick.js"></script>
 
     <!-- JS Skillpark -->
-    <script src="/js/hs.core.js"></script>
-    <script src="/js/hs.validation.js"></script>
-    <script src="/js/hs.slick-carousel.js"></script>
+    <script src="/js/core.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/slick-carousel.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>

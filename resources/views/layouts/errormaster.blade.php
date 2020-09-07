@@ -231,7 +231,7 @@
     <script src="/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
 
     <!-- JS Skillpark -->
-    <script src="/js/hs.core.js"></script>
+    <script src="/js/core.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>

@@ -297,10 +297,10 @@
     <script src="/vendor/hs-step-form/dist/hs-step-form.min.js"></script>
 
     <!-- JS Skillpark -->
-    <script src="/js/hs.core.js"></script>
-    <script src="/js/hs.validation.js"></script>
-    <script src="/js/hs.mask.js"></script>
-    <script src="/js/hs.select2.js"></script>
+    <script src="/js/core.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/mask.js"></script>
+    <script src="/js/select2.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>

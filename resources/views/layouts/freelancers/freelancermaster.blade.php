@@ -506,9 +506,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
   <!-- JS Skillpark -->
-  <script src="/js/hs.core.js"></script>
-  <script src="/js/hs.validation.js"></script>
-  <script src="/js/hs.select2.js"></script>
+  <script src="/js/core.js"></script>
+  <script src="/js/validation.js"></script>
+  <script src="/js/select2.js"></script>
   <script src="/js/snackbar.js"></script>
 
   <!-- JS Plugins Init. -->

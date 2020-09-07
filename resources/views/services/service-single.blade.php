@@ -3,13 +3,13 @@
 @section('content')
 
 <link rel="stylesheet" href="/css/style.css">
-<div class="third-menu ">
+<div class="third-menu space-top-n1">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-between">
             <div class="col-lg-9 left">
                 <ul>
                     <li class="nav-overview selected"><a href="#overview">Overview</a></li>
-                    <li class="nav-description seleced"><a href="#description">Description</a></li>
+                    <li class="nav-overview"><a href="#description">Description</a></li>
                     <li class="nav-aboutSeller"><a href="#aboutSeller">About The Seller</a></li>
                     <li class="nav-recommendations"><a href="#recommendations">Recommendations</a></li>
                 </ul>
@@ -17,12 +17,15 @@
             <div class="col-lg-3 right">
                 <ul class="d-flex align-items-center justify-content-end">
                     <li>
-                        <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
+                        <a data-toggle="modal" data-target="#loginModal">
                             <button>
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                Save
+                                <i class="fas fa-th-large mr-2" aria-hidden="true"></i>
+                                Proposal Biddings
                             </button>
                         </a>
+                    </li>
+                    <li>
+                        <span class="collect-count font-weight-bolder">{{ $job->proposals->count() }}</span>
                     </li>
                     <li class="ml-2">
                         <a href="javascript:;">
@@ -40,44 +43,37 @@
 <div class="main-page py-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 left">
+            <div id="overview" class="col-lg-8 left">
                 <h2>{{ $job->title }}</h2>
                 <div class="slider mt-2">
                     <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
-                        <a href="javascript:;">
-                            <img class="img-fluid" width="640"
-                                src="{{ asset($job->thumbnail) ?? '/images/svg/discussion-scene.svg' }}" />
-                        </a>
+                        <img class="img-fluid" width="500"
+                            src="{{ asset($job->thumbnail) ?? '/images/svg/discussion-scene.svg'}}" />
                     </div>
                 </div>
                 <div id="description" class="description">
-                    <h3>About This Service</h3>
+                    <h3>About This Job</h3>
                     <p>{{ $job->title }}</p>
                     <p>{{ $job->description }}
                     </p>
-                    <p>It'll help you to demonstrate your idea to your developers or Investors. Why don't we do
-                        something
-                        together?
-                    </p>
                 </div>
-                <ul class="metadata">
+                @if($job->attachments)
+                <ul class="border-bottom py-4 mt-3 mb-7">
                     <li class="metadata-attribute">
-                        <p>Tagged Topics</p>
-                        <ul>
-                            <li>Websites</li>
-                            <li>Mobile Apps</li>
-                        </ul>
-                    </li>
-                    <li class="metadata-attribute">
-                        <p>Image File Format</p>
-                        <ul>
-                            <li>JPG</li>
-                            <li>PNG</li>
-                            <li>PSD</li>
-                        </ul>
+                        <u><small class="text-cap font-weight-bold">Associated File(s)</small></u>
+                        <div class="row mx-n1 d-flex attachment-container">
+                            @if($job->attachments)
+                            @foreach($job->attachments as $key => $media)
+                            <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}" target="_blank">
+                                <span>Attachment</span></a>
+                            </a>
+                            @endforeach
+                            @endif
+                        </div>
                     </li>
                 </ul>
-                <h3 id="aboutSeller">About The Seller</h3>
+                @endif
+                <h3 id="aboutSeller">About The Client</h3>
                 <div class="profile-card">
                     <div class="user-profile-image d-flex">
                         <label class="profile-pict" for="profile_image">
@@ -106,20 +102,8 @@
                             <li>Member since<strong>{{ $job->employer->created_at ?? 'Nepal' }}</strong></li>
                         </ul>
                         <article class="seller-desc">
-                            <div class="inner">- Wireframes for mobile apps &amp; Website <br />
-                                - Flowcharts for the whole system <br />
-                                - Mobile app prototypes, interactive UI designs <br />
-                                - UI for social media postings <br />
-                                - Design an app to achieve a business objective (web or mobile). <br />
-                                - Design or re-design a website to grow revenue, close more sales and generate more
-                                leads.
-                                <br />
-                                - Optimize their existing website with a conversion rate audit and strategy. <br />
-                                - Design a high converting landing page. <br />
-                                <span>Excellent communication and availability.
-                                    Reach me any time during our project on Whatsapp, Skype, Text or any other
-                                    messenger.</span>
-                            </div>
+                            <h4 class="font-weight-bolder mb-3 mt-2">{{ $job->employer->tagline }}</h4>
+                            <div class="inner">{{ $job->employer->about }}</div>
                         </article>
                     </div>
                 </div>
@@ -186,23 +170,22 @@
                     <div class="tab-content">
                         <div id="basic" class="tab-pane fade show active">
                             <div class="header">
-                                <h3><b class="title">Service</b><span class="price text-muted">NPR
+                                <h3><b class="title">Send Proposal</b><span class="price text-muted">NPR
                                         {{ $job->budget }}</span></h3>
                                 <p>{{ $job->title }}. {{ Str::limit($job->description, 60) }}
                                 </p>
                             </div>
                             <article>
                                 <div class="d-flex">
-                                    <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i>Delivery:
+                                    <b class="delivery"><i class="fa fa-clock-o" aria-hidden="true"></i>Delivery Time:
                                         {{ $job->delivery_time }}</b>
                                 </div>
                                 <ul class="features">
                                     <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Source
                                         File
                                     </li>
-                                    <li class="feature included"><i class="fa fa-check"
-                                            aria-hidden="true"></i>Commercial
-                                        Use
+                                    <li class="feature included"><i class="fa fa-check" aria-hidden="true"></i>Verified
+                                        Client
                                     </li>
                                     <li class="feature included"><i class="fa fa-check"
                                             aria-hidden="true"></i>Interactive
@@ -210,13 +193,13 @@
                                     </li>
                                 </ul>
                             </article>
-                            <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
+                            <a data-toggle="modal" data-target="#loginModal">
                                 <button>Continue</button>
                             </a>
                         </div>
                     </div>
-                    <div class="contact-seller-wrapper">
-                        <a class="fit-button" href="#">Contact Seller</a>
+                    <div class="contact-seller-wrapper mt-1">
+                        <a class="fit-button" data-toggle="modal" data-target="#loginModal">Contact Seller</a>
                     </div>
                 </div>
             </div>
@@ -224,9 +207,7 @@
     </div>
     <div class="container mt-5">
         <div id="recommendations" class="view_slider recommended">
-            <h3>People Who Viewed This Service Also Viewed</h3>
-
-
+            <h3>People Who Viewed This Job Also Viewed</h3>
         </div>
     </div>
 </div>

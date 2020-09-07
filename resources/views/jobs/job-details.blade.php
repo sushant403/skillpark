@@ -19,7 +19,7 @@
             <div class="col-lg-3 right">
                 <ul class="d-flex align-items-center justify-content-end">
                     <li>
-                        <a href="javascript:;" data-toggle="modal" data-target="#loginModal">
+                        <a href="javascript:;">
                             <button>
                                 <i class="fas fa-th-large mr-2" aria-hidden="true"></i>
                                 Proposal Biddings
@@ -210,8 +210,6 @@
     <div class="container mt-5">
         <div id="recommendations" class="view_slider recommended">
             <h3>People Who Viewed This Job Also Viewed</h3>
-
-
         </div>
     </div>
 </div>

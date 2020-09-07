@@ -422,10 +422,10 @@
     <script src="/vendor/select2/dist/js/select2.full.min.js"></script>
 
     <!-- JS Front -->
-    <script src="/js/hs.core.js"></script>
-    <script src="/js/hs.validation.js"></script>
-    <script src="/js/hs.mask.js"></script>
-    <script src="/js/hs.select2.js"></script>
+    <script src="/js/core.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/mask.js"></script>
+    <script src="/js/select2.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>

@@ -25,7 +25,7 @@ class JobsSeeder extends Seeder
             $job->delivery_time = $faker->randomElement(['48 Hours', '7 Days', 'Upon Discussion']);
             $job->topic = rand(1, 12);
             $job->budget = $faker->randomElement(['5,000 - 20,000', '20,000 - 50,000', '50,000 - 1,00,000', '1 Lakh+']);
-            $job->thumbnail = $faker->imageUrl($width = 640, $height = 480, 'business', true, 'skillpark');
+            $job->thumbnail = $faker->imageUrl($width = 720, $height = 370, 'business', true, 'skillpark');
             $job->employer_id = rand(5, 55);
             $job->created_at = $faker->unique()->dateTimeBetween($startDate = '-1 years', $endDate = 'now');
             $job->updated_at = $faker->unique()->dateTimeBetween($startDate = '-1 years', $endDate = 'now');

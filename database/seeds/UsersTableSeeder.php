@@ -94,7 +94,7 @@ class UsersTableSeeder extends Seeder
             $user->email = $faker->unique()->email;
             $user->email_verified_at = now();
             $user->password = bcrypt('skillpark');
-            $user->about = $faker->paragraph($nbSentences = 5, $variableNbSentences = true);
+            $user->about = $faker->paragraph($nbSentences = 7, $variableNbSentences = true);
             $user->city_id = rand(1, 259);
             $user->avatar = $faker->imageUrl($width = 540, $height = 480, 'cats');
             $user->tagline = $faker->sentence($nbWords = 4, $variableNbWords = true);
