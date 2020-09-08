@@ -97,7 +97,7 @@
                         </div>
                         <!-- End Platform -->
 
-                        <!-- Budget Custom Select -->
+                        {{-- <!-- Budget Custom Select -->
                         <div class="js-form-message mb-4 mb-md-6">
                             <label class="input-label">Your Estimated Budget?</label>
                             <select class="form-control custom-select" name="budget"
@@ -109,7 +109,19 @@
                                 <option value="1 Lakh +">Rs. 1,00,000+</option>
                             </select>
                         </div>
-                        <!-- End Budget Custom Select -->
+                        <!-- End Budget Custom Select --> --}}
+
+                        <!-- Input -->
+                        <div class="js-form-message mb-4 mb-md-6">
+                            <label class="input-label">Your Estimated Budget? (NPR)<i
+                                    class="far fa-question-circle text-body ml-1" data-toggle="tooltip"
+                                    data-placement="right" title=""
+                                    data-original-title="1% Service Fee will be deducted."></i></label>
+                            <input type="number" class="form-control" name="budget" min="1000" max="100000"
+                                placeholder="Enter your Budget" required
+                                data-msg="Please enter your estimated Budget. (Between 1000 and One-Lakh NPR)">
+                        </div>
+                        <!-- End Input -->
 
                         <!-- Attachment Custom Select -->
                         <div class="form-group {{ $errors->has('attachments') ? 'has-error' : '' }}">

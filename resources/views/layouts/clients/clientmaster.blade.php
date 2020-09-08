@@ -148,7 +148,7 @@
                                                 </span>
                                                 My Projects
                                             </a>
-                                            <a class="dropdown-item px-0" href="messages">
+                                            <a class="dropdown-item px-0" href="/messages">
                                                 <span class="dropdown-item-icon">
                                                     <i class="fas fa-envelope"></i>
                                                 </span>
@@ -209,8 +209,9 @@
                             <ul class="navbar-nav">
                                 <!-- Catgories -->
                                 <li class="hs-has-sub-menu navbar-nav-item">
-                                    <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link font-weight-bolder" href="javascript:;"
-                                        aria-haspopup="true" aria-expanded="false" aria-labelledby="coursesSubMenu">
+                                    <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link font-weight-bolder"
+                                        href="javascript:;" aria-haspopup="true" aria-expanded="false"
+                                        aria-labelledby="coursesSubMenu">
                                         Categories
                                     </a>
 
@@ -283,7 +284,8 @@
                                 </li>
 
                                 <li class="navbar-nav-item">
-                                    <a href="{{ route('myprojects') }}" class="nav-link font-weight-bolder"> Messages</a>
+                                    <a href="{{ url('messages') }}" class="nav-link font-weight-bolder">
+                                        Messages</a>
                                 </li>
 
                                 <!-- Search Form -->
@@ -320,7 +322,7 @@
     <!-- ========== END HEADER ========== -->
 
     <div class="space-bottom-1 pt-6"></div>
-    
+
     @include('layouts.components.message')
     @yield('content')
 
@@ -503,6 +505,7 @@
     <script src="/js/validation.js"></script>
     <script src="/js/slick-carousel.js"></script>
     <script src="/js/select2.js"></script>
+    <script src="/js/snackbar.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
@@ -550,6 +553,17 @@
             maximumSelectionLength: 3,
             });
           });
+
+            // Snackbar for "place a bid" button
+            $('#snackbar-place-bid').click(function() { 
+                Snackbar.show({
+                text: 'Added to Saved Jobs!',
+                pos: 'bottom-right',
+                showAction: true,
+                actionText: 'DISMISS',
+                actionTextColor: '#1dc8cc',
+                }); 
+            }); 
         });
     </script>
     @yield('script')

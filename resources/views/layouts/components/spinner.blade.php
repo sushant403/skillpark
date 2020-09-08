@@ -1,4 +1,4 @@
-    <!-- Page loading styles-->
+    {{-- <!-- Page loading styles-->
     <style>
         .cs-page-loading {
           position: fixed;
@@ -75,7 +75,7 @@
             preloader.classList.remove('active');
             setTimeout(function () {
               preloader.remove();
-            }, 2000);
+            }, 1000);
           };
         })();
         
@@ -86,4 +86,4 @@
         <div class="cs-page-loading-inner">
           <div class="cs-page-spinner"></div><span>Loading...</span>
         </div>
-      </div>
+      </div> --}}

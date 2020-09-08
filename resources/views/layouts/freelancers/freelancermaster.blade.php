@@ -143,7 +143,7 @@
                         </span>
                         My Biddings
                       </a>
-                      <a class="dropdown-item px-0" href="messages">
+                      <a class="dropdown-item px-0" href="/messages">
                         <span class="dropdown-item-icon">
                           <i class="fas fa-envelope"></i>
                         </span>
@@ -209,7 +209,7 @@
                 </li>
 
                 <li class="navbar-nav-item font-weight-bolder">
-                  <a href="{{ url('coming-soon') }}" class="nav-link px-0 px-md-3">
+                  <a href="{{ url('messages') }}" class="nav-link px-0 px-md-3">
                     Messages</a>
                 </li>
 

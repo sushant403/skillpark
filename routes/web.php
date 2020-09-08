@@ -61,7 +61,6 @@ Route::middleware(['verified', 'auth'])->group(function () {
     //freelancer only
     Route::group(['middleware' => ['role:freelancer'], 'prefix' => 'ab'], function () {
         Route::get('/home', 'HomeController@freelancer')->name('freelancer'); //user feeds
-        Route::post('/home', 'HomeController@freelancerSearch')->name('freelancer'); //user feeds
 
         Route::get('/jobs/{id}', 'JobsController@details')->name('jobs.details');
 
@@ -75,7 +74,6 @@ Route::middleware(['verified', 'auth'])->group(function () {
     //client only
     Route::group(['middleware' => ['role:client'], 'prefix' => 'cd'], function () {
         Route::get('/home', 'HomeController@client')->name('client'); //client feeds
-        Route::post('/home', 'HomeController@clientSearch')->name('client'); //client feeds
 
         Route::get('/my-jobs', 'JobsController@index')->name('myprojects');
 
@@ -87,7 +85,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
     });
 
     //user-accounts routes
-    Route::get('/dashboard', 'ProfileController@freelancerDashboard')->name('dashboard');
+    Route::get('/dashboard', 'ProfileController@dashboard')->name('dashboard');
     Route::get('/settings', 'ProfileController@editProfile');
     Route::post('/settings', 'ProfileController@editProfile')->name('editProfile');
     Route::get('/auth', 'ProfileController@auth');
