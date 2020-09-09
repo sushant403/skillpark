@@ -58,11 +58,9 @@ class HomeController extends Controller
         $countJobs = count($jobs);
 
         if (request()->sort == 'oldest') {
-            $jobs = Job::with('categories')->orderBy('created_at')->simplePaginate($pagination);
-        } elseif (request()->sort == 'newest') {
-            $jobs = Job::with('categories')->orderBy('created_at', 'desc')->simplePaginate($pagination);
+            $jobs = Job::whereNull('candidate_id')->with('categories')->orderBy('created_at')->simplePaginate($pagination);
         } else {
-            $jobs = Job::with('categories')->simplePaginate($pagination);
+            $jobs = Job::whereNull('candidate_id')->with('categories')->orderBy('created_at', 'desc')->simplePaginate($pagination);
         }
 
         return view('freelancers.home')->with([

@@ -47,8 +47,11 @@
                 <h2>{{ $job->title }}</h2>
                 <div class="slider mt-2">
                     <div id="aniimated-thumbnials" class="slider-for slick-slider-single">
-                        <img class="img-fluid" width="500"
-                            src="{{ asset($job->thumbnail) ?? '/images/svg/discussion-scene.svg'}}" />
+                        @if($job->thumbnail)
+                        <img class="img-fluid" width="500" src="{{ asset($job->thumbnail)}}">
+                        @else
+                        <img class="img-fluid" width="500" src="/images/svg/discussion-scene.svg">
+                        @endif
                     </div>
                 </div>
                 <div id="description" class="description">

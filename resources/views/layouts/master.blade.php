@@ -649,7 +649,6 @@
 
     <!-- JS Implementing Plugins -->
     <script src="/vendor/hs-header/dist/hs-header.min.js"></script>
-    <script src="/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
     <script src="/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
     <script src="/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
     <script src="/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>

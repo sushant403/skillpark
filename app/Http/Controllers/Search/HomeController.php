@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
-        $jobs = Job::with('categories')
+        $jobs = Job::whereNull('candidate_id')->with('categories')
             ->searchResults()
             ->paginate(12);
 

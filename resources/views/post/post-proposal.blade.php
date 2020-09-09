@@ -14,8 +14,8 @@
                         <ol class="breadcrumb breadcrumb-light mb-0">
                             <li class="breadcrumb-item"><a class="breadcrumb-link"
                                     href="{{ route('freelancer') }}">Home</a></li>
-                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Back to Details</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:window.history.back();">Go Back</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Post Proposal</li>
                         </ol>
                     </nav>
                 </div>
@@ -102,9 +102,6 @@
                             {{ $errors->first('attachments') }}
                         </p>
                         @endif
-                        <p class="helper-block">
-                            {{ trans('global.proposal.fields.attachments_helper') }}
-                        </p>
                     </div>
                     <!-- End Attachment Custom Select -->
 

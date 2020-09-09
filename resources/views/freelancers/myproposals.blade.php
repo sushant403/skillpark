@@ -43,17 +43,17 @@
                                         <span>{{ Str::limit($proposal->job->description, 150) }}</span>
                                     </div>
 
-                                    @if($proposal->job->attachments)
                                     <div class="text-body font-size-1 mb-1 mt-3">
                                         <span><b>Attachments:</b></span><br>
+                                        @if($proposal->job->attachments)
                                         @foreach($proposal->job->attachments as $key => $media)
                                         <a class="attachment-box ripple-effect" href="{{ $media->getUrl() }}"
                                             target="_blank">
                                             <span>Attachment</span></a>
                                         </a>
                                         @endforeach
+                                        @endif
                                     </div>
-                                    @endif
                                 </div>
 
                                 <div class="col-md-3">
