@@ -37,9 +37,9 @@
                                 <button type="submit"
                                     class="btn btn-primary btn-block">{{ __('nepali.Search') }}</button>
                             </div>
+                        </div>
                     </form>
                 </div>
-                </form>
                 <!-- End Form -->
                 <!-- Tags -->
                 <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
@@ -72,7 +72,6 @@
             </figure>
             <!-- End SVG Shape -->
         </div>
-    </div>
     </div>
     <!-- End Hero Section -->
 
@@ -493,6 +492,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
 
