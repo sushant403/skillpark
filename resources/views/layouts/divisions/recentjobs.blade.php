@@ -19,19 +19,19 @@
             <!-- Article -->
             <div class="card border h-100">
                 <div class="card-img-top position-relative">
-                    <img class="card-img-top" src={{ asset($job->thumbnail) ?? '/images/svg/components/graphics-1.svg' }}
+                    @if(!$job->thumbnail)
+                    <img class="card-img-top" src="/images/svg/components/graphics-1.svg"
                         alt="">
-
+                    @else
+                    <img class="card-img-top" src={{ asset($job->thumbnail) }}
+                        alt="">
+                    @endif
                     <div class="position-absolute top-0 left-0 mt-3 ml-3">
                         <small class="btn btn-xs btn-success btn-pill text-uppercase shadow-soft mb-3">Verified</small>
                     </div>
 
                     <div class="position-absolute bottom-0 left-0 mb-3 ml-4">
                         <div class="d-flex align-items-center flex-wrap">
-                            <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="/images/svg/illustrations/star.svg"
-                                        alt="Review rating" width="14"></li>
-                            </ul>
                             <span class="d-inline-block">
                                 <small
                                     class="font-weight-bold text-white mr-1">{{ $job->company ?? 'Verified Seller' }}</small>
