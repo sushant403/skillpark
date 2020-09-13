@@ -6,10 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23fdcde-9559-4376-ae6d-8051d210ee52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e/storage_v2/_src_/database/skillpark.u527dg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e/storage_v2/_src_/database/skillpark.u527dg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/skillpark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skillpark.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/divisions/recentjobs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/divisions/recentjobs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +158,8 @@
   </component>
   <component name="ProjectId" id="1hKOOPnOLy3EBRH2gBQnT0HkpoT" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -165,7 +169,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="xpath.settings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -188,7 +192,11 @@
       <workItem from="1599759282414" duration="1107000" />
       <workItem from="1599767114686" duration="1261000" />
       <workItem from="1599825167160" duration="833000" />
-      <workItem from="1599828243265" duration="3833000" />
+      <workItem from="1599828243265" duration="5253000" />
+      <workItem from="1599846411645" duration="387000" />
+      <workItem from="1599852973886" duration="560000" />
+      <workItem from="1599963007378" duration="580000" />
+      <workItem from="1600008207389" duration="233000" />
     </task>
     <task id="LOCAL-00001" summary="Project Added to PhpStorm. (conf. files).">
       <created>1599759892975</created>
@@ -197,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599759892975</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Database and Views added to PhpStrom. Config Changes.">
+      <created>1599833053885</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599833053886</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,8 +261,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Project Added to PhpStorm. (conf. files)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Added to PhpStorm. (conf. files)." />
+    <MESSAGE value="Database and Views added to PhpStrom. Config Changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Database and Views added to PhpStrom. Config Changes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="263" y="19" key="#CLI_Interpreters" timestamp="1599757250639">
@@ -270,10 +287,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="318" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599831609808" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1599768397484">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1599834004023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1599768397484" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1599834004023" />
     <state x="428" y="96" key="FileChooserDialogImpl" timestamp="1599825751258">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -298,14 +315,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="521" y="1" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599831516163" />
-    <state x="149" y="0" key="SettingsEditor" timestamp="1599832856117">
+    <state x="149" y="0" key="SettingsEditor" timestamp="1599834289018">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="149" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599832856117" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1599760273689">
+    <state x="149" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599834289018" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1599833108462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599760273689" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599833108462" />
     <state x="555" y="208" key="cloudConfig.SelfSettingsDialog" timestamp="1599831779599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

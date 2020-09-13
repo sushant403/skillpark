@@ -39,18 +39,18 @@
                             </div>
                         </div>
                     </form>
+                    <!-- Tags -->
+                    <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
+                    <span class="d-block mr-1 mb-2 mb-sm-1 text-muted"
+                          style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
+                        @foreach($searchByCategory as $id=>$searchByCategory)
+                            <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
+                               href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
+                        @endforeach
+                    </div>
+                    <!-- End Tags -->
                 </div>
                 <!-- End Form -->
-                <!-- Tags -->
-                <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
-                    <span class="d-block mr-1 mb-2 mb-sm-1 text-muted"
-                        style="font-size: 13px">{{ __('nepali.Trending') }}:</span>
-                    @foreach($searchByCategory as $id=>$searchByCategory)
-                    <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1"
-                        href="{{ route('categories.show', $id) }}">{{ $searchByCategory }}</a>@if(!$loop->last)@endif
-                    @endforeach
-                </div>
-                <!-- End Tags -->
             </div>
             <!-- SVG Shape -->
             <figure class="col-lg-6 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
