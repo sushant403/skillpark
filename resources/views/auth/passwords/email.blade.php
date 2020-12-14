@@ -18,12 +18,20 @@
                 <li><span class="text-primary font-weight-semibold mr-1">3.</span>Follow the provided link and set the
                     new secure password..</li>
             </ul>
+
+            @if (session('status'))
+            <div class="alert alert-info text-center my-4" role="alert">
+                {{ __('Password reset link has been sent to your email address.') }}
+            </div>
+            @endif
+
             <div class="bg-light rounded-lg px-3 py-4 p-sm-4">
                 <form method="POST" action="{{ route('password.email') }}" class="needs-validation p-2" novalidate>
                     @csrf
 
                     <div class="form-group">
-                        <label class="form-label" for="recovery-email"><b>{{ __('Enter your email address') }}</b></label>
+                        <label class="form-label"
+                            for="recovery-email"><b>{{ __('Enter your email address') }}</b></label>
                         <input class="form-control" type="email" name="email" value="{{ old('email') }}"
                             autocomplete="off" required id="recovery-email">
                         @error('email')
@@ -32,7 +40,8 @@
                         </span>
                         @enderror
                     </div>
-                    <button class="btn btn-primary" onclick="this.disabled=true;this.form.submit();" type="submit">{{ __('Request Verification Link') }}</button>
+                    <button class="btn btn-primary" onclick="this.disabled=true;this.form.submit();"
+                        type="submit">{{ __('Request Verification Link') }}</button>
                 </form>
             </div>
         </div>

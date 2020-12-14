@@ -24,7 +24,10 @@ class JobPaidNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('Job #' . $this->model->id . ' has been paid')
-            ->action('See Job', route('jobs.show', $this->model));
+            ->from('noreply@skillpark.com.np', 'Skillpark Inc.')
+            ->greeting('Hello ' . $this->model->employer->name . ',')
+            ->subject('Job Payment Successful.')
+            ->line('Job titled "' . $this->model->title . '" has been paid with the amount of Rs. '. $this->model->budget . ' . Thank You.')
+            ->action('Start Hiring', route('jobs.show', $this->model));
     }
 }

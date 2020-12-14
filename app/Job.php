@@ -7,6 +7,7 @@ use App\Topic;
 use App\Category;
 use App\Proposal;
 use Carbon\Carbon;
+use App\Observers\JobActionObserver;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -42,6 +43,13 @@ class Job extends Model implements HasMedia
         'topic',
         'company',
     ];
+
+
+    public static function boot()
+    {
+        parent::boot();
+        Job::observe(new JobActionObserver);
+    }
 
     public function employer()
     {
