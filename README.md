@@ -1,14 +1,14 @@
 <p align="center">
-<img width="230" src="https://github.com/sushantpoudel98/skillpark/blob/master/public/images/logo/biglogo.png">
+<img width="230" src="https://github.com/sushant403/skillpark/blob/master/public/images/logo/biglogo.png">
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.4.4-blue" />
   
-  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/changelog.md">
+  <a href="https://github.com/sushant403/skillpark/blob/master/changelog.md">
     <img src="https://img.shields.io/badge/changelog-skillpark-brightgreen" alt="skillpark-changelog">
   </a>
 
-  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/planning-ideas.md">
+  <a href="https://github.com/sushant403/skillpark/blob/master/planning-ideas.md">
     <img alt="License: MIT" src="https://img.shields.io/badge/plans-ideas-blue" target="_blank" />
   </a>
 
@@ -16,7 +16,7 @@
     <img alt="Twitter: Sushant Poudel" src="https://img.shields.io/twitter/follow/sushant_pdll?label=Sushant%20Poudel&style=social" target="_blank" />
   </a>
   
-  <a href="https://github.com/sushantpoudel98/skillpark/blob/master/LICENSE">
+  <a href="https://github.com/sushant403/skillpark/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
 </p>
@@ -28,7 +28,7 @@
 `Skillpark Inc.` will be available to public soon. To view the current status and changes, `changelog.md` contains the plans:
 
 <p align="center">
-  <img align="center" src="https://github.com/sushantpoudel98/skillpark/blob/master/public/markdown/homepage.png" alt="homepage"/>
+  <img align="center" src="https://github.com/sushant403/skillpark/blob/master/public/markdown/homepage.png" alt="homepage"/>
 </p>
 Summary `info.json` with basic website information:
 
@@ -42,10 +42,10 @@ Summary `info.json` with basic website information:
   "homepage": "https://skillpark.herokuapp.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sushantpoudel98/skillpark.git"
+    "url": "git+https://github.com/sushant403/skillpark.git"
   },
   "bugs": {
-    "url": "https://github.com/sushantpoudel98/skillpark/issues"
+    "url": "https://github.com/sushant403/skillpark/issues"
   },
   "engines": {
     "npm": ">=5.5.0",
@@ -70,16 +70,16 @@ Features for Freelancers
 Dynamic homepage with latest jobs, Apply and Send Proposals, Search Jobs, Message.
 ```
 
-View our `ideas` template (`-p`) : [Plans and Ideas here](https://github.com/sushantpoudel98/skillpark/blob/master/planning-ideas.md).
+View our `ideas` template (`-p`) : [Plans and Ideas here](https://github.com/sushant403/skillpark/blob/master/planning-ideas.md).
 
-You can find [Changelog here](https://github.com/sushantpoudel98/skillpark/blob/master/changelog.md).
+You can find [Changelog here](https://github.com/sushant403/skillpark/blob/master/changelog.md).
 
 ## Code Contributors
 
 This project exists because of the following people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/sushantpoudel98/skillpark/graphs/contributors"><br><img src="https://img.shields.io/badge/contributors-3-blue" /></a>
+<a href="https://github.com/sushant403/skillpark/graphs/contributors"><br><img src="https://img.shields.io/badge/contributors-3-blue" /></a>
 [@dbasechhetri](https://github.com/dbasechhetri) ,
-[@sushantpoudel98](https://github.com/sushantpoudel98) ,
+[@sushant403](https://github.com/sushantpoudel98) ,
 [@nitikabhatta](https://github.com/nitikabhatta)
 
 ### Organizations
@@ -99,10 +99,10 @@ Feel free to check [issues page](https://github.com/sushantpoudel98/skillpark/is
  **Skillpark Inc.**
 
 - Twitter: [@sushant_pdll](https://twitter.com/sushant_pdll)
-- Github: [@sushantpoudel98](https://github.com/sushantpoudel98)
+- Github: [@sushant403](https://github.com/sushant403)
 
 
 ## License
 
 Copyright © 2020 [Skillpark Inc.](https://github.com/kefranabg).<br />
-This project is [MIT](https://github.com/sushantpoudel98/skillpark/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/sushant403/skillpark/blob/master/LICENSE) licensed.

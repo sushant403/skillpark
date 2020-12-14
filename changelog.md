@@ -1,3 +1,16 @@
+- ### Commit 97th:
+     ### Real Time Payment Gateway Added. Stripe Global Payment Processor established. :
+
+    1. Cashier Package included in Composer.
+
+    2. Skillpark Inc. Stripe Payment via Card added.
+
+    3. Database and Seeders Modifications.
+
+    <i>(To Test the payment processing, Login as Client, Post a Job, GOTO 'My Jobs', Select 'that' Job details, Enter Card Information and Pay.)</i>
+
+<hr>
+
 - ### Commit 84th:
      ### Codes Migrated to Fresh Laravel App [L/F - V.7.24]. Unnecessary Clutters Removed :
 

@@ -1,4 +1,4 @@
-#Planning Phase III:
+#Planning Phase III: _(Almost Done)_
 ---
 
 1. Migrate to Fresh _Laravel Application_ with clean `composer`.
@@ -70,8 +70,8 @@
 7. Registration (Select) page:<br>
             - Select Skills (for freelancers)<br>
             - Select Category (for clients)
-<hr>
 
+---
     Back-End Part (Vue JS, Node Modules, Database)
 
 8. Middleware 
