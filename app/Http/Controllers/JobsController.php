@@ -11,6 +11,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
+use App\Http\Requests\StorePaymentRequest;
+use Stripe\SetupIntent;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 
 class JobsController extends Controller
@@ -112,6 +114,18 @@ class JobsController extends Controller
                 $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
             }
         }
+        
+        $validatedData = $request->validated();
+
+        if ($job->employer_id == auth()->id()) {
+            $budget = $request->validate([
+                'budget' => 'required', 'numeric'
+            ]);
+
+            $validatedData = array_merge($validatedData, $budget);
+        }
+
+        $job->update($validatedData);
 
         return redirect()->route('jobs.index');
     }
@@ -122,9 +136,11 @@ class JobsController extends Controller
             abort(404);
         }
 
-        $job->load(['employer', 'candidate', 'proposals']);
+        $job->load(['employer', 'candidate', 'proposals', 'user']);
 
-        return view('clients.myprojectdetails', compact('job'));
+        $intent = auth()->user()->createSetupIntent();
+
+        return view('clients.myprojectdetails', compact('job', 'intent'));
     }
 
     public function destroy(Job $job)
@@ -136,5 +152,25 @@ class JobsController extends Controller
         $job->delete();
 
         return redirect()->route('jobs.index');
+    }
+
+    public function pay(StorePaymentRequest $request, Job $job)
+    {
+        $job->load('employer');
+        $paymentMethod = $request->input('payment_method');
+
+        try {
+            $job->employer->createOrGetStripeCustomer();
+            $job->employer->updateDefaultPaymentMethod($paymentMethod);
+            $job->employer->charge($job->budget * 100, $paymentMethod);
+
+            $job->update([
+                'paid_at' => now()
+            ]);
+        } catch (\Exception $exception) {
+            return redirect()->back()->withErrors([$exception->getMessage()]);
+        }
+
+        return redirect()->back()->with('success', 'The payment is Successful! Start Hiring!');
     }
 }

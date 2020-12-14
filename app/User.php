@@ -8,12 +8,14 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasPermissions;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use HasRoles;
     use HasPermissions;
+    use Billable;
 
     public $table = 'users';
 
@@ -76,6 +78,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function clients()
     {
         return $this->hasMany(Client::class);
+    }
+
+    public function jobs()
+    {
+        return $this->hasMany(Job::class);
     }
 
     public function getCreatedAtAttribute($date)

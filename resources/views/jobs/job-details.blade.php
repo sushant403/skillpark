@@ -201,6 +201,11 @@
                             <a href="{{ route('proposals.create') }}?job_id={{ $job->id }}">
                                 <button>Continue</button>
                             </a>
+                            @if($job->paid_at == NULL)
+                            <i style="font-weight:bolder;">Payment Unverified</i>
+                            @else
+                            <i style="font-weight:bolder;color:#1dc8cc">Payment Verified</i><i class="fa fa-check ml-2" style="color: #1dc8cc"></i>
+                            @endif
                         </div>
                     </div>
                     <div class="contact-seller-wrapper mt-1">

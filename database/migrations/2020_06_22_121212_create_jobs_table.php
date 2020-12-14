@@ -14,12 +14,13 @@ class CreateJobsTable extends Migration
             $table->integer('candidate_id')->unsigned()->nullable();
             $table->string('title');
             $table->longText('description');
-            $table->integer('budget');
+            $table->decimal('budget', 15, 2)->nullable();
             $table->string('thumbnail')->nullable();
             $table->string('company')->nullable();
             $table->integer('topic')->unsigned();
             $table->string('delivery_time')->nullable();
             $table->datetime('hired_at')->nullable();
+            $table->timestamp('paid_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

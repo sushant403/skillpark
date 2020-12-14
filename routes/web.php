@@ -80,6 +80,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
         //post projects for client
         Route::get('/post/project', 'JobsController@create')->name('post-project');
 
+        Route::post('jobs/{job}/pay', 'JobsController@pay')->name('jobs.pay');
         Route::resource('jobs', 'JobsController');
         Route::post('jobs/media', 'JobsController@storeMedia')->name('jobs.storeMedia');
     });

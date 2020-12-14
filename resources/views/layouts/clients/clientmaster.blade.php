@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/theme.css">
 
+    @yield('style')
+
     @include('layouts.components.spinner')
 </head>
 
@@ -566,6 +568,7 @@
             }); 
         });
     </script>
+    
     @yield('script')
 </body>
 

@@ -3,12 +3,14 @@
 namespace App;
 
 use App\User;
+use App\Topic;
+use App\Category;
 use App\Proposal;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Job extends Model implements HasMedia
 {
@@ -18,6 +20,7 @@ class Job extends Model implements HasMedia
 
     protected $dates = [
         'hired_at',
+        'paid_at',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -26,6 +29,7 @@ class Job extends Model implements HasMedia
     protected $fillable = [
         'title',
         'budget',
+        'paid_at',
         'category_id',
         'hired_at',
         'created_at',
@@ -42,6 +46,11 @@ class Job extends Model implements HasMedia
     public function employer()
     {
         return $this->belongsTo(User::class, 'employer_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function candidate()
@@ -66,18 +75,18 @@ class Job extends Model implements HasMedia
 
     public function scopeSearchResults($query)
     {
-        return $query->when(!empty(request()->input('category', 0)), function($query) {
-            $query->whereHas('categories', function($query) {
+        return $query->when(!empty(request()->input('category', 0)), function ($query) {
+            $query->whereHas('categories', function ($query) {
                 $query->whereId(request()->input('category'));
             });
         })
-        ->when(!empty(request()->input('search', '')), function($query) {
-            $query->where(function($query) {
-                $search = request()->input('search');
-                $query->where('title', 'LIKE', "%$search%")
-                    ->orWhere('description', 'LIKE', "%$search%");
-                    });
-        });
+            ->when(!empty(request()->input('search', '')), function ($query) {
+                $query->where(function ($query) {
+                    $search = request()->input('search');
+                    $query->where('title', 'LIKE', "%$search%")
+                        ->orWhere('description', 'LIKE', "%$search%");
+                });
+            });
     }
 
     public function getattachmentsAttribute()
@@ -104,4 +113,14 @@ class Job extends Model implements HasMedia
     {
         $this->attributes['hired_at'] = $value ? Carbon::createFromFormat(config('panel.date_format') . ' ' . config('panel.time_format'), $value)->format('Y-m-d H:i:s') : null;
     }
+
+    // public function getPaidAtAttribute($value)
+    // {
+    //     return $value ? Carbon::createFromFormat('Y-m-d H:i:s', $value)->format(config('panel.date_format') . ' ' . config('panel.time_format')) : null;
+    // }
+
+    // public function setPaidAtAttribute($value)
+    // {
+    //     $this->attributes['paid_at'] = $value ? Carbon::createFromFormat(config('panel.date_format') . ' ' . config('panel.time_format'), $value)->format('Y-m-d H:i:s') : null;
+    // }
 }

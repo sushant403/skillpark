@@ -76,7 +76,7 @@
                                         <div class="col-6 col-md mb-3 mb-md-0">
                                             <small class="text-cap">Budget</small>
                                             <small class="text-dark font-weight-bold">NPR
-                                                {{ $job->budget ?? '' }}</small>
+                                                {{ $job->budget ?? '' }} <i class="text-muted">@if($job->paid_at == NULL) <span style="color: red">(Unpaid)</span> @else <i>(Paid)</i> @endif </i></small>
                                         </div>
                                         <div class="col-6 col-md">
                                             <small class="text-cap">Job Posted Date:</small>
