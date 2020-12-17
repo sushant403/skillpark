@@ -14,6 +14,7 @@ use App\Http\Requests\UpdateJobRequest;
 use App\Http\Requests\StorePaymentRequest;
 use Stripe\SetupIntent;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
+use PhpParser\Node\Expr\FuncCall;
 
 class JobsController extends Controller
 {
@@ -171,6 +172,15 @@ class JobsController extends Controller
             return redirect()->back()->withErrors([$exception->getMessage()]);
         }
 
-        return redirect()->back()->with('success', 'The payment is Successful! Start Hiring!');
+        return redirect()->route('payment-success')->with('success', 'The payment transaction is successful!');
+    }
+
+    public function paymentSuccess()
+    {
+        if (! session()->has('success')) {
+            return redirect()->route('jobs.index');
+        }
+
+        return view('post.success');
     }
 }

@@ -575,142 +575,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <a href="services/description">
-                    <img class="img-fluid" src="/images/svg/discussion-scene.svg" />
-                </a>
-                <div class="inner-slider">
-                    <div class="inner-wrapper">
-                        <div class="d-flex align-items-center">
-                            <span class="seller-image">
-                                <img class="img-fluid" src="{{ asset( Auth::user()->avatar ) }}" alt='' />
-                            </span>
-                            <span class="seller-name">
-                                <a href="#">{{ Auth::user()->name }}</a>
-                                <span class="level hint--top level-one-seller">
-                                    Freelancer
-                                </span>
-                            </span>
-                        </div>
-                        <h3>
-                            {{ Auth::user()->about }}
-                        </h3>
-                        <div class="content-info">
-                            <i class="fa fa-map-marker"></i> Kathmandu
-                        </div>
-                        <div class="footer">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <div class="price">
-                                <a href="#">
-                                    Starting At <span> Rs. 1,205</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <a href="services/description">
-                    <img class="img-fluid" src="/images/svg/discussion-scene.svg" />
-                </a>
-                <div class="inner-slider">
-                    <div class="inner-wrapper">
-                        <div class="d-flex align-items-center">
-                            <span class="seller-image">
-                                <img class="img-fluid" src="{{ asset( Auth::user()->avatar ) }}" alt='' />
-                            </span>
-                            <span class="seller-name">
-                                <a href="#">{{ Auth::user()->name }}</a>
-                                <span class="level hint--top level-one-seller">
-                                    Freelancer
-                                </span>
-                            </span>
-                        </div>
-                        <h3>
-                            {{ Auth::user()->about }}
-                        </h3>
-                        <div class="content-info">
-                            <i class="fa fa-map-marker"></i> Kathmandu
-                        </div>
-                        <div class="footer">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <div class="price">
-                                <a href="#">
-                                    Starting At <span> Rs. 1,205</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <a href="services/description">
-                    <img class="img-fluid" src="/images/svg/discussion-scene.svg" />
-                </a>
-                <div class="inner-slider">
-                    <div class="inner-wrapper">
-                        <div class="d-flex align-items-center">
-                            <span class="seller-image">
-                                <img class="img-fluid" src="{{ asset( Auth::user()->avatar ) }}" alt='' />
-                            </span>
-                            <span class="seller-name">
-                                <a href="#">{{ Auth::user()->name }}</a>
-                                <span class="level hint--top level-one-seller">
-                                    Freelancer
-                                </span>
-                            </span>
-                        </div>
-                        <h3>
-                            {{ Auth::user()->about }}
-                        </h3>
-                        <div class="content-info">
-                            <i class="fa fa-map-marker"></i> Kathmandu
-                        </div>
-                        <div class="footer">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <div class="price">
-                                <a href="#">
-                                    Starting At <span> Rs. 1,205</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <a href="services/description">
-                    <img class="img-fluid" src="/images/svg/discussion-scene.svg" />
-                </a>
-                <div class="inner-slider">
-                    <div class="inner-wrapper">
-                        <div class="d-flex align-items-center">
-                            <span class="seller-image">
-                                <img class="img-fluid" src="{{ asset( Auth::user()->avatar ) }}" alt='' />
-                            </span>
-                            <span class="seller-name">
-                                <a href="#">{{ Auth::user()->name }}</a>
-                                <span class="level hint--top level-one-seller">
-                                    Freelancer
-                                </span>
-                            </span>
-                        </div>
-                        <h3>
-                            {{ Auth::user()->about }}
-                        </h3>
-                        <div class="content-info">
-                            <i class="fa fa-map-marker"></i> Kathmandu
-                        </div>
-                        <div class="footer">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <div class="price">
-                                <a href="#">
-                                    Starting At <span> Rs. 1,205</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="col-md-3">
                 <a href="services/description">
                     <img class="img-fluid" src="/images/svg/discussion-scene.svg" />
@@ -791,9 +656,9 @@
                         <!--                    <span class="sr-only"></span>-->
                     </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
                 <li class="page-item"><a class="page-link" href="#">5</a></li>
                 <li class="page-item">
                     <a class="page-link" href="#" aria-label="Next">
