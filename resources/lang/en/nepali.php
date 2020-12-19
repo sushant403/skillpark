@@ -10,6 +10,10 @@ return [
     |
     */
 
+    'Skillpark' => 'Skillpark',
+    'SkillPark' => 'SkillPark',
+    'SKILLPARK' => 'SKILLPARK',
+
     'Ok'     => 'ठिक छ ! ',
     'Cancel' => 'रद्द गर्नुहोस् !',
     'Close'  => 'समाप्त',
@@ -61,6 +65,7 @@ return [
     'Join Now'=> 'Join Now',
     'Contact Us'=> 'Contact Us',
     'Enterprise'=> 'Enterprise',
+    'Language'=> 'Language',
     'Terms & Conditions'=> 'Terms & Conditions',
     'All rights reserved.'=> 'All rights reserved.',
     'Services'=> 'Services',
@@ -86,4 +91,6 @@ return [
     'Trending' => 'Trending',
     'FAQ' => 'FAQ',
     'Want to Explore more?' => 'Want to Explore more?',
+
+    'All Categories' => 'All Categories',
 ];

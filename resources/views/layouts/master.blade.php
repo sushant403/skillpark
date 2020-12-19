@@ -143,8 +143,8 @@
                                                         <a class="navbar-promo-link" href="{{ url('about') }}">
                                                             <div class="media align-items-center">
                                                                 <div class="media-body">
-                                                                    <span class="navbar-promo-title">Freelancer
-                                                                        Marketplace</span>
+                                                                    <span
+                                                                        class="navbar-promo-title">{{ __('nepali.Enterprise') }}</span>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -234,20 +234,32 @@
                                     <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
                                         aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
                                         <a class="dropdown-item" href="">Trending Services</a>
-                                        <a class="dropdown-item" href="">Freelancers</a>
-                                        <a class="dropdown-item" href="">Clients</a>
                                         <a class="dropdown-item" href="">Popular Jobs</a>
-                                        <a class="dropdown-item" href="">Featured</a>
+                                        <a class="dropdown-item" href="">Featured Freelancers</a>
                                     </div>
                                     <!-- End Pages - Submenu -->
                                 </li>
                                 <!-- End Pages -->
 
-                                <li class="navbar-nav-item">
-                                    <a href="{{ url('coming-soon') }}"
-                                        class="nav-link">{{ __('nepali.Enterprise') }}</a>
-                                </li>
+                                <!-- Language -->
+                                <li class="hs-has-sub-menu navbar-nav-item">
+                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
+                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-labelledby="pagesSubMenu">{{ __('nepali.Language') }}</a>
 
+                                    <!-- Pages - Submenu -->
+                                    <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
+                                        aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
+                                        <a class="dropdown-item" href="/lang/ne"><img
+                                                src="https://cdn.countryflags.com/thumbs/nepal/flag-3d-round-250.png"
+                                                class="mr-2" width="20">Nepali</a>
+                                        <a class="dropdown-item" href="/lang/en"><img
+                                                src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-3d-round-250.png"
+                                                class="mr-2" width="20">English</a>
+                                    </div>
+                                    <!-- End Pages - Submenu -->
+                                </li>
+                                <!-- End Language -->
 
                                 <!-- Support -->
                                 <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{

@@ -6,12 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23fdcde-9559-4376-ae6d-8051d210ee52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e/storage_v2/_src_/database/skillpark.u527dg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e/storage_v2/_src_/database/skillpark.u527dg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/skillpark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skillpark.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +154,16 @@
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hKOOPnOLy3EBRH2gBQnT0HkpoT" />
@@ -166,10 +176,11 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -197,6 +208,12 @@
       <workItem from="1599852973886" duration="560000" />
       <workItem from="1599963007378" duration="580000" />
       <workItem from="1600008207389" duration="233000" />
+      <workItem from="1608302253847" duration="380000" />
+      <workItem from="1608302969765" duration="525000" />
+      <workItem from="1608310013179" duration="372000" />
+      <workItem from="1608311926662" duration="459000" />
+      <workItem from="1608312702096" duration="1057000" />
+      <workItem from="1608384900725" duration="1073000" />
     </task>
     <task id="LOCAL-00001" summary="Project Added to PhpStorm. (conf. files).">
       <created>1599759892975</created>
@@ -265,83 +282,5 @@
     <MESSAGE value="Project Added to PhpStorm. (conf. files)." />
     <MESSAGE value="Database and Views added to PhpStrom. Config Changes." />
     <option name="LAST_COMMIT_MESSAGE" value="Database and Views added to PhpStrom. Config Changes." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="263" y="19" key="#CLI_Interpreters" timestamp="1599757250639">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="263" y="19" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1599757250639" />
-    <state x="493" y="243" key="#Composer" timestamp="1599756788013">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="493" y="243" key="#Composer/0.0.1366.728@0.0.1366.728" timestamp="1599756788013" />
-    <state x="436" y="184" key="#Notifications" timestamp="1599759309541">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="436" y="184" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1599759309541" />
-    <state x="390" y="7" key="#PHP" timestamp="1599757278680">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="390" y="7" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1599757278680" />
-    <state x="318" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599831609808">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="318" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599831609808" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1599834004023">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1599834004023" />
-    <state x="428" y="96" key="FileChooserDialogImpl" timestamp="1599825751258">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="428" y="96" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599825751258" />
-    <state width="1323" height="172" key="GridCell.Tab.0.bottom" timestamp="1599826041976">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599826041976" />
-    <state width="1323" height="172" key="GridCell.Tab.0.center" timestamp="1599826041976">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599826041976" />
-    <state width="1323" height="172" key="GridCell.Tab.0.left" timestamp="1599826041976">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599826041976" />
-    <state width="1323" height="172" key="GridCell.Tab.0.right" timestamp="1599826041976">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599826041976" />
-    <state x="521" y="1" key="RollbackChangesDialog" timestamp="1599831516163">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="521" y="1" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599831516163" />
-    <state x="149" y="0" key="SettingsEditor" timestamp="1599834289018">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="149" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599834289018" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1599833108462">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599833108462" />
-    <state x="555" y="208" key="cloudConfig.SelfSettingsDialog" timestamp="1599831779599">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="555" y="208" key="cloudConfig.SelfSettingsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599831779599" />
-    <state x="498" y="131" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599832417730">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="498" y="131" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1599832417730" />
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1599758782767">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1599758782767" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1599767945486">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599767945486" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599832496966">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599832496966" />
   </component>
 </project>

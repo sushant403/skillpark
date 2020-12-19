@@ -7,16 +7,22 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/tests/Unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests/Feature" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/public/storage/1" />
       <excludeFolder url="file://$MODULE_DIR$/public/storage/11" />
       <excludeFolder url="file://$MODULE_DIR$/public/storage/12" />
+      <excludeFolder url="file://$MODULE_DIR$/public/storage/2" />
       <excludeFolder url="file://$MODULE_DIR$/public/storage/4" />
       <excludeFolder url="file://$MODULE_DIR$/public/storage/7" />
       <excludeFolder url="file://$MODULE_DIR$/public/storage/users-avatar" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/app/public/1" />
       <excludeFolder url="file://$MODULE_DIR$/storage/app/public/11" />
       <excludeFolder url="file://$MODULE_DIR$/storage/app/public/12" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/app/public/2" />
       <excludeFolder url="file://$MODULE_DIR$/storage/app/public/4" />
       <excludeFolder url="file://$MODULE_DIR$/storage/app/public/7" />
       <excludeFolder url="file://$MODULE_DIR$/storage/app/public/users-avatar" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/3a" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/95" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />

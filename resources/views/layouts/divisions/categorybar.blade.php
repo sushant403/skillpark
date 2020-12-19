@@ -8,7 +8,7 @@
                     href="{{ route('categories.show', $id) }}">{{ $allCategory }}</a>@if(!$loop->last)@endif
             </li>
             @endforeach
-            <li class="nav-item"><a class="nav-link" href="{{ url('coming-soon') }}">All Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url('coming-soon') }}">{{ __('nepali.All Categories') }}</a></li>
         </ul>
     </div>
 </div>

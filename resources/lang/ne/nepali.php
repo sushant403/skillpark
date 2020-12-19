@@ -9,6 +9,9 @@ return [
     | The following language lines are the custom lines which match.
     |
     */
+    'Skillpark' => 'स्किलपार्क',
+    'SkillPark' => 'स्किलपार्क',
+    'SKILLPARK' => 'स्किलपार्क',
 
     'Ok'     => 'ठिक छ ! ',
     'Cancel' => 'रद्द गर्नुहोस् !',
@@ -66,6 +69,7 @@ return [
     'Join Now'=> 'अहिले सामेल हुनुहोस',
     'Contact Us'=> 'हामीलाई सम्पर्क गर्नुहोस',
     'Enterprise'=> 'उद्यम',
+    'Language'=> 'भाषा ',
     'Terms & Conditions'=> 'नियम तथा सर्त',
     'All rights reserved.'=> 'सबै अधिकार सुरक्षित।',
     'Services'=> 'सेवाहरू',
@@ -87,4 +91,6 @@ return [
     'Trending' => 'लोकप्रिय खोजिहरु',
     'FAQ' => 'आधारभूत प्रश्नहरू',
     'Want to Explore more?' => 'थप अन्वेषण गर्न चाहनुहुन्छ?',
+
+    'All Categories' => 'सबै कोटीहरु',
 ];
