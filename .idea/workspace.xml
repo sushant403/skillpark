@@ -6,12 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23fdcde-9559-4376-ae6d-8051d210ee52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e/storage_v2/_src_/database/skillpark.u527dg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c6298ad-38a3-458b-aebb-045d77b9f03e/storage_v2/_src_/database/skillpark.u527dg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/skillpark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skillpark.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SirLaiExplainGareyJastai-Introduction.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +17,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/app/Http/Controllers/JobsController.php" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +37,15 @@
         <option value="https://github.com/sushantpoudel98/skillpark" />
       </set>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/DetailsController.php" root0="SKIP_INSPECTION" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php" root0="SKIP_INSPECTION" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php" root0="SKIP_INSPECTION" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/JobsController.php" root0="SKIP_INSPECTION" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/User.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/database/seeds/JobsSeeder.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ProposalsController.php" root0="SKIP_INSPECTION" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -168,7 +176,6 @@
   </component>
   <component name="ProjectId" id="1hKOOPnOLy3EBRH2gBQnT0HkpoT" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -177,10 +184,11 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowDatabase Changes.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -214,6 +222,12 @@
       <workItem from="1608311926662" duration="459000" />
       <workItem from="1608312702096" duration="1057000" />
       <workItem from="1608384900725" duration="1073000" />
+      <workItem from="1608408058847" duration="2920000" />
+      <workItem from="1608492804116" duration="328000" />
+      <workItem from="1608551700978" duration="1795000" />
+      <workItem from="1612444229945" duration="82000" />
+      <workItem from="1614586637848" duration="199000" />
+      <workItem from="1614586913623" duration="1029000" />
     </task>
     <task id="LOCAL-00001" summary="Project Added to PhpStorm. (conf. files).">
       <created>1599759892975</created>
@@ -282,5 +296,9 @@
     <MESSAGE value="Project Added to PhpStorm. (conf. files)." />
     <MESSAGE value="Database and Views added to PhpStrom. Config Changes." />
     <option name="LAST_COMMIT_MESSAGE" value="Database and Views added to PhpStrom. Config Changes." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
