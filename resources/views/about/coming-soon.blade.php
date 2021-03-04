@@ -91,7 +91,7 @@
 
             <!-- Countdown -->
             <div class="js-countdown row mb-5" data-hs-countdown-options='{
-                   "endDate": "2021/2/15"
+                   "endDate": "2021/4/21"
                  }'>
               <div class="col-3">
                 <span class="js-cd-days font-size-3 text-primary font-weight-bold mb-0"></span>

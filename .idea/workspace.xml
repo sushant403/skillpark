@@ -6,8 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23fdcde-9559-4376-ae6d-8051d210ee52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SirLaiExplainGareyJastai-Introduction.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SirLaiExplainGareyJastai-Introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/SirLaiExplainGareyJastai-Introduction.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -227,7 +235,8 @@
       <workItem from="1608551700978" duration="1795000" />
       <workItem from="1612444229945" duration="82000" />
       <workItem from="1614586637848" duration="199000" />
-      <workItem from="1614586913623" duration="2624000" />
+      <workItem from="1614586913623" duration="2770000" />
+      <workItem from="1614607468989" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="Project Added to PhpStorm. (conf. files).">
       <created>1599759892975</created>

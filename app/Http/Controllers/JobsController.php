@@ -7,14 +7,13 @@ use App\User;
 use App\Topic;
 use App\Category;
 use App\Proposal;
+use Stripe\SetupIntent;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Http\Requests\StorePaymentRequest;
-use Stripe\SetupIntent;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use PhpParser\Node\Expr\FuncCall;
 
 class JobsController extends Controller
 {
@@ -115,7 +114,7 @@ class JobsController extends Controller
                 $job->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('attachments');
             }
         }
-        
+
         $validatedData = $request->validated();
 
         if ($job->employer_id == auth()->id()) {
@@ -177,7 +176,7 @@ class JobsController extends Controller
 
     public function paymentSuccess()
     {
-        if (! session()->has('success')) {
+        if (!session()->has('success')) {
             return redirect()->route('jobs.index');
         }
 
