@@ -55,7 +55,7 @@ class CategoryController extends Controller
         $banner = $category->name;
         $servicecount = $jobs->total();
 
-        return view('services.service-list', compact(['jobs', 'banner', 'servicecount']));
+        return view('services.service-list', compact(['jobs', 'banner', 'servicecount', 'category']));
     }
 
     /**
