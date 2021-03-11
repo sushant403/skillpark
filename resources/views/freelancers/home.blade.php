@@ -216,8 +216,8 @@
 
                     <div class="row w-100">
                         <div class="post__tags">
-                            @foreach($job->categories as $id => $categories)
-                            <a href="{{ route('categories.show', $id) }}">#{{ $categories->name }}</a>
+                            @foreach($job->categories as $id => $category)
+                            <a href="{{ route('categories.show', $category) }}">#{{ $category->name }}</a>
                             @endforeach
                         </div>
                     </div>

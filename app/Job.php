@@ -8,6 +8,7 @@ use App\Category;
 use App\Proposal;
 use Carbon\Carbon;
 use App\Observers\JobActionObserver;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Job extends Model implements HasMedia
 {
-    use SoftDeletes, InteractsWithMedia;
+    use SoftDeletes, InteractsWithMedia, Sluggable;
 
     public $table = 'jobs';
 
@@ -43,7 +44,6 @@ class Job extends Model implements HasMedia
         'topic',
         'company',
     ];
-
 
     public static function boot()
     {
@@ -131,4 +131,12 @@ class Job extends Model implements HasMedia
     // {
     //     $this->attributes['paid_at'] = $value ? Carbon::createFromFormat(config('panel.date_format') . ' ' . config('panel.time_format'), $value)->format('Y-m-d H:i:s') : null;
     // }
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 }

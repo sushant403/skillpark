@@ -41,7 +41,7 @@ Route::get('/coming-soon', function () {
 //===============SEARCH===============//
 Route::get('search', 'Search\HomeController@search')->name('search');
 Route::resource('job', 'Search\JobController')->only(['index', 'show']);
-Route::get('category/{category}', 'Search\CategoryController@show')->name('categories.show');
+Route::get('categories/{category:name}', 'Search\CategoryController@show')->name('categories.show');
 //===============END-SEARCH===============//
 
 // |=================LOGGED IN USER==========================|

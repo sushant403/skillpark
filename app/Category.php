@@ -2,38 +2,35 @@
 
 namespace App;
 
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Category extends Model
 {
-    use HasSlug;
+    use Sluggable;
 
     public $table = 'categories';
+
+    protected  $fillable = [
+        'name',
+        'slug'
+    ];
 
     protected $guarded = [];
 
     /**
-     * Get the options for generating the slug.
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
      */
-    public function getSlugOptions(): SlugOptions
+    public function sluggable(): array
     {
-        return SlugOptions::create()
-            ->generateSlugsFrom('name')
-            ->saveSlugsTo('slug')
-            ->doNotGenerateSlugsOnCreate();
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
     }
-
-    // /**
-    //  * Get the route key for the model.
-    //  *
-    //  * @return string
-    //  */
-    // public function getRouteKeyName()
-    // {
-    //     return 'slug';
-    // }
 
     public function jobs()
     {
