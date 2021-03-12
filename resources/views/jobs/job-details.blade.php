@@ -162,9 +162,9 @@
                 <div class="tags">
                     <h3>Related tags</h3>
                     <ul class="d-flex">
-                        @foreach($job->categories as $id => $categories)
+                        @foreach($job->categories as $category)
                         <li>
-                            <a href="{{ route('categories.show', $id) }}">{{ $categories->name }}</a>
+                            <a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a>
                         </li>
                         @endforeach
                     </ul>
@@ -204,7 +204,8 @@
                             @if($job->paid_at == NULL)
                             <i style="font-weight:bolder;">Payment Unverified</i>
                             @else
-                            <i style="font-weight:bolder;color:#1dc8cc">Payment Verified</i><i class="fa fa-check ml-2" style="color: #1dc8cc"></i>
+                            <i style="font-weight:bolder;color:#1dc8cc">Payment Verified</i><i class="fa fa-check ml-2"
+                                style="color: #1dc8cc"></i>
                             @endif
                         </div>
                     </div>

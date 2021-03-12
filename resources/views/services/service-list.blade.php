@@ -48,8 +48,8 @@
                            </div>
                         </div>
                         <div class="footer">
-                           <a href="javascript:;" data-toggle="modal" data-target="#loginModal"><i class="fa fa-heart"
-                                 aria-hidden="true"></i>
+                           <a href="javascript:;" @guest data-toggle="modal" data-target="#loginModal" @endguest><i
+                                 class="fa fa-heart" aria-hidden="true"></i>
                               <div class="price">
                                  Budget At <span style="font-size:13px">NPR {{ $job->budget }}</span>
                            </a>
