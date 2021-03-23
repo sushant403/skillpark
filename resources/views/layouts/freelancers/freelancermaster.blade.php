@@ -304,9 +304,9 @@
                 <!-- Search Form -->
                 <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
                   <form action="{{ route('search') }}" class="d-flex align-items-center">
-                    <label class="sr-only" for="signupSEmail">Search for apps</label>
+                    <label class="sr-only" for="search">Search for apps</label>
                     <div class="d-inline-block w-65 mr-2">
-                      <input required type="text" class="form-control" name="search" id="signupSEmail"
+                      <input required type="text" class="form-control" name="search" id="search"
                         placeholder="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole"
                         aria-label="@hasrole('freelancer') Search for Jobs @else Search for Categories @endhasrole">
                     </div>

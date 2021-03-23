@@ -56,7 +56,8 @@
                                                 <input type="hidden" name="payment_method" class="payment-method">
                                                 <div class="col-12 col-md-10 px-0">
                                                     <input class="StripeElement mb-3" name="card_holder_name"
-                                                        placeholder="Card holder name" required>
+                                                        placeholder="Card holder name"
+                                                        value="{{ auth()->user()->name }}" required>
                                                     <div id="card-element"></div>
                                                     <div id="card-errors" class="feedback" style="color: red;"
                                                         role="alert"></div>
@@ -153,8 +154,9 @@
                                                 </div>
 
                                             </div>
+                                            @if($job->candidate_id == NULL)
                                             <div class="col-sm-auto">
-                                                @if($job->candidate_id == NULL && !$job->paid_at == NULL)
+                                                @if(!$job->paid_at == NULL)
                                                 <form action="{{ route("jobs.update", [$job->id]) }}" method="POST">
                                                     @csrf
                                                     @method('PUT')
@@ -166,9 +168,10 @@
                                                     </button>
                                                 </form>
                                                 @else
-                                                <b> Payment must be done before you can hire.</b>
+                                                <b> Payment must be done before hiring.</b>
                                                 @endif
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -179,68 +182,6 @@
                         <!-- End List Group -->
                     </div>
                     <!-- End Body -->
-                </div>
-                <!-- End Card -->
-
-                <!-- Card -->
-                <div class="card">
-                    <!-- Header -->
-                    <div class="card-header">
-                        <h5 class="card-header-title">Project History</h5>
-                    </div>
-                    <!-- End Header -->
-
-                    <!-- Table -->
-                    <div class="table-responsive">
-                        <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th>Reference</th>
-                                    <th>Status</th>
-                                    <th>Amount</th>
-                                    <th>Updated</th>
-                                    <th>Invoice</th>
-                                    <th style="width: 5%;"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="#">#3682303</a></td>
-                                    <td><span class="badge badge-soft-warning">Pending</span></td>
-                                    <td>NPR</td>
-                                    <td>22/04/2020</td>
-                                    <td><a class="btn btn-xs btn-white" href="../pages/invoice.html"><i
-                                                class="fas fa-file-download mr-1"></i> PDF</a></td>
-                                    <td><a class="btn btn-xs btn-white" href="javascript:;" data-toggle="modal"
-                                            data-target="#invoiceReceiptModal"><i class="fas fa-eye mr-1"></i> Quick
-                                            view</a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">#2333234</a></td>
-                                    <td><span class="badge badge-soft-success">Successful</span></td>
-                                    <td>NPR</td>
-                                    <td>22/04/2019</td>
-                                    <td><a class="btn btn-xs btn-white" href="../pages/invoice.html"><i
-                                                class="fas fa-file-download mr-1"></i> PDF</a></td>
-                                    <td><a class="btn btn-xs btn-white" href="javascript:;" data-toggle="modal"
-                                            data-target="#invoiceReceiptModal"><i class="fas fa-eye mr-1"></i> Quick
-                                            view</a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">#9834283</a></td>
-                                    <td><span class="badge badge-soft-success">Successful</span></td>
-                                    <td>NPR</td>
-                                    <td>22/04/2018</td>
-                                    <td><a class="btn btn-xs btn-white" href="../pages/invoice.html"><i
-                                                class="fas fa-file-download mr-1"></i> PDF</a></td>
-                                    <td><a class="btn btn-xs btn-white" href="javascript:;" data-toggle="modal"
-                                            data-target="#invoiceReceiptModal"><i class="fas fa-eye mr-1"></i> Quick
-                                            view</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- End Table -->
                 </div>
                 <!-- End Card -->
             </div>

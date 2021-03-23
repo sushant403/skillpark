@@ -7,16 +7,17 @@ use App\Topic;
 use App\Category;
 use App\Proposal;
 use Carbon\Carbon;
-use App\Observers\JobActionObserver;
-use Cviebrock\EloquentSluggable\Sluggable;
 use Spatie\MediaLibrary\HasMedia;
+use App\Observers\JobActionObserver;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Notifications\YouAreHiredNotification;
 
 class Job extends Model implements HasMedia
 {
-    use SoftDeletes, InteractsWithMedia, Sluggable;
+    use SoftDeletes, InteractsWithMedia;
 
     public $table = 'jobs';
 
@@ -49,6 +50,15 @@ class Job extends Model implements HasMedia
     {
         parent::boot();
         Job::observe(new JobActionObserver);
+    }
+
+    public static function booting()
+    {
+        self::updated(function (Job $job) {
+            if ($job->isDirty('candidate_id')) {
+                Notification::route('mail', $job->candidate->email)->notify(new YouAreHiredNotification($job));
+            }
+        });
     }
 
     public function employer()
@@ -131,12 +141,4 @@ class Job extends Model implements HasMedia
     // {
     //     $this->attributes['paid_at'] = $value ? Carbon::createFromFormat(config('panel.date_format') . ' ' . config('panel.time_format'), $value)->format('Y-m-d H:i:s') : null;
     // }
-    public function sluggable(): array
-    {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
-    }
 }

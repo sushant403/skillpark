@@ -48,7 +48,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('password'),
             'about' => 'Owns Bhatta Incorporations. This person can perform tasks like post proposals, view projects, place bids, message clients, view own proposal.',
             'city_id' => 140,
-            'avatar' => 'https://scontent.fktm8-1.fna.fbcdn.net/v/t1.0-1/p160x160/117304905_598831747666475_3946948008009374014_o.jpg?_nc_cat=101&_nc_sid=dbb9e7&_nc_ohc=sOGTElxC_OsAX8Zcgcc&_nc_ht=scontent.fktm8-1.fna&tp=6&oh=79621efa7b37b7d8e4a3be580c146d03&oe=5F7426A4',
+            'avatar' => 'https://avatars.githubusercontent.com/u/71059454?s=400&u=cf231f06ae5685b7bf90c6aa8779e5faf831aff1&v=4',
             'tagline' => 'Owner of Bhatta Incorporations.',
             'created_at' => now(),
             'updated_at' => now()

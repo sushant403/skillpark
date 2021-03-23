@@ -27,7 +27,7 @@ class JobPaidNotification extends Notification
             ->from('noreply@skillpark.com.np', 'Skillpark Inc.')
             ->greeting('Hello ' . $this->model->employer->name . ',')
             ->subject('Job Payment Successful.')
-            ->line('Job titled "' . $this->model->title . '" has been paid with the amount of Rs. '. $this->model->budget . ' . Thank You.')
+            ->line('Job titled "' . $this->model->title . '" has been paid with the amount of Rs. ' . $this->model->budget . ' . Thank You.')
             ->action('Start Hiring', route('jobs.show', $this->model));
     }
 }

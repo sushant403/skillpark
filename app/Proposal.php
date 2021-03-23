@@ -3,10 +3,12 @@
 namespace App;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Notifications\ProposalSubmitNotification;
 
 class Proposal extends Model implements HasMedia
 {
@@ -36,6 +38,13 @@ class Proposal extends Model implements HasMedia
         'comment',
         'url',
     ];
+
+    public static function booting()
+    {
+        self::created(function (Proposal $client) {
+            Notification::route('mail', $client->job->employer->email)->notify(new ProposalSubmitNotification($client));
+        });
+    }
 
     public function job()
     {

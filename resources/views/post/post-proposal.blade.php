@@ -14,7 +14,8 @@
                         <ol class="breadcrumb breadcrumb-light mb-0">
                             <li class="breadcrumb-item"><a class="breadcrumb-link"
                                     href="{{ route('freelancer') }}">Home</a></li>
-                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:window.history.back();">Go Back</a></li>
+                            <li class="breadcrumb-item"><a class="breadcrumb-link"
+                                    href="javascript:window.history.back();">Go Back</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Post Proposal</li>
                         </ol>
                     </nav>
@@ -39,11 +40,11 @@
                             </p>
                             @endif
                             <div class="input-group">
-                                <textarea class="form-control" rows="6" minlength="50" maxlength="250"
+                                <textarea class="form-control" rows="6" minlength="70" maxlength="350"
                                     name="proposal_text"
                                     placeholder="Write Something that would attract client's attention..."
                                     aria-label="Write Something that would attract client's attention..." required
-                                    data-msg="'Proposal Text' is required and should be at least 50 characters."></textarea>
+                                    data-msg="'Proposal Text' is required and should be at least 70 characters."></textarea>
                             </div>
                         </div>
                         <!-- End Input -->
@@ -53,12 +54,12 @@
                         <div class="col-md-12 mb-3 mb-md-5">
                             <!-- Input -->
                             <div class="js-form-message">
-                                <label class="input-label" for="tagLabel">Statement Of Purpose Title</label>
+                                <label class="input-label" for="comment">Statement Of Purpose Title</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="comment" id="tagLabel"
+                                    <input type="text" class="form-control" name="comment" id="comment"
                                         placeholder="(eg. 3 years+ experience in PHP)"
                                         aria-label="(eg. 3 years+ experience in PHP)" required
-                                        data-msg="First thing Client sees is your SOP.">
+                                        data-msg="First thing Client sees is your Statement.">
                                 </div>
                             </div>
                             <!-- End Input -->
@@ -67,11 +68,12 @@
                         <div class="col-md-6 mb-3 mb-md-5">
                             <!-- Input -->
                             <div class="js-form-message">
-                                <label class="input-label" for="budgetLabel">Required Budget <span
+                                <label class="input-label" for="budgetLabel">Purposed Budget <span
                                         class="text-muted font-weight-normal ml-1">(Optional)</span></label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="budget" id="budgetLabel"
-                                        placeholder="Budget (NPR)" aria-label="Budget">
+                                    <input type="number" class="form-control" name="budget" min="1000" max="100000"
+                                        placeholder="Enter your purposed Budget"
+                                        data-msg="Please enter your purposed Budget between 1000 and One-Lakh NPR">
                                 </div>
                             </div>
                             <!-- End Input -->
