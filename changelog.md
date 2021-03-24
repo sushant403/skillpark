@@ -1,4 +1,4 @@
-- ### Commit 97th:
+- ### Commit 109th:
      ### Email Notifcations Added for Proposals and Hiring. Cluster Removed. :
 
     1. Two more email notifications added, one for **while the proposal is submitted** and another when the **freelancer is hired**.
