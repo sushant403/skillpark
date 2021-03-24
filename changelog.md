@@ -1,4 +1,31 @@
 - ### Commit 97th:
+     ### Email Notifcations Added for Proposals and Hiring. Cluster Removed. :
+
+    1. Two more email notifications added, one for **while the proposal is submitted** and another when the **freelancer is hired**.
+
+<hr>
+
+- ### Commit 104th:
+     ### Paypal Developer API Initiated. Slugs URL Added. :
+
+    1. API Keys for Paypal testing added. Better URL optimizations for SEO.
+
+    2. `Category Search` Naming Convention Fixes.
+
+<hr>
+
+- ### Commit 100th:
+     ### E-notifications Established. Migrated to PHPStorm for better refactorization. :
+
+    1. Added the email notification for payment invoices.
+
+    2. Various optimization in the payment system.
+
+    3. Faker modified for better pictures rendering.
+
+<hr>
+
+- ### Commit 97th:
      ### Real Time Payment Gateway Added. Stripe Global Payment Processor established. :
 
     1. Cashier Package included in Composer.
