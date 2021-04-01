@@ -1,4 +1,5 @@
-## Sir Lai Explain garne Jastai Introduction
+## Project Explanation and Basic Introduction 
+`Skillpark Inc.`
 
 ---
 
@@ -26,7 +27,7 @@
 ---
 
 ### Introduction Start
-    Good Morning/Afternoon respected Supervisor and teachers hope you are doing absolutely well.
+    Good Morning! Respected Supervisor and teachers hope you are doing absolutely well.
     
     We are here to proudly present what we have achieved over the course of this Semester and the project development.
 

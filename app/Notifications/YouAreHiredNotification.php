@@ -48,6 +48,7 @@ class YouAreHiredNotification extends Notification
             ->subject('Proposal Accepted and Hired')
             ->greeting('Hello ' . $this->job->candidate->name . ',')
             ->line('You have been hired for the job - \'' . $this->job->title . '\' by \'' . $this->job->employer->name . '\'.')
+            ->line('You may contact directly via the email - ' . $this->job->employer->email . '.')
             ->line('Please visit the Proposal Dashboard for more information.')
             ->action(Lang::get('Dashboard'), $proposalUrl)
             ->line('Please DO NOT reply to this auto-generated mail.')

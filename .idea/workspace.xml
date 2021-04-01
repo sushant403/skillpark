@@ -6,7 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23fdcde-9559-4376-ae6d-8051d210ee52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TeamMembers-SectionDivide.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SirLaiExplainGareyJastai-Introduction.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,6 +259,7 @@
       <workItem from="1615464991423" duration="452000" />
       <workItem from="1615479285076" duration="4437000" />
       <workItem from="1615633210828" duration="11000" />
+      <workItem from="1616763948642" duration="3766000" />
     </task>
     <task id="LOCAL-00001" summary="Project Added to PhpStorm. (conf. files).">
       <created>1599759892975</created>
