@@ -71,3 +71,19 @@ Dynamic homepage with latest jobs, Apply and Send Proposals, Search Jobs, Messag
 **~~Thank You~~**
 <br>
 Goodbye | Tata | Khatam | ByeBye
+
+<br>
+
+---
+
+### Links | Websites to Open During Presentation:
+
+1. [Employer Dashboard - Heroku](https://skillpark.herokuapp.com/cd/home)
+
+2. [Freelancer Dashboard - Heroku](https://skillpark.herokuapp.com/ab/home)
+
+3. [Database - TablePlus]()
+
+4. [Stripe Dashboard - Payment](https://dashboard.stripe.com/test/payments)
+
+5. [Project Report - Presentaiton](https://skillpark.herokuapp.com)
