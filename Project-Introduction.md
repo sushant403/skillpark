@@ -87,3 +87,26 @@ Goodbye | Tata | Khatam | ByeBye
 4. [Stripe Dashboard - Payment](https://dashboard.stripe.com/test/payments)
 
 5. [Project Report - Presentaiton](https://skillpark.herokuapp.com)
+
+<br>
+
+---
+
+### Technologies | Tools Used:
+
+**During Developent , Collabaration Tools:**
+ 
+    i. Github [For Code Repository and Regular Updates]
+    ii. Zoom/Meet [For Project Discussion]
+    iii. Visual Studio Code [For Coding]
+    iv. Visio [For Desiging Project Diagrams]
+    v. PostgreSQL for Database.
+    vi. Heroku for Deployment.
+
+**JS Libraries / Technologies Used:**
+ 
+    i. Slick JS for Slideshow.
+    ii. Select2 JS for Forms.
+    iii. JQuery for Responsiveness and Interactivity.
+    iv. Bootstrap 4.5.0.
+    v. JavaScript Core Codes.
