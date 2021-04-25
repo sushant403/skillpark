@@ -209,7 +209,7 @@
                 </li>
 
                 <li class="navbar-nav-item font-weight-bolder">
-                  <a href="{{ url('messages') }}" class="nav-link px-0 px-md-3">
+                  <a href="http://messagepark.herokuapp.com" class="nav-link px-0 px-md-3">
                     Messages</a>
                 </li>
 

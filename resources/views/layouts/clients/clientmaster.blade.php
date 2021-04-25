@@ -150,7 +150,7 @@
                                                 </span>
                                                 My Projects
                                             </a>
-                                            <a class="dropdown-item px-0" href="/messages">
+                                            <a class="dropdown-item px-0" href="http://messagepark.herokuapp.com">
                                                 <span class="dropdown-item-icon">
                                                     <i class="fas fa-envelope"></i>
                                                 </span>
