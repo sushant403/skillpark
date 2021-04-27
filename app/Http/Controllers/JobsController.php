@@ -8,6 +8,7 @@ use App\Topic;
 use App\Category;
 use App\Proposal;
 use Stripe\SetupIntent;
+use App\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreJobRequest;
@@ -97,6 +98,15 @@ class JobsController extends Controller
                 ->update(['approved_at' => now()]);
             Proposal::where('job_id', $job->id)->where('candidate_id', '!=', $request->candidate_id)
                 ->update(['rejected_at' => now()]);
+
+            Message::create([
+                'type' => 'user',
+                'from_id' => $job->employer_id,
+                'to_id' => $request->candidate_id,
+                'body' => 'You have been hired for the job. Messages and Works are transfered via here. Happy Freelancing.',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
 
         if (count($job->attachments) > 0) {
