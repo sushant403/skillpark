@@ -50,26 +50,15 @@
                                     <div class="card">
                                         <div class="card-header"><b>Pay Now</b></div>
                                         <div class="card-body">
-                                            <form method="POST" action="{{ route('jobs.pay', $job) }}"
-                                                class="card-form mb-3">
-                                                @csrf
-                                                <input type="hidden" name="payment_method" class="payment-method">
-                                                <div class="col-12 col-md-10 px-0">
-                                                    <input class="StripeElement mb-3" name="card_holder_name"
-                                                        placeholder="Card holder name"
-                                                        value="{{ auth()->user()->name }}" required>
-                                                    <div id="card-element"></div>
-                                                    <div id="card-errors" class="feedback" style="color: red;"
-                                                        role="alert"></div>
-                                                    <div class="form-group mt-3">
-                                                        <button type="submit" class="btn btn-primary pay">
-                                                            Pay
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
+
+                                            <a class="mb-2" href="javascript:;" data-toggle="modal"
+                                                data-target="#invoiceReceiptModal">
+                                                <img src="{{ asset('images/paymentbutton.png') }}" width="200">
+                                            </a>
+                                            @include('layouts.components.paymentmodal')
                                         </div>
                                     </div>
+
                                     @endif
                                 </div>
                                 <div class="mt-4">
