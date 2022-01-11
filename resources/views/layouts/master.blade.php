@@ -677,6 +677,7 @@
     <script src="/js/core.js"></script>
     <script src="/js/validation.js"></script>
     <script src="/js/slick-carousel.js"></script>
+    @yield('script')
 
     <!-- JS Plugins Init. -->
     <script>

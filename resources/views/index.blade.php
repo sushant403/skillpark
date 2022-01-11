@@ -411,7 +411,7 @@
 
     <div style="background: url('images/team/teambg.jpg'')">
     <!-- START TEAM -->
-    <section id="team">
+    <section id="team" class="pb-3">
         <div class="container">
             <div style="margin-top: 30px;"></div>
             <div class="row">
@@ -424,7 +424,7 @@
                         <div class="section-text">
                             <h2 class="section-title">Team Alpha</h2>
                             <p style="font: 18px;">
-                                The team that created KonnectFord, Enigma Club, OKTraders, OVS and much much more.
+                                The team that created <b>Skillpark</b>, KonnectFord, Enigma Club, OKTraders, OVS and much much more.
                             </p>
                         </div>
                         <!-- END section-text-->
@@ -549,7 +549,6 @@
     <!-- END team-->
     <!-- END TEAM -->
     <!-- partial -->
-    <script src="/js/teamscript.js"></script>
     <!-- Icon Blocks Section -->
 
 
@@ -640,4 +639,8 @@
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
 
+@endsection
+
+@section('script')
+<script src="/js/teamscript.js"></script>
 @endsection

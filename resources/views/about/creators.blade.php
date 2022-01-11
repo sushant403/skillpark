@@ -21,7 +21,7 @@
                         <div class="section-text">
                             <h2 class="section-title">Team Alpha</h2>
                             <p style="font: 18px;">
-                                The team that created KonnectFord, Enigma Club, OKTraders, OVS and much much more.
+                                The team that created <b>Skillpark</b>, KonnectFord, Enigma Club, OKTraders, OVS and much much more.
                             </p>
                         </div>
                         <!-- END section-text-->
