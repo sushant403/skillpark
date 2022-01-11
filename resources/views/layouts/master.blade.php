@@ -113,7 +113,7 @@
 
                             <li class="navbar-nav-item mr-2 font-weight-bold">
                                 <div class="hs-unfold">
-                                    <a class="js-hs-unfold-invoker nav-link badge badge-primary text-white p-3" href="https://messagepark.herokuapp.com">{{ __('nepali.Messenger') }}</a>
+                                    <a class="js-hs-unfold-invoker nav-link badge badge-success text-white p-3" target="_blank" href="https://messagepark.herokuapp.com"><b>{{ __('nepali.Messenger') }}</b></a>
                                 </div>
                             </li>
 
@@ -653,7 +653,7 @@
 
             <!-- Copyright -->
             <div class="w-md-75 text-lg-center mx-lg-auto">
-                <p class="text-muted small">&copy; Skillpark Inc. 2020. All rights reserved.</p>
+                <p class="text-muted small">&copy; Skillpark Inc. 2022. All rights reserved. <a href="https://sushantp.com.np" target="_blank">Creator</a></p>
             </div>
             <!-- End Copyright -->
         </div>

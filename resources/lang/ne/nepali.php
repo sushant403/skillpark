@@ -40,7 +40,7 @@ return [
     'Forgot your password?'=> 'तपाईको पासवर्ड बिर्सनुभयो?',
     'GitHub'=> 'गीटहब',
     'Choose Your Language'=> 'आफ्नाे भाषा छान्नुहाेस् ',
-    'Messsenger'=> 'स्किलपार्क मेसेन्जर',
+    'Messenger'=> 'स्किलपार्क मेसेन्जर',
 
 
 

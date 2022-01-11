@@ -437,14 +437,14 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="team-list">
                                 <ul>
-                                    <li class="active wow zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <li class="wow zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
                                         <a href="#team-1" data-team="team-1">
                                             <figure>
                                                 <img src="images/team/sushant.jpg" alt="Team Member image three">
                                             </figure>
                                         </a>
                                     </li>
-                                    <li class="wow zoomIn" data-wow-duration="1s" data-wow-delay=".1s">
+                                    <li class="active wow zoomIn" data-wow-duration="1s" data-wow-delay=".1s">
                                         <a href="#team-2" data-team="team-2">
                                             <figure>
                                                 <img src="images/team/nitika.jpg" alt="Team Member image One">
@@ -465,7 +465,7 @@
                         <!-- END col-sm-4-->
                         <div class="col-md-9 col-sm-8">
 
-                            <div id="team-1" class="team-single active">
+                            <div id="team-1" class="team-single">
                                 <div class="team-img">
                                     <img src="images/team/sushant.jpg" alt="">
                                     <div class="team-social">
@@ -488,7 +488,7 @@
                             </div>
                             <!-- END team-single-->
 
-                            <div id="team-2" class="team-single">
+                            <div id="team-2" class="team-single active">
                                 <div class="team-img">
                                     <img src="images/team/nitika.jpg" alt="">
                                     <div class="team-social">
