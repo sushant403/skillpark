@@ -37,6 +37,7 @@ return [
     'Vapor' => 'भ्यापर',
     'GitHub'=> 'गीटहब',
     'Choose Your Language'=> 'आफ्नाे भाषा छान्नुहाेस् ',
+    'Messsenger'=> 'Skillpark Messenger'
 
 
     'Search'=> 'Search',

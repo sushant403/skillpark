@@ -111,6 +111,12 @@
                         <div class="navbar-body header-sticky-top-inner">
                             <ul class="navbar-nav">
 
+                            <li class="navbar-nav-item mr-2 font-weight-bold">
+                                <div class="hs-unfold">
+                                    <a class="js-hs-unfold-invoker nav-link badge badge-primary text-white p-3" href="https://messagepark.herokuapp.com">{{ __('nepali.Messenger') }}</a>
+                                </div>
+                            </li>
+
                                 <!-- About -->
                                 <li class="hs-has-mega-menu navbar-nav-item" data-hs-mega-menu-item-options='{
                                 "desktop": {
