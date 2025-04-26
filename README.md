@@ -78,7 +78,6 @@ You can find [Changelog here](https://github.com/sushant403/skillpark/blob/maste
 
 This project exists because of the following people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/sushant403/skillpark/graphs/contributors"><br><img src="https://img.shields.io/badge/contributors-3-blue" /></a>
-[@dbasechhetri](https://github.com/dbasechhetri) ,
 [@sushant403](https://github.com/sushantpoudel98) ,
 [@nitikabhatta](https://github.com/nitikabhatta)
 
